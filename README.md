@@ -92,6 +92,8 @@ tags: [ジャンル, ...]
 
 #### ゴム {rubber}
 - なにでできてる: [ゴムは何からできているか](trivia/rubber-natural-synthetic.md)
+- しくみ: [ゴムが夏にとけず冬にかたまらないのは「硫黄の橋」のおかげ（加硫）](trivia/rubber-vulcanization.md)
+- れきし: [ゴムの歴史、ストーブの上の失敗と、借金だらけの発明家](trivia/rubber-history.md)
 
 #### ばんそうこう {bandage}
 - しくみ: [ふつうの絆創膏とキズパワーパッドの違い](trivia/bandage-vs-hydrocolloid.md)
