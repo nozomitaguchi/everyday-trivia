@@ -82,6 +82,8 @@ tags: [ジャンル, ...]
 
 #### ダンボール {cardboard}
 - かたち: [ダンボールは何でできているか](trivia/cardboard-structure.md)
+- つくりかた: [ダンボールはどうやって作るのか（100mの機械とトウモロコシののり）](trivia/cardboard-making.md)
+- ひみつ: [ダンボールは帽子の内側から始まった（名前の由来と歴史）](trivia/cardboard-history.md)
 
 #### ゴム {rubber}
 - なにでできてる: [ゴムは何からできているか](trivia/rubber-natural-synthetic.md)
@@ -132,6 +134,10 @@ tags: [ジャンル, ...]
 
 #### ケチャップ {ketchup}
 - つくりかた: [ケチャップはどうやって作るか](trivia/ketchup-making.md)
+
+#### とうふ {tofu}
+- きほん: [豆腐とは何か、木綿と絹ごしの違い（そもそも）](trivia/tofu-basics.md)
+- しくみ: [豆腐はなぜ固まるのか（にがりの正体と、作る順番）](trivia/tofu-making.md)
 
 ### まちのなか {town}
 
@@ -210,6 +216,7 @@ tags: [ジャンル, ...]
 - しくみ: [空が青くて夕焼けが赤い理由](trivia/sky-blue-sunset-red.md)
 
 #### おつきさま {moon}
+- きほん: [月とは何か（そもそも）](trivia/moon-basics.md)
 - かたち: [月の形が毎日変わる理由](trivia/moon-phases.md)
 
 ### からだ {body}

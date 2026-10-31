@@ -501,4 +501,165 @@
         ${i < 4 ? A(`M${58 + i * 62} 90h12`) : ''}`).join('')}
       ${T(214, 34, '＋さとう・しお・す', 'tx-s')}`,
   };
+  // ---- ダンボール ----
+  const wave = (x0, x1, y, h, step) => {
+    let d = `M${x0} ${y}`;
+    for (let x = x0; x + step <= x1 + 0.1; x += step) d += ` q${step / 4} ${-h} ${step / 2} 0 t${step / 2} 0`;
+    return d;
+  };
+
+  F['cardboard-making'] = {
+    alt: 'まいたかみを3ぼんながし、なかのかみをギザギザのローラーでなみにして、のりでうらとおもてのかみをはる',
+    svg: `
+      <circle class="pale" cx="34" cy="150" r="20"/><circle class="ln thin" cx="34" cy="150" r="20"/><circle class="ln thin" cx="34" cy="150" r="5"/>
+      ${T(34, 186, 'うら', 'tx-s')}
+      <circle class="brown" cx="34" cy="60" r="20"/><circle class="ln thin" cx="34" cy="60" r="20"/><circle class="ln thin" cx="34" cy="60" r="5"/>
+      ${T(34, 30, 'なか', 'tx-s')}
+      <circle class="pale" cx="176" cy="40" r="18"/><circle class="ln thin" cx="176" cy="40" r="18"/><circle class="ln thin" cx="176" cy="40" r="5"/>
+      ${T(206, 26, 'おもて', 'tx-s', 'start')}
+      <path class="ln thin" d="M54 60h36"/>
+      <circle class="gray" cx="104" cy="72" r="14"/><circle class="gray" cx="104" cy="100" r="14"/>
+      ${Array.from({ length: 12 }, (_, i) => `<path class="ln thin" d="M104 72l${(14 * Math.cos(i * Math.PI / 6)).toFixed(1)} ${(14 * Math.sin(i * Math.PI / 6)).toFixed(1)}"/>`).join('')}
+      ${T(104, 132, 'ギザギザ', 'tx-s')}${T(104, 146, 'ローラー', 'tx-s')}
+      <path class="ln thin" d="M54 150h70"/>
+      <path class="ln s-yellow" d="${wave(124, 172, 112, 10, 12)}"/>
+      <path class="ln thin" d="M124 120h48"/>
+      ${T(148, 166, 'のりで はる', 'tx-s')}
+      <path class="ln thin" d="M176 58v56"/>
+      <path class="ln s-yellow" d="${wave(180, 300, 120, 10, 12)}"/>
+      <path class="ln" d="M180 128h120M180 112h120"/>
+      ${T(240, 150, 'ダンボール', 'tx')}
+      ${A('M240 160v20')}${T(240, 196, 'きって はこに', 'tx-s')}
+      ${T(270, 90, 'ながさ 100メートル', 'tx-s')}`,
+  };
+
+  F['cardboard-flutes'] = {
+    alt: 'なみのたかさで、エー、シー、ビー、イーのしゅるいがある。エーがいちばんあつい',
+    svg: `
+      ${[['エー', 5], ['シー', 4], ['ビー', 3], ['イー', 1.5]].map(([n, mm], i) => {
+        const y = 40 + i * 42, h = mm * 5;
+        return `${T(40, y + 5, n, 'tx-b')}
+          <rect class="brown" x="70" y="${y - h / 2 - 3}" width="180" height="3"/>
+          <rect class="brown" x="70" y="${y + h / 2}" width="180" height="3"/>
+          <path class="ln thin" d="${wave(70, 250, y + 1.5, h, Math.max(8, h * 1.6))}"/>
+          ${T(272, y + 5, `${mm}ミリ`, 'tx-s', 'start')}`;
+      }).join('')}`,
+  };
+
+  F['cardboard-history'] = {
+    alt: 'なみのかみは、ぼうしのなかにはるかみから、つつむかみ、はこへとかわった',
+    svg: `
+      <g transform="translate(20 50)">
+        <rect x="16" y="0" width="44" height="60" rx="3" fill="#2b2b2b"/><rect x="0" y="56" width="76" height="8" rx="4" fill="#2b2b2b"/>
+        <path class="ln s-yellow" d="${wave(18, 58, 50, 6, 8)}"/>
+        ${T(38, 90, 'ぼうしの なか', 'tx-s')}${T(38, 106, '1856', 'tx-s')}
+      </g>
+      ${A('M104 90h16')}
+      <g transform="translate(126 44)">
+        <path class="glass" d="M22 0h12v14l8 10v46H14V24l8-10Z"/><path class="ln thin" d="M22 0h12v14l8 10v46H14V24l8-10Z"/>
+        <path class="ln s-yellow" d="${wave(6, 50, 46, 6, 8)}"/>
+        ${T(28, 96, 'つつむ かみ', 'tx-s')}${T(28, 112, '1871', 'tx-s')}
+      </g>
+      ${A('M190 90h16')}
+      <g transform="translate(214 44)">
+        <path class="brown" d="M0 20h80v50H0Z"/><path class="ln thin" d="M0 20h80v50H0ZM0 20l14-16h80l-14 16M80 70l14-16V4"/>
+        ${T(40, 96, 'はこ', 'tx-s')}${T(40, 112, '1903', 'tx-s')}
+      </g>
+      ${T(160, 30, 'なみの かみの うつりかわり', 'tx')}
+      ${T(160, 186, 'にほんでは 1909ねんから', 'tx-s')}`,
+  };
+
+  // ---- とうふ ----
+  F['tofu-basics'] = {
+    alt: 'だいずをふやかしてすりつぶし、にて、しぼるととうにゅうとおからにわかれる。とうにゅうをかためるととうふ',
+    svg: `
+      ${[[30, 'だいず'], [100, 'すりつぶす'], [170, 'にる'], [240, 'しぼる']].map(([x, s], i) => `
+        <g transform="translate(${x} 60)">
+          ${i === 0 ? '<ellipse class="pale" cx="0" cy="0" rx="9" ry="7"/><ellipse class="pale" cx="14" cy="6" rx="9" ry="7"/><ellipse class="pale" cx="-8" cy="12" rx="9" ry="7"/>' : ''}
+          ${i === 1 ? '<path class="pale" d="M-18 -6h36l-6 26h-24Z"/><path class="ln thin" d="M-18 -6h36l-6 26h-24Z"/>' : ''}
+          ${i === 2 ? '<path class="gray" d="M-20 0h40v20a6 6 0 0 1-6 6h-28a6 6 0 0 1-6-6Z"/><path class="ln thin" d="M-14 -4c0-6 6-6 6-12M0 -4c0-6 6-6 6-12"/>' : ''}
+          ${i === 3 ? '<path class="white" d="M-14 -10h28l-6 30h-16Z"/><path class="ln thin" d="M-14 -10h28l-6 30h-16Z"/>' : ''}
+          ${T(0, 46, s, 'tx-s')}
+        </g>
+        ${i < 3 ? A(`M${x + 24} 66h20`) : ''}`).join('')}
+      <rect class="white" x="160" y="132" width="40" height="34" rx="4"/><rect class="ln thin" x="160" y="132" width="40" height="34" rx="4"/>
+      ${T(180, 184, 'とうにゅう', 'tx-s')}
+      <circle class="pale" cx="264" cy="150" r="14"/>${T(264, 184, 'おから', 'tx-s')}
+      ${A('M236 110l-40 18')}${A('M246 110l12 22')}
+      ${A('M152 150h-34')}
+      <rect class="white" x="56" y="128" width="54" height="38" rx="4"/><rect class="ln" x="56" y="128" width="54" height="38" rx="4"/>
+      ${T(83, 184, 'とうふ', 'tx')}${T(135, 140, 'にがり', 'tx-s')}`,
+  };
+
+  F['tofu-momen-kinu'] = {
+    alt: 'もめんどうふはくずしてぬのをしいたはこにいれ、おもしでみずをしぼる。きぬごしはそのままかためる',
+    svg: `
+      <g transform="translate(20 30)">
+        ${T(60, 0, 'もめん', 'tx-b')}
+        <rect class="gray" x="10" y="86" width="100" height="10"/>
+        <path class="ln" d="M10 40v56h100V40"/>
+        ${Array.from({ length: 6 }, (_, i) => `<circle class="bg" cx="${22 + i * 15}" cy="91" r="2.5"/>`).join('')}
+        <rect class="white" x="14" y="56" width="92" height="30"/>
+        ${Array.from({ length: 10 }, (_, i) => `<path class="ln thin s-soft" d="M${18 + i * 9} 56v30"/>`).join('')}
+        <rect class="gray" x="40" y="24" width="40" height="22" rx="3"/><rect class="ln thin" x="40" y="24" width="40" height="22" rx="3"/>${T(60, 40, 'おもし', 'tx')}
+        ${A('M60 48v6')}
+        <path class="ln thin s-blue" d="M30 100v14M60 100v14M90 100v14"/>
+        ${T(60, 134, 'みずを しぼる', 'tx-s')}${T(60, 150, '→ すこし かたい', 'tx-s')}
+      </g>
+      <g transform="translate(180 30)">
+        ${T(60, 0, 'きぬごし', 'tx-b')}
+        <path class="ln" d="M10 40v56h100V40"/>
+        <rect class="white" x="14" y="50" width="92" height="44"/>
+        <path class="ln thin s-blue" d="M14 50h92"/>
+        ${T(60, 134, 'そのまま かためる', 'tx-s')}${T(60, 150, '→ やわらかい', 'tx-s')}
+      </g>`,
+  };
+
+  F['tofu-nigari'] = {
+    alt: 'うみのみずをにつめるとしおがでる。しおをとったのこりがにがり',
+    svg: `
+      <path class="blue" d="M10 70q20-10 40 0t40 0v30H10Z"/>${T(50, 124, 'うみの みず', 'tx-s')}
+      ${A('M100 84h22')}
+      <path class="gray" d="M130 70h70v26a8 8 0 0 1-8 8h-54a8 8 0 0 1-8-8Z"/><path class="ln thin" d="M130 70h70v26a8 8 0 0 1-8 8h-54a8 8 0 0 1-8-8Z"/>
+      <path class="ln thin s-red" d="M144 120c4-6-4-10 0-16M164 120c4-6-4-10 0-16M184 120c4-6-4-10 0-16"/>
+      ${T(165, 60, 'につめる', 'tx-s')}
+      ${A('M206 70l26-24')}${A('M206 96l26 24')}
+      ${[0, 1, 2, 3, 4].map(i => `<rect class="white" x="${240 + (i % 3) * 14}" y="${28 + Math.floor(i / 3) * 12}" width="10" height="10"/><rect class="ln thin" x="${240 + (i % 3) * 14}" y="${28 + Math.floor(i / 3) * 12}" width="10" height="10"/>`).join('')}
+      ${T(262, 70, 'しお', 'tx')}
+      <path class="glass" d="M246 116h28v40a6 6 0 0 1-6 6h-16a6 6 0 0 1-6-6Z"/><path class="ln thin" d="M246 116h28v40a6 6 0 0 1-6 6h-16a6 6 0 0 1-6-6Z"/>
+      ${T(260, 184, 'のこりが にがり', 'tx')}`,
+  };
+
+  F['tofu-making'] = {
+    alt: 'にがりのマグネシウムがはしになって、とうにゅうのなかのたんぱくしつどうしをつなぎ、あみになってかたまる',
+    svg: `
+      <g transform="translate(20 40)">
+        <rect class="bg" x="0" y="0" width="120" height="110" rx="10"/>
+        ${[[20, 20], [70, 30], [40, 60], [95, 70], [25, 90], [80, 95]].map(([x, y]) => `<path class="ln s-yellow" d="M${x - 10} ${y}q5-8 10 0t10 0"/>`).join('')}
+        ${T(60, 132, 'さらさらの とうにゅう', 'tx-s')}
+      </g>
+      ${A('M150 95h22')}${T(161, 80, 'にがり', 'tx-s')}
+      <g transform="translate(180 40)">
+        <rect class="bg" x="0" y="0" width="120" height="110" rx="10"/>
+        ${[[20, 20], [70, 20], [20, 60], [70, 60], [20, 95], [70, 95]].map(([x, y]) => `<path class="ln s-yellow" d="M${x} ${y}h30"/>`).join('')}
+        ${[[20, 20, 20, 60], [50, 20, 70, 20], [50, 60, 70, 60], [100, 20, 100, 60], [20, 60, 20, 95], [50, 95, 70, 95], [100, 60, 100, 95], [50, 20, 50, 60]].map(([a, b, c, d]) => `<path class="ln thin s-purple" d="M${a} ${b}L${c} ${d}"/>`).join('')}
+        ${[[20, 40], [60, 20], [60, 60], [100, 40], [20, 78], [60, 95], [100, 78], [50, 40]].map(([x, y]) => `<circle class="purple" cx="${x}" cy="${y}" r="4"/>`).join('')}
+        ${T(60, 132, 'あみに なって かたまる', 'tx-s')}
+      </g>
+      <circle class="purple" cx="180" cy="22" r="4"/>${T(188, 26, 'マグネシウム（はし）', 'tx-s', 'start')}
+      <path class="ln s-yellow" d="M30 22h20"/>${T(56, 26, 'たんぱくしつ', 'tx-s', 'start')}`,
+  };
+
+  F['tofu-steps'] = {
+    alt: 'とうふづくりのじゅんばん。ふやかす、すりつぶす、にる、しぼる、かためる、まつ',
+    svg: `
+      ${['ふやかす', 'すりつぶす', 'にる', 'しぼる', 'かためる', 'まつ'].map((s, i) => {
+        const x = 20 + (i % 3) * 100, y = 30 + Math.floor(i / 3) * 90;
+        const sub = ['ひと ばん', 'ミキサー', '94ど', 'おからを とる', '70どで にがり', '10〜20ぷん'][i];
+        return `<rect class="pale" x="${x}" y="${y}" width="80" height="54" rx="10"/><rect class="ln thin" x="${x}" y="${y}" width="80" height="54" rx="10"/>
+          ${T(x + 40, y + 24, s, 'tx-k')}${T(x + 40, y + 42, sub, 'tx-k')}
+          ${i % 3 < 2 ? A(`M${x + 84} ${y + 27}h12`) : ''}`;
+      }).join('')}
+      ${A('M260 88q0 10-20 10H60q-20 0-20 10')}`,
+  };
 })();

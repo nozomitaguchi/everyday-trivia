@@ -174,4 +174,35 @@
       <rect class="bg" x="140" y="140" width="14" height="50" rx="7"/><circle class="red" cx="147" cy="186" r="10"/><rect class="red" x="143" y="156" width="8" height="30"/>
       ${T(166, 160, 'ねつで ウイルスが', 'tx-s', 'start')}${T(166, 176, 'ふえにくく なる', 'tx-s', 'start')}`,
   };
+  // ---- おつきさま ----
+  F['moon-basics'] = {
+    alt: 'つきのおおきさはちきゅうのやく4ぶんの1。ちきゅうから38まんキロはなれている',
+    svg: `
+      <circle class="blue" cx="60" cy="100" r="44"/><path class="green" d="M34 80q14-10 24 2t-6 22q-18 4-18-24ZM70 110q14-6 20 6t-14 14Z"/>
+      <circle class="ln thin" cx="60" cy="100" r="44"/>
+      ${T(60, 166, 'ちきゅう', 'tx')}
+      <circle class="gray" cx="270" cy="100" r="12"/><circle class="ink" cx="266" cy="96" r="3" opacity=".35"/><circle class="ink" cx="274" cy="104" r="2" opacity=".35"/>
+      <circle class="ln thin" cx="270" cy="100" r="12"/>
+      ${T(270, 166, 'つき', 'tx')}${T(270, 182, 'ちきゅうの 4ぶんの 1', 'tx-s')}
+      <path class="ln dash thin" d="M110 100h144"/>
+      ${T(182, 90, '38まん キロ', 'tx')}
+      ${T(182, 120, '（ほんとうは もっと とおい）', 'tx-s')}`,
+  };
+
+  F['moon-same-face'] = {
+    alt: 'つきはちきゅうをいっしゅうするあいだに、じぶんもいっかいまわるので、いつもおなじかおをちきゅうにむける',
+    svg: `
+      <circle class="blue" cx="160" cy="100" r="30"/><circle class="ln thin" cx="160" cy="100" r="30"/>
+      ${T(160, 104, 'ちきゅう', 'tx-k')}
+      <circle class="ln dash thin" cx="160" cy="100" r="74"/>
+      ${[0, 90, 180, 270].map(a => {
+        const r = a * Math.PI / 180, x = 160 + 74 * Math.cos(r), y = 100 + 74 * Math.sin(r);
+        return `<g transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${a + 180})">
+          <circle class="gray" r="13"/><circle class="ln thin" r="13"/>
+          <path class="ln thin" d="M5 -4h0M5 4h0" style="stroke-width:4"/><path class="ln thin" d="M9 -5a10 10 0 0 1 0 10"/>
+        </g>`;
+      }).join('')}
+      ${T(160, 196, 'いつも かおが ちきゅうを むく', 'tx')}
+      ${T(296, 40, '1しゅうで', 'tx-s', 'end')}${T(296, 56, '1かい くるっ', 'tx-s', 'end')}`,
+  };
 })();
