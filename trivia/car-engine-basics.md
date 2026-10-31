@@ -17,7 +17,19 @@ tags: [のりもの, 自動車, 仕組み]
 3. 燃焼：点火プラグが火花を出してガスを燃やす。燃えて膨らむ力でピストンが押し下げられる
 4. 排気：ピストンがまた上がって、燃えたあとのガスを外へ出す（これが[マフラー](loud-cars-and-motorcycles.md)を通って出ていく）
 
+{{fig:engine-intake}}
+
+{{fig:engine-compression}}
+
+{{fig:engine-combustion}}
+
+{{fig:engine-exhaust}}
+
+
 ピストンの上下の動きは、クランクシャフトという部品で回転に変えられて、タイヤを回す。
+
+{{fig:engine-crank}}
+
 
 ## 3〜5歳むけ
 
@@ -25,7 +37,13 @@ tags: [のりもの, 自動車, 仕組み]
 
 その ちからで、なかの ぼうが ぐいっと おされるんだ。
 
+{{fig:engine-combustion}}
+
+
 ぼうが うごく ちからで、タイヤが くるくる まわるよ。
+
+{{fig:engine-crank}}
+
 
 ## 6〜9歳むけ
 
@@ -36,7 +54,19 @@ tags: [のりもの, 自動車, 仕組み]
 3. ひばなで ボン！と もやすと、ピストンが おしさげられる
 4. ピストンが あがって、もえた ガスを そとへ だす
 
+{{fig:engine-intake}}
+
+{{fig:engine-compression}}
+
+{{fig:engine-combustion}}
+
+{{fig:engine-exhaust}}
+
+
 これを なんども くりかえすよ。うえしたの うごきを まわる ちからに かえて、タイヤを まわして いるんだ。
+
+{{fig:engine-crank}}
+
 
 ## 出典
 
