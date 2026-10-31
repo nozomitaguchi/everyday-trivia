@@ -199,7 +199,9 @@
       if (!top || l.indent > top.indent) {
         const tag = l.ordered ? 'ol' : 'ul';
         stack.push({ indent: l.indent, tag });
-        html += `<${tag}><li>${inline(l.text)}`;
+        // an ordered list split by a picture keeps its numbering (6. 7. ... after a figure)
+        const start = l.ordered && l.start > 1 ? ` start="${l.start}"` : '';
+        html += `<${tag}${start}><li>${inline(l.text)}`;
       } else {
         html += `</li><li>${inline(l.text)}`;
       }
@@ -243,7 +245,7 @@
         const buf = [];
         while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) {
           const m = lines[i].match(/^(\s*)([-*]|\d+\.)\s+(.*)$/);
-          buf.push({ indent: m[1].length, ordered: /\d/.test(m[2]), text: m[3] });
+          buf.push({ indent: m[1].length, ordered: /\d/.test(m[2]), start: parseInt(m[2], 10), text: m[3] });
           i++;
         }
         html += renderList(buf);
