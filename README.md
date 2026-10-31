@@ -180,6 +180,7 @@ tags: [ジャンル, ...]
 - きほん: [信号機はだれが切り替えているのか](trivia/traffic-light-basics.md)
 - かたち: [信号機の赤がいちばん右にある理由](trivia/road-red-light-on-right.md)
 - かたち: [雪国の信号機が縦向きな理由](trivia/road-vertical-traffic-light.md)
+- れきし: [信号機の歴史、最初の信号はガスで爆発した、緑なのに「青信号」のわけ](trivia/traffic-light-history.md)
 
 #### おうだんほどう {crosswalk}
 - かたち: [横断歩道から横線が消えた理由](trivia/road-crosswalk-stripes.md)
