@@ -206,6 +206,7 @@ main:focus, main:focus-visible { outline: none; }
   color: var(--exit-ink); background: var(--exit);
   border-radius: 999px; padding: 1px 12px;
 }
+.angle.basic { background: var(--plate); color: var(--plate-ink); }
 .trivia-title { font-size: 1.35rem; line-height: 1.45; font-weight: 900; margin: 8px 0 4px; }
 .level-small .trivia-title, .level-kid .trivia-title { font-size: 1.5rem; }
 details.sources summary { cursor: pointer; font-weight: 700; color: var(--ink); }
@@ -260,6 +261,39 @@ details.sources summary { cursor: pointer; font-weight: 700; color: var(--ink); 
 }
 .status strong { color: var(--exit); }
 .status.live strong { color: var(--signal); }
+
+/* illustrations */
+.fig { margin: 12px 0 8px; padding: 12px; background: var(--panel); border-radius: 20px; }
+.fig svg { display: block; width: 100%; height: auto; max-width: 440px; margin: 0 auto; overflow: visible; }
+.fig .ln { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.fig .thin { stroke-width: 1.5; }
+.fig .dash { stroke-dasharray: 5 5; }
+.fig .bg { fill: var(--paper); stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
+.fig .ink { fill: var(--ink); }
+.fig .white { fill: #fff; }
+.fig .gray { fill: var(--steel); }
+.fig .green { fill: #1f9d6b; }
+.fig .orange { fill: #f0a35a; }
+.fig .red { fill: #e0563c; }
+.fig .blue { fill: #5b9bd5; }
+.fig .yellow { fill: #f2c230; }
+.fig .pale { fill: #f6e7a8; }
+.fig .pink { fill: #f2a7b5; }
+.fig .brown { fill: #b9814a; }
+.fig .purple { fill: #9b7be0; }
+.fig .glass { fill: #bfe3f2; }
+.fig .s-red { stroke: #e0563c; }
+.fig .s-blue { stroke: #5b9bd5; }
+.fig .s-yellow { stroke: #f2c230; }
+.fig .s-purple { stroke: #9b7be0; }
+.fig .s-green { stroke: #1f9d6b; }
+.fig .s-soft { stroke: var(--ink-soft); }
+.fig .arw { fill: none; stroke: var(--ink-soft); stroke-width: 2.5; stroke-linecap: round; marker-end: url(#ah); }
+.ah-head { fill: var(--ink-soft); }
+.fig .tx { fill: var(--ink); font: 700 13px "Zen Maru Gothic", system-ui, sans-serif; }
+.fig .tx-s { fill: var(--ink-soft); font: 700 11px "Zen Maru Gothic", system-ui, sans-serif; }
+.fig .tx-w { fill: #fff; font: 900 14px "Zen Maru Gothic", system-ui, sans-serif; }
+.fig .tx-b { fill: var(--ink); font: 900 16px "Zen Maru Gothic", system-ui, sans-serif; }
 
 /* moon widget */
 .diagram .turn { display: flex; justify-content: center; gap: 8px; margin-top: 8px; }

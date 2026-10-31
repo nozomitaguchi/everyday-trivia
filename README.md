@@ -23,7 +23,8 @@
 ```
 
 - `{ }` の中は URL に使う名前（英小文字とハイフン）
-- 行頭の言葉はトリビアの角度。次のどれか：`なにでできてる` `つくりかた` `しくみ` `かたち` `しるし` `ひみつ`
+- 行頭の言葉はトリビアの角度。次のどれか：`きほん` `なにでできてる` `つくりかた` `しくみ` `かたち` `しるし` `ひみつ`
+- `きほん` は「そもそもそれは何で、どう動くのか」。もののページの先頭に置き、その上に他のトリビアを積む
 
 ## 1トリビアのフォーマット
 
@@ -120,10 +121,12 @@ tags: [ジャンル, ...]
 ### まちのなか {town}
 
 #### エレベーター {elevator}
+- きほん: [エレベーターはどうやって動くのか](trivia/elevator-basics.md)
 - しくみ: [エレベーターの一次消防・二次消防の鍵穴](trivia/elevator-fire-service-keyswitch.md)
 - かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
 
 #### エスカレーター {escalator}
+- きほん: [エスカレーターはどうやって動くのか](trivia/escalator-basics.md)
 - かたち: [エスカレーター側面のブラシ](trivia/escalator-brush.md)
 
 #### かいだん {stairs}
@@ -137,10 +140,12 @@ tags: [ジャンル, ...]
 - しるし: [高いビルの赤い点滅灯](trivia/building-aviation-obstruction-light.md)
 
 #### でんちゅうと でんせん {power-lines}
+- きほん: [電柱の電線は上から電圧の高い順に並んでいる](trivia/utility-pole-wire-order.md)
 - しるし: [電柱の番号札は通報のときの住所代わり](trivia/utility-pole-number.md)
 - しるし: [送電線にぶら下がる玉](trivia/powerline-marker-balls.md)
 
 #### しんごう {traffic-light}
+- きほん: [信号機はだれが切り替えているのか](trivia/traffic-light-basics.md)
 - かたち: [信号機の赤がいちばん右にある理由](trivia/road-red-light-on-right.md)
 - かたち: [雪国の信号機が縦向きな理由](trivia/road-vertical-traffic-light.md)
 
@@ -160,6 +165,7 @@ tags: [ジャンル, ...]
 ### のりもの {vehicles}
 
 #### でんしゃ {train}
+- きほん: [電車はどうやって走るのか](trivia/train-basics.md)
 - しくみ: [デッドマン装置とEB装置](trivia/deadman-and-eb-device.md)
 - しるし: [電車の「クハ」「モハ」の意味](trivia/railway-car-type-symbols.md)
 - かたち: [電車のつり革の高さと色](trivia/train-strap-height-color.md)
@@ -170,6 +176,7 @@ tags: [ジャンル, ...]
 - しるし: [ホームの点字ブロックの「内方線」](trivia/railway-tactile-block-inner-line.md)
 
 #### くるま {car}
+- きほん: [車のエンジンはどうやって動くのか](trivia/car-engine-basics.md)
 - しくみ: [車のキーのSTART位置と抜ける位置](trivia/car-ignition-key.md)
 - しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
 - しくみ: [うるさい車やバイクは何がうるさいのか](trivia/loud-cars-and-motorcycles.md)

@@ -122,11 +122,12 @@
 
   // angle keys used in README, with how each reader level sees them
   const ANGLES = {
+    'きほん': { small: 'これは なあに？', kid: 'どんな もの？', adult: 'そもそも' },
     'なにでできてる': { small: 'なにで できてる？', kid: 'なにで できてる？', adult: '素材' },
     'つくりかた': { small: 'どうやって つくる？', kid: 'どうやって つくる？', adult: '作り方' },
     'しくみ': { small: 'どうなってるの？', kid: 'どんな しくみ？', adult: '仕組み' },
     'かたち': { small: 'どうして この かたち？', kid: 'なぜ この かたち？', adult: '形のわけ' },
-    'しるし': { small: 'これ なあに？', kid: 'この しるしは なに？', adult: '記号の意味' },
+    'しるし': { small: 'これは なんの しるし？', kid: 'この しるしは なに？', adult: '記号の意味' },
     'ひみつ': { small: 'ひみつ', kid: 'ひみつ', adult: '小ネタ' },
   };
   const angleLabel = a => (ANGLES[a] || { small: a, kid: a, adult: a })[level().id];
@@ -542,6 +543,13 @@
     }
   }
 
+  // illustrations come from assets/figures-*.js: { svg, alt } keyed by slug
+  function figureHtml(slug) {
+    const f = (window.AHA_FIGURES || {})[slug];
+    if (!f) return '';
+    return `<figure class="fig"><svg viewBox="${f.box || '0 0 320 200'}" role="img" aria-label="${f.alt}">${f.svg}</svg></figure>`;
+  }
+
   function entryHtml(e, md, solo) {
     const { meta, sections } = parseEntry(md);
     const lv = level();
@@ -565,9 +573,10 @@
     const H = solo ? 'h1' : 'h2';
     return `
       <article class="trivia level-${kidSection ? lv.id : 'adult'}" id="t-${e.slug}">
-        <p class="angle">${angleLabel(e.angle)}</p>
+        <p class="angle${e.angle === 'きほん' ? ' basic' : ''}">${angleLabel(e.angle)}</p>
         ${heading ? `<${H} class="trivia-title">${heading}</${H}>` : ''}
         ${note ? `<p class="level-note">${note}</p>` : ''}
+        ${figureHtml(e.slug)}
         <div class="body">${toHtml(bodyMd)}</div>
         <div class="widget-mount" data-slug="${e.slug}"></div>
         ${showSources ? `<details class="sources"${lv.id === 'adult' ? ' open' : ''}><summary>出典</summary>${toHtml(sources.text)}</details>` : ''}
