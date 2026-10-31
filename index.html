@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アハ図鑑</title>
+<meta name="description" content="見ているけど知らない、触っているけど知らない。身の回りの仕組みを、読む人の年齢に合わせて説明する図鑑。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">本文へ</a>
+<header class="site">
+  <a class="site-name" href="#/">アハ図鑑</a>
+  <p class="site-lead"><span>見てるけど、知らない。</span><span>さわってるけど、知らない。</span></p>
+  <section class="reader" aria-label="読む人の年齢">
+    <div class="reader-dial" id="reader-dial"></div>
+    <div class="reader-age">
+      <label for="age-input">読む人は</label>
+      <div class="age-row">
+        <div class="age-stepper">
+          <button type="button" id="age-down" aria-label="1歳へらす">−</button>
+          <input id="age-input" type="number" inputmode="numeric" min="2" max="99" value="30">
+          <button type="button" id="age-up" aria-label="1歳ふやす">＋</button>
+        </div>
+        <span class="age-unit">さい</span>
+      </div>
+      <p class="level-name" id="level-name" aria-live="polite"></p>
+    </div>
+  </section>
+</header>
+<main id="main" tabindex="-1"></main>
+<footer class="site-foot">
+  <p>説明はそれぞれの出典をもとに書いています。まちがいを見つけたら <a href="https://github.com/nozomitaguchi/everyday-trivia">GitHub</a> で教えてください。</p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>
