@@ -61,6 +61,8 @@ tags: [ジャンル, ...]
 
 #### かみ {paper}
 - つくりかた: [紙はどうやって作るのか](trivia/paper-making.md)
+- なにでできてる: [和紙と洋紙の違い](trivia/paper-washi.md)
+- れきし: [紙の歴史、ぼろ布の紙から木の紙へ（ヒントはハチの巣）](trivia/paper-history.md)
 
 #### おさら {plate}
 - なにでできてる: [お皿は何でできているか、陶器と磁器の違い](trivia/plate-pottery-porcelain.md)
