@@ -176,6 +176,7 @@ tags: [ジャンル, ...]
 
 #### ひじょうぐち {emergency-exit}
 - しるし: [非常口マークの緑地と白地](trivia/building-exit-sign-colors.md)
+- れきし: [走る人の非常口マークは日本生まれ、世界の標準になった](trivia/emergency-exit-history.md)
 
 #### ビル {building}
 - ひみつ: [「定礎」の裏にあるタイムカプセル](trivia/building-cornerstone-box.md)
