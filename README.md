@@ -58,6 +58,7 @@ tags: [ジャンル, ...]
 
 #### クレヨンと クレパス {crayon}
 - なにでできてる: [クレヨンとクレパスの違い](trivia/crayon-vs-craypas.md)
+- れきし: [クレヨンは「油っぽいチョーク」、クレパスは日本生まれ](trivia/crayon-history.md)
 
 #### かみ {paper}
 - つくりかた: [紙はどうやって作るのか](trivia/paper-making.md)
