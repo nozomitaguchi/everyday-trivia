@@ -14,7 +14,7 @@
   const bag = (x, y, w = 70, h = 70, cls = 'glass') => `
     <path class="ln" d="M${x + w * 0.12} ${y}v-${h * 0.28}a${w * 0.1} ${w * 0.1} 0 0 1 ${w * 0.2} 0v${h * 0.28}M${x + w * 0.68} ${y}v-${h * 0.28}a${w * 0.1} ${w * 0.1} 0 0 1 ${w * 0.2} 0v${h * 0.28}"/>
     <rect class="${cls}" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/><rect class="ln" x="${x}" y="${y}" width="${w}" height="${h}" rx="6"/>`;
-  const drop = (x, y, s = 1, cls = 'ink') => `<path class="${cls}" transform="translate(${x} ${y}) scale(${s})" d="M0 -22C-10 -6 -14 2 -14 8a14 14 0 0 0 28 0c0-6-4-14-14-30Z"/>`;
+  const drop = (x, y, s = 1, cls = 'coal') => `<path class="${cls}" transform="translate(${x} ${y}) scale(${s})" d="M0 -22C-10 -6 -14 2 -14 8a14 14 0 0 0 28 0c0-6-4-14-14-30Z"/>`;
   const flame = (x, y) => `<path class="orange" d="M${x} ${y}c-10-8-8-18 0-28 2 8 10 10 8 20 4-2 4-6 4-8 4 6 2 14-6 16Z"/><path class="red" d="M${x + 1} ${y}c-4-4-3-9 0-13 2 5 6 6 4 11Z"/>`;
 
   // ---------- ポリ袋とは（そもそも） ----------
@@ -362,12 +362,12 @@
     svg: `
       ${T(160, 26, 'ビニールの おもさの うちわけ', 'tx')}
       <rect class="white" x="20" y="50" width="160" height="44" rx="6"/>
-      <rect class="ink" x="180" y="50" width="120" height="44" rx="6"/>
+      <rect class="coal" x="180" y="50" width="120" height="44" rx="6"/>
       <rect class="ln" x="20" y="50" width="280" height="44" rx="6"/>
       ${T(100, 78, 'しお 57%', 'tx-k')}
       ${T(240, 78, 'せきゆ', 'tx-w')}
       <path class="white" d="M88 116h24v10l-4 40H92l-4-40Z"/><path class="ln thin" d="M88 116h24v10l-4 40H92l-4-40Z"/>
-      <circle class="ink" cx="96" cy="122" r="1.5"/><circle class="ink" cx="104" cy="122" r="1.5"/>
+      <circle class="coal" cx="96" cy="122" r="1.5"/><circle class="coal" cx="104" cy="122" r="1.5"/>
       ${T(100, 190, 'しおの えんそ', 'tx-s')}
       ${drop(240, 150, 1)}
       ${T(240, 190, 'せきゆの エチレン', 'tx-s')}`,
@@ -441,7 +441,7 @@
     alt: 'ゴムとてつをくっつけるのりをつくろうとして、えんかビニルをあつくしたら、ぷるぷるはずむゼリーができた。これがやわらかいビニールのはじまり',
     svg: `
       ${T(70, 22, 'のりを つくりたい', 'tx-s')}
-      <rect class="gray" x="30" y="40" width="40" height="30" rx="4"/><rect class="ink" x="70" y="40" width="40" height="30" rx="4"/>
+      <rect class="gray" x="30" y="40" width="40" height="30" rx="4"/><rect class="coal" x="70" y="40" width="40" height="30" rx="4"/>
       ${T(50, 88, 'てつ', 'tx-s')}${T(90, 88, 'ゴム', 'tx-s')}
       <path class="glass" d="M60 110v12l-18 34h56l-18-34v-12Z"/><path class="ln" d="M60 110v12l-18 34h56l-18-34v-12Z"/>
       ${flame(62, 186)}${flame(78, 186)}

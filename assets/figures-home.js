@@ -9,27 +9,28 @@
     alt: 'えんぴつのしんは、ねんどとこくえんをまぜたもの。ねんどがおおいとH、こくえんがおおいとB',
     svg: `
       <path class="orange" d="M30 30h190l40 15-40 15H30Z"/><path class="ln" d="M30 30h190l40 15-40 15H30Z"/>
-      <path class="ink" d="M44 42h200l16 3-16 3H44Z"/>
+      <path class="coal" d="M44 42h200l16 3-16 3H44Z"/>
       <path class="ln thin" d="M220 30v30"/>
       ${T(150, 82, 'なかの くろい しん')}
       ${A('M150 70 150 52')}
       <g transform="translate(64 108)">
         ${T(-8, 21, 'エイチ', 'tx-b', 'end')}
-        <rect class="gray" x="0" y="6" width="100" height="20" rx="4"/><rect class="ink" x="100" y="6" width="50" height="20" rx="4"/>
+        <rect class="gray" x="0" y="6" width="100" height="20" rx="4"/><rect class="coal" x="100" y="6" width="50" height="20" rx="4"/>
         <rect class="ln thin" x="0" y="6" width="150" height="20" rx="4"/>
         ${T(158, 21, 'かたい・うすい', 'tx-s', 'start')}
         ${T(-8, 65, 'ビー', 'tx-b', 'end')}
-        <rect class="gray" x="0" y="50" width="50" height="20" rx="4"/><rect class="ink" x="50" y="50" width="100" height="20" rx="4"/>
+        <rect class="gray" x="0" y="50" width="50" height="20" rx="4"/><rect class="coal" x="50" y="50" width="100" height="20" rx="4"/>
         <rect class="ln thin" x="0" y="50" width="150" height="20" rx="4"/>
         ${T(158, 65, 'やわらかい・こい', 'tx-s', 'start')}
         <rect class="gray" x="0" y="82" width="12" height="12" rx="2"/>${T(18, 92, 'ねんど', 'tx-s', 'start')}
-        <rect class="ink" x="80" y="82" width="12" height="12" rx="2"/>${T(98, 92, 'こくえん', 'tx-s', 'start')}
+        <rect class="coal" x="80" y="82" width="12" height="12" rx="2"/>${T(98, 92, 'こくえん', 'tx-s', 'start')}
       </g>
       ${T(160, 236, 'ぜんぶで 17しゅるい（ジス きかく）', 'tx')}
       ${['9H', '8H', '7H', '6H', '5H', '4H', '3H', '2H', 'H', 'F', 'HB', 'B', '2B', '3B', '4B', '5B', '6B'].map((g, i) => {
         const x = 10 + i * 17.6;
-        const shade = 0.12 + i * 0.055;
-        return `<rect class="ink" x="${x}" y="250" width="16" height="26" rx="2" opacity="${shade.toFixed(2)}"/>
+        // fixed grays from light (9H) to near black (6B), the same in light and dark mode
+        const v = Math.round(0xd8 - i * (0xd8 - 0x2b) / 16).toString(16).padStart(2, '0');
+        return `<rect x="${x}" y="250" width="16" height="26" rx="2" style="fill:#${v}${v}${v}"/>
           <text class="tx-s" x="${x + 8}" y="292" text-anchor="middle" style="font-size:9px">${g}</text>`;
       }).join('')}
       ${T(10, 312, '← かたい・うすい', 'tx-s', 'start')}${T(310, 312, 'やわらかい・こい →', 'tx-s', 'end')}`,
@@ -41,14 +42,14 @@
     svg: `
       <g transform="translate(14 24)">
         <rect class="pale" x="0" y="30" width="130" height="22" rx="2"/><rect class="ln thin" x="0" y="30" width="130" height="22" rx="2"/>
-        ${Array.from({ length: 9 }, (_, i) => `<path class="bg" d="M${6 + i * 14} 30a5 5 0 0 0 10 0"/><circle class="ink" cx="${11 + i * 14}" cy="30" r="4"/>`).join('')}
+        ${Array.from({ length: 9 }, (_, i) => `<path class="bg" d="M${6 + i * 14} 30a5 5 0 0 0 10 0"/><circle class="coal" cx="${11 + i * 14}" cy="30" r="4"/>`).join('')}
         <rect class="pale" x="0" y="0" width="130" height="22" rx="2" opacity=".85"/><rect class="ln thin" x="0" y="0" width="130" height="22" rx="2"/>
         ${A('M65 -2v0')}
         ${T(65, 76, 'みぞに しんを ならべて', 'tx-s')}${T(65, 92, 'もう 1まいで はさむ', 'tx-s')}
       </g>
       ${A('M152 50h24')}
       <g transform="translate(184 30)">
-        ${Array.from({ length: 9 }, (_, i) => `<g transform="translate(${i * 14} ${i % 2 ? 6 : 0})"><path class="orange" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><path class="ln thin" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><circle class="ink" cx="6" cy="24" r="2.5"/></g>`).join('')}
+        ${Array.from({ length: 9 }, (_, i) => `<g transform="translate(${i * 14} ${i % 2 ? 6 : 0})"><path class="orange" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><path class="ln thin" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><circle class="coal" cx="6" cy="24" r="2.5"/></g>`).join('')}
         ${T(62, 82, 'けずると', 'tx-s')}${T(62, 98, '9ほん いっぺんに', 'tx')}
       </g>
       ${T(160, 160, 'いた 1まい：ながさ 185ミリ・はば 70ミリ・あつさ 5ミリ', 'tx-s')}`,
@@ -57,8 +58,8 @@
   F['pencil-materials-origin'] = {
     alt: 'えんぴつのこくえんはちゅうごく、ねんどはドイツ、きはアメリカからくる',
     svg: `
-      <path class="orange" d="M110 96h120l30 10-30 10H110Z"/><path class="ln" d="M110 96h120l30 10-30 10H110Z"/><path class="ink" d="M250 103l10 3-10 3Z"/>
-      ${[['ちゅうごく', 'こくえん', 'ink', 52, 40], ['ドイツ', 'ねんど', 'gray', 160, 26], ['アメリカ', 'き', 'brown', 268, 40]].map(([c, m, cls, x, y]) => `
+      <path class="orange" d="M110 96h120l30 10-30 10H110Z"/><path class="ln" d="M110 96h120l30 10-30 10H110Z"/><path class="coal" d="M250 103l10 3-10 3Z"/>
+      ${[['ちゅうごく', 'こくえん', 'coal', 52, 40], ['ドイツ', 'ねんど', 'gray', 160, 26], ['アメリカ', 'き', 'brown', 268, 40]].map(([c, m, cls, x, y]) => `
         <circle class="${cls}" cx="${x}" cy="${y}" r="12"/><circle class="ln thin" cx="${x}" cy="${y}" r="12"/>
         ${T(x, y + 30, c, 'tx')}${T(x, y + 46, m, 'tx-s')}`).join('')}
       ${A('M60 90 120 100')}${A('M160 74 170 92')}${A('M262 90 226 98')}
@@ -258,7 +259,7 @@
     alt: 'かがみはガラスのうらにぎんがぬってあり、ぎんがひかりをはねかえす',
     svg: `
       <rect class="glass" x="150" y="20" width="30" height="160"/><rect class="gray" x="180" y="20" width="10" height="160"/>
-      <rect class="ink" x="190" y="20" width="6" height="160"/>
+      <rect class="coal" x="190" y="20" width="6" height="160"/>
       <rect class="ln thin" x="150" y="20" width="46" height="160"/>
       <path class="ln s-yellow" d="M30 40 180 100" style="stroke-width:4"/><path class="ln s-yellow" d="M180 100 30 160" style="stroke-width:4"/>
       ${A('M60 52 100 68')}${A('M120 124 80 140')}
@@ -312,7 +313,7 @@
       ${[['1きゅう', '1まんこに 1こ', .92], ['2きゅう', '1まんこに 20こ', .78], ['3きゅう', '1まんこに 60こ', .6]].map(([n, s, o], i) => `
         <g transform="translate(${20 + i * 100} 30)">
           <rect class="yellow" x="0" y="0" width="80" height="110" rx="6"/>
-          <rect class="ink" x="0" y="0" width="80" height="110" rx="6" opacity="${o}"/>
+          <rect class="coal" x="0" y="0" width="80" height="110" rx="6" opacity="${o}"/>
           <rect class="ln" x="0" y="0" width="80" height="110" rx="6"/>
           <circle class="pale" cx="40" cy="56" r="14" opacity="${1 - o + .1}"/>
           ${T(40, 134, n, 'tx-b')}
@@ -348,8 +349,8 @@
     svg: `
       <rect class="bg" x="100" y="20" width="120" height="160" rx="14"/>
       <rect class="bg" x="120" y="44" width="80" height="112" rx="10"/>
-      <rect class="ink" x="140" y="70" width="10" height="34" rx="2"/>
-      <rect class="ink" x="172" y="74" width="10" height="26" rx="2"/>
+      <rect class="coal" x="140" y="70" width="10" height="34" rx="2"/>
+      <rect class="coal" x="172" y="74" width="10" height="26" rx="2"/>
       ${T(138, 128, 'ながい', 'tx-s')}
       ${T(190, 146, 'みじかい', 'tx-s')}
       ${T(60, 90, 'ひだり', 'tx')}
@@ -411,7 +412,7 @@
       <rect class="gray" x="150" y="20" width="16" height="160"/>
       ${T(158, 196, 'かべ', 'tx-s')}
       <g transform="translate(20 30)">
-        <rect class="ink" x="0" y="0" width="22" height="60" rx="8"/><circle class="red" cx="11" cy="8" r="4"/>
+        <rect class="coal" x="0" y="0" width="22" height="60" rx="8"/><circle class="red" cx="11" cy="8" r="4"/>
         <path class="ln s-red dash" d="M26 8h96" style="stroke-width:3"/>
         ${T(74, 30, 'みえない ひかり', 'tx-s')}
         ${T(11, 82, 'リモコン', 'tx-s')}

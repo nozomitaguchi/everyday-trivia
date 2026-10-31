@@ -138,6 +138,8 @@
     'かたち': { small: 'どうして この かたち？', kid: 'なぜ この かたち？', adult: '形のわけ' },
     'しるし': { small: 'これは なんの しるし？', kid: 'この しるしは なに？', adult: '記号の意味' },
     'ひみつ': { small: 'ひみつ', kid: 'ひみつ', adult: '小ネタ' },
+    'れきし': { small: 'むかしは どうだった？', kid: 'だれが かんがえたの？', adult: '歴史' },
+    'ことば': { small: 'なんで この なまえ？', kid: 'なまえの ひみつ', adult: '名前の由来' },
   };
   const angleLabel = a => (ANGLES[a] || { small: a, kid: a, adult: a })[level().id];
 
@@ -530,7 +532,6 @@
     const c = idx.cats.find(x => x.id === id);
     if (!c) return renderNotFound();
     document.title = `${c.name}｜みのまわり図鑑`;
-    const lv = level();
     main.innerHTML = `
       <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a></nav>
       <h1 class="cat-title cat-${c.id}">${picto(c.id)}${c.name}</h1>
@@ -540,19 +541,6 @@
           <span class="item-angles">${[...new Set(i.entries.map(e => e.angle))].map(a => `<span>${angleLabel(a)}</span>`).join('')}</span>
         </a></li>`).join('')}</ul>`
         : `<p class="empty">${say({ small: 'いま つくって いるよ。まってね。', kid: 'いま つくって いるよ。もうすこし まってね。', adult: 'この分類はまだ準備中です。' })}</p>`}`;
-
-    if (lv.heading) {
-      const label = lv.id === 'small' ? 'よみきかせ' : 'こども';
-      c.items.forEach(async i => {
-        try {
-          const mds = await Promise.all(i.entries.map(e => fetchText(`trivia/${e.slug}.md`)));
-          if (mds.some(md => md.includes(`## ${lv.heading}`))) {
-            const a = main.querySelector(`a[data-item="${i.id}"] .item-name`);
-            if (a && !a.querySelector('.kids')) a.insertAdjacentHTML('beforeend', ` <span class="kids">${label}</span>`);
-          }
-        } catch (err) { /* list still works without the badge */ }
-      });
-    }
   }
 
   // illustrations come from assets/figures-*.js: { svg, alt } keyed by slug

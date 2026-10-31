@@ -30,10 +30,11 @@ for it in items:
         t = open(f'{ROOT}/trivia/{slug}.md', encoding='utf-8').read()
         nfig += (slug in figs) + len(set(re.findall(r'\{\{fig:([a-z0-9-]+)\}\}', t)))
         history = history or bool(re.search(r'\d{4}年', t))
+    has_hist_entry = any(a == 'れきし' for a, _ in it['entries'])
     angles = sorted({a for a, _ in it['entries']})
     has_basic = any(a == 'きほん' for a, _ in it['entries'])
-    score = len(it['entries']) * 2 + nfig + has_basic * 2 + history * 2
-    rows.append((score, it, angles, nfig, has_basic, history))
+    score = len(it['entries']) * 2 + nfig + has_basic * 2 + history * 2 + has_hist_entry * 3
+    rows.append((score, it, angles, nfig, has_basic, has_hist_entry))
 
 rows.sort(key=lambda r: r[0])
 n = int(sys.argv[sys.argv.index('-n') + 1]) if '-n' in sys.argv else len(rows)

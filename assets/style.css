@@ -273,6 +273,7 @@ details.sources summary { cursor: pointer; font-weight: 700; color: var(--ink); 
 .fig .dash { stroke-dasharray: 5 5; }
 .fig .bg { fill: var(--paper); stroke: var(--ink); stroke-width: 2.5; stroke-linejoin: round; }
 .fig .ink { fill: var(--ink); }
+.fig .coal { fill: #2b2b2b; stroke: var(--steel); stroke-width: 1.5; stroke-linejoin: round; }
 .fig .white { fill: #fff; }
 .fig .gray { fill: var(--steel); }
 .fig .green { fill: #1f9d6b; }
