@@ -143,6 +143,7 @@ tags: [ジャンル, ...]
 
 #### リモコンと Wi-Fi {remote-and-wifi}
 - しくみ: [Wi-Fi、Bluetooth、赤外線の仕組み](trivia/wifi-bluetooth-infrared.md)
+- れきし: [リモコンは「ひも」から始まった、Bluetooth はバイキングの王さまの名前、電波を乗りかえる発明は女優から](trivia/remote-bluetooth-history.md)
 
 ### たべもの {food}
 
