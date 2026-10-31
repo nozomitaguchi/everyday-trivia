@@ -47,6 +47,8 @@ tags: [ジャンル, ...]
 
 #### えんぴつ {pencil}
 - なにでできてる: [鉛筆の芯は何でできているか、HとBの違い](trivia/pencil-lead.md)
+- つくりかた: [鉛筆の芯はどうやって木に入っているのか](trivia/pencil-making.md)
+- ひみつ: [鉛筆の材料はどこから来るのか](trivia/pencil-materials-origin.md)
 
 #### クレヨンと クレパス {crayon}
 - なにでできてる: [クレヨンとクレパスの違い](trivia/crayon-vs-craypas.md)

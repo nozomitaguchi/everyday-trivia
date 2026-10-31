@@ -27,6 +27,35 @@
       </g>`,
   };
 
+  F['pencil-making'] = {
+    alt: 'みぞをほったいたにしんをならべ、もう1まいのいたではさんで、けずると9ほんのえんぴつができる',
+    svg: `
+      <g transform="translate(14 24)">
+        <rect class="pale" x="0" y="30" width="130" height="22" rx="2"/><rect class="ln thin" x="0" y="30" width="130" height="22" rx="2"/>
+        ${Array.from({ length: 9 }, (_, i) => `<path class="bg" d="M${6 + i * 14} 30a5 5 0 0 0 10 0"/><circle class="ink" cx="${11 + i * 14}" cy="30" r="4"/>`).join('')}
+        <rect class="pale" x="0" y="0" width="130" height="22" rx="2" opacity=".85"/><rect class="ln thin" x="0" y="0" width="130" height="22" rx="2"/>
+        ${A('M65 -2v0')}
+        ${T(65, 76, 'みぞに しんを ならべて', 'tx-s')}${T(65, 92, 'もう 1まいで はさむ', 'tx-s')}
+      </g>
+      ${A('M152 50h24')}
+      <g transform="translate(184 30)">
+        ${Array.from({ length: 9 }, (_, i) => `<g transform="translate(${i * 14} ${i % 2 ? 6 : 0})"><path class="orange" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><path class="ln thin" d="M0 4l6-4 6 4v40l-6 4-6-4Z"/><circle class="ink" cx="6" cy="24" r="2.5"/></g>`).join('')}
+        ${T(62, 82, 'けずると', 'tx-s')}${T(62, 98, '9ほん いっぺんに', 'tx')}
+      </g>
+      ${T(160, 160, 'いた 1まい：ながさ 185ミリ・はば 70ミリ・あつさ 5ミリ', 'tx-s')}`,
+  };
+
+  F['pencil-materials-origin'] = {
+    alt: 'えんぴつのこくえんはちゅうごく、ねんどはドイツ、きはアメリカからくる',
+    svg: `
+      <path class="orange" d="M110 96h120l30 10-30 10H110Z"/><path class="ln" d="M110 96h120l30 10-30 10H110Z"/><path class="ink" d="M250 103l10 3-10 3Z"/>
+      ${[['ちゅうごく', 'こくえん', 'ink', 52, 40], ['ドイツ', 'ねんど', 'gray', 160, 26], ['アメリカ', 'き', 'brown', 268, 40]].map(([c, m, cls, x, y]) => `
+        <circle class="${cls}" cx="${x}" cy="${y}" r="12"/><circle class="ln thin" cx="${x}" cy="${y}" r="12"/>
+        ${T(x, y + 30, c, 'tx')}${T(x, y + 46, m, 'tx-s')}`).join('')}
+      ${A('M60 90 120 100')}${A('M160 74 170 92')}${A('M262 90 226 98')}
+      ${T(160, 160, 'こくえんは ダイヤモンドと おなじ たんその なかま', 'tx-s')}`,
+  };
+
   F['crayon-vs-craypas'] = {
     alt: 'クレヨンはかたくてほそいせん、クレパスはやわらかくてひろくぬれる',
     svg: `
