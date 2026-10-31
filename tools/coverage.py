@@ -25,19 +25,22 @@ for line in readme.splitlines():
 rows = []
 for it in items:
     nfig = 0
+    npoints = 0
     history = False
     for _, slug in it['entries']:
         t = open(f'{ROOT}/trivia/{slug}.md', encoding='utf-8').read()
         nfig += (slug in figs) + len(set(re.findall(r'\{\{fig:([a-z0-9-]+)\}\}', t)))
+        adult = t.split('## 3〜5歳むけ')[0]
+        npoints += len(re.findall(r'^\s*(?:[-*]|\d+\.)\s', adult, re.M)) + len(re.findall(r'^\|[^-|]', adult, re.M))
         history = history or bool(re.search(r'\d{4}年', t))
     has_hist_entry = any(a == 'れきし' for a, _ in it['entries'])
     angles = sorted({a for a, _ in it['entries']})
     has_basic = any(a == 'きほん' for a, _ in it['entries'])
-    score = len(it['entries']) * 2 + nfig + has_basic * 2 + history * 2 + has_hist_entry * 3
-    rows.append((score, it, angles, nfig, has_basic, has_hist_entry))
+    score = len(it['entries']) * 2 + nfig - max(0, npoints - nfig) // 2 + has_basic * 2 + history * 2 + has_hist_entry * 3
+    rows.append((score, it, angles, nfig, has_basic, has_hist_entry, npoints))
 
 rows.sort(key=lambda r: r[0])
 n = int(sys.argv[sys.argv.index('-n') + 1]) if '-n' in sys.argv else len(rows)
-print('score  item  entries  figs  basic  history  angles')
-for score, it, angles, nfig, basic, hist in rows[:n]:
-    print(f"{score:>4}  {it['name']} ({it['slug']})  {len(it['entries'])}  {nfig}  {'o' if basic else '-'}  {'o' if hist else '-'}  {' '.join(angles)}")
+print('score  item  entries  figs/points  basic  history  angles')
+for score, it, angles, nfig, basic, hist, pts in rows[:n]:
+    print(f"{score:>4}  {it['name']} ({it['slug']})  {len(it['entries'])}  {nfig}/{pts}  {'o' if basic else '-'}  {'o' if hist else '-'}  {' '.join(angles)}")
