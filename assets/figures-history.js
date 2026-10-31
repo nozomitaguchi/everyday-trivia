@@ -73,6 +73,111 @@
     { y: '1967', t: 'おわると「チン」', c: 'orange' },
   ], 'でんしレンジのれきし。1945ねんにチョコがとけて、1946ねんにさいしょのでんしレンジ、1961ねんににほんでもうりはじめ、1966ねんにまわるおさら、1967ねんにチンがついた');
 
+  // ---------- マヨネーズ・ケチャップ ----------
+  F['mayo-mahon'] = {
+    alt: 'スペインのメノルカとうにあるマオンというまちのなまえから、マヨネーズというなまえがついたといわれている',
+    svg: `
+      <path class="blue" d="M0 0h320v200H0Z" opacity=".25"/>
+      <path class="green" d="M60 120c10-30 60-50 110-40s70 10 90 30-20 40-80 36-130 4-120-26Z"/>
+      <path class="ln thin" d="M60 120c10-30 60-50 110-40s70 10 90 30-20 40-80 36-130 4-120-26Z"/>
+      <circle class="red" cx="232" cy="112" r="6"/>
+      ${T(232, 96, 'マオン', 'tx-b')}
+      ${T(150, 40, 'スペインの メノルカとう', 'tx')}
+      ${A('M232 130v28')}
+      <path class="pale" d="M210 170h44l-4 22h-36Z"/><path class="ln thin" d="M210 170h44l-4 22h-36Z"/>
+      ${T(170, 186, 'マヨネーズ', 'tx', 'end')}`,
+  };
+
+  F['mayo-yolk-white'] = {
+    alt: 'にほんのマヨネーズはたまごのきみだけをつかう。のこったしろみはびんにつめてうっていた',
+    svg: `
+      <ellipse class="white" cx="70" cy="90" rx="50" ry="40"/><ellipse class="ln thin" cx="70" cy="90" rx="50" ry="40"/>
+      <circle class="yellow" cx="70" cy="90" r="20"/>
+      ${T(70, 152, 'たまご', 'tx-s')}
+      ${A('M92 76l58-26')}${A('M100 110l50 30')}
+      <path class="pale" d="M170 30h40l-4 40h-32Z"/><path class="ln thin" d="M170 30h40l-4 40h-32Z"/><circle class="yellow" cx="190" cy="50" r="8"/>
+      ${T(222, 46, 'きみ', 'tx-s', 'start')}${T(222, 62, '→ マヨネーズ', 'tx-s', 'start')}
+      <path class="glass" d="M178 120h14v10l8 8v50h-30v-50l8-8Z"/><path class="ln thin" d="M178 120h14v10l8 8v50h-30v-50l8-8Z"/>
+      ${T(214, 156, 'しろみ', 'tx-s', 'start')}${T(214, 172, '→ びんで うる', 'tx-s', 'start')}`,
+  };
+
+  F['mayonnaise-history'] = timeline([
+    { y: '1756', t: 'マオンの まちで うまれた', t2: '（と いわれる）' },
+    { y: '1910ねんだい', t: 'なかしまさんが アメリカで', t2: 'マヨネーズに であう' },
+    { y: '1922', t: 'キユーピーの マークを きめる' },
+    { y: '1925', t: 'にほんで うりだす', t2: '（きみだけで つくる）', c: 'orange' },
+  ], 'マヨネーズのれきし。1756ねんごろマオンのまちでうまれたといわれ、1925ねんににほんでうりだされた');
+
+  F['ketchup-fish-to-tomato'] = {
+    alt: 'ケチャップはちゅうごくのさかなのソースから、イギリスでキノコやクルミのソース、アメリカでトマトのソースになった',
+    svg: `
+      ${[
+        { x: 52, place: 'ちゅうごく', what: 'さかな' },
+        { x: 160, place: 'イギリス', what: 'キノコ・クルミ' },
+        { x: 268, place: 'アメリカ', what: 'トマト' },
+      ].map((s, i) => `
+        ${T(s.x, 30, s.place, 'tx')}
+        ${i === 0 ? `<path class="blue" d="M${s.x - 26} 90c10-20 40-20 50 0-10 20-40 20-50 0Z"/><path class="blue" d="M${s.x + 22} 90l12-10v20Z"/><circle class="coal" cx="${s.x - 14}" cy="86" r="3"/>` : ''}
+        ${i === 1 ? `<path class="brown" d="M${s.x - 26} 92a14 12 0 0 1 28 0Z"/><rect class="pale" x="${s.x - 16}" y="92" width="8" height="14"/><circle class="brown" cx="${s.x + 16}" cy="96" r="10"/><path class="ln thin" d="M${s.x + 16} 86v20"/>` : ''}
+        ${i === 2 ? `<circle class="red" cx="${s.x}" cy="94" r="20"/><path class="green" d="M${s.x - 8} 76l8 4 8-4-4 8h-8Z"/>` : ''}
+        ${T(s.x, 140, s.what, 'tx-s')}
+        ${i < 2 ? A(`M${s.x + 36} 94h34`) : ''}`).join('')}
+      ${T(160, 180, 'ぜんぶ「ケチャップ」と よばれた', 'tx-s')}`,
+  };
+
+  F['ketchup-history'] = timeline([
+    { y: 'むかし', t: 'ちゅうごくの さかなの ソース' },
+    { y: '1700ねんだい', t: 'イギリスで キノコや クルミの', t2: 'ケチャップ' },
+    { y: '1812', t: 'アメリカで トマトの ケチャップの', t2: 'つくりかたが ほんに のる', c: 'orange' },
+    { y: '1876', t: 'ハインツが うりだす' },
+    { y: '1899', t: 'かにえさんが トマトを そだてる', t2: '（でも うれない）' },
+    { y: '1908', t: 'にほんで ケチャップを', t2: 'つくりはじめる', c: 'orange' },
+  ], 'ケチャップのれきし。ちゅうごくのさかなのソースから、イギリス、アメリカをへてトマトのケチャップになり、1908ねんににほんでもつくりはじめた');
+
+  // ---------- エレベーター ----------
+  const rack = (x) => `<rect class="gray" x="${x}" y="20" width="10" height="160"/>` +
+    Array.from({ length: 15 }, (_, k) => `<path class="ln thin" d="M${x + (x < 160 ? 10 : 0)} ${26 + k * 10}l${x < 160 ? 6 : -6} 5-${x < 160 ? 6 : -6} 5"/>`).join('');
+  F['otis-safety-catch'] = {
+    alt: 'ロープでひっぱられているあいだはばねがとじている。ロープがきれるとばねがひらいて、りょうがわのギザギザのぼうにひっかかり、とまる',
+    svg: `
+      ${[{ x: 0, cut: false, label: 'ふだん' }, { x: 160, cut: true, label: 'ロープが きれると' }].map(s => `
+        <g transform="translate(${s.x} 0)">
+          ${T(80, 14, s.label, 'tx-s')}
+          ${rack(14)}${rack(136)}
+          ${s.cut ? '<path class="ln" d="M80 20v20M80 52v10"/><path class="ln thin s-red" d="M72 44l16 4"/>' : '<path class="ln" d="M80 20v52"/>'}
+          ${s.cut
+            ? '<path class="ln s-red" d="M80 74 L28 84 M80 74 L132 84" style="stroke-width:4"/>'
+            : '<path class="ln s-blue" d="M80 72 C60 74 50 80 44 84 M80 72 C100 74 110 80 116 84" style="stroke-width:4"/>'}
+          <rect class="pale" x="34" y="84" width="92" height="70" rx="4"/><rect class="ln thin" x="34" y="84" width="92" height="70" rx="4"/>
+          ${T(80, 124, s.cut ? 'とまる！' : 'のぼる', 'tx-k')}
+          ${s.cut ? '' : A('M80 160v20')}
+        </g>`).join('')}
+      ${T(160, 196, 'りょうがわの ギザギザに ひっかかる', 'tx-s')}`,
+  };
+
+  F['otis-demo'] = {
+    alt: 'オーチスはたかくあがったエレベーターにのって、ロープをきらせた。エレベーターはおちずにとまった',
+    svg: `
+      <path class="ln thin" d="M100 10v170M180 10v170"/>
+      <path class="ln" d="M140 10v26"/><path class="ln thin s-red" d="M130 40l20 4"/>
+      <path class="ln" d="M140 48v10"/>
+      <rect class="pale" x="104" y="58" width="72" height="12"/><rect class="ln thin" x="104" y="58" width="72" height="12"/>
+      <circle class="pale" cx="140" cy="32" r="0"/>
+      <g transform="translate(140 58)"><circle class="pale" cx="0" cy="-30" r="8"/><circle class="ln thin" cx="0" cy="-30" r="8"/><path class="ln thin" d="M0 -22v14M0 -18l-10-6M0 -18l10-6M0 -8l-6 8M0 -8l6 8"/></g>
+      ${T(232, 50, 'ロープを きれ！', 'tx-s')}
+      ${T(232, 74, 'でも おちない', 'tx')}
+      ${[40, 60, 220, 250, 280].map((x, i) => `<g transform="translate(${x} 184)"><circle class="gray" cx="0" cy="-22" r="7"/><path class="gray" d="M-8 -14h16v14h-16Z"/></g>`).join('')}
+      ${T(50, 140, 'わあ！', 'tx-s')}${T(260, 140, 'すごい！', 'tx-s')}`,
+  };
+
+  F['elevator-history'] = timeline([
+    { y: '1830ねんだい', t: 'ひとが のる エレベーター', t2: '（でも ロープが きれる）' },
+    { y: '1854', t: 'オーチスが ロープを きって', t2: 'みせる', c: 'orange' },
+    { y: '1857', t: 'おみせに あんぜんな', t2: 'エレベーターが つく' },
+    { y: '1890', t: 'にほん はじめての でんきの', t2: 'エレベーター（あさくさ）', c: 'orange' },
+    { y: '1923', t: 'じしんで とうが こわれる' },
+  ], 'エレベーターのれきし。1854ねんにオーチスがロープをきってもおちないところをみせ、1890ねんににほんではじめてのでんきのエレベーターがあさくさについた');
+
   // ---------- えんぴつ ----------
   F['pencil-history'] = timeline([
     { y: '1564', t: 'イギリスで まっくろな いしが', t2: 'みつかる' },

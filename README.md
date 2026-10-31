@@ -135,9 +135,11 @@ tags: [ジャンル, ...]
 
 #### マヨネーズ {mayonnaise}
 - なにでできてる: [マヨネーズは何でできているか](trivia/mayonnaise-emulsion.md)
+- れきし: [マヨネーズの名前は島の町から、日本のマヨネーズはなぜ卵黄だけ](trivia/mayonnaise-history.md)
 
 #### ケチャップ {ketchup}
 - つくりかた: [ケチャップはどうやって作るか](trivia/ketchup-making.md)
+- れきし: [ケチャップはもともと魚のソース、日本のケチャップは売れないトマトから](trivia/ketchup-history.md)
 
 #### とうふ {tofu}
 - きほん: [豆腐とは何か、木綿と絹ごしの違い（そもそも）](trivia/tofu-basics.md)
@@ -149,6 +151,7 @@ tags: [ジャンル, ...]
 - きほん: [エレベーターはどうやって動くのか](trivia/elevator-basics.md)
 - しくみ: [エレベーターの一次消防・二次消防の鍵穴](trivia/elevator-fire-service-keyswitch.md)
 - かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
+- れきし: [エレベーターを「乗れるもの」にしたのは、ロープが切れても落ちないしかけ](trivia/elevator-history.md)
 
 #### エスカレーター {escalator}
 - きほん: [エスカレーターはどうやって動くのか](trivia/escalator-basics.md)
