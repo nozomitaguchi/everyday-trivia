@@ -77,6 +77,12 @@ tags: [ジャンル, ...]
 #### でんしレンジ {microwave}
 - しくみ: [電子レンジはどうやって温めるのか](trivia/microwave-oven.md)
 
+#### しゃしん {photo}
+- しくみ: [写真はどうやって撮れるのか](trivia/photo-digital-camera.md)
+
+#### ふとん {futon}
+- しくみ: [ふとんはなぜあたたかいのか](trivia/futon-warmth.md)
+
 #### かがみ {mirror}
 - なにでできてる: [鏡は何でできているか](trivia/mirror-silver.md)
 - しくみ: [お風呂の鏡がくもるのはなぜか](trivia/mirror-fog.md)
@@ -185,6 +191,24 @@ tags: [ジャンル, ...]
 - かたち: [月の形が毎日変わる理由](trivia/moon-phases.md)
 
 ### からだ {body}
+
+#### うんち {digestion}
+- しくみ: [ごはんがうんちになるまで](trivia/digestion-to-poop.md)
+
+#### つめと かみ {nails-and-hair}
+- しくみ: [つめと髪はなぜのびるのか](trivia/nails-and-hair-grow.md)
+
+#### せの たかさ {height}
+- しくみ: [背はどうやってのびるのか](trivia/growing-taller.md)
+
+#### からだの あぶら {body-fat}
+- しくみ: [人はどうやって太るのか](trivia/body-fat-energy.md)
+
+#### め {eyes}
+- しくみ: [目が悪くなる（近視になる）仕組み](trivia/myopia.md)
+
+#### かぜ {cold}
+- しくみ: [かぜをひくと体の中で何が起きているか](trivia/common-cold.md)
 
 #### かさぶた {scab}
 - しくみ: [かさぶたができる仕組み](trivia/scab.md)
