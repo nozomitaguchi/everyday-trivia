@@ -96,19 +96,40 @@
     return cache.get(path);
   }
 
-  async function loadIndex() {
-    const md = await fetchText('README.md');
-    const list = md.split(/^## 一覧\s*$/m)[1] || '';
-    const genres = [];
-    let current = null;
-    for (const line of list.split('\n')) {
-      const g = line.match(/^###\s+(.+)$/);
-      if (g) { current = { name: g[1].trim(), entries: [] }; genres.push(current); continue; }
-      const e = line.match(/^-\s+\[(.+?)\]\(trivia\/([a-z0-9-]+)\.md\)/);
-      if (e && current) current.entries.push({ title: e[1], slug: e[2] });
-    }
-    return genres;
+  // README "## 一覧": ### category {id} / #### item {id} / - angle: [title](trivia/slug.md)
+  let indexPromise = null;
+  function loadIndex() {
+    if (!indexPromise) indexPromise = fetchText('README.md').then(md => {
+      const list = md.split(/^## 一覧\s*$/m)[1] || '';
+      const cats = [];
+      let cat = null;
+      let item = null;
+      for (const line of list.split('\n')) {
+        const c = line.match(/^###\s+(.+?)\s*\{([a-z0-9-]+)\}\s*$/);
+        if (c) { cat = { name: c[1], id: c[2], items: [] }; cats.push(cat); item = null; continue; }
+        const it = line.match(/^####\s+(.+?)\s*\{([a-z0-9-]+)\}\s*$/);
+        if (it && cat) { item = { name: it[1], id: it[2], cat, entries: [] }; cat.items.push(item); continue; }
+        const e = line.match(/^-\s+(\S+?):\s*\[(.+?)\]\(trivia\/([a-z0-9-]+)\.md\)/);
+        if (e && item) item.entries.push({ angle: e[1], title: e[2], slug: e[3], item });
+      }
+      const items = new Map();
+      const bySlug = new Map();
+      cats.forEach(c => c.items.forEach(i => { items.set(i.id, i); i.entries.forEach(e => bySlug.set(e.slug, e)); }));
+      return { cats, items, bySlug };
+    });
+    return indexPromise;
   }
+
+  // angle keys used in README, with how each reader level sees them
+  const ANGLES = {
+    'なにでできてる': { small: 'なにで できてる？', kid: 'なにで できてる？', adult: '素材' },
+    'つくりかた': { small: 'どうやって つくる？', kid: 'どうやって つくる？', adult: '作り方' },
+    'しくみ': { small: 'どうなってるの？', kid: 'どんな しくみ？', adult: '仕組み' },
+    'かたち': { small: 'どうして この かたち？', kid: 'なぜ この かたち？', adult: '形のわけ' },
+    'しるし': { small: 'これ なあに？', kid: 'この しるしは なに？', adult: '記号の意味' },
+    'ひみつ': { small: 'ひみつ', kid: 'ひみつ', adult: '小ネタ' },
+  };
+  const angleLabel = a => (ANGLES[a] || { small: a, kid: a, adult: a })[level().id];
 
   function parseEntry(md) {
     let meta = {};
@@ -133,7 +154,7 @@
   function fixPaths(md) {
     return md
       .replace(/\]\(\.\.\/images\//g, '](images/')
-      .replace(/\]\(([a-z0-9-]+)\.md\)/g, '](#/$1)');
+      .replace(/\]\(([a-z0-9-]+)\.md\)/g, '](#/t/$1)');
   }
 
   // Minimal Markdown renderer for the subset used in trivia/*.md.
@@ -272,7 +293,85 @@
     },
   };
 
+  // ---- moon phase widget ----
+  const MOON_STEPS = [
+    { day: 0, small: 'しんげつ。みえないよ', kid: 'しんげつ。おひさまと おなじ ほうこうで、みえない', adult: '新月（見えない）' },
+    { day: 3, small: 'みかづき', kid: 'みかづき', adult: '三日月（約3日）' },
+    { day: 7, small: 'はんぶんの つき', kid: 'はんげつ（じょうげんの つき）', adult: '上弦の月（約7日）' },
+    { day: 11, small: 'ふくらんだ つき', kid: 'まんまるに ちかい つき', adult: '十日余りの月（約11日）' },
+    { day: 15, small: 'まんまる！', kid: 'まんげつ。おひさまの はんたいがわ', adult: '満月（約15日）' },
+    { day: 18, small: 'すこし かけた つき', kid: 'かけはじめた つき', adult: '欠け始めの月（約18日）' },
+    { day: 22, small: 'はんぶんの つき', kid: 'はんげつ（かげんの つき）', adult: '下弦の月（約22日）' },
+    { day: 26, small: 'ほそい つき', kid: 'ほそい つき', adult: '細い月（約26日）' },
+  ];
+  const CYCLE = 29.53;
+
+  function moonDiskPath(p, r) {
+    // lit part of the moon as seen from Earth (northern hemisphere), p = 0..1 of the cycle
+    const k = Math.cos(2 * Math.PI * p);
+    const rx = Math.abs(k * r).toFixed(2);
+    if (p < 0.5) {
+      // waxing: right edge lit; terminator bulges right while crescent, left once gibbous
+      return `M0 ${-r} A${r} ${r} 0 0 1 0 ${r} A${rx} ${r} 0 0 ${k > 0 ? 0 : 1} 0 ${-r}Z`;
+    }
+    return `M0 ${-r} A${r} ${r} 0 0 0 0 ${r} A${rx} ${r} 0 0 ${k > 0 ? 1 : 0} 0 ${-r}Z`;
+  }
+
+  function renderMoon(mount) {
+    const lv = level().id;
+    const wrap = document.createElement('section');
+    wrap.className = 'diagram';
+    const title = { small: 'おつきさまを うごかして みよう', kid: 'おつきさまを うごかして みよう', adult: '月を動かしてみる' }[lv];
+    wrap.setAttribute('aria-label', title);
+    wrap.innerHTML = `<p class="diagram-title">${title}</p>
+      <div class="moon-row">
+        <figure class="moon-fig"><svg class="moon-orbit" viewBox="-100 -80 230 160" role="img"></svg>
+          <figcaption>${{ small: 'うえから みた ところ', kid: 'うえから みた ところ', adult: '北の上空から見た位置' }[lv]}</figcaption></figure>
+        <figure class="moon-fig"><svg class="moon-look" viewBox="-60 -60 120 120" role="img"></svg>
+          <figcaption>${{ small: 'ちきゅうから みた ところ', kid: 'ちきゅうから みた ところ', adult: '地球から見た形' }[lv]}</figcaption></figure>
+      </div>
+      <div class="turn">
+        <button type="button" data-d="-1">${{ small: 'もどる', kid: 'まえの ひ', adult: '前へ' }[lv]}</button>
+        <button type="button" data-d="1">${{ small: 'すすむ', kid: 'つぎの ひ', adult: '次へ' }[lv]}</button>
+      </div>
+      <p class="status" aria-live="polite"></p>`;
+    let i = 0;
+    const orbit = wrap.querySelector('.moon-orbit');
+    const look = wrap.querySelector('.moon-look');
+    const status = wrap.querySelector('.status');
+    function draw() {
+      const s = MOON_STEPS[i];
+      const p = s.day / CYCLE;
+      const th = 2 * Math.PI * p;
+      const R = 52;
+      const mx = (Math.cos(th) * R).toFixed(1);
+      const my = (-Math.sin(th) * R).toFixed(1);
+      const sunLabel = { small: 'おひさま', kid: 'おひさま', adult: '太陽の光' }[lv];
+      orbit.setAttribute('aria-label', `${s[lv]}`);
+      orbit.innerHTML = `
+        <g class="sunrays">${[-36, -12, 12, 36].map(y => `<line x1="128" y1="${y}" x2="84" y2="${y}"/>`).join('')}</g>
+        <text class="sun-label" x="106" y="-50" text-anchor="middle">${sunLabel}</text>
+        <circle class="orbit" r="${R}"/>
+        <circle class="earth" r="13"/>
+        <g transform="translate(${mx} ${my})">
+          <circle class="moon-dark" r="9"/>
+          <path class="moon-lit" d="M0 -9 A9 9 0 0 1 0 9Z"/>
+        </g>`;
+      look.setAttribute('aria-label', `${s[lv]}`);
+      look.innerHTML = `<circle class="moon-dark" r="48"/>${s.day === 0 ? '' : `<path class="moon-lit" d="${moonDiskPath(p, 48)}"/>`}`;
+      const dayLine = { small: '', kid: `しんげつから ${s.day}にちめ`, adult: `新月から${s.day}日目` }[lv];
+      status.innerHTML = `<strong>${s[lv]}</strong>${dayLine ? `<br>${dayLine}` : ''}`;
+    }
+    wrap.querySelectorAll('.turn button').forEach(b => b.addEventListener('click', () => {
+      i = (i + Number(b.dataset.d) + MOON_STEPS.length) % MOON_STEPS.length;
+      draw();
+    }));
+    draw();
+    mount.appendChild(wrap);
+  }
+
   function renderWidget(slug, mount) {
+    if (slug === 'moon-phases') return renderMoon(mount);
     const def = WIDGETS[slug];
     if (!def) return;
     const wrap = document.createElement('section');
@@ -384,69 +483,128 @@
   // ---------- views ----------
   const main = document.getElementById('main');
 
+  const PICTO = {
+    home: '<path d="M8 23 24 9l16 14"/><path d="M12 20v19h24V20"/><path d="M21 39V29h6v10"/>',
+    town: '<rect x="8" y="16" width="14" height="23" rx="1"/><rect x="26" y="8" width="14" height="31" rx="1"/><path d="M12 22h6M12 28h6M30 14h6M30 20h6M30 26h6M30 32h6"/>',
+    vehicles: '<rect x="11" y="7" width="26" height="28" rx="6"/><path d="M11 22h26"/><rect x="15" y="11" width="18" height="7" rx="2"/><circle cx="17" cy="28" r="2"/><circle cx="31" cy="28" r="2"/><path d="M15 35l-4 6M33 35l4 6"/>',
+    'living-things': '<ellipse cx="24" cy="27" rx="8" ry="11"/><circle cx="24" cy="12" r="4"/><path d="M16 22l-7-4M16 28H8M16 34l-7 4M32 22l7-4M32 28h8M32 34l7 4M22 9l-3-4M26 9l3-4"/>',
+    sky: '<path d="M30 8a14 14 0 1 0 10 22A11 11 0 0 1 30 8Z"/><path d="M12 10v6M9 13h6"/>',
+    body: '<circle cx="24" cy="10" r="5"/><path d="M14 20h20M24 18v12M24 30l-7 11M24 30l7 11M14 20l-4 10M34 20l4 10"/>',
+  };
+  const picto = id => `<svg class="picto" viewBox="0 0 48 48" aria-hidden="true">${PICTO[id] || '<circle cx="24" cy="24" r="14"/>'}</svg>`;
+
+  const say = o => o[level().id];
+
   async function renderHome() {
     document.title = 'アハ図鑑';
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
-    let genres;
-    try { genres = await loadIndex(); } catch (e) { return showError(e); }
-    const lv = level();
-    const parts = genres.map(g => `
-      <section class="genre">
-        <h2>${g.name}</h2>
-        <ul class="entries">${g.entries.map(e => `<li><a href="#/${e.slug}" data-slug="${e.slug}"><span>${e.title}</span></a></li>`).join('')}</ul>
-      </section>`);
-    main.innerHTML = parts.join('');
+    let idx;
+    try { idx = await loadIndex(); } catch (e) { return showError(e); }
+    main.innerHTML = `<ul class="cats">${idx.cats.map(c => {
+      const n = c.items.reduce((s, i) => s + i.entries.length, 0);
+      const count = n
+        ? say({ small: `${c.items.length}こ`, kid: `${c.items.length}こ`, adult: `${c.items.length}種・${n}話` })
+        : say({ small: 'じゅんびちゅう', kid: 'じゅんびちゅう', adult: '準備中' });
+      return `<li><a class="cat cat-${c.id}${n ? '' : ' is-empty'}" href="#/c/${c.id}">
+        ${picto(c.id)}<span class="cat-name">${c.name}</span><span class="cat-count">${count}</span></a></li>`;
+    }).join('')}</ul>`;
+  }
 
-    // mark entries that have an explanation for the current reader
+  async function renderCategory(id) {
+    let idx;
+    try { idx = await loadIndex(); } catch (e) { return showError(e); }
+    const c = idx.cats.find(x => x.id === id);
+    if (!c) return renderNotFound();
+    document.title = `${c.name}｜アハ図鑑`;
+    const lv = level();
+    main.innerHTML = `
+      <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a></nav>
+      <h1 class="cat-title cat-${c.id}">${picto(c.id)}${c.name}</h1>
+      ${c.items.length ? `<ul class="items">${c.items.map(i => `
+        <li><a href="#/i/${i.id}" data-item="${i.id}">
+          <span class="item-name">${i.name}</span>
+          <span class="item-angles">${[...new Set(i.entries.map(e => e.angle))].map(a => `<span>${angleLabel(a)}</span>`).join('')}</span>
+        </a></li>`).join('')}</ul>`
+        : `<p class="empty">${say({ small: 'いま つくって いるよ。まってね。', kid: 'いま つくって いるよ。もうすこし まってね。', adult: 'この分類はまだ準備中です。' })}</p>`}`;
+
     if (lv.heading) {
       const label = lv.id === 'small' ? 'よみきかせ' : 'こども';
-      genres.flatMap(g => g.entries).forEach(async e => {
+      c.items.forEach(async i => {
         try {
-          const md = await fetchText(`trivia/${e.slug}.md`);
-          if (md.includes(`## ${lv.heading}`)) {
-            const a = main.querySelector(`a[data-slug="${e.slug}"]`);
-            if (a && !a.querySelector('.kids')) a.insertAdjacentHTML('beforeend', `<span class="kids">${label}</span>`);
+          const mds = await Promise.all(i.entries.map(e => fetchText(`trivia/${e.slug}.md`)));
+          if (mds.some(md => md.includes(`## ${lv.heading}`))) {
+            const a = main.querySelector(`a[data-item="${i.id}"] .item-name`);
+            if (a && !a.querySelector('.kids')) a.insertAdjacentHTML('beforeend', ` <span class="kids">${label}</span>`);
           }
         } catch (err) { /* list still works without the badge */ }
       });
     }
   }
 
-  async function renderEntry(slug) {
-    main.innerHTML = '<p class="empty">よみこみ中…</p>';
-    let md;
-    try { md = await fetchText(`trivia/${slug}.md`); } catch (e) { return showError(e); }
+  function entryHtml(e, md, solo) {
     const { meta, sections } = parseEntry(md);
     const lv = level();
     const kidSection = lv.heading && sections.find(s => s.heading === lv.heading);
     const sources = sections.find(s => s.heading === '出典');
     const adultSections = sections.filter(s => s.heading !== '出典' && !KID_HEADINGS.includes(s.heading));
-
     let note = '';
     let bodyMd;
     if (kidSection) {
       bodyMd = kidSection.text;
-      if (lv.id === 'small') note = 'おとなの ひとが よんで あげてね。';
     } else {
-      bodyMd = adultSections.map(s => `## ${s.heading}\n\n${s.text}`).join('\n\n');
+      bodyMd = adultSections.map(s => `### ${s.heading}\n\n${s.text}`).join('\n\n');
       if (lv.heading) note = lv.id === 'small'
         ? 'この おはなしは まだ おとな むけしか ないよ。おとなの ひとが かみくだいて よんで あげてね。'
         : 'この おはなしは まだ おとな むけしか ないよ。';
     }
-
-    const title = meta.title || slug;
-    document.title = `${title}｜アハ図鑑`;
+    const title = meta.title || e.title;
+    // kids get the kid title from frontmatter (kidtitle); without one, the angle badge is the heading
+    const heading = lv.id === 'adult' || !kidSection ? title : (meta.kidtitle || '');
     const showSources = sources && (lv.id === 'adult' || !kidSection);
-    main.innerHTML = `
-      <a class="back" href="#/">${lv.id === 'adult' ? 'いちらんへ戻る' : 'いちらんへ もどる'}</a>
-      <article class="entry level-${kidSection ? lv.id : 'adult'}">
-        <h1>${title}</h1>
+    const H = solo ? 'h1' : 'h2';
+    return `
+      <article class="trivia level-${kidSection ? lv.id : 'adult'}" id="t-${e.slug}">
+        <p class="angle">${angleLabel(e.angle)}</p>
+        ${heading ? `<${H} class="trivia-title">${heading}</${H}>` : ''}
         ${note ? `<p class="level-note">${note}</p>` : ''}
-        <div class="widget-mount"></div>
         <div class="body">${toHtml(bodyMd)}</div>
-        ${showSources ? `<section class="sources"><h2>出典</h2>${toHtml(sources.text)}</section>` : ''}
+        <div class="widget-mount" data-slug="${e.slug}"></div>
+        ${showSources ? `<details class="sources"${lv.id === 'adult' ? ' open' : ''}><summary>出典</summary>${toHtml(sources.text)}</details>` : ''}
       </article>`;
-    renderWidget(slug, main.querySelector('.widget-mount'));
+  }
+
+  async function renderItem(id, focusSlug) {
+    let idx;
+    try { idx = await loadIndex(); } catch (e) { return showError(e); }
+    const it = idx.items.get(id);
+    if (!it) return renderNotFound();
+    document.title = `${it.name}｜アハ図鑑`;
+    main.innerHTML = '<p class="empty">よみこみ中…</p>';
+    let mds;
+    try { mds = await Promise.all(it.entries.map(e => fetchText(`trivia/${e.slug}.md`))); } catch (e) { return showError(e); }
+    const lv = level();
+    main.innerHTML = `
+      <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a><span aria-hidden="true">›</span><a href="#/c/${it.cat.id}">${it.cat.name}</a></nav>
+      <h1 class="item-title">${it.name}</h1>
+      ${lv.id === 'small' ? '<p class="level-note">おとなの ひとが よんで あげてね。</p>' : ''}
+      ${it.entries.map((e, i) => entryHtml(e, mds[i], false)).join('')}`;
+    main.querySelectorAll('.widget-mount').forEach(m => renderWidget(m.dataset.slug, m));
+    if (focusSlug) {
+      const el = document.getElementById(`t-${focusSlug}`);
+      if (el) el.scrollIntoView();
+    }
+  }
+
+  async function renderTrivia(slug) {
+    let idx;
+    try { idx = await loadIndex(); } catch (e) { return showError(e); }
+    const e = idx.bySlug.get(slug);
+    if (!e) return renderNotFound();
+    return renderItem(e.item.id, slug);
+  }
+
+  function renderNotFound() {
+    main.innerHTML = `<p class="empty">${say({ small: 'この ページは ないみたい。', kid: 'この ページは みつからなかったよ。', adult: 'このページは見つかりませんでした。' })} <a href="#/">${say({ small: 'さいしょに もどる', kid: 'さいしょに もどる', adult: 'トップへ' })}</a></p>`;
   }
 
   function showError(e) {
@@ -459,8 +617,13 @@
     const path = location.hash.replace(/^#\/?/, '');
     const changed = path !== lastPath;
     lastPath = path;
-    if (!path) renderHome(); else renderEntry(path);
-    if (changed) { window.scrollTo(0, 0); }
+    const [kind, id] = path.split('/');
+    if (!path) renderHome();
+    else if (kind === 'c') renderCategory(id);
+    else if (kind === 'i') renderItem(id);
+    else if (kind === 't') renderTrivia(id);
+    else renderTrivia(kind); // links from before the zukan layout: #/<slug>
+    if (changed && kind !== 't') window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', () => { route(); main.focus({ preventScroll: true }); });
   route();

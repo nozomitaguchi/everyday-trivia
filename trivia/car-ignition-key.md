@@ -1,5 +1,6 @@
 ---
 title: 車のキーのSTART位置と抜ける位置
+kidtitle: くるまの かぎの ひみつ
 tags: [自動車, UI設計]
 ---
 

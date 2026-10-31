@@ -1,5 +1,6 @@
 ---
 title: Wi-Fi、Bluetooth、赤外線の仕組み
+kidtitle: リモコンは どうやって つたえるの？
 tags: [通信, 仕組み, IT]
 ---
 
