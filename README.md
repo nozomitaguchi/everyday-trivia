@@ -97,6 +97,7 @@ tags: [ジャンル, ...]
 
 #### ばんそうこう {bandage}
 - しくみ: [ふつうの絆創膏とキズパワーパッドの違い](trivia/bandage-vs-hydrocolloid.md)
+- れきし: [ばんそうこうは、台所でよくけがをする奥さんのために生まれた](trivia/bandage-history.md)
 
 #### でんしレンジ {microwave}
 - しくみ: [電子レンジはどうやって温めるのか](trivia/microwave-oven.md)
