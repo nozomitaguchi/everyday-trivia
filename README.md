@@ -71,7 +71,12 @@ tags: [ジャンル, ...]
 - なにでできてる: [メラミンカップとは何か](trivia/melamine-cup.md)
 
 #### はみがきこ {toothpaste}
-- なにでできてる: [歯みがき粉は何でできているか](trivia/toothpaste-ingredients.md)
+- きほん: [歯みがき粉とは何か、何をしているのか（そもそも）](trivia/toothpaste-basics.md)
+- なにでできてる: [歯みがき粉は何でできているか、その材料はどこから来るか](trivia/toothpaste-ingredients.md)
+- しくみ: [フッ素はなぜむし歯を防ぐのか（3つのはたらき）](trivia/toothpaste-fluoride.md)
+- しるし: [歯みがき粉のフッ素の数字（ppm）と、年齢ごとの量](trivia/toothpaste-fluoride-ppm.md)
+- つくりかた: [歯みがき粉はどうやって作ってチューブに入れるのか（はしの四角いしるしのなぞ）](trivia/toothpaste-making.md)
+- れきし: [歯みがき粉の歴史、チューブは絵の具から、フッ素は茶色い歯から](trivia/toothpaste-history.md)
 
 #### ビニールぶくろ（ポリぶくろ） {plastic-bag}
 - きほん: [ポリ袋とは何か（そもそも）](trivia/plastic-bag-basics.md)
