@@ -24,7 +24,16 @@
         ${T(158, 65, 'やわらかい・こい', 'tx-s', 'start')}
         <rect class="gray" x="0" y="82" width="12" height="12" rx="2"/>${T(18, 92, 'ねんど', 'tx-s', 'start')}
         <rect class="ink" x="80" y="82" width="12" height="12" rx="2"/>${T(98, 92, 'こくえん', 'tx-s', 'start')}
-      </g>`,
+      </g>
+      ${T(160, 236, 'ぜんぶで 17しゅるい（ジス きかく）', 'tx')}
+      ${['9H', '8H', '7H', '6H', '5H', '4H', '3H', '2H', 'H', 'F', 'HB', 'B', '2B', '3B', '4B', '5B', '6B'].map((g, i) => {
+        const x = 10 + i * 17.6;
+        const shade = 0.12 + i * 0.055;
+        return `<rect class="ink" x="${x}" y="250" width="16" height="26" rx="2" opacity="${shade.toFixed(2)}"/>
+          <text class="tx-s" x="${x + 8}" y="292" text-anchor="middle" style="font-size:9px">${g}</text>`;
+      }).join('')}
+      ${T(10, 312, '← かたい・うすい', 'tx-s', 'start')}${T(310, 312, 'やわらかい・こい →', 'tx-s', 'end')}`,
+    box: '0 0 320 320',
   };
 
   F['pencil-making'] = {
