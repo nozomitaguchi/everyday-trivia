@@ -320,6 +320,24 @@
       ${A('M252 86 188 86')}`,
   };
 
+  F['pet-bottle-basics'] = {
+    alt: 'しけんかんのようなちいさなつつをあたためて、かたのなかでくうきをふきこんでふくらませる',
+    svg: `
+      <g transform="translate(30 50)">
+        <rect class="glass" x="10" y="0" width="30" height="16" rx="3"/><rect class="ln thin" x="10" y="0" width="30" height="16" rx="3"/>
+        <path class="glass" d="M14 16h22v80a11 11 0 0 1-22 0Z"/><path class="ln" d="M14 16h22v80a11 11 0 0 1-22 0Z"/>
+        ${T(25, 136, 'ちいさな つつ', 'tx-s')}
+      </g>
+      ${A('M90 100h30')}${T(105, 84, 'あたためる', 'tx-s')}
+      <g transform="translate(140 20)">
+        <path class="ln dash s-soft" d="M10 0h70v160H10Z"/>
+        <path class="glass" d="M32 10h26v14l14 20v100a8 8 0 0 1-8 8H26a8 8 0 0 1-8-8V44l14-20Z"/><path class="ln" d="M32 10h26v14l14 20v100a8 8 0 0 1-8 8H26a8 8 0 0 1-8-8V44l14-20Z"/>
+        ${A('M45 70 24 70')}${A('M45 70 66 70')}${A('M45 70 45 130')}
+        ${T(45, 186, 'くうきで ふくらむ', 'tx-s')}
+      </g>
+      ${T(270, 70, 'かたの', 'tx-s')}${T(270, 86, 'なかで', 'tx-s')}`,
+  };
+
   F['pet-bottle-orange-cap'] = {
     alt: 'オレンジのキャップはあたためてもだいじょうぶなペットボトルのしるし',
     svg: `

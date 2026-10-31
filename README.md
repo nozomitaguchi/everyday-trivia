@@ -101,6 +101,7 @@ tags: [ジャンル, ...]
 - かたち: [コンセントの左の穴が長い理由](trivia/outlet-long-slot.md)
 
 #### ペットボトル {pet-bottle}
+- きほん: [ペットボトルはどうやって作るのか](trivia/pet-bottle-basics.md)
 - しるし: [ペットボトルのオレンジのキャップ](trivia/pet-bottle-orange-cap.md)
 - かたち: [炭酸のペットボトルの底が花びら型な理由](trivia/pet-bottle-petaloid-bottom.md)
 
