@@ -121,6 +121,7 @@ tags: [ジャンル, ...]
 
 #### でんき {lights}
 - しくみ: [蛍光灯とLEDの仕組みと違い](trivia/fluorescent-vs-led.md)
+- れきし: [あかりの歴史、エジソンの電球と竹、「20世紀中は無理」と言われた青色LED](trivia/lights-history.md)
 
 #### コンセント {outlet}
 - かたち: [コンセントの左の穴が長い理由](trivia/outlet-long-slot.md)
