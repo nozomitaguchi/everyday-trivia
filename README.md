@@ -110,6 +110,7 @@ tags: [ジャンル, ...]
 
 #### しゃしん {photo}
 - しくみ: [写真はどうやって撮れるのか](trivia/photo-digital-camera.md)
+- れきし: [写真の歴史、暗い部屋の穴から、ボタンを押すだけのカメラ、そしてデジタルへ](trivia/photo-history.md)
 
 #### ふとん {futon}
 - しくみ: [ふとんはなぜあたたかいのか](trivia/futon-warmth.md)
