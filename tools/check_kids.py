@@ -9,6 +9,8 @@ for f in sorted(glob.glob(ROOT + '/trivia/*.md')):
     name = f.split('/')[-1]
     secs = dict(re.findall(r'^## (.+?)\n(.*?)(?=^## |\Z)', t, re.M | re.S))
     s, k = secs.get('3〜5歳むけ'), secs.get('6〜9歳むけ')
+    FIG = re.compile(r'^\{\{fig:[a-z0-9-]+\}\}$', re.M)
+    s = s and FIG.sub('', s); k = k and FIG.sub('', k)
     kt = re.search(r'^kidtitle:\s*(.+)$', t, re.M)
     if not s or not k:
         missing.append(name); continue

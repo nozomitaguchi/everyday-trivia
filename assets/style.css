@@ -296,6 +296,7 @@ details.sources summary { cursor: pointer; font-weight: 700; color: var(--ink); 
 .fig .tx { fill: var(--ink); font: 700 13px "Zen Maru Gothic", system-ui, sans-serif; }
 .fig .tx-s { fill: var(--ink-soft); font: 700 11px "Zen Maru Gothic", system-ui, sans-serif; }
 .fig .tx-w { fill: #fff; font: 900 14px "Zen Maru Gothic", system-ui, sans-serif; }
+.fig .tx-k { fill: #2b2b2b; font: 700 12px "Zen Maru Gothic", system-ui, sans-serif; }
 .fig .tx-b { fill: var(--ink); font: 900 16px "Zen Maru Gothic", system-ui, sans-serif; }
 
 /* moon widget */

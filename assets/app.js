@@ -226,6 +226,9 @@
         html += `<pre><code>${esc(buf.join('\n'))}</code></pre>`;
         continue;
       }
+      // a line like {{fig:name}} places an extra illustration from AHA_FIGURES right there
+      const fg = line.match(/^\{\{fig:([a-z0-9-]+)\}\}$/);
+      if (fg) { html += figureHtml(fg[1]); i++; continue; }
       const h = line.match(/^(#{2,4})\s+(.+)$/);
       if (h) { const n = h[1].length; html += `<h${n}>${inline(h[2])}</h${n}>`; i++; continue; }
       if (/^\s*\|/.test(line)) {
@@ -245,7 +248,7 @@
         continue;
       }
       const buf = [];
-      while (i < lines.length && lines[i].trim() && !/^(#{2,4}\s|\s*\||\s*([-*]|\d+\.)\s|```)/.test(lines[i])) buf.push(lines[i++].trim());
+      while (i < lines.length && lines[i].trim() && !/^(#{2,4}\s|\s*\||\s*([-*]|\d+\.)\s|```|\{\{fig:)/.test(lines[i])) buf.push(lines[i++].trim());
       html += `<p>${inline(buf.join(''))}</p>`;
     }
     return html;
@@ -507,7 +510,7 @@
   const say = o => o[level().id];
 
   async function renderHome() {
-    document.title = 'アハ図鑑';
+    document.title = 'みのまわり図鑑';
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let idx;
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
@@ -526,7 +529,7 @@
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
     const c = idx.cats.find(x => x.id === id);
     if (!c) return renderNotFound();
-    document.title = `${c.name}｜アハ図鑑`;
+    document.title = `${c.name}｜みのまわり図鑑`;
     const lv = level();
     main.innerHTML = `
       <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a></nav>
@@ -597,7 +600,7 @@
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
     const it = idx.items.get(id);
     if (!it) return renderNotFound();
-    document.title = `${it.name}｜アハ図鑑`;
+    document.title = `${it.name}｜みのまわり図鑑`;
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let mds;
     try { mds = await Promise.all(it.entries.map(e => fetchText(`trivia/${e.slug}.md`))); } catch (e) { return showError(e); }

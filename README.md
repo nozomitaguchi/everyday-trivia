@@ -1,4 +1,4 @@
-# アハ図鑑
+# みのまわり図鑑
 
 見てるけど、知らない。さわってるけど、知らない。身の回りのものの「なにでできてる？」「どうやってつくる？」「どんなしくみ？」「なぜこのかたち？」を集めた図鑑。
 
@@ -7,7 +7,9 @@
 ## 構成
 
 - `index.html`, `assets/` … サイト本体。この README の「一覧」と `trivia/*.md` をそのまま読みこんで表示する
-- `WRITING.md` … 子ども向けの説明の書き方の基準
+- `WRITING.md` … 深掘りの基準（1つのものにそろえる問い、絵の入れ方）と、子ども向けの説明の書き方の基準
+- `tools/check_kids.py` … 子ども向けの文が基準を満たすかの機械チェック
+- `tools/coverage.py` … ものごとの深さ（ネタの本数・絵の枚数・きほん・歴史の有無）を浅い順に並べる
 - `trivia/` … 1トリビア1ファイル。出典を確認できたもの
 - `inbox.md` … まだ出典を確認できていないネタの置き場
 - `images/` … 自分で撮った写真のみ（他サイトの画像は入れない）
@@ -31,12 +33,13 @@
 ```markdown
 ---
 title: タイトル
+kidtitle: こどもむけの たいとる（ひらがな）
 tags: [ジャンル, ...]
 ---
 
 ## 見るとわかること
-## なぜそうなっているか
-## 3〜5歳むけ   （WRITING.md の基準で書く）
+## なぜそうなっているか   （### で小見出し、表、{{fig:絵の名前}} を入れてよい）
+## 3〜5歳むけ   （WRITING.md の基準で書く。{{fig:…}} も入れる）
 ## 6〜9歳むけ
 ## 出典
 ```
@@ -65,8 +68,17 @@ tags: [ジャンル, ...]
 #### はみがきこ {toothpaste}
 - なにでできてる: [歯みがき粉は何でできているか](trivia/toothpaste-ingredients.md)
 
-#### ビニールぶくろ {plastic-bag}
-- なにでできてる: [「ビニール袋」は実はビニールではない](trivia/plastic-bag-polyethylene.md)
+#### ビニールぶくろ（ポリぶくろ） {plastic-bag}
+- きほん: [ポリ袋とは何か（そもそも）](trivia/plastic-bag-basics.md)
+- なにでできてる: [「ビニール袋」は実はビニールではない（名前のなぞ）](trivia/plastic-bag-polyethylene.md)
+- なにでできてる: [シャカシャカの袋としっとりした袋の違い（高密度・低密度・直鎖状低密度）](trivia/polyethylene-hdpe-ldpe.md)
+- つくりかた: [ポリエチレンは石油からどう作られるか](trivia/polyethylene-how-made.md)
+- つくりかた: [ポリ袋はどうやって袋の形になるか（ふくらませて作る）](trivia/plastic-bag-inflation-molding.md)
+- ひみつ: [ポリエチレンは偶然から生まれ、触媒で作りやすくなった（だれが・どうやって）](trivia/polyethylene-history.md)
+- しるし: [レジ袋の有料化、タダのままでいい袋の条件](trivia/plastic-bag-fee-rules.md)
+
+#### ビニール（えんかビニル） {vinyl}
+- なにでできてる: [本物のビニール（塩化ビニル）とは、なぜやわらかいのか](trivia/vinyl-pvc.md)
 
 #### ダンボール {cardboard}
 - かたち: [ダンボールは何でできているか](trivia/cardboard-structure.md)
