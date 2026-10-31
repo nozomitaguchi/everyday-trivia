@@ -132,6 +132,7 @@ tags: [ジャンル, ...]
 
 #### コンセント {outlet}
 - かたち: [コンセントの左の穴が長い理由](trivia/outlet-long-slot.md)
+- れきし: [コンセントの歴史、電球のソケットから家電をつないでいた時代、「コンセント」は英語では通じない](trivia/outlet-history.md)
 
 #### ペットボトル {pet-bottle}
 - きほん: [ペットボトルはどうやって作るのか](trivia/pet-bottle-basics.md)
