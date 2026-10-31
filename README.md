@@ -67,6 +67,7 @@ tags: [ジャンル, ...]
 
 #### おさら {plate}
 - なにでできてる: [お皿は何でできているか、陶器と磁器の違い](trivia/plate-pottery-porcelain.md)
+- れきし: [日本の磁器は1616年に有田で始まった、ヨーロッパの王さまが夢中になった「白い金」](trivia/plate-history.md)
 
 #### メラミンの コップ {melamine-cup}
 - なにでできてる: [メラミンカップとは何か](trivia/melamine-cup.md)
