@@ -121,6 +121,7 @@ tags: [ジャンル, ...]
 
 #### エアコン {air-conditioner}
 - しくみ: [エアコンはなぜ冷えるのか、室外機はなぜ必要なのか](trivia/air-conditioner-and-outdoor-unit.md)
+- れきし: [エアコンは「印刷所の紙のしわ」を直すために生まれた、室外機を分けたのは日本](trivia/air-conditioner-history.md)
 
 #### カーテン {curtain}
 - しるし: [カーテンの遮光等級とは何か](trivia/curtain-blackout-grade.md)
