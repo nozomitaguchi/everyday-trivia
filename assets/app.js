@@ -5,7 +5,7 @@
   const LEVELS = [
     { id: 'small', short: 'ちいさい', heading: '3〜5歳むけ', sample: 4, max: 5 },
     { id: 'kid', short: 'こども', heading: '6〜9歳むけ', sample: 7, max: 9 },
-    { id: 'adult', short: 'おとな', heading: null, sample: 30, max: Infinity },
+    { id: 'adult', short: 'おとな', heading: null, sample: 15, max: Infinity },
   ];
   const DIAL_ANGLES = [-55, 0, 55];
   const KID_HEADINGS = LEVELS.filter(l => l.heading).map(l => l.heading);
@@ -15,8 +15,12 @@
     set(k, v) { try { localStorage.setItem(k, v); } catch (e) { /* storage unavailable */ } },
   };
 
-  let age = clampAge(parseInt(store.get('aha-age'), 10) || 30);
-  function clampAge(n) { return Math.min(99, Math.max(2, n || 2)); }
+  // the slider runs 3..15; 3 means "3 and under", 15 means "15 and over" (reads like an adult)
+  const AGE_MIN = 3;
+  const AGE_MAX = 15;
+  let age = clampAge(parseInt(store.get('aha-age'), 10) || AGE_MAX);
+  function clampAge(n) { return Math.min(AGE_MAX, Math.max(AGE_MIN, n || AGE_MIN)); }
+  function ageText(a) { return a <= AGE_MIN ? `${AGE_MIN}さい いか` : a >= AGE_MAX ? `${AGE_MAX}さい いじょう` : `${a}さい`; }
   function levelOf(a) { return LEVELS.find(l => a <= l.max); }
   function level() { return levelOf(age); }
 
@@ -44,7 +48,8 @@
 
   // ---------- header dial ----------
   const dialEl = document.getElementById('reader-dial');
-  const ageInput = document.getElementById('age-input');
+  const ageRange = document.getElementById('age-range');
+  const ageOut = document.getElementById('age-out');
 
   function renderDial() {
     const idx = LEVELS.indexOf(level());
@@ -67,10 +72,16 @@
     });
   }
 
+  function showAge() {
+    ageRange.value = age;
+    ageOut.textContent = ageText(age);
+    ageRange.setAttribute('aria-valuetext', ageText(age));
+  }
+
   function setAge(n) {
     const before = level();
     age = clampAge(n);
-    ageInput.value = age;
+    showAge();
     store.set('aha-age', String(age));
     if (level() !== before) {
       renderDial();
@@ -78,10 +89,8 @@
     }
   }
 
-  ageInput.value = age;
-  ageInput.addEventListener('change', () => setAge(parseInt(ageInput.value, 10)));
-  document.getElementById('age-down').addEventListener('click', () => setAge(age - 1));
-  document.getElementById('age-up').addEventListener('click', () => setAge(age + 1));
+  showAge();
+  ageRange.addEventListener('input', () => setAge(parseInt(ageRange.value, 10)));
   renderDial();
 
   // ---------- content loading ----------

@@ -18,15 +18,9 @@
   <section class="reader" aria-label="読む人の年齢">
     <div class="reader-dial" id="reader-dial"></div>
     <div class="reader-age">
-      <label for="age-input">読む人は</label>
-      <div class="age-row">
-        <div class="age-stepper">
-          <button type="button" id="age-down" aria-label="1歳へらす">−</button>
-          <input id="age-input" type="number" inputmode="numeric" min="2" max="99" value="30">
-          <button type="button" id="age-up" aria-label="1歳ふやす">＋</button>
-        </div>
-        <span class="age-unit">さい</span>
-      </div>
+      <label for="age-range">読む人は <output id="age-out" for="age-range" class="age-out"></output></label>
+      <input id="age-range" class="age-range" type="range" min="3" max="15" step="1" value="15">
+      <div class="age-ends" aria-hidden="true"><span>3さい いか</span><span>15さい いじょう</span></div>
       <p class="level-name" id="level-name" aria-live="polite"></p>
     </div>
   </section>

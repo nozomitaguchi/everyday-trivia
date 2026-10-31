@@ -75,8 +75,11 @@ img { max-width: 100%; height: auto; border-radius: 12px; }
   border-radius: 20px;
   padding: 14px 14px;
 }
-.reader-age { display: grid; gap: 6px; }
+.reader-age { display: grid; gap: 4px; min-width: 0; }
 .reader-age label { font-weight: 700; }
+.age-out { font-size: 1.5rem; font-weight: 900; margin-left: 4px; }
+.age-range { width: 100%; height: 36px; margin: 0; accent-color: var(--signal); cursor: pointer; }
+.age-ends { display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--ink-soft); font-weight: 700; }
 .age-row { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
 .level-name { margin: 0; font-size: 0.9rem; font-weight: 700; color: var(--exit); }
 .site-lead span { display: inline-block; }
