@@ -62,6 +62,25 @@ tags: [ジャンル, ...]
 #### はみがきこ {toothpaste}
 - なにでできてる: [歯みがき粉は何でできているか](trivia/toothpaste-ingredients.md)
 
+#### ビニールぶくろ {plastic-bag}
+- なにでできてる: [「ビニール袋」は実はビニールではない](trivia/plastic-bag-polyethylene.md)
+
+#### ダンボール {cardboard}
+- かたち: [ダンボールは何でできているか](trivia/cardboard-structure.md)
+
+#### ゴム {rubber}
+- なにでできてる: [ゴムは何からできているか](trivia/rubber-natural-synthetic.md)
+
+#### ばんそうこう {bandage}
+- しくみ: [ふつうの絆創膏とキズパワーパッドの違い](trivia/bandage-vs-hydrocolloid.md)
+
+#### でんしレンジ {microwave}
+- しくみ: [電子レンジはどうやって温めるのか](trivia/microwave-oven.md)
+
+#### かがみ {mirror}
+- なにでできてる: [鏡は何でできているか](trivia/mirror-silver.md)
+- しくみ: [お風呂の鏡がくもるのはなぜか](trivia/mirror-fog.md)
+
 #### エアコン {air-conditioner}
 - しくみ: [エアコンはなぜ冷えるのか、室外機はなぜ必要なのか](trivia/air-conditioner-and-outdoor-unit.md)
 
@@ -80,6 +99,17 @@ tags: [ジャンル, ...]
 
 #### リモコンと Wi-Fi {remote-and-wifi}
 - しくみ: [Wi-Fi、Bluetooth、赤外線の仕組み](trivia/wifi-bluetooth-infrared.md)
+
+### たべもの {food}
+
+#### おこめ {rice}
+- つくりかた: [お米が家に届くまで](trivia/rice-to-table.md)
+
+#### マヨネーズ {mayonnaise}
+- なにでできてる: [マヨネーズは何でできているか](trivia/mayonnaise-emulsion.md)
+
+#### ケチャップ {ketchup}
+- つくりかた: [ケチャップはどうやって作るか](trivia/ketchup-making.md)
 
 ### まちのなか {town}
 

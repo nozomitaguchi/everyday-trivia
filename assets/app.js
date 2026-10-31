@@ -485,6 +485,7 @@
 
   const PICTO = {
     home: '<path d="M8 23 24 9l16 14"/><path d="M12 20v19h24V20"/><path d="M21 39V29h6v10"/>',
+    food: '<path d="M7 22h34a17 17 0 0 1-34 0Z"/><path d="M14 39h20"/><path d="M17 18c2-4 6-6 9-3s6 0 8-3"/>',
     town: '<rect x="8" y="16" width="14" height="23" rx="1"/><rect x="26" y="8" width="14" height="31" rx="1"/><path d="M12 22h6M12 28h6M30 14h6M30 20h6M30 26h6M30 32h6"/>',
     vehicles: '<rect x="11" y="7" width="26" height="28" rx="6"/><path d="M11 22h26"/><rect x="15" y="11" width="18" height="7" rx="2"/><circle cx="17" cy="28" r="2"/><circle cx="31" cy="28" r="2"/><path d="M15 35l-4 6M33 35l4 6"/>',
     'living-things': '<ellipse cx="24" cy="27" rx="8" ry="11"/><circle cx="24" cy="12" r="4"/><path d="M16 22l-7-4M16 28H8M16 34l-7 4M32 22l7-4M32 28h8M32 34l7 4M22 9l-3-4M26 9l3-4"/>',

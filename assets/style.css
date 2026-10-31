@@ -163,6 +163,7 @@ main:focus, main:focus-visible { outline: none; }
 
 .cat-home, .cat-title.c-home { --accent: #d98a00; }
 .cat-town { --accent: var(--exit); }
+.cat-food { --accent: #c4502b; }
 .cat-vehicles { --accent: #2b6cc4; }
 .cat-living-things { --accent: #5b9a1e; }
 .cat-sky { --accent: #6a4fc4; }
@@ -170,6 +171,7 @@ main:focus, main:focus-visible { outline: none; }
 @media (prefers-color-scheme: dark) {
   .cat-home { --accent: #f0b324; }
   .cat-vehicles { --accent: #6aa8ff; }
+  .cat-food { --accent: #f08a62; }
   .cat-living-things { --accent: #8ccf4a; }
   .cat-sky { --accent: #a995ff; }
   .cat-body { --accent: #f087a0; }
