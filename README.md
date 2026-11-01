@@ -53,8 +53,8 @@ tags: [ジャンル, ...]
 
 #### えんぴつ {pencil}
 - なにでできてる: [鉛筆の芯は何でできているか、HとBの違い](trivia/pencil-lead.md)
-- つくりかた: [鉛筆の芯はどうやって木に入っているのか](trivia/pencil-making.md)
 - ひみつ: [鉛筆の材料はどこから来るのか](trivia/pencil-materials-origin.md)
+- つくりかた: [鉛筆の芯はどうやって木に入っているのか](trivia/pencil-making.md)
 - れきし: [鉛筆の歴史、なぜ「鉛」の筆なのか](trivia/pencil-history.md)
 
 #### クレヨンと クレパス {crayon}
@@ -83,11 +83,11 @@ tags: [ジャンル, ...]
 
 #### ビニールぶくろ（ポリぶくろ） {plastic-bag}
 - きほん: [ポリ袋とは何か（そもそも）](trivia/plastic-bag-basics.md)
-- なにでできてる: [「ビニール袋」は実はビニールではない（名前のなぞ）](trivia/plastic-bag-polyethylene.md)
 - なにでできてる: [シャカシャカの袋としっとりした袋の違い（高密度・低密度・直鎖状低密度）](trivia/polyethylene-hdpe-ldpe.md)
 - つくりかた: [ポリエチレンは石油からどう作られるか](trivia/polyethylene-how-made.md)
 - つくりかた: [ポリ袋はどうやって袋の形になるか（ふくらませて作る）](trivia/plastic-bag-inflation-molding.md)
-- ひみつ: [ポリエチレンは偶然から生まれ、触媒で作りやすくなった（だれが・どうやって）](trivia/polyethylene-history.md)
+- れきし: [ポリエチレンは偶然から生まれ、触媒で作りやすくなった（だれが・どうやって）](trivia/polyethylene-history.md)
+- ことば: [「ビニール袋」は実はビニールではない（名前のなぞ）](trivia/plastic-bag-polyethylene.md)
 - しるし: [レジ袋の有料化、タダのままでいい袋の条件](trivia/plastic-bag-fee-rules.md)
 
 #### ビニール（えんかビニル） {vinyl}
@@ -96,7 +96,7 @@ tags: [ジャンル, ...]
 #### ダンボール {cardboard}
 - かたち: [ダンボールは何でできているか](trivia/cardboard-structure.md)
 - つくりかた: [ダンボールはどうやって作るのか（100mの機械とトウモロコシののり）](trivia/cardboard-making.md)
-- ひみつ: [ダンボールは帽子の内側から始まった（名前の由来と歴史）](trivia/cardboard-history.md)
+- れきし: [ダンボールは帽子の内側から始まった（名前の由来と歴史）](trivia/cardboard-history.md)
 
 #### ゴム {rubber}
 - なにでできてる: [ゴムは何からできているか](trivia/rubber-natural-synthetic.md)
@@ -214,20 +214,20 @@ tags: [ジャンル, ...]
 
 #### でんしゃ {train}
 - きほん: [電車はどうやって走るのか](trivia/train-basics.md)
-- しくみ: [デッドマン装置とEB装置](trivia/deadman-and-eb-device.md)
-- しるし: [電車の「クハ」「モハ」の意味](trivia/railway-car-type-symbols.md)
 - かたち: [電車のつり革の高さと色](trivia/train-strap-height-color.md)
+- しるし: [電車の「クハ」「モハ」の意味](trivia/railway-car-type-symbols.md)
 - しるし: [線路脇の勾配標](trivia/railway-gradient-post.md)
 - ひみつ: [東海道新幹線で富士山が見えるのはE席](trivia/shinkansen-fuji-e-seat.md)
+- しくみ: [デッドマン装置とEB装置](trivia/deadman-and-eb-device.md)
 
 #### えき {station}
 - しるし: [ホームの点字ブロックの「内方線」](trivia/railway-tactile-block-inner-line.md)
 
 #### くるま {car}
 - きほん: [車のエンジンはどうやって動くのか](trivia/car-engine-basics.md)
-- しくみ: [車のキーのSTART位置と抜ける位置](trivia/car-ignition-key.md)
-- しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
 - しくみ: [うるさい車やバイクは何がうるさいのか](trivia/loud-cars-and-motorcycles.md)
+- しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
+- しくみ: [車のキーのSTART位置と抜ける位置](trivia/car-ignition-key.md)
 
 ### いきもの {living-things}
 

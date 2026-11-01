@@ -16,7 +16,7 @@ for f in sorted(glob.glob(ROOT + '/trivia/*.md')) + sorted(glob.glob(ROOT + '/it
         missing.append(name); continue
     if not kt and '/items/' not in f:
         print(name, 'no kidtitle'); fail += 1
-    elif KANA.findall(kt.group(1)):
+    elif kt and KANA.findall(kt.group(1)):
         print(name, 'kidtitle non-kana', set(KANA.findall(kt.group(1)))); fail += 1
     bad = KANA.findall(s)
     if bad: print(name, '3歳 non-kana', set(bad)); fail += 1
