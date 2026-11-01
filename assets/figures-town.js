@@ -232,6 +232,27 @@
       ${T(160, 24, 'はみだして おいこさない', 'tx')}`,
   };
 
+  F['road-center-line-3kinds'] = {
+    alt: 'まんなかのせん3しゅるい。しろのてんせんは、ひつようならはみだしておいこせる。しろのじっせんは、はばのひろいみちで、はみださないのがきほん。きいろのじっせんは、おいこすためにはみだしてはいけない',
+    box: '0 0 320 230',
+    svg: `
+      ${[0, 1, 2].map(i => {
+        const x = 8 + i * 104;
+        const line = i === 0
+          ? [0, 1, 2, 3].map(k => `<rect x="${x + 43}" y="${40 + k * 34}" width="6" height="20" style="fill:#fff"/>`).join('')
+          : `<rect x="${x + 43}" y="36" width="6" height="132" style="fill:${i === 1 ? '#fff' : '#f2c230'}"/>`;
+        return `<rect class="gray" x="${x}" y="30" width="92" height="144" rx="4"/>
+          ${line}
+          <rect class="blue" x="${x + 58}" y="126" width="22" height="34" rx="5"/>
+          <rect class="red" x="${x + 58}" y="70" width="22" height="34" rx="5"/>
+          ${i === 0 ? `<path class="arw" d="M${x + 64} 124c-20-14-20-40 0-58"/>` : `<path class="ln s-red" d="M${x + 26} 92l16 16M${x + 42} 92l-16 16" style="stroke-width:4"/>`}`;
+      }).join('')}
+      ${T(54, 20, 'しろの てんせん', 'tx-s')}${T(158, 20, 'しろの じっせん', 'tx-s')}${T(262, 20, 'きいろの じっせん', 'tx-s')}
+      ${T(54, 194, 'ひつようなら', 'tx-s')}${T(54, 212, 'はみだせる', 'tx-s')}
+      ${T(158, 194, 'ひろい みち。', 'tx-s')}${T(158, 212, 'はみださない', 'tx-s')}
+      ${T(262, 194, 'おいこす ために', 'tx-s')}${T(262, 212, 'はみださない', 'tx-s')}`,
+  };
+
   F['road-route-number-signs'] = {
     alt: 'こくどうはおにぎりがた、けんどうはろっかっけい。こうそくどうろのかんばんはみどり',
     svg: `
@@ -410,5 +431,20 @@
           <text class="tx-b" x="60" y="33" text-anchor="middle" style="fill:${fg}">12-34</text>
           ${T(60, 68, `${n}：${s}`, 'tx-s')}
         </g>`).join('')}`,
+  };
+  F['car-plate-zugara-kei'] = {
+    alt: 'えのはいったしろいナンバーは、けいじどうしゃでもしろ。けいじどうしゃのものは、まわりにきいろいふちがある',
+    box: '0 0 320 170',
+    svg: `
+      ${[['ふつうの くるま', '#8c979b', 3], ['けいじどうしゃ', '#f2c230', 6]].map(([n, edge, w], i) => `
+        <g transform="translate(${16 + i * 152} 30)">
+          <rect x="0" y="0" width="136" height="64" rx="8" style="fill:#ffffff;stroke:${edge};stroke-width:${w}"/>
+          <path d="M8 56c20-26 36-30 52-14 14-16 34-22 68 6v6H8Z" style="fill:#7cc4a0;opacity:.6"/>
+          <circle cx="112" cy="18" r="8" style="fill:#f2a65a;opacity:.8"/>
+          <text class="tx-b" x="68" y="44" text-anchor="middle" style="fill:#1f7a3a">12-34</text>
+          ${T(68, 90, n, 'tx-s')}
+        </g>`).join('')}
+      ${T(160, 18, 'えの はいった しろい ナンバー', 'tx')}
+      ${T(244, 150, '↑ きいろい ふち', 'tx-s')}`,
   };
 })();

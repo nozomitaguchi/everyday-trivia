@@ -38,7 +38,7 @@ tags: [たべもの, お米, 歴史]
 
 {{fig:rh-army-navy}}
 
-- **鈴木梅太郎**は、玄米を食べると脚気の予防や治療に効くことに目をつけ、1910年、米ぬかから脚気をふせぐ成分を見つけた。1912年に取り出すことに成功し、イネの学名「オリザ」にちなんで**オリザニン**と名づけた。その約1年後、ポーランドのフンクが米ぬかから見つけた物質に「ビタミン」と名前をつけて発表した。オリザニンは、今でいうビタミンB1
+- **鈴木梅太郎**は、玄米を食べると脚気の予防や治療に効くことに目をつけ、1910年、米ぬかから脚気をふせぐ成分を見つけて「アベリ酸」として発表した。1912年、イネの学名「オリザ」にちなんで**オリザニン**と名づけた。同じ1912年、ポーランド生まれのフンクが、脚気などの病気をふせぐ物質に「ビタミン（vitamine）」という名前を考えて論文に書いた。オリザニンは、今でいうビタミンB1
 
 {{fig:rh-oryzanin}}
 
@@ -58,7 +58,7 @@ tags: [たべもの, お米, 歴史]
 
 {{fig:rh-quake}}
 
-- 1953年に「越南17号」として14の県で試され、1956年に新潟県が育てることをすすめる品種に選び、「**コシヒカリ**」と名づけた。「越の国に光り輝く米」という願いがこめられている
+- 1953年に「越南17号」として、新潟県をふくむ22の県に配られ、全国で試作が始まった（新潟県の資料。14県と書く資料もある）。1956年に新潟県と千葉県が育てることをすすめる品種に選び、「**コシヒカリ**」と名づけた。「越の国に光り輝く米」という願いがこめられている
 
 {{fig:rh-koshihikari-name}}
 
@@ -117,7 +117,9 @@ tags: [たべもの, お米, 歴史]
 - [米穀安定供給確保支援機構 お米なんでもブック（稲作の起源と伝来）（PDF）](https://komenet.jp/nandemobook/documents/ip_22-23w.pdf)
 - [Weblio プラント・オパール（植物珪酸体）](https://www.weblio.jp/content/phytolith)
 - [農林水産省 明治150年 脚気と白米、江戸わずらい](https://www.maff.go.jp/j/meiji150/eiyo/01.html)
-- [日本アイソトープ協会 医療史跡 鈴木梅太郎とオリザニン（PDF）](https://www.jrias.or.jp/books/pdf/201804_IRYOSHISEKI_MOROZUMI.pdf)
+- [日本アイソトープ協会 医療史跡 鈴木梅太郎とオリザニン（PDF）](https://www.jrias.or.jp/books/pdf/201804_IRYOSHISEKI_MOROZUMI.pdf)：1910年アベリ酸発見、1912年オリザニンと命名
+- [Live Science: Casimir Funk](https://livescience.com/health/medicine-drugs/casimir-funk-what-is-the-biochemist-celebrated-in-todays-google-doodle-famous-for)：1912年の論文で "vitamine" という語を使った
+- [新潟県 コシヒカリの沿革](https://www.pref.niigata.lg.jp/sec/nosanengei/1341867635261.html)：1953年「越南17号」を新潟県を含む22県に配付し試作開始。1956年に新潟県と千葉県が奨励品種に採用、農林100号「コシヒカリ」として登録
 - [東芝ライフスタイル 電気釜の歴史](https://www.toshiba-lifestyle.com/jp/corporate/rd/research/history/ricecooker/)
 - [文化遺産オンライン 東芝自動式電気釜](https://online.bunka.go.jp/heritages/detail/429852)
 - [家電Watch 東芝の炊飯器の歩み（最初の電気釜の価格と初任給）](https://kaden.watch.impress.co.jp/docs/column/newtech/681461.html)

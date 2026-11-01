@@ -37,7 +37,12 @@ tags: [おうちのなか, 家電, 歴史]
 
 ### 青ができて、白ができた
 
-- 赤・緑・青の**光の三原色**がそろったことで、白い光を作るLEDができ、蛍光灯に代わるあかりになった（→[蛍光灯とLEDの仕組みと違い](fluorescent-vs-led.md)）
+- 青ができたことで、白い光を作るLEDができ、蛍光灯に代わるあかりになった（→[蛍光灯とLEDの仕組みと違い](fluorescent-vs-led.md)）。作り方は2つある
+- **青＋蛍光体**：青いLEDの光を「蛍光体」という粉に当てると、粉が黄色（赤や緑）に光る。青と黄色がまざって白く見える。家の照明の白いLEDの多くはこの方法
+
+{{fig:led-white-phosphor}}
+
+- **赤・緑・青をならべる**：光の三原色の3つのLEDをならべて、目の中で白にまぜる
 
 {{fig:led-rgb-white}}
 
@@ -71,7 +76,11 @@ tags: [おうちのなか, 家電, 歴史]
 
 {{fig:blue-led-buffer}}
 
-あか・みどり・あおが そろうと、しろい ひかりが つくれるよ。だから いまの エルイーディーの でんきが できたんだ。
+あおい ひかりを、きいろく ひかる こなに あてるよ。あおと きいろが まざって、しろく みえるんだ。いえの エルイーディーの でんきの おおくは、この やりかたなんだ。
+
+{{fig:led-white-phosphor}}
+
+あか・みどり・あおを ならべても、しろい ひかりが つくれるよ。
 
 {{fig:led-rgb-white}}
 
@@ -81,3 +90,4 @@ tags: [おうちのなか, 家電, 歴史]
 - [家電Watch 照明の歴史](https://kaden.watch.impress.co.jp/docs/column/newtech/580113.html)
 - [名古屋市科学館 青色LED](https://www.ncsm.city.nagoya.jp/exhibit_files/pdf/LB14.pdf)
 - [JST 青色LEDの開発](https://www.jst.go.jp/seika/bt47-48.html)
+- [The Nobel Prize in Physics 2014 Popular information](https://www.nobelprize.org/prizes/physics/2014/popular-information/)：白色LEDは、青い光で蛍光体を光らせる方法と、赤・緑・青のLEDを組み合わせる方法がある

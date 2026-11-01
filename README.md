@@ -144,7 +144,7 @@ tags: [ジャンル, ...]
 
 #### リモコンと Wi-Fi {remote-and-wifi}
 - しくみ: [Wi-Fi、Bluetooth、赤外線の仕組み](trivia/wifi-bluetooth-infrared.md)
-- れきし: [リモコンは「ひも」から始まった、Bluetooth はバイキングの王さまの名前、電波を乗りかえる発明は女優から](trivia/remote-bluetooth-history.md)
+- れきし: [リモコンは「ひも」から始まった、Bluetooth はバイキングの王さまの名前、電波を乗りかえる早い特許は女優と作曲家](trivia/remote-bluetooth-history.md)
 
 ### たべもの {food}
 
@@ -286,7 +286,7 @@ tags: [ジャンル, ...]
 - しくみ: [背はどうやってのびるのか](trivia/growing-taller.md)
 
 #### からだの あぶら {body-fat}
-- しくみ: [人はどうやって太るのか](trivia/body-fat-energy.md)
+- しくみ: [体の脂肪はどうやってたまるのか](trivia/body-fat-energy.md)
 
 #### め {eyes}
 - しくみ: [目が悪くなる（近視になる）仕組み](trivia/myopia.md)

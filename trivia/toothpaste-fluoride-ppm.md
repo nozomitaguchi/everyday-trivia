@@ -26,7 +26,7 @@ tags: [おうちのなか, はみがきこ, しるし, からだ]
 
 {{fig:tp-label-warnings}}
 
-- 小さい子に濃いものを控えるのは、歯がまだ作られている時期にフッ化物をとりすぎると、歯に茶色いしみのような模様が出る「歯のフッ素症」が起きることがあるから。コクランのまとめでも、6歳未満は1000ppm未満が勧められている。歯のフッ素症は、フッ素がむし歯を防ぐと気づくきっかけにもなった（→[歯みがき粉の歴史](toothpaste-history.md)）
+- 小さい子に濃いものを控えるのは、歯がまだ作られている時期にフッ化物をとりすぎると、歯に茶色いしみのような模様が出る「歯のフッ素症」が起きることがあるから。研究をまとめたコクランのレビュー（2010年、2024年に更新）でも、6歳未満がフッ素の少ない歯みがき粉を使うと、フッ素症の起きる心配がへりそうだとされている。いっぽう日本の4学会（2023年）は、6歳未満にも900〜1000ppmを、ごく少しの量だけ使うよう勧めている。濃さだけでなく「量」で調整する考え方で、家ではこの4学会の量を目安にする。歯のフッ素症は、フッ素がむし歯を防ぐと気づくきっかけにもなった（→[歯みがき粉の歴史](toothpaste-history.md)）
 
 {{fig:tp-fluorosis-why}}
 
@@ -68,7 +68,7 @@ tags: [おうちのなか, はみがきこ, しるし, からだ]
 
 {{fig:tp-ppm}}
 
-6さいに なったら、おとなと おなじ こい はみがきこが つかえるよ。はぶらしの はしから はしまで つけて いいんだ。
+6さいに なったら、おとなと おなじ こい はみがきこが つかえるよ。はぶらしの はしから はしまで、1.5〜2センチくらい つけて いいんだ。
 
 {{fig:tp-amount-6up}}
 
@@ -86,5 +86,6 @@ tags: [おうちのなか, はみがきこ, しるし, からだ]
 
 - [神奈川県歯科医師会 高濃度フッ化物配合歯磨剤についての見解（PDF）](https://www.dent-kng.or.jp/fswp/wp-content/uploads/2022/09/statement_20180301.pdf)
 - [コクラン 小児における歯のフッ素症の原因としてのフッ化物局所応用](https://www.cochrane.org/ja/CD007693/ORAL_xiao-er-niokeruchi-nohutusu-zheng-noyuan-yin-tositenohutuhua-wu-ju-suo-ying-yong)
+- [Cochrane CD007693（2024年更新）Topical fluoride as a cause of dental fluorosis in children](https://www.cochrane.org/CD007693/ORAL_topical-fluoride-cause-dental-fluorosis-children)
 - [NIDCR The Story of Fluoridation](https://www.nidcr.nih.gov/health-info/fluoride/the-story-of-fluoridation)
 - [東京都保健医療局 4学会合同のフッ化物配合歯磨剤の推奨される利用方法](https://www.hokeniryo.metro.tokyo.lg.jp/documents/d/hokeniryo/news_230106)

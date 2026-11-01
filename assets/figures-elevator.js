@@ -27,6 +27,26 @@
     box: '0 0 320 214',
   };
 
+  F['elev-traction-vs-drum'] = {
+    alt: 'トラクションしきは、まわるくるまにロープをかけて、こすれるちからでおくる。まきどうしきは、ドラムにロープをまきとる。ひくいたてものむけ',
+    box: '0 0 320 220',
+    svg: `
+      ${T(80, 20, 'トラクションしき', 'tx-b')}${T(80, 38, '（いちばん おおい）', 'tx-s')}
+      <circle class="gray" cx="80" cy="82" r="20"/><circle class="ln" cx="80" cy="82" r="20"/><circle class="coal" cx="80" cy="82" r="4"/>
+      <path class="ln" d="M60 82v54M100 82v68"/><path class="ln" d="M60 82a20 20 0 0 1 40 0"/>
+      <rect class="pale" x="38" y="136" width="44" height="40" rx="4"/><rect class="ln thin" x="38" y="136" width="44" height="40" rx="4"/>${T(60, 196, 'かご', 'tx-s')}
+      <rect class="coal" x="94" y="150" width="14" height="34" rx="2"/>${T(116, 196, 'おもり', 'tx-s')}
+      <path class="arw" d="M54 66a30 30 0 0 1 52 0"/>
+      ${T(80, 214, 'かけて こすって おくる', 'tx-s')}
+      <path class="ln thin" d="M160 14v196" style="stroke-dasharray:4 4"/>
+      ${T(240, 20, 'まきどうしき', 'tx-b')}${T(240, 38, '（ひくい たてもの）', 'tx-s')}
+      <rect class="gray" x="208" y="56" width="64" height="30" rx="6"/><rect class="ln" x="208" y="56" width="64" height="30" rx="6"/>
+      ${[0, 1, 2, 3, 4].map(k => `<path class="ln thin" d="M${216 + k * 12} 58v26"/>`).join('')}
+      <path class="ln" d="M240 86v50"/>
+      <rect class="pale" x="218" y="136" width="44" height="40" rx="4"/><rect class="ln thin" x="218" y="136" width="44" height="40" rx="4"/>${T(240, 196, 'かご', 'tx-s')}
+      ${T(240, 214, 'ドラムに まきとる', 'tx-s')}`,
+  };
+
   F['elev-same-idea'] = {
     alt: 'いどのつるべは、かたほうのおけをあげると、もうかたほうがさがる。シーソーもおなじかんがえかた',
     svg: `
