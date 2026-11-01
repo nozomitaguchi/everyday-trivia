@@ -1,4 +1,4 @@
-"""How deep is each item? Lists entries, angles and illustrations per item, shallowest first.
+"""How deep is each item? Lists entries, angles, illustrations and "みてみよう" (look) per item, shallowest first.
 
 Usage: python3 tools/coverage.py [-n 15]
 """
@@ -27,20 +27,22 @@ for it in items:
     nfig = 0
     npoints = 0
     history = False
+    nlook = 0
     for _, slug in it['entries']:
         t = open(f'{ROOT}/trivia/{slug}.md', encoding='utf-8').read()
         nfig += (slug in figs) + len(set(re.findall(r'\{\{fig:([a-z0-9-]+)\}\}', t)))
         adult = t.split('## 3〜5歳むけ')[0]
         npoints += len(re.findall(r'^\s*(?:[-*]|\d+\.)\s', adult, re.M)) + len(re.findall(r'^\|[^-|]', adult, re.M))
         history = history or bool(re.search(r'\d{4}年', t))
+        nlook += '### みてみよう' in adult
     has_hist_entry = any(a == 'れきし' for a, _ in it['entries'])
     angles = sorted({a for a, _ in it['entries']})
     has_basic = any(a == 'きほん' for a, _ in it['entries'])
-    score = len(it['entries']) * 2 + nfig - max(0, npoints - nfig) // 2 + has_basic * 2 + history * 2 + has_hist_entry * 3
-    rows.append((score, it, angles, nfig, has_basic, has_hist_entry, npoints))
+    score = len(it['entries']) * 2 + nfig - max(0, npoints - nfig) // 2 + has_basic * 2 + history * 2 + has_hist_entry * 3 + nlook - (len(it['entries']) - nlook) // 2
+    rows.append((score, it, angles, nfig, has_basic, has_hist_entry, npoints, nlook))
 
 rows.sort(key=lambda r: r[0])
 n = int(sys.argv[sys.argv.index('-n') + 1]) if '-n' in sys.argv else len(rows)
-print('score  item  entries  figs/points  basic  history  angles')
-for score, it, angles, nfig, basic, hist, pts in rows[:n]:
-    print(f"{score:>4}  {it['name']} ({it['slug']})  {len(it['entries'])}  {nfig}/{pts}  {'o' if basic else '-'}  {'o' if hist else '-'}  {' '.join(angles)}")
+print('score  item  entries  figs/points  basic  history  look  angles')
+for score, it, angles, nfig, basic, hist, pts, look in rows[:n]:
+    print(f"{score:>4}  {it['name']} ({it['slug']})  {len(it['entries'])}  {nfig}/{pts}  {'o' if basic else '-'}  {'o' if hist else '-'}  {look}/{len(it['entries'])}  {' '.join(angles)}")

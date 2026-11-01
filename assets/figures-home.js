@@ -663,4 +663,101 @@
       }).join('')}
       ${A('M260 88q0 10-20 10H60q-20 0-20 10')}`,
   };
+
+  // ---------- ペットボトルの底：押す・引く・昔の形 ----------
+  const bottle = (x, y, bottom, o = {}) => {
+    const b = {
+      petal: 'M4 120c0 12 8 16 14 10 6 8 14 8 18 0 4 8 12 8 18 0 6 6 14 2 14-10',
+      flat: 'M4 120v8h64v-8',
+      bulge: 'M4 120c0 26 64 26 64 0',
+      round: 'M4 120c0 34 64 34 64 0',
+      dent: 'M4 120v8h20c4-6 20-6 24 0h20v-8',
+    }[bottom];
+    return `<g transform="translate(${x} ${y})">
+      <rect class="${o.cap || 'gray'}" x="24" y="-12" width="24" height="12" rx="2"/>
+      <path class="${o.fill || 'glass'}" d="M24 0h24v12l20 26v82H4V38l20-26Z"/>
+      <path class="${o.fill || 'glass'}" d="${b}Z"/>
+      <path class="ln" d="M24 0h24v12l20 26v82M24 0v12L4 38v82"/><path class="ln" d="${b}"/>
+      ${o.ribs ? [0, 1, 2].map(k => `<path class="ln thin" d="M4 ${60 + k * 18}c10 6 54 6 64 0"/>`).join('') : ''}
+    </g>`;
+  };
+
+  F['pet-flat-bulge'] = {
+    alt: 'そこがたいらだと、たんさんにおされてまるくふくらみ、ぐらぐらしてたてなくなる',
+    box: '0 0 320 210',
+    svg: `
+      ${bottle(50, 30, 'flat')}${T(86, 196, 'たいらな そこ', 'tx-s')}
+      ${A('M140 100h40')}${T(160, 88, 'おされる', 'tx-s')}
+      <g transform="rotate(8 236 150)">${bottle(200, 30, 'bulge')}</g>${T(240, 196, 'ふくらんで ぐらぐら', 'tx-s')}
+      ${A('M236 110v30')}`,
+  };
+
+  F['pet-bottom-thick-legs'] = {
+    alt: 'たんさんのボトルは、そこをあつくして、5ほんのあしでたつ',
+    box: '0 0 320 200',
+    svg: `
+      ${bottle(40, 30, 'petal')}
+      <path class="ln s-red" d="M44 150c10 6 18 6 24 0" style="stroke-width:4"/>
+      ${T(76, 190, 'そこを あつく', 'tx-s')}
+      <g transform="translate(180 40)">
+        ${[0, 72, 144, 216, 288].map(r => `<ellipse class="glass" cx="60" cy="34" rx="16" ry="26" transform="rotate(${r} 60 60)"/><ellipse class="ln thin" cx="60" cy="34" rx="16" ry="26" transform="rotate(${r} 60 60)"/>`).join('')}
+        ${[0, 72, 144, 216, 288].map((r, k) => { const a = (r - 90) * Math.PI / 180; return `<text class="tx-k" x="${(60 + 34 * Math.cos(a)).toFixed(1)}" y="${(66 + 34 * Math.sin(a)).toFixed(1)}" text-anchor="middle">${k + 1}</text>`; }).join('')}
+      </g>
+      ${T(240, 190, 'あしは 5ほん', 'tx-s')}`,
+  };
+
+  F['pet-bottom-history'] = {
+    alt: 'むかしのたんさんのボトルはそこがまるく、べつのだいをくっつけてたてた。いまはまるいそこにあしをはやしたはなびらのかたち',
+    box: '0 0 320 230',
+    svg: `
+      ${bottle(16, 30, 'round')}
+      <rect class="coal" x="16" y="134" width="72" height="40" rx="4"/>
+      ${T(52, 194, 'まるい そこ', 'tx-s')}${T(52, 210, '＋ べつの だい', 'tx-s')}
+      ${A('M104 100h20')}
+      ${bottle(132, 30, 'round')}
+      ${[146, 166, 186].map(x => `<path class="glass" d="M${x} 158l-4 16h12l-4-16Z"/><path class="ln thin" d="M${x} 158l-4 16h12l-4-16Z"/>`).join('')}
+      ${T(168, 194, 'まるい そこに', 'tx-s')}${T(168, 210, 'あしを はやす', 'tx-s')}
+      ${A('M218 100h20')}
+      ${bottle(244, 30, 'petal')}
+      ${T(280, 194, 'いまの', 'tx-s')}${T(280, 210, 'はなびらがた', 'tx-s')}`,
+  };
+
+  F['pet-push-vs-pull'] = {
+    alt: 'たんさんはなかからおす。あついままつめたおちゃは、ひえるとなかからひっぱられる',
+    box: '0 0 320 220',
+    svg: `
+      ${bottle(40, 30, 'petal')}
+      ${A('M76 90h-26')}${A('M76 90h26')}${A('M76 90v-34')}
+      ${T(76, 194, 'たんさん：おす', 'tx')}
+      ${bottle(204, 30, 'dent', { ribs: true })}
+      ${A('M218 90h20')}${A('M262 90h-20')}
+      ${T(240, 194, 'あつい おちゃ：', 'tx-s')}${T(240, 212, 'ひえると ひっぱる', 'tx')}`,
+  };
+
+  F['pet-aseptic-light'] = {
+    alt: 'あついままつめるボトルはあつくておもい。ふつうのおんどできんがはいらないようにつめれば、かるいボトルでよい',
+    box: '0 0 320 210',
+    svg: `
+      ${bottle(40, 30, 'dent', { ribs: true })}
+      <path class="ln" d="M64 42L44 68V150M108 150V68L88 42" style="stroke-width:6;fill:none"/>
+      ${T(76, 180, 'あつい まま つめる', 'tx-s')}${T(76, 198, '→ おもい ボトル', 'tx-s')}
+      ${bottle(204, 30, 'dent')}
+      ${T(240, 180, 'きんを いれずに', 'tx-s')}${T(240, 198, 'ふつうの おんどで → かるい', 'tx-s')}`,
+  };
+
+  F['pet-look-compare'] = {
+    alt: 'たんさんとおちゃのボトルをならべて、そこをしたからのぞいてくらべよう',
+    box: '0 0 320 210',
+    svg: `
+      ${T(160, 22, 'そこを したから のぞこう', 'tx')}
+      <g transform="translate(20 40)">
+        ${[0, 72, 144, 216, 288].map(r => `<ellipse class="glass" cx="60" cy="40" rx="15" ry="24" transform="rotate(${r} 60 64)"/><ellipse class="ln thin" cx="60" cy="40" rx="15" ry="24" transform="rotate(${r} 60 64)"/>`).join('')}
+      </g>
+      ${T(80, 190, 'たんさん：あしは？', 'tx-s')}
+      <g transform="translate(180 40)">
+        <circle class="glass" cx="60" cy="64" r="56"/><circle class="ln thin" cx="60" cy="64" r="56"/>
+        <circle class="ln thin" cx="60" cy="64" r="26"/>
+      </g>
+      ${T(240, 190, 'おちゃ：どう ちがう？', 'tx-s')}`,
+  };
 })();
