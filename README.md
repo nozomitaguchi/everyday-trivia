@@ -203,10 +203,13 @@ tags: [ジャンル, ...]
 - しるし: [送電線にぶら下がる玉](trivia/powerline-marker-balls.md)
 
 #### しんごう {traffic-light}
-- きほん: [信号機はだれが切り替えているのか](trivia/traffic-light-basics.md)
+- きほん: [信号機はだれが切り替えているのか（時間・感知器・押ボタン、点・線・面）](trivia/traffic-light-basics.md)
+- しくみ: [黄色のあと、なぜすぐ反対側が青にならないのか（全部が赤の数秒と、歩行者の青の点滅）](trivia/traffic-light-clearance.md)
+- しくみ: [信号の光るところ、電球からLEDへ（西日で全部ついて見えた「疑似点灯」）](trivia/traffic-light-led.md)
+- れきし: [信号機の歴史、最初の信号はガスで爆発した、緑なのに「青信号」のわけ](trivia/traffic-light-history.md)
 - かたち: [信号機の赤がいちばん右にある理由](trivia/road-red-light-on-right.md)
 - かたち: [雪国の信号機が縦向きな理由](trivia/road-vertical-traffic-light.md)
-- れきし: [信号機の歴史、最初の信号はガスで爆発した、緑なのに「青信号」のわけ](trivia/traffic-light-history.md)
+- しるし: [信号の「ピヨピヨ」「カッコー」、なぜ2つの音が交互に鳴るのか](trivia/traffic-light-sound.md)
 
 #### おうだんほどう {crosswalk}
 - かたち: [横断歩道から横線が消えた理由](trivia/road-crosswalk-stripes.md)

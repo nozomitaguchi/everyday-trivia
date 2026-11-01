@@ -159,12 +159,12 @@
     svg: `
       <rect class="gray" x="14" y="150" width="190" height="34" rx="4" opacity=".5"/>
       <path class="blue" d="M30 158h34v18H30Z"/><path class="red" d="M80 158h34v18H80Z"/>
-      <rect class="ink" x="140" y="160" width="20" height="14" rx="2"/>${T(150, 146, 'かぞえる', 'tx-s')}
+      <rect class="coal" x="140" y="160" width="20" height="14" rx="2"/>${T(150, 146, 'かぞえる', 'tx-s')}
       <path class="ln dash s-soft" d="M160 160 240 100"/>
       <rect class="bg" x="230" y="60" width="70" height="50" rx="4"/><rect class="glass" x="236" y="66" width="58" height="32"/>
       ${T(265, 128, 'コンピューター', 'tx-s')}
       <path class="ln dash s-soft" d="M230 80 120 50"/>
-      <rect class="ink" x="40" y="30" width="80" height="28" rx="6"/>
+      <rect class="coal" x="40" y="30" width="80" height="28" rx="6"/>
       <circle class="green" cx="56" cy="44" r="8"/><circle class="gray" cx="80" cy="44" r="8"/><circle class="gray" cx="104" cy="44" r="8"/>
       ${T(80, 80, 'あおを ながく', 'tx-s')}`,
   };
@@ -176,7 +176,7 @@
       <path class="ln dash" d="M0 165h320" style="stroke:#fff"/>
       <circle class="green" cx="40" cy="60" r="34"/><rect class="brown" x="36" y="90" width="8" height="40"/>
       <rect class="gray" x="70" y="40" width="6" height="90"/><path class="ln" d="M76 46h40"/>
-      <rect class="ink" x="110" y="30" width="120" height="34" rx="8"/>
+      <rect class="coal" x="110" y="30" width="120" height="34" rx="8"/>
       <circle class="green" cx="132" cy="47" r="11"/><circle class="gray" cx="170" cy="47" r="11"/><circle class="red" cx="208" cy="47" r="11"/>
       ${T(132, 86, 'あお', 'tx-s')}${T(208, 86, 'あか', 'tx-s')}
       ${T(260, 120, 'みちの まんなかがわ', 'tx-s')}${A('M240 106 214 66')}
@@ -186,11 +186,11 @@
   F['road-vertical-traffic-light'] = {
     alt: 'よこながのしんごうはうえにゆきがたくさんつもる。たてながならすこししかつもらない',
     svg: `
-      <rect class="ink" x="30" y="70" width="130" height="40" rx="8"/>
+      <rect class="coal" x="30" y="70" width="130" height="40" rx="8"/>
       <path class="bg" d="M26 70c10-24 128-24 138 0Z"/>
       ${[52, 95, 138].map((x, i) => `<circle class="${['green', 'gray', 'gray'][i]}" cx="${x}" cy="90" r="12"/>`).join('')}
       ${T(95, 140, 'ゆきが いっぱい', 'tx-s')}
-      <rect class="ink" x="220" y="40" width="40" height="130" rx="8"/>
+      <rect class="coal" x="220" y="40" width="40" height="130" rx="8"/>
       <path class="bg" d="M216 40c6-14 42-14 48 0Z"/>
       ${[62, 105, 148].map((y, i) => `<circle class="${['red', 'gray', 'gray'][i]}" cx="240" cy="${y}" r="12"/>`).join('')}
       ${T(240, 192, 'すこしだけ', 'tx-s')}`,
