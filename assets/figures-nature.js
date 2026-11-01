@@ -26,21 +26,6 @@
   };
 
 
-  // ---- そらと けしき ----
-  F['sky-blue-sunset-red'] = {
-    alt: 'あおいひかりはくうきのつぶにぶつかってちらばり、そらがあおくみえる。ゆうがたはあかいひかりがのこる',
-    svg: `
-      <circle class="yellow" cx="30" cy="40" r="16"/>
-      <path class="ln s-yellow" d="M48 46 150 80" style="stroke-width:4"/>
-      ${[[120, 64], [160, 56], [190, 80], [140, 96], [175, 110]].map(([x, y]) => `<circle class="gray" cx="${x}" cy="${y}" r="3"/><path class="ln s-blue" d="M${x} ${y}l-14-10M${x} ${y}l14-10M${x} ${y}l-12 12M${x} ${y}l12 12" style="stroke-width:2"/>`).join('')}
-      ${T(160, 30, 'あおい ひかりが ちらばる', 'tx-s')}
-      <path class="ln" d="M0 150h320"/>
-      <circle class="orange" cx="40" cy="146" r="14"/>
-      <path class="ln s-red" d="M56 144h220" style="stroke-width:4"/>
-      ${T(170, 176, 'ゆうがたは ながい みちのりで あかが のこる', 'tx-s')}
-      <circle class="ink" cx="290" cy="140" r="6"/><path class="ln" d="M290 146v12"/>`,
-  };
-
   // ---- からだ ----
   F['scab'] = {
     alt: 'きずのうえにちがかたまってかさぶたのふたができ、そのしたであたらしいひふがつくられる',

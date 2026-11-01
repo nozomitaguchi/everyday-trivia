@@ -257,7 +257,12 @@ tags: [ジャンル, ...]
 ### そらと けしき {sky}
 
 #### そらの いろ {sky-color}
-- しくみ: [空が青くて夕焼けが赤い理由](trivia/sky-blue-sunset-red.md)
+- きほん: [空の色とは何か、透明な空気がなぜ青く見えるのか（そもそも）](trivia/sky-color-basics.md)
+- しくみ: [空が青くて夕焼けが赤い理由（紫に見えないわけも）](trivia/sky-blue-sunset-red.md)
+- しくみ: [雲はなぜ白いのか、雨雲はなぜ灰色なのか](trivia/sky-cloud-white.md)
+- れきし: [空の色の歴史、ダ・ヴィンチのノート、空の青さをはかる道具、ガラス管の中の青空](trivia/sky-color-history.md)
+- ことば: [「あお」はもともと「ぼんやりした色」？ 英語の sky はもともと「雲」](trivia/sky-words.md)
+- ひみつ: [空の色は場所で変わる、山の上は濃い青、火星の夕焼けは青い](trivia/sky-color-places.md)
 
 #### おつきさま {moon}
 - きほん: [月とは何か（そもそも）](trivia/moon-basics.md)
