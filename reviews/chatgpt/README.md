@@ -22,6 +22,9 @@
 | [2026-11-01-city-hidden-signals-and-public-design.md](2026-11-01-city-hidden-signals-and-public-design.md) | **新規12記事**：街の音・触覚・光、公共設備が誰のためにあるか、道路規制の相違（CITY-01〜13） | 都市・安全・バリアフリーのレビュー |
 | [2026-11-01-human-body-science-updates-and-materials.md](2026-11-01-human-body-science-updates-and-materials.md) | **新規12記事**：科学的な推定値の更新、身体の多様性、創傷ケアと素材の限界（BODY-01〜12） | 新しい研究と旧常識の整合性チェック |
 | [2026-11-01-everyday-history-invisible-tech-and-exceptions.md](2026-11-01-everyday-history-invisible-tech-and-exceptions.md) | **新規12記事**：昔の不便と発明、通信の見えない仕組み、規格の例外（TIME-01〜14） | 技術史・使う人・例外のレビュー |
+| [2026-11-01-last42-nature-human-questions.md](2026-11-01-last42-nature-human-questions.md) | **残り42記事①／14件**：生き物・月・からだ。「研究者はどうやって分かった？」と個体差（N42-01〜14） | 観察から証拠・条件まで問いを深める |
+| [2026-11-01-last42-inventions-design-history.md](2026-11-01-last42-inventions-design-history.md) | **残り42記事②／14件**：道具・発明・素材の歴史。「何に困ったから？」（D42-01〜14） | 発明の連鎖、設計変更、意外な生活史 |
+| [2026-11-01-last42-materials-everyday-artifacts.md](2026-11-01-last42-materials-everyday-artifacts.md) | **残り42記事③／14件**：包装・材質・写真・食器・歯みがき。「製造の痕跡を読む」（M42-01〜14） | 形・材質・商品表示に残る工夫を見つける |
 
 **追加の監査（2026-11-01 第2弾）**：これまで重点監査していなかった**36記事**を、新しい観点でレビューしました。直ちに対応したいものは車のキー操作を促す幼児向け文、道路の白・黄実線の違い、小腸の「テニスコート2面」比喩、図柄入り軽自動車の白地ナンバーという例外です。新しい3ファイルは編集提案と根拠確認事項を区別しています。
 
@@ -64,7 +67,20 @@
 - **体と素材（12）**：`bandage-history`、`bandage-vs-hydrocolloid`、`common-cold`、`myopia`、`tummy-rumble`、`digestion-to-poop`、`poop-bacteria`、`poop-basics`、`melamine-cup`、`rubber-natural-synthetic`、`rubber-vulcanization`、`rubber-history`。
 - **乗り物・歴史・通信（12）**：`shinkansen-fuji-e-seat`、`train-strap-height-color`、`car-engine-basics`、`car-ignition-key`、`car-number-plate-colors`、`loud-cars-and-motorcycles`、`ketchup-making`、`ketchup-history`、`mayonnaise-history`、`remote-bluetooth-history`、`wifi-bluetooth-infrared`、`crayon-vs-craypas`。
 
-**累計で異なる90記事**（最初の54記事＋今回の36記事）を読んでレビューを残しています。ただし、全記述・全出典の完全な裏付けが終了したという意味ではありません。
+**2026-11-01の累計：全132記事に対して、少なくとも1件のChatGPTレビューコメントを記録しました。** 最初の54記事＋追加36記事＋今回の残り42記事です。これは**記事単位の編集レビューの網羅**であり、全132記事を逐語的に校閲・全出典を確認・全図解を実機検証したという意味ではありません。事実の指摘と、未調査の面白い問い・編集企画を必ず区別してください。
+
+### 2026-11-01 第3弾：残り42記事
+
+3ファイルに**14記事ずつ、合計42件の個別編集コメント**を記録しました。新しい共通の評価視点は「発見の証拠（どう分かった）」「発明が解決した困りごと」「製造工程の痕跡」「例外と条件」「明日実物で確かめる部分」です。
+
+**優先して扱う指摘：**
+- **D42-05（P1）** エレベーターの「ロープを巻き取る」という説明と、シーブ駆動との違い。
+- **D42-09（P1）** 一般的な白色LEDの「青色LED＋蛍光体」の方式が説明から漏れている。
+- **D42-07（P1・要検証）** 重大な火災と非常口標識の成立を直接結びつける歴史的因果の裏付け。
+- **N42-09（P2）** 月の「同じ面」「月面での体重」の説明に、秤動・質量と重さを補う。
+- **M42-14（P2）** PVCの約57%は**塩素元素の質量比**であり、食塩がそのまま混ざっているわけではない。
+
+対象の42記事は各レビュー内に元記事リンクとして記載。**既存の記事・図解・本番公開サイトは変更していません。**
 
 ## 今後ほかのAIや担当者が使うとき
 
