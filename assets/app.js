@@ -585,6 +585,29 @@
       </article>`;
   }
 
+  // top of an item page: what this thing is in one breath, then a table of contents in reading order
+  function overviewHtml(it, md, mds) {
+    const lv = level();
+    let lead = '';
+    if (md) {
+      const { sections } = parseEntry(md);
+      const sec = sections.find(s => s.heading === (lv.heading || 'ひとことで')) || sections.find(s => s.heading === 'ひとことで');
+      if (sec) lead = toHtml(sec.text);
+    }
+    if (it.entries.length < 2 && !lead) return '';
+    const label = { small: 'この ページの おはなし', kid: 'この ページで わかること', adult: 'このページの構成' }[lv.id];
+    const toc = it.entries.map((e, i) => {
+      const meta = parseEntry(mds[i]).meta;
+      const name = lv.id === 'adult' ? (meta.title || e.title) : (meta.kidtitle || meta.title || e.title);
+      return `<li><a href="#/t/${e.slug}"><span class="toc-angle">${angleLabel(e.angle)}</span><span class="toc-name">${name}</span></a></li>`;
+    }).join('');
+    return `
+      <section class="overview">
+        ${lead ? `<div class="overview-lead">${lead}</div>` : ''}
+        ${it.entries.length > 1 ? `<p class="overview-label">${label}</p><ol class="toc">${toc}</ol>` : ''}
+      </section>`;
+  }
+
   async function renderItem(id, focusSlug) {
     let idx;
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
@@ -594,11 +617,14 @@
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let mds;
     try { mds = await Promise.all(it.entries.map(e => fetchText(`trivia/${e.slug}.md`))); } catch (e) { return showError(e); }
+    // optional overview for the whole item: items/<id>.md (## ひとことで / ## 3〜5歳むけ / ## 6〜9歳むけ)
+    const overviewMd = await fetchText(`items/${id}.md`).catch(() => null);
     const lv = level();
     main.innerHTML = `
       <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a><span aria-hidden="true">›</span><a href="#/c/${it.cat.id}">${it.cat.name}</a></nav>
       <h1 class="item-title">${it.name}</h1>
       ${lv.id === 'small' ? '<p class="level-note">おとなの ひとが よんで あげてね。</p>' : ''}
+      ${overviewHtml(it, overviewMd, mds)}
       ${it.entries.map((e, i) => entryHtml(e, mds[i], false)).join('')}`;
     main.querySelectorAll('.widget-mount').forEach(m => renderWidget(m.dataset.slug, m));
     if (focusSlug) {

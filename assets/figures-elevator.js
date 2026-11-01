@@ -121,6 +121,37 @@
     box: '0 0 320 200',
   };
 
+  // ---------- 非常用エレベーター ----------
+  F['fire-elevator-what'] = {
+    alt: 'たかさ31メートルをこえるたてものには、ひじょうようエレベーターがある。かじのとき、しょうぼうしがじょうのかいへいくためにつかう',
+    box: '0 0 320 220',
+    svg: `
+      <rect class="bg" x="40" y="20" width="110" height="190"/>
+      ${Array.from({ length: 9 }, (_, k) => `<path class="ln thin" d="M40 ${40 + k * 20}h110"/>`).join('')}
+      <rect class="red" x="56" y="40" width="20" height="20" opacity=".8"/><path class="orange" d="M66 40c-8-6-6-14 0-20 2 6 8 8 6 14 3-2 3-4 3-6 3 4 1 10-5 12Z"/>
+      <rect class="pale" x="110" y="140" width="28" height="40"/><rect class="ln thin" x="110" y="140" width="28" height="40"/>
+      <g transform="translate(124 176)"><circle class="red" cx="0" cy="-26" r="5"/><path class="red" d="M-6 -20h12v14h-12Z"/></g>
+      ${A('M124 136V70')}
+      <path class="ln thin dash" d="M170 20v190"/><path class="ln thin" d="M164 20h12M164 210h12"/>
+      ${T(184, 110, '31メートルを', 'tx-s', 'start')}${T(184, 128, 'こえると ひつよう', 'tx-s', 'start')}
+      ${T(240, 40, 'しょうぼうしが', 'tx-s')}${T(240, 58, 'うえの かいへ', 'tx-s')}`,
+  };
+  F['fire-elevator-flow'] = {
+    alt: 'よびもどしで1かいへ、いちじしょうぼうをいれる、いきさきボタンをおしつづける、ついたらひらくボタン、ドアがしまらないときはにじしょうぼう',
+    box: '0 0 320 300',
+    svg: `
+      ${[
+        ['①', 'よびもどし', '1かいへ もどって まつ'],
+        ['②', 'いちじしょうぼうを いれる', 'かごの なかでだけ うごく'],
+        ['③', 'いきさきボタンを おしつづける', 'ドアが しまって うごく'],
+        ['④', 'ついたら ひらくボタン', 'じどうでは ひらかない'],
+        ['⑤', 'しまらない ときは にじしょうぼう', 'ひねって 3びょう おしつづける'],
+      ].map(([n, a, b], i) => `
+        <rect class="bg" x="14" y="${12 + i * 56}" width="292" height="46" rx="10"/>${i === 4 ? `<rect class="ln s-red" x="14" y="${12 + i * 56}" width="292" height="46" rx="10" style="stroke-width:3"/>` : ''}
+        ${T(34, 42 + i * 56, n, 'tx-b')}
+        ${T(56, 32 + i * 56, a, 'tx', 'start')}${T(56, 50 + i * 56, b, 'tx-s', 'start')}`).join('')}`,
+  };
+
   // ---------- 消防運転の鍵 ----------
   const keyhole = (x, y, angle, opts = {}) => `
     <g transform="translate(${x} ${y})">

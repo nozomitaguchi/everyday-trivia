@@ -217,6 +217,14 @@ details.sources summary { cursor: pointer; font-weight: 700; color: var(--ink); 
 /* entry */
 .back { display: inline-block; margin: 8px 0 4px; font-weight: 700; text-decoration: none; }
 .entry h1 { font-size: 1.75rem; line-height: 1.4; font-weight: 900; margin: 8px 0 4px; }
+.overview { margin: 0 0 24px; padding: 16px; background: var(--panel); border-radius: 20px; }
+.overview-lead p { margin: 0 0 10px; line-height: 1.8; }
+.overview-label { margin: 8px 0 6px; font-size: 0.85rem; font-weight: 700; color: var(--ink-soft); }
+.toc { margin: 0; padding-left: 1.4em; }
+.toc li { margin: 6px 0; }
+.toc a { color: var(--ink); text-decoration: none; display: flex; flex-direction: column; gap: 2px; }
+.toc-angle { font-size: 0.75rem; font-weight: 700; color: var(--ink-soft); }
+.toc-name { font-weight: 700; text-decoration: underline; text-decoration-color: var(--line, #ccc); text-underline-offset: 3px; }
 .level-note { margin: 0 0 16px; font-size: 0.9rem; color: var(--ink-soft); }
 /* kid text is written with spaces between phrases; break lines only there */
 .level-small .body, .level-kid .body { word-break: keep-all; overflow-wrap: anywhere; line-break: strict; }

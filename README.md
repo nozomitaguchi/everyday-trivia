@@ -8,6 +8,7 @@
 
 - `index.html`, `assets/` … サイト本体。この README の「一覧」と `trivia/*.md` をそのまま読みこんで表示する
 - `WRITING.md` … 深掘りの基準（1つのものにそろえる問い、絵の入れ方）と、子ども向けの説明の書き方の基準
+- `items/` … 「もの」ごとのページの先頭に出す「ひとことで」（`items/<id>.md`）
 - `tools/check_kids.py` … 子ども向けの文が基準を満たすかの機械チェック
 - `tools/coverage.py` … ものごとの深さ（ネタの本数・絵の枚数・きほん・歴史の有無）を浅い順に並べる
 - `trivia/` … 1トリビア1ファイル。出典を確認できたもの
@@ -166,9 +167,9 @@ tags: [ジャンル, ...]
 
 #### エレベーター {elevator}
 - きほん: [エレベーターはどうやって動くのか](trivia/elevator-basics.md)
-- しくみ: [エレベーターの一次消防・二次消防の鍵穴](trivia/elevator-fire-service-keyswitch.md)
-- かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
 - れきし: [エレベーターを「乗れるもの」にしたのは、ロープが切れても落ちないしかけ](trivia/elevator-history.md)
+- かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
+- しくみ: [火事のとき消防隊が使う特別な運転と、2つの鍵穴（一次消防・二次消防）](trivia/elevator-fire-service-keyswitch.md)
 
 #### エスカレーター {escalator}
 - きほん: [エスカレーターはどうやって動くのか](trivia/escalator-basics.md)

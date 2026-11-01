@@ -4,7 +4,7 @@ ROOT = __import__('os').path.dirname(__import__('os').path.dirname(__import__('o
 KANA = re.compile(r'[^぀-ヿ　-〿！-／？～\s「」、。！？…ー（）\-]')
 fail = 0
 missing = []
-for f in sorted(glob.glob(ROOT + '/trivia/*.md')):
+for f in sorted(glob.glob(ROOT + '/trivia/*.md')) + sorted(glob.glob(ROOT + '/items/*.md')):
     t = open(f, encoding='utf-8').read()
     name = f.split('/')[-1]
     secs = dict(re.findall(r'^## (.+?)\n(.*?)(?=^## |\Z)', t, re.M | re.S))
@@ -14,7 +14,7 @@ for f in sorted(glob.glob(ROOT + '/trivia/*.md')):
     kt = re.search(r'^kidtitle:\s*(.+)$', t, re.M)
     if not s or not k:
         missing.append(name); continue
-    if not kt:
+    if not kt and '/items/' not in f:
         print(name, 'no kidtitle'); fail += 1
     elif KANA.findall(kt.group(1)):
         print(name, 'kidtitle non-kana', set(KANA.findall(kt.group(1)))); fail += 1
