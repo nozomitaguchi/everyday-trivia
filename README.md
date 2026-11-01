@@ -192,7 +192,13 @@ tags: [ジャンル, ...]
 - しるし: [なぜ「歩かずに立ち止まって」なのか、条例になった街と、東京は左・大阪は右のなぞ](trivia/escalator-stand-still.md)
 
 #### かいだん {stairs}
-- しるし: [階段の手すりの端にある点字](trivia/handrail-braille.md)
+- きほん: [階段とは何か、段の部分の名前と、坂・階段・はしごのかたむき](trivia/stairs-basics.md)
+- しくみ: [1段の高さと奥行きはどう決まる？ 小学校は16cm、家は23cmまで、「2段の高さ＋奥行き＝歩はば」の目安](trivia/stairs-rise-tread.md)
+- れきし: [階段の歴史、きざんだ丸太とはしごから箱階段へ、歩はばの目安、家の手すりは2000年から](trivia/stairs-history.md)
+- ことば: [「階段」は江戸時代に日本で生まれた言葉、昔は「きざはし」「はしご」、「踊り場」はもとは踊る場所](trivia/stairs-words.md)
+- かたち: [階段の途中の平らな場所（踊り場）はどこにある？ 3mか4mごと、家の階段の三角の段](trivia/stairs-landing.md)
+- しるし: [駅の階段の段のはしにある線はなぜある？ 段鼻の色と、すべり止めの金物](trivia/stairs-nosing.md)
+- しるし: [階段の手すり、なぜ高さのちがう2本？ 端が60cmまっすぐ延びるわけと、そこにある点字](trivia/handrail-braille.md)
 
 #### ひじょうぐち {emergency-exit}
 - しるし: [非常口マークの緑地と白地](trivia/building-exit-sign-colors.md)
