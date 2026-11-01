@@ -108,8 +108,14 @@ tags: [ジャンル, ...]
 - れきし: [ばんそうこうは、台所でよくけがをする奥さんのために生まれた](trivia/bandage-history.md)
 
 #### でんしレンジ {microwave}
+- きほん: [電子レンジとは何か、箱の中で何が起きているのか（そもそも）](trivia/microwave-basics.md)
 - しくみ: [電子レンジはどうやって温めるのか](trivia/microwave-oven.md)
+- なにでできてる: [電子レンジの心臓「マグネトロン」は何でできているか（銅・磁石・タングステン、2つの日本の発明）](trivia/microwave-magnetron.md)
+- しくみ: [温めむらはなぜできるのか、氷はなぜとけにくいのか（回るお皿と回るアンテナ）](trivia/microwave-uneven.md)
 - れきし: [電子レンジはポケットのチョコから生まれた、「チン」は自転車のベル](trivia/microwave-history.md)
+- ことば: [「レンジ」は英語のこんろ、「マイクロ」は短い波、「チンする」は9割の人が使う](trivia/microwave-words.md)
+- かたち: [電子レンジのドアの点々のなぞ、マイクロ波が外に出ないしくみ](trivia/microwave-door.md)
+- ひみつ: [電子レンジのよくある誤解、「中から温まる」「外がぬるければ中も平気」](trivia/microwave-myths.md)
 
 #### しゃしん {photo}
 - しくみ: [写真はどうやって撮れるのか](trivia/photo-digital-camera.md)
