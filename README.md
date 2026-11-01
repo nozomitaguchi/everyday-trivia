@@ -184,7 +184,12 @@ tags: [ジャンル, ...]
 
 #### エスカレーター {escalator}
 - きほん: [エスカレーターはどうやって動くのか](trivia/escalator-basics.md)
-- かたち: [エスカレーター側面のブラシ](trivia/escalator-brush.md)
+- しくみ: [手すりはなぜ段と同じ速さで動くのか（どこから力をもらっているか）](trivia/escalator-handrail.md)
+- れきし: [エスカレーターの歴史、「動く坂」と「平らな段」を1つにした、日本の1号はデパートではなく博覧会](trivia/escalator-history.md)
+- ことば: [「エスカレーター」はもともと会社の商品名、動詞の「エスカレート」はあとから生まれた](trivia/escalator-words.md)
+- かたち: [段の上の細いみぞと、降り口の「くし」、黄色い線のわけ](trivia/escalator-comb-cleat.md)
+- かたち: [エスカレーター側面のブラシ（すき間に近づかないためのしるし）](trivia/escalator-brush.md)
+- しるし: [なぜ「歩かずに立ち止まって」なのか、条例になった街と、東京は左・大阪は右のなぞ](trivia/escalator-stand-still.md)
 
 #### かいだん {stairs}
 - しるし: [階段の手すりの端にある点字](trivia/handrail-braille.md)
