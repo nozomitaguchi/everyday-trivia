@@ -266,7 +266,13 @@ tags: [ジャンル, ...]
 ### からだ {body}
 
 #### うんち {digestion}
+- きほん: [うんちとは何か、8割は水で、残りは食べかす・腸内細菌・はがれた腸のかべ](trivia/poop-basics.md)
 - しくみ: [ごはんがうんちになるまで](trivia/digestion-to-poop.md)
+- なにでできてる: [うんちはなぜ茶色いのか、赤い血の色から生まれる色と、赤ちゃんの便色カード](trivia/poop-color.md)
+- かたち: [うんちのかたちでわかること、コロコロからバナナ、どろどろまでの7タイプ](trivia/poop-shapes.md)
+- ひみつ: [おなかの細菌とうんちのにおい、大腸にすむ約40兆個の仲間](trivia/poop-bacteria.md)
+- れきし: [うんちと消化の歴史、ふくろを飲んだ学者、おなかに穴のあいた人、赤ちゃんのうんちから見つかった大腸菌](trivia/poop-history.md)
+- ことば: [「うんこ」「うんち」「くそ」「便」、うんちの呼び名](trivia/poop-words.md)
 
 #### つめと かみ {nails-and-hair}
 - しくみ: [つめと髪はなぜのびるのか](trivia/nails-and-hair-grow.md)
