@@ -541,12 +541,7 @@
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let idx;
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
-    const total = idx.cats.reduce((s, c) => s + c.items.reduce((a, i) => a + i.entries.length, 0), 0);
-    main.innerHTML = `<p class="home-lead">${say({
-      small: 'みの まわりの ものの ひみつを、のぞいて みよう。',
-      kid: 'みの まわりの ものは、なにで できて いて、どう うごくのかな。',
-      adult: `身の回りのものの「なにでできてる？」「どんなしくみ？」を、いま${total}話。`,
-    })}</p><ul class="cats">${idx.cats.map(c => {
+    main.innerHTML = `<ul class="cats">${idx.cats.map(c => {
       const n = c.items.reduce((s, i) => s + i.entries.length, 0);
       const count = n
         ? say({ small: `${c.items.length}こ`, kid: `${c.items.length}こ`, adult: `${c.items.length}種・${n}話` })
