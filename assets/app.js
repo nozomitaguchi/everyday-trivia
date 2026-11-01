@@ -46,17 +46,19 @@
     </svg>`;
   }
 
-  // ---------- header dial ----------
+  // ---------- header: dial + three-way switch ----------
+  // Content only changes between three levels, so the reader picks a level;
+  // the stored age is the level's sample age (4 / 7 / 15).
   const dialEl = document.getElementById('reader-dial');
-  const ageRange = document.getElementById('age-range');
-  const ageOut = document.getElementById('age-out');
+  const seg = document.getElementById('level-seg');
+  const segButtons = [...seg.querySelectorAll('button')];
 
   function renderDial() {
     const idx = LEVELS.indexOf(level());
     dialEl.innerHTML = `<div class="ks">
       <button type="button" class="dial-hit" aria-label="読む人を切りかえる（いまは${LEVELS[idx].short}）">
         ${keySwitchSvg({
-          size: 104,
+          size: 64,
           labels: LEVELS.map((l, i) => ({ text: l.short, angle: DIAL_ANGLES[i] })),
           angle: DIAL_ANGLES[idx],
           litIndex: idx,
@@ -64,34 +66,55 @@
           title: `読む人：${LEVELS[idx].short}`,
         })}
       </button></div>`;
-    document.getElementById('level-name').textContent =
-      { small: 'ちいさい子むけ（よみきかせ）', kid: 'こどもむけ', adult: 'おとなむけ' }[LEVELS[idx].id];
-    dialEl.querySelector('button').addEventListener('click', () => {
-      const next = LEVELS[(idx + 1) % LEVELS.length];
-      setAge(next.sample);
+    dialEl.querySelector('button').addEventListener('click', e => setLevel((LEVELS.indexOf(level()) + 1) % LEVELS.length, { instant: e.detail === 0 }));
+  }
+
+  function showLevel() {
+    const idx = LEVELS.indexOf(level());
+    seg.style.setProperty('--i', idx);
+    segButtons.forEach((b, i) => {
+      b.setAttribute('aria-checked', String(i === idx));
+      b.tabIndex = i === idx ? 0 : -1;
     });
+    document.documentElement.dataset.level = LEVELS[idx].id;
   }
 
-  function showAge() {
-    ageRange.value = age;
-    ageOut.textContent = ageText(age);
-    ageRange.setAttribute('aria-valuetext', ageText(age));
+  // rotate the existing dial instead of redrawing, so the key turns
+  function turnDial() {
+    const idx = LEVELS.indexOf(level());
+    const rotor = dialEl.querySelector('.rotor');
+    if (!rotor) return renderDial();
+    rotor.style.transform = `rotate(${DIAL_ANGLES[idx]}deg)`;
+    dialEl.querySelectorAll('.tick').forEach((t, i) => t.classList.toggle('on', i === idx));
+    const btn = dialEl.querySelector('button');
+    btn.setAttribute('aria-label', `読む人を切りかえる（いまは${LEVELS[idx].short}）`);
   }
 
-  function setAge(n) {
+  function setLevel(i, { instant = false } = {}) {
     const before = level();
-    age = clampAge(n);
-    showAge();
+    const target = LEVELS[i];
+    if (target === before) return;
+    age = target.sample;
     store.set('aha-age', String(age));
-    if (level() !== before) {
-      renderDial();
-      route();
-    }
+    seg.classList.toggle('instant', instant);
+    showLevel();
+    turnDial();
+    route({ swap: true });
   }
 
-  showAge();
-  ageRange.addEventListener('input', () => setAge(parseInt(ageRange.value, 10)));
+  segButtons.forEach((b, i) => {
+    b.addEventListener('click', e => setLevel(i, { instant: e.detail === 0 }));
+    b.addEventListener('keydown', e => {
+      const d = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+      if (!d) return;
+      e.preventDefault();
+      const n = (LEVELS.indexOf(level()) + d + LEVELS.length) % LEVELS.length;
+      setLevel(n, { instant: true });
+      segButtons[n].focus();
+    });
+  });
   renderDial();
+  showLevel();
 
   // ---------- content loading ----------
   const cache = new Map();
@@ -518,13 +541,18 @@
     main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let idx;
     try { idx = await loadIndex(); } catch (e) { return showError(e); }
-    main.innerHTML = `<ul class="cats">${idx.cats.map(c => {
+    const total = idx.cats.reduce((s, c) => s + c.items.reduce((a, i) => a + i.entries.length, 0), 0);
+    main.innerHTML = `<p class="home-lead">${say({
+      small: 'みの まわりの ものの ひみつを、のぞいて みよう。',
+      kid: 'みの まわりの ものは、なにで できて いて、どう うごくのかな。',
+      adult: `身の回りのものの「なにでできてる？」「どんなしくみ？」を、いま${total}話。`,
+    })}</p><ul class="cats">${idx.cats.map(c => {
       const n = c.items.reduce((s, i) => s + i.entries.length, 0);
       const count = n
         ? say({ small: `${c.items.length}こ`, kid: `${c.items.length}こ`, adult: `${c.items.length}種・${n}話` })
         : say({ small: 'じゅんびちゅう', kid: 'じゅんびちゅう', adult: '準備中' });
       return `<li><a class="cat cat-${c.id}${n ? '' : ' is-empty'}" href="#/c/${c.id}">
-        ${picto(c.id)}<span class="cat-name">${c.name}</span><span class="cat-count">${count}</span></a></li>`;
+        <span class="cat-icon">${picto(c.id)}</span><span class="cat-name">${c.name}</span><span class="cat-count">${count}</span></a></li>`;
     }).join('')}</ul>`;
   }
 
@@ -534,15 +562,19 @@
     const c = idx.cats.find(x => x.id === id);
     if (!c) return renderNotFound();
     document.title = `${c.name}｜みのまわり図鑑`;
-    main.innerHTML = `
+    main.innerHTML = `<div class="page cat-${c.id}">
       <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a></nav>
-      <h1 class="cat-title cat-${c.id}">${picto(c.id)}${c.name}</h1>
+      <h1 class="cat-title"><span class="item-badge">${picto(c.id)}</span>${c.name}</h1>
       ${c.items.length ? `<ul class="items">${c.items.map(i => `
         <li><a href="#/i/${i.id}" data-item="${i.id}">
-          <span class="item-name">${i.name}</span>
-          <span class="item-angles">${[...new Set(i.entries.map(e => e.angle))].map(a => `<span>${angleLabel(a)}</span>`).join('')}</span>
+          <span class="item-main">
+            <span class="item-name">${i.name}</span>
+            <span class="item-angles">${[...new Set(i.entries.map(e => e.angle))].map(a => `<span>${angleLabel(a)}</span>`).join('')}</span>
+          </span>
+          <span class="item-count">${say({ small: `${i.entries.length}わ`, kid: `${i.entries.length}わ`, adult: `${i.entries.length}話` })}</span>
         </a></li>`).join('')}</ul>`
-        : `<p class="empty">${say({ small: 'いま つくって いるよ。まってね。', kid: 'いま つくって いるよ。もうすこし まってね。', adult: 'この分類はまだ準備中です。' })}</p>`}`;
+        : `<p class="empty">${say({ small: 'いま つくって いるよ。まってね。', kid: 'いま つくって いるよ。もうすこし まってね。', adult: 'この分類はまだ準備中です。' })}</p>`}
+    </div>`;
   }
 
   // illustrations come from assets/figures-*.js: { svg, alt } keyed by slug
@@ -552,7 +584,7 @@
     return `<figure class="fig"><svg viewBox="${f.box || '0 0 320 200'}" role="img" aria-label="${f.alt}">${f.svg}</svg></figure>`;
   }
 
-  function entryHtml(e, md, solo) {
+  function entryHtml(e, md, solo, n = 0, total = 1) {
     const { meta, sections } = parseEntry(md);
     const lv = level();
     const kidSection = lv.heading && sections.find(s => s.heading === lv.heading);
@@ -575,7 +607,7 @@
     const H = solo ? 'h1' : 'h2';
     return `
       <article class="trivia level-${kidSection ? lv.id : 'adult'}" id="t-${e.slug}">
-        <p class="angle${e.angle === 'きほん' ? ' basic' : ''}">${angleLabel(e.angle)}</p>
+        <div class="trivia-meta">${total > 1 ? `<span class="trivia-n">${n + 1}<span>／${total}</span></span>` : ''}<p class="angle${e.angle === 'きほん' ? ' basic' : ''}">${angleLabel(e.angle)}</p></div>
         ${heading ? `<${H} class="trivia-title">${heading}</${H}>` : ''}
         ${note ? `<p class="level-note">${note}</p>` : ''}
         ${figureHtml(e.slug)}
@@ -599,7 +631,7 @@
     const toc = it.entries.map((e, i) => {
       const meta = parseEntry(mds[i]).meta;
       const name = lv.id === 'adult' ? (meta.title || e.title) : (meta.kidtitle || meta.title || e.title);
-      return `<li><a href="#/t/${e.slug}"><span class="toc-angle">${angleLabel(e.angle)}</span><span class="toc-name">${name}</span></a></li>`;
+      return `<li><a href="#/t/${e.slug}"><span class="toc-n" aria-hidden="true">${i + 1}</span><span class="toc-text"><span class="toc-angle">${angleLabel(e.angle)}</span><span class="toc-name">${name}</span></span></a></li>`;
     }).join('');
     return `
       <section class="overview">
@@ -614,18 +646,22 @@
     const it = idx.items.get(id);
     if (!it) return renderNotFound();
     document.title = `${it.name}｜みのまわり図鑑`;
-    main.innerHTML = '<p class="empty">よみこみ中…</p>';
+    if (!main.querySelector(`[data-item-page="${id}"]`)) main.innerHTML = '<p class="empty">よみこみ中…</p>';
     let mds;
     try { mds = await Promise.all(it.entries.map(e => fetchText(`trivia/${e.slug}.md`))); } catch (e) { return showError(e); }
     // optional overview for the whole item: items/<id>.md (## ひとことで / ## 3〜5歳むけ / ## 6〜9歳むけ)
     const overviewMd = await fetchText(`items/${id}.md`).catch(() => null);
     const lv = level();
-    main.innerHTML = `
+    main.innerHTML = `<div class="page item-page cat-${it.cat.id}" data-item-page="${id}">
       <nav class="crumbs"><a href="#/">${say({ small: 'さいしょ', kid: 'さいしょ', adult: 'トップ' })}</a><span aria-hidden="true">›</span><a href="#/c/${it.cat.id}">${it.cat.name}</a></nav>
-      <h1 class="item-title">${it.name}</h1>
-      ${lv.id === 'small' ? '<p class="level-note">おとなの ひとが よんで あげてね。</p>' : ''}
+      <header class="item-head">
+        <span class="item-badge">${picto(it.cat.id)}</span>
+        <h1 class="item-title">${it.name}</h1>
+      </header>
+      ${lv.id === 'small' ? '<p class="level-note read-aloud">おとなの ひとが よんで あげてね。</p>' : ''}
       ${overviewHtml(it, overviewMd, mds)}
-      ${it.entries.map((e, i) => entryHtml(e, mds[i], false)).join('')}`;
+      ${it.entries.map((e, i) => entryHtml(e, mds[i], false, i, it.entries.length)).join('')}
+    </div>`;
     main.querySelectorAll('.widget-mount').forEach(m => renderWidget(m.dataset.slug, m));
     if (focusSlug) {
       const el = document.getElementById(`t-${focusSlug}`);
@@ -650,17 +686,47 @@
   }
 
   // ---------- router ----------
+  // Content arrives with a short fade-up; a level switch keeps the scroll position.
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function enter(swap) {
+    if (!main.animate) return;
+    const frames = reduceMotion.matches
+      ? [{ opacity: 0 }, { opacity: 1 }]
+      : [{ opacity: 0, transform: `translateY(${swap ? 4 : 8}px)` }, { opacity: 1, transform: 'none' }];
+    main.animate(frames, { duration: swap ? 180 : 240, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' });
+  }
   let lastPath = null;
-  function route() {
+  let seq = 0;
+  function route({ swap = false } = {}) {
     const path = location.hash.replace(/^#\/?/, '');
     const changed = path !== lastPath;
     lastPath = path;
     const [kind, id] = path.split('/');
-    if (!path) renderHome();
-    else if (kind === 'c') renderCategory(id);
-    else if (kind === 'i') renderItem(id);
-    else if (kind === 't') renderTrivia(id);
-    else renderTrivia(kind); // links from before the zukan layout: #/<slug>
+    document.documentElement.dataset.view = !path ? 'home' : kind === 'c' ? 'category' : 'item';
+    // on a level switch, keep the section the reader was looking at
+    let anchor = null;
+    if (swap) {
+      const arts = [...main.querySelectorAll('.trivia')];
+      const a = arts.find(el => el.getBoundingClientRect().bottom > 80);
+      if (a && a.getBoundingClientRect().top < window.innerHeight) anchor = { id: a.id, top: a.getBoundingClientRect().top };
+    }
+    const y = window.scrollY;
+    const n = ++seq;
+    let done;
+    if (!path) done = renderHome();
+    else if (kind === 'c') done = renderCategory(id);
+    else if (kind === 'i') done = renderItem(id);
+    else if (kind === 't') done = renderTrivia(id);
+    else done = renderTrivia(kind); // links from before the zukan layout: #/<slug>
+    Promise.resolve(done).then(() => {
+      if (n !== seq) return;
+      if (swap) {
+        const el = anchor && document.getElementById(anchor.id);
+        if (el) window.scrollTo(0, window.scrollY + el.getBoundingClientRect().top - Math.max(anchor.top, 0));
+        else window.scrollTo(0, y);
+      }
+      enter(swap);
+    });
     if (changed && kind !== 't') window.scrollTo(0, 0);
   }
   window.addEventListener('hashchange', () => { route(); main.focus({ preventScroll: true }); });
