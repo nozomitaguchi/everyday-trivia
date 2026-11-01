@@ -125,8 +125,15 @@ tags: [ジャンル, ...]
 - しくみ: [ふとんはなぜあたたかいのか](trivia/futon-warmth.md)
 
 #### かがみ {mirror}
-- なにでできてる: [鏡は何でできているか](trivia/mirror-silver.md)
-- しくみ: [お風呂の鏡がくもるのはなぜか](trivia/mirror-fog.md)
+- きほん: [鏡とは何か、なぜ映るのか（白い紙も光をはね返しているのに映らないわけ、全身を映すには身長の半分）](trivia/mirror-basics.md)
+- なにでできてる: [鏡は何でできているか、ガラス・銀・銅・塗料の4つの層と、金属を裏にぬるわけ](trivia/mirror-silver.md)
+- つくりかた: [鏡はどうやって作るのか、溶けたスズに浮かべるガラスと、吹きつける銀の液（ふちが黒くなるわけ）](trivia/mirror-making.md)
+- しくみ: [お風呂の鏡がくもるのはなぜか、お湯をかけると晴れるわけと、くもり止めの3つのしくみ](trivia/mirror-fog.md)
+- れきし: [鏡の歴史、水たまりから黒い石・青銅の鏡へ、卑弥呼の100枚、ヴェネツィアの水銀の鏡、そして銀の鏡](trivia/mirror-history.md)
+- ことば: [「かがみ」は「影見」、「鏡」と「鑑」はもとは同じ言葉、鏡もちはなぜ「鏡」？ 英語の mirror は「おどろく」から](trivia/mirror-words.md)
+- ひみつ: [鏡は本当に左右を反対にする？ 鏡が入れかえるのは「前と後ろ」、救急車の「急救」](trivia/mirror-left-right.md)
+- ひみつ: [鏡は何色？ 合わせ鏡のトンネルの奥はなぜ暗く緑になるのか（犯人はガラスの鉄分）](trivia/mirror-green.md)
+- かたち: [道のカーブミラーはなぜふくらんでいて、なぜオレンジなのか](trivia/mirror-curve.md)
 
 #### エアコン {air-conditioner}
 - しくみ: [エアコンはなぜ冷えるのか、室外機はなぜ必要なのか](trivia/air-conditioner-and-outdoor-unit.md)
