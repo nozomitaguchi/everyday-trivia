@@ -25,18 +25,6 @@
       ${T(160, 182, 'かたい からで おなかを まもる', 'tx')}`,
   };
 
-  F['ant-trail-pheromone'] = {
-    alt: 'ありはにおいのみちをつけて、なかまはそのにおいをたどって、すとえさのあいだをいききする',
-    svg: `
-      <path class="brown" d="M14 150c10-30 50-30 60 0Z"/><circle class="ink" cx="44" cy="146" r="6"/>
-      ${T(44, 176, 'す', 'tx-s')}
-      <path class="ln dash s-purple" d="M74 140c60-20 100 30 170-10" style="stroke-width:4;stroke-dasharray:2 6"/>
-      ${[[100, 132], [140, 134], [180, 140], [220, 132]].map(([x, y]) => `<g transform="translate(${x} ${y})"><circle class="ink" cx="-6" cy="0" r="3"/><ellipse class="ink" cx="0" cy="0" rx="3" ry="2.5"/><ellipse class="ink" cx="7" cy="0" rx="5" ry="3.5"/><path class="ln thin" d="M-2 0l-3 5M2 0l3 5M0 0v-5"/></g>`).join('')}
-      <circle class="red" cx="270" cy="120" r="14"/><path class="green" d="M266 104h8v6h-8Z"/>
-      ${T(270, 150, 'えさ', 'tx-s')}
-      ${T(160, 100, 'においの みち', 'tx')}
-      ${T(160, 40, 'なかまは においを たどる', 'tx-s')}`,
-  };
 
   // ---- そらと けしき ----
   F['sky-blue-sunset-red'] = {
