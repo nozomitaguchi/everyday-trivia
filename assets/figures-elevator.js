@@ -211,4 +211,146 @@
         <path class="ln s-red" d="M${180} ${78 + i * 50}c8 0 8 12 0 12" style="stroke-width:3"/>
         ${T(196, 82 + i * 50, a, 'tx-s', 'start')}${T(196, 98 + i * 50, b, 'tx-s', 'start')}`).join('')}`,
   };
+
+  // ---------- 鏡・定員・敷居・調速機・みてみよう ----------
+  // くるまいすの ひと（よこから見た形）。face: 1=右向き, -1=左向き
+  const chair = (x, y, face = 1, s = 1) => `<g transform="translate(${x} ${y}) scale(${face * s} ${s})">
+    <circle class="ln" cx="-4" cy="18" r="16"/><circle class="ln thin" cx="22" cy="28" r="6"/>
+    <path class="ln" d="M-20 -2h34v18M-20 -30v28"/>
+    <circle class="pale" cx="-8" cy="-40" r="8"/><circle class="ln thin" cx="-8" cy="-40" r="8"/>
+    <path class="blue" d="M-16 -31h14l4 25h-18Z"/><path class="ln thin" d="M-2 -8h18"/></g>`;
+
+  F['mirror-what-you-see'] = {
+    alt: 'うしろむきのままではドアが見えない。おくのかがみにドアとゆかのたかさがうつるので、ふりかえらずにたしかめられる',
+    box: '0 0 320 226',
+    svg: `
+      <rect class="bg" x="20" y="40" width="200" height="130"/><rect class="ln thin" x="20" y="40" width="200" height="130"/>
+      <rect class="glass" x="28" y="44" width="8" height="122"/><path class="ln" d="M28 44v122"/>
+      ${T(32, 32, 'かがみ', 'tx-s')}
+      <rect class="gray" x="214" y="70" width="12" height="80"/>${T(250, 114, 'ドア', 'tx-s')}
+      ${chair(120, 130, -1)}
+      <path class="ln dash s-blue" d="M110 92 34 100M34 100 214 120" style="stroke-width:2"/>
+      ${A('M150 156h40')}${T(120, 188, 'うしろむきに でる', 'tx-s')}
+      ${T(160, 214, 'ドアが あいた？ ゆかは そろった？', 'tx')}`,
+  };
+
+  F['mirror-height-rule'] = {
+    alt: 'かがみはゆかから90センチいかのたかさからはじまり、うえへ90センチいじょうある。すわったひとのめのたかさでもうつる',
+    box: '0 0 320 220',
+    svg: `
+      <path class="ln" d="M20 196h280"/>${T(36, 212, 'ゆか', 'tx-s')}
+      <rect class="glass" x="200" y="34" width="30" height="110"/><rect class="ln" x="200" y="34" width="30" height="110"/>
+      <path class="ln thin s-red" d="M246 144v52M240 144h12M240 196h12" style="stroke-width:2"/>
+      ${T(256, 168, '90センチ', 'tx-s', 'start')}${T(256, 184, 'いか', 'tx-s', 'start')}
+      <path class="ln thin s-blue" d="M246 34v110M240 34h12" style="stroke-width:2"/>
+      ${T(256, 92, '90センチ', 'tx-s', 'start')}${T(256, 108, 'いじょう', 'tx-s', 'start')}
+      ${chair(110, 160, 1)}
+      <path class="ln dash s-blue" d="M110 120h90" style="stroke-width:2"/>
+      ${T(110, 30, 'すわった めの たかさ', 'tx-s')}${A('M110 38v60')}`,
+  };
+
+  F['mirror-through-type'] = {
+    alt: 'まえとうしろにドアがあるエレベーターや、よこにドアがあるエレベーターでは、ふくらんだかがみでもよい',
+    box: '0 0 320 200',
+    svg: `
+      ${T(80, 22, 'おくに かがみ', 'tx-s')}
+      <rect class="bg" x="30" y="34" width="100" height="110"/><rect class="ln thin" x="30" y="34" width="100" height="110"/>
+      <rect class="glass" x="38" y="38" width="84" height="8"/><rect class="gray" x="56" y="140" width="48" height="8"/>
+      ${T(80, 170, 'ドアは まえだけ', 'tx-s')}
+      ${T(240, 22, 'ドアが 2か所', 'tx-s')}
+      <rect class="bg" x="190" y="34" width="100" height="110"/><rect class="ln thin" x="190" y="34" width="100" height="110"/>
+      <rect class="gray" x="216" y="30" width="48" height="8"/><rect class="gray" x="216" y="140" width="48" height="8"/>
+      <path class="glass" d="M194 44a18 18 0 0 1 18 18h-18Z"/><path class="ln" d="M212 62a18 18 0 0 0-18-18"/>
+      ${T(240, 170, 'ふくらんだ かがみ', 'tx-s')}${T(240, 188, 'でも よい', 'tx-s')}`,
+  };
+
+  F['mirror-look'] = {
+    alt: 'かがみのしたのはしが、じぶんのおなかよりひくいか、くらべてみよう',
+    box: '0 0 320 210',
+    svg: `
+      <path class="ln" d="M20 190h280"/>
+      <rect class="glass" x="180" y="40" width="40" height="110"/><rect class="ln" x="180" y="40" width="40" height="110"/>
+      <path class="ln dash s-red" d="M60 150h180" style="stroke-width:2"/>${T(250, 154, 'したの はし', 'tx-s', 'start')}
+      ${kid(90, 190, 2.2)}
+      ${T(100, 30, 'おなかと くらべる', 'tx')}`,
+  };
+
+  F['elev-capacity-65'] = {
+    alt: 'のせてよいおもさを、ひとり65キロでわったにんずうがていいん。かごのなかにひょうじがある',
+    box: '0 0 320 200',
+    svg: `
+      <rect class="bg" x="20" y="40" width="130" height="80" rx="8"/><rect class="ln thin" x="20" y="40" width="130" height="80" rx="8"/>
+      ${T(85, 72, 'じょうよう', 'tx-s')}${T(85, 96, '11にんのり 750キロ', 'tx-s')}
+      ${T(85, 142, 'かごの なかの ひょうじ', 'tx-s')}
+      ${T(240, 60, '750 ÷ 65', 'tx')}${T(240, 86, '＝ 11.5…', 'tx')}${A('M240 98v20')}${T(240, 140, '11にん', 'tx-b')}
+      ${[0, 1, 2, 3, 4, 5].map(k => kid(186 + k * 22, 190, .7)).join('')}`,
+  };
+
+  F['elev-two-doors-sill'] = {
+    alt: 'かごのドアとのりばのドアの2まいがいっしょにうごく。あしもとのしきいには、ドアをあんないするみぞがある',
+    box: '0 0 320 210',
+    svg: `
+      <rect class="pale" x="20" y="30" width="110" height="140"/><rect class="ln thin" x="20" y="30" width="110" height="140"/>${T(75, 24, 'かご', 'tx-s')}
+      <rect class="gray" x="130" y="40" width="10" height="130"/><rect class="gray" x="160" y="40" width="10" height="130"/>
+      ${T(135, 190, 'かごの', 'tx-s')}${T(135, 204, 'ドア', 'tx-s')}${T(195, 190, 'のりばの', 'tx-s')}${T(195, 204, 'ドア', 'tx-s')}
+      <rect class="coal" x="120" y="170" width="30" height="8"/><rect class="coal" x="152" y="170" width="30" height="8"/>
+      <path class="ln" style="stroke:#fff" d="M135 172v4M167 172v4"/>
+      <rect class="bg" x="182" y="30" width="120" height="140"/><rect class="ln thin" x="182" y="30" width="120" height="140"/>${T(242, 24, 'のりば', 'tx-s')}
+      ${T(242, 100, 'しきいの みぞで', 'tx-s')}${T(242, 118, 'ドアが まっすぐ', 'tx-s')}`,
+  };
+
+  F['elev-look-sign-sill'] = {
+    alt: 'みてみよう。かごのなかのていいんのひょうじと、あしもとのしきいのみぞ',
+    box: '0 0 320 200',
+    svg: `
+      <rect class="bg" x="20" y="30" width="130" height="70" rx="8"/><rect class="ln thin" x="20" y="30" width="130" height="70" rx="8"/>
+      ${T(85, 60, '○にんのり', 'tx-s')}${T(85, 82, '○キロ', 'tx-s')}
+      ${T(85, 126, 'キロ ÷ にんずう ＝ ？', 'tx-s')}
+      <rect class="coal" x="180" y="80" width="120" height="16"/>
+      ${[0, 1].map(k => `<path class="ln" style="stroke:#fff" d="M${196 + k * 60} 84h28"/>`).join('')}
+      ${T(240, 70, 'あしもとの いた', 'tx-s')}${T(240, 126, 'みぞは いくつ？', 'tx-s')}
+      ${T(160, 180, 'みる だけ', 'tx')}`,
+  };
+
+  F['elev-governor'] = {
+    alt: 'ちょうそくきは、かごといっしょにまわるくるまのえんしんりょくで、はやすぎるのをみつけて、かごをとめる',
+    box: '0 0 320 210',
+    svg: `
+      <circle class="gray" cx="80" cy="60" r="34"/><circle class="ln" cx="80" cy="60" r="34"/>
+      <path class="ln" d="M80 60l-20-16M80 60l20-16"/><circle class="coal" cx="58" cy="42" r="7"/><circle class="coal" cx="102" cy="42" r="7"/>
+      ${A('M48 40l-12-8')}${A('M112 40l12-8')}
+      ${T(80, 116, 'はやく まわると', 'tx-s')}${T(80, 132, 'おもりが ひらく', 'tx-s')}
+
+      <rect class="pale" x="160" y="70" width="80" height="80" rx="4"/><rect class="ln thin" x="160" y="70" width="80" height="80" rx="4"/>
+      <path class="ln" d="M150 30v150M250 30v150" style="stroke-width:4"/>
+      <rect class="red" x="152" y="150" width="10" height="16"/><rect class="red" x="238" y="150" width="10" height="16"/>
+      ${T(200, 200, 'ひじょうどめで とめる', 'tx-s')}${T(200, 116, 'かご', 'tx-k')}`,
+  };
+
+  F['elev-look-top-floor'] = {
+    alt: 'エレベーターができるまえは、いちばんうえのへやがいちばんやすかった。いまのたてもののいちばんうえにはなにがあるかな',
+    box: '0 0 320 220',
+    svg: `
+      ${T(80, 20, 'むかし', 'tx-b')}${T(240, 20, 'いま', 'tx-b')}
+      ${[0, 1, 2, 3].map(k => `<rect class="bg" x="40" y="${36 + k * 36}" width="80" height="36"/><rect class="ln thin" x="40" y="${36 + k * 36}" width="80" height="36"/>`).join('')}
+      ${T(80, 52, 'いちばん', 'tx-s')}${T(80, 66, 'やすい', 'tx-s')}
+      <path class="ln thin" d="M126 180l10-12v-24l10-12v-24l10-12v-24l10-12"/>${T(146, 200, 'かいだん', 'tx-s')}
+      ${[0, 1, 2, 3].map(k => `<rect class="bg" x="200" y="${36 + k * 36}" width="80" height="36"/><rect class="ln thin" x="200" y="${36 + k * 36}" width="80" height="36"/>`).join('')}
+      ${T(240, 60, '？', 'tx-b')}
+      <rect class="pale" x="286" y="80" width="18" height="24"/><rect class="ln thin" x="286" y="80" width="18" height="24"/>${A('M295 140v-30')}`,
+  };
+
+  F['fire-look-sign'] = {
+    alt: 'たかいビルののりばで、ひじょうようのひょうじをさがそう。かぎあなはみるだけ',
+    box: '0 0 320 200',
+    svg: `
+      <rect x="40" y="30" width="120" height="34" rx="4" style="fill:#fff;stroke:#1f7a3a;stroke-width:2"/>
+      <text x="100" y="53" text-anchor="middle" style="fill:#1f7a3a;font:800 15px 'Zen Maru Gothic',sans-serif">非常用ＥＶ</text>
+      <rect class="gray" x="54" y="76" width="44" height="104"/><rect class="gray" x="102" y="76" width="44" height="104"/>
+      ${T(100, 196, 'のりば', 'tx-s')}
+      <rect class="bg" x="200" y="40" width="80" height="120" rx="8"/><rect class="ln thin" x="200" y="40" width="80" height="120" rx="8"/>
+      <circle class="gray" cx="240" cy="74" r="12"/><circle class="gray" cx="240" cy="110" r="12"/>
+      <rect class="coal" x="236" y="64" width="8" height="20" rx="3" transform="rotate(45 240 74)"/><rect class="coal" x="236" y="100" width="8" height="20" rx="3"/>
+      ${T(240, 180, 'みる だけ', 'tx')}`,
+  };
 })();
