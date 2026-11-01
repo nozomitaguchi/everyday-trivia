@@ -19,6 +19,11 @@
 | [2026-11-01-design-tradeoffs-counterfactuals.md](2026-11-01-design-tradeoffs-counterfactuals.md) | **設計の制約・トレードオフ／もし無かったら／誰の不便を解決したか**：12テーマの指摘 | 形や仕組みの選択理由をもっと深くする |
 | [2026-11-01-storytelling-misconceptions-kids-editing.md](2026-11-01-storytelling-misconceptions-kids-editing.md) | **常識の見直し／驚きの構成／子どもの「でも？」／説明の引き算**：14記事の構成レビュー | 既にある面白さを読み手に届ける |
 | [2026-11-01-knowledge-network.md](2026-11-01-knowledge-network.md) | **記事をまたぐ知識ネットワーク**：17件のつながり案と5つの短い読書ルート | 違うものに共通する材料・原理・設計課題を発見する |
+| [2026-11-01-city-hidden-signals-and-public-design.md](2026-11-01-city-hidden-signals-and-public-design.md) | **新規12記事**：街の音・触覚・光、公共設備が誰のためにあるか、道路規制の相違（CITY-01〜13） | 都市・安全・バリアフリーのレビュー |
+| [2026-11-01-human-body-science-updates-and-materials.md](2026-11-01-human-body-science-updates-and-materials.md) | **新規12記事**：科学的な推定値の更新、身体の多様性、創傷ケアと素材の限界（BODY-01〜12） | 新しい研究と旧常識の整合性チェック |
+| [2026-11-01-everyday-history-invisible-tech-and-exceptions.md](2026-11-01-everyday-history-invisible-tech-and-exceptions.md) | **新規12記事**：昔の不便と発明、通信の見えない仕組み、規格の例外（TIME-01〜14） | 技術史・使う人・例外のレビュー |
+
+**追加の監査（2026-11-01 第2弾）**：これまで重点監査していなかった**36記事**を、新しい観点でレビューしました。直ちに対応したいものは車のキー操作を促す幼児向け文、道路の白・黄実線の違い、小腸の「テニスコート2面」比喩、図柄入り軽自動車の白地ナンバーという例外です。新しい3ファイルは編集提案と根拠確認事項を区別しています。
 
 ### 最初に見てほしい指摘
 - **A-01（P0）** 非常用エレベーターの記事で、3〜5歳に鍵を操作するように読める箇所を削除する。
@@ -27,6 +32,10 @@
 - **R-01（P1）** 白米100gの「炭水化物75.6g」は統計項目名が誤っている。
 - **R-02（P1）** コシヒカリ試作の県数は研究論文14県、新潟県の公式史料22県で食い違うため断定しない。
 - **R-03（P1）** ビタミンB1の発見史と命名年の時系列を整理する。
+- **CITY-01（P1）** 白の実線と黄色の実線の規制は異なる。JAF資料を参照。
+- **BODY-01（P1）** 小腸の表面積「テニスコート2面」は2014年の再推定と食い違う。
+- **TIME-01（P0）** 幼児に車のキーを回すよう促す文を削除する。
+- **TIME-02（P1）** 白地の図柄入り軽自動車ナンバーなど、色分けの例外を示す。
 
 ## 対象範囲と確認したファイル
 
@@ -48,6 +57,14 @@
 `fluorescent-vs-led.md`, `outlet-long-slot.md`, `air-conditioner-and-outdoor-unit.md`, `paper-making.md`, `pencil-making.md`, `cardboard-making.md`, `road-tunnel-entrance-lighting.md`, `photo-digital-camera.md`, `nails-and-hair-grow.md`, `growing-taller.md`, `body-fat-energy.md`, `train-basics.md`。
 
 ※記事によっては本文の前半・主要な説明と出典欄を中心に確認したものがあります。すべての文章を逐語校閲したという意味ではありません。参照先のURLの全件到達性・PDFの全ページは未検査です。
+
+### 追加で確認した記事（第2弾：36記事）
+
+- **街の設備（12）**：`building-aviation-obstruction-light`、`building-cornerstone-box`、`building-exit-sign-colors`、`handrail-braille`、`powerline-marker-balls`、`utility-pole-wire-order`、`road-rumble-strips`、`road-center-line-colors`、`road-vertical-traffic-light`、`road-route-number-signs`、`railway-tactile-block-inner-line`、`railway-gradient-post`（各 `trivia/*.md`）。
+- **体と素材（12）**：`bandage-history`、`bandage-vs-hydrocolloid`、`common-cold`、`myopia`、`tummy-rumble`、`digestion-to-poop`、`poop-bacteria`、`poop-basics`、`melamine-cup`、`rubber-natural-synthetic`、`rubber-vulcanization`、`rubber-history`。
+- **乗り物・歴史・通信（12）**：`shinkansen-fuji-e-seat`、`train-strap-height-color`、`car-engine-basics`、`car-ignition-key`、`car-number-plate-colors`、`loud-cars-and-motorcycles`、`ketchup-making`、`ketchup-history`、`mayonnaise-history`、`remote-bluetooth-history`、`wifi-bluetooth-infrared`、`crayon-vs-craypas`。
+
+**累計で異なる90記事**（最初の54記事＋今回の36記事）を読んでレビューを残しています。ただし、全記述・全出典の完全な裏付けが終了したという意味ではありません。
 
 ## 今後ほかのAIや担当者が使うとき
 
