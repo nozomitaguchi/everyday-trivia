@@ -237,7 +237,12 @@ tags: [ジャンル, ...]
 ### いきもの {living-things}
 
 #### ダンゴムシ {pill-bug}
+- きほん: [ダンゴムシとは何か、虫ではなくエビやカニの仲間](trivia/pill-bug-basics.md)
+- しくみ: [ダンゴムシは右に曲がったら次は左、交替性転向反応](trivia/pill-bug-turn.md)
+- れきし: [ダンゴムシの歴史、地中海から世界へ、明治に日本へ、迷路の研究まで](trivia/pill-bug-history.md)
 - かたち: [ダンゴムシが丸くなる理由](trivia/pill-bug-rolls-up.md)
+- かたち: [ダンゴムシとワラジムシの違い、日本には140種あまりの仲間](trivia/pill-bug-vs-woodlouse.md)
+- ひみつ: [ダンゴムシの一生、おなかのふくろで育ち、体を半分ずつ脱皮する](trivia/pill-bug-life.md)
 
 #### あり {ant}
 - しくみ: [アリが行列を作る仕組み](trivia/ant-trail-pheromone.md)

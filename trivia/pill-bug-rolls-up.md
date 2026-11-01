@@ -10,9 +10,39 @@ tags: [いきもの, むし]
 
 ## なぜそうなっているか
 
+### 何のために丸くなる？
+
 - 敵が近づいたときに丸くなって、やわらかいお腹側を隠し、かたい殻で体を守るため
+
+{{fig:pb-roll-belly}}
+
 - ダンゴムシを食べる敵には、カエル、カマキリ、クモ、アリなどがいる
+
+{{fig:pb-roll-enemies}}
+
+### 何をきっかけに丸くなる？
+
+- さわられたときや、ゆれ（振動）を感じたときに丸くなることが多い
+
+{{fig:pb-roll-trigger}}
+
 - 頭の触角では、ものの形やかたさ、においなどを感じているといわれている
+
+{{fig:pb-antenna}}
+
+- 東京都の児童・生徒の研究では、電子ホイッスルの音を聞かせると、ダンゴムシ5匹すべてが動きを止めた。丸まったダンゴムシをゆらすと、5匹すべてが体をのばして動き出した。同じことをしてもワラジムシは反応しなかった
+
+{{fig:pb-roll-sound}}
+
+- とても強いストレスを受けると、じっと動かない「死んだふり」をすることもある
+
+{{fig:pb-roll-still}}
+
+### 丸くなれる体
+
+- 丸くなると、背中のかたい殻が外側になって、ボールのような形になる。にた形のワラジムシは体がやわらかく、丸くなれない（→[ダンゴムシとワラジムシの違い](pill-bug-vs-woodlouse.md)）
+
+{{fig:pb-roll-segments}}
 
 ## 3〜5歳むけ
 
@@ -22,7 +52,11 @@ tags: [いきもの, むし]
 
 まるく なると、やわらかい おなかが かくれるよ。
 
+{{fig:pb-roll-belly}}
+
 カエルや クモから、からだを まもって いるんだね。
+
+{{fig:pb-roll-enemies}}
 
 ## 6〜9歳むけ
 
@@ -30,8 +64,17 @@ tags: [いきもの, むし]
 
 カエルや カマキリ、クモ、アリなどの てきが ちかづくと、まるく なるよ。やわらかい おなかを うちがわに かくして、かたい からで まもって いるんだ。
 
+{{fig:pb-roll-belly}}
+
+ゆれや おとにも きづいて、うごきを とめる ことが あるよ。
+
+{{fig:pb-roll-sound}}
+
 みつけたら、そっと やさしく さわって みてね。
 
 ## 出典
 
 - [埼玉県 身近な生きもの ダンゴムシ（PDF）](https://www.pref.saitama.lg.jp/documents/49600/20-21.pdf)
+- [Wikipedia: Armadillidium vulgare（丸くなるきっかけ、死んだふり）](https://en.wikipedia.org/wiki/Armadillidium_vulgare)
+- [東京都教育委員会 児童・生徒の研究 ダンゴムシとワラジムシのくらべっこ（PDF）](https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/03_22)
+- [福岡県 生物多様性 オカダンゴムシ](https://biodiversity.pref.fukuoka.lg.jp/futsushu/picturebook/okadangomushi.html)
