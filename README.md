@@ -149,7 +149,12 @@ tags: [ジャンル, ...]
 ### たべもの {food}
 
 #### おこめ {rice}
+- きほん: [お米とは何か、白いお米は種のどこなのか](trivia/rice-basics.md)
+- ことば: [稲・もみ・米・ごはん、呼び名が変わるわけと「米」の字は八十八か](trivia/rice-words.md)
 - つくりかた: [お米が家に届くまで](trivia/rice-to-table.md)
+- なにでできてる: [うるち米ともち米、ジャポニカとインディカ、ねばりの違いはでんぷんの形](trivia/rice-types.md)
+- しくみ: [ごはんはなぜふっくら炊けるのか、冷めるとなぜかたくなるのか](trivia/rice-cooking.md)
+- れきし: [お米の歴史、1万年前の長江から、ぬかの発見、地震を生きのびたコシヒカリまで](trivia/rice-history.md)
 
 #### マヨネーズ {mayonnaise}
 - なにでできてる: [マヨネーズは何でできているか](trivia/mayonnaise-emulsion.md)
