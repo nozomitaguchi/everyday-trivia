@@ -154,7 +154,7 @@
       <circle class="blue" cx="60" cy="100" r="44"/><path class="green" d="M34 80q14-10 24 2t-6 22q-18 4-18-24ZM70 110q14-6 20 6t-14 14Z"/>
       <circle class="ln thin" cx="60" cy="100" r="44"/>
       ${T(60, 166, 'ちきゅう', 'tx')}
-      <circle class="gray" cx="270" cy="100" r="12"/><circle class="ink" cx="266" cy="96" r="3" opacity=".35"/><circle class="ink" cx="274" cy="104" r="2" opacity=".35"/>
+      <circle class="gray" cx="270" cy="100" r="12"/><circle class="coal" cx="266" cy="96" r="3" opacity=".35" style="stroke:none"/><circle class="coal" cx="274" cy="104" r="2" opacity=".35" style="stroke:none"/>
       <circle class="ln thin" cx="270" cy="100" r="12"/>
       ${T(270, 166, 'つき', 'tx')}${T(270, 182, 'ちきゅうの 4ぶんの 1', 'tx-s')}
       <path class="ln dash thin" d="M110 100h144"/>
@@ -163,6 +163,7 @@
   };
 
   F['moon-same-face'] = {
+    box: '0 0 320 215',
     alt: 'つきはちきゅうをいっしゅうするあいだに、じぶんもいっかいまわるので、いつもおなじかおをちきゅうにむける',
     svg: `
       <circle class="blue" cx="160" cy="100" r="30"/><circle class="ln thin" cx="160" cy="100" r="30"/>
@@ -175,7 +176,7 @@
           <path class="ln thin" d="M5 -4h0M5 4h0" style="stroke-width:4"/><path class="ln thin" d="M9 -5a10 10 0 0 1 0 10"/>
         </g>`;
       }).join('')}
-      ${T(160, 196, 'いつも かおが ちきゅうを むく', 'tx')}
+      ${T(160, 208, 'いつも かおが ちきゅうを むく', 'tx')}
       ${T(296, 40, '1しゅうで', 'tx-s', 'end')}${T(296, 56, '1かい くるっ', 'tx-s', 'end')}`,
   };
 })();
