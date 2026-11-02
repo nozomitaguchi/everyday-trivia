@@ -58,8 +58,13 @@ tags: [ジャンル, ...]
 - れきし: [鉛筆の歴史、なぜ「鉛」の筆なのか](trivia/pencil-history.md)
 
 #### クレヨンと クレパス {crayon}
-- なにでできてる: [クレヨンとクレパスの違い](trivia/crayon-vs-craypas.md)
-- れきし: [クレヨンは「油っぽいチョーク」、クレパスは日本生まれ](trivia/crayon-history.md)
+- きほん: [クレヨンとは何か、色の粉を「ろう」で固めた棒（そもそも）](trivia/crayon-basics.md)
+- なにでできてる: [クレヨンとクレパスの違い、同じ材料で「量」がちがう](trivia/crayon-vs-craypas.md)
+- つくりかた: [クレヨンとクレパスはどうやって作るのか（とかして、練って、流して、紙を巻く）](trivia/crayon-making.md)
+- れきし: [クレヨンは「油っぽいチョーク」、クレパスは日本生まれ（お手本を写す図画から、感じたままを描く図画へ）](trivia/crayon-history.md)
+- ことば: [「クレパス」は商品の名前、「はだいろ」は「うすだいだい」に（クレヨンのことば）](trivia/crayon-words.md)
+- しるし: [クレヨンの箱と巻紙のきまり（JIS、54の色、体温で折れない強さ、8つの金属）](trivia/crayon-jis-rules.md)
+- ひみつ: [クレヨンの上に絵の具をぬるとはじくのはなぜか、消しゴムで消えないのはなぜか](trivia/crayon-resist-eraser.md)
 
 #### かみ {paper}
 - つくりかた: [紙はどうやって作るのか](trivia/paper-making.md)
