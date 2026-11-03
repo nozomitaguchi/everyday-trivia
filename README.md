@@ -163,7 +163,14 @@ tags: [ジャンル, ...]
 - れきし: [エアコンは「印刷所の紙のしわ」を直すために生まれた、室外機を分けたのは日本](trivia/air-conditioner-history.md)
 
 #### カーテン {curtain}
-- しるし: [カーテンの遮光等級とは何か](trivia/curtain-blackout-grade.md)
+- きほん: [カーテンとは何か、レール・ランナー・フックとひだ、厚地とレースの2枚がけ（そもそも）](trivia/curtain-basics.md)
+- なにでできてる: [カーテンは何でできているか、ペットボトルと同じポリエステルが多いわけ（原料は石油のナフサ）](trivia/curtain-materials.md)
+- つくりかた: [カーテンはどうやって作るのか（レースは編む、遮光は黒い糸か裏のぬり、すそは10cmの三つ折り、ひだは90mmの芯）](trivia/curtain-making.md)
+- しくみ: [レースのカーテンは、なぜ昼は外から見えにくく、夜は見えてしまうのか（ミラーレース・遮像レース・UVカット）](trivia/curtain-lace-see-through.md)
+- れきし: [カーテンの歴史、ベッドを囲む布から窓の布へ（ガラスのない時代はどうしていた？ レールはいつ？ 日本へはいつ？）](trivia/curtain-history.md)
+- ことば: [「カーテン」はラテン語の「中庭」から、「レース」は「輪なわ」から（窓掛・窓帷・暗幕・緞帳）](trivia/curtain-words.md)
+- しるし: [カーテンの遮光等級とは何か（1級・2級・3級は「99.4%」より先の小数点の差、どうやって測る？）](trivia/curtain-blackout-grade.md)
+- しるし: [カーテンの「防炎」ラベルとは何か（そもそも何？ どこで使う決まり？ 劇場の火事から生まれたきまり）](trivia/curtain-fire-label.md)
 
 #### でんき {lights}
 - しくみ: [蛍光灯とLEDの仕組みと違い](trivia/fluorescent-vs-led.md)
