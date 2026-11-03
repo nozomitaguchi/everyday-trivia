@@ -341,7 +341,7 @@
       ${A('M252 86 188 86')}`,
   };
 
-  F['pet-bottle-basics'] = {
+  F['pet-bottle-making'] = {
     alt: 'しけんかんのようなちいさなつつをあたためて、かたのなかでくうきをふきこんでふくらませる',
     svg: `
       <g transform="translate(30 50)">

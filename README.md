@@ -185,9 +185,15 @@ tags: [ジャンル, ...]
 - れきし: [コンセントの歴史、電球のソケットから家電をつないでいた時代、「コンセント」は英語では通じない](trivia/outlet-history.md)
 
 #### ペットボトル {pet-bottle}
-- きほん: [ペットボトルはどうやって作るのか](trivia/pet-bottle-basics.md)
-- しるし: [ペットボトルのオレンジのキャップ](trivia/pet-bottle-orange-cap.md)
+- きほん: [ペットボトルとは何か、なぜびんや缶のかわりになったのか（そもそも）](trivia/pet-bottle-basics.md)
+- なにでできてる: [ペットボトルは石油と空気からできている（PETの原料の原料）](trivia/pet-bottle-materials.md)
+- つくりかた: [ペットボトルは小さな試験管からふくらむ（プリフォームと延伸ブロー）](trivia/pet-bottle-making.md)
+- れきし: [ペットボトルは冷蔵庫でふくらんだ洗剤のボトルから（PETの発見、ワイエスの実験、日本ではしょうゆから）](trivia/pet-bottle-history.md)
+- ことば: [「ペット」は動物ではない、テレフタルの「テレ」は木の名前（ペットボトルのことば）](trivia/pet-bottle-words.md)
 - かたち: [炭酸のペットボトルの底が花びら型な理由](trivia/pet-bottle-petaloid-bottom.md)
+- しるし: [口が白いペットボトルと透明なペットボトル（熱いままつめるしるし）](trivia/pet-bottle-white-neck.md)
+- しるし: [ペットボトルのオレンジのキャップ（温めて売れるしるし、最初は2000年）](trivia/pet-bottle-orange-cap.md)
+- しるし: [三角のPETマークと「1」、キャップが水にうくわけ（リサイクルのしるし）](trivia/pet-bottle-mark.md)
 
 #### リモコンと Wi-Fi {remote-and-wifi}
 - しくみ: [Wi-Fi、Bluetooth、赤外線の仕組み](trivia/wifi-bluetooth-infrared.md)
