@@ -30,7 +30,7 @@
       <rect class="coal" x="40" y="50" width="200" height="50" rx="25"/>
       <ellipse class="gray" cx="240" cy="75" rx="12" ry="25"/>
       <path class="ln thin dash" d="M40 116h200"/>${T(140, 132, 'ながさ やく 35センチ', 'tx-s')}
-      <path class="ln thin dash" d="M262 50v50"/>${T(270, 80, 'ふとさ', 'tx-s', 'start')}${T(270, 96, '10.5センチ', 'tx-s', 'start')}
+      <path class="ln thin dash" d="M262 50v50"/>${T(266, 80, 'ふとさ', 'tx-s', 'start')}${T(266, 96, '10.5', 'tx-s', 'start')}${T(266, 112, 'センチ', 'tx-s', 'start')}
       ${T(140, 34, 'ふとい つつに まとめる', 'tx')}`,
   };
   F['pencil-step-extrude'] = {

@@ -52,10 +52,14 @@ tags: [ジャンル, ...]
 ### おうちのなか {home}
 
 #### えんぴつ {pencil}
+- きほん: [鉛筆とは何か、なぜ紙に線が書けて、消しゴムで消えるのか（そもそも）](trivia/pencil-basics.md)
 - なにでできてる: [鉛筆の芯は何でできているか、HとBの違い](trivia/pencil-lead.md)
 - ひみつ: [鉛筆の材料はどこから来るのか](trivia/pencil-materials-origin.md)
 - つくりかた: [鉛筆の芯はどうやって木に入っているのか](trivia/pencil-making.md)
 - れきし: [鉛筆の歴史、なぜ「鉛」の筆なのか](trivia/pencil-history.md)
+- ことば: [pencilは「小さなしっぽ」、「鉛筆」は明治に広まった呼び名（鉛筆のことば）](trivia/pencil-words.md)
+- かたち: [鉛筆はなぜ六角形で、色鉛筆はなぜ丸いのか、長さはなぜ17cmくらいなのか](trivia/pencil-shape.md)
+- しるし: [鉛筆のきまり JIS S 6006（17の硬さ、172mm、芯の折れにくさ、8つの金属、1本ずつの表示）](trivia/pencil-jis.md)
 
 #### クレヨンと クレパス {crayon}
 - きほん: [クレヨンとは何か、色の粉を「ろう」で固めた棒（そもそも）](trivia/crayon-basics.md)
