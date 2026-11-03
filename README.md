@@ -115,8 +115,13 @@ tags: [ジャンル, ...]
 - れきし: [ゴムの歴史、ストーブの上の失敗と、借金だらけの発明家](trivia/rubber-history.md)
 
 #### ばんそうこう {bandage}
-- しくみ: [ふつうの絆創膏とキズパワーパッドの違い](trivia/bandage-vs-hydrocolloid.md)
-- れきし: [ばんそうこうは、台所でよくけがをする奥さんのために生まれた](trivia/bandage-history.md)
+- きほん: [ばんそうこうとは何か、4つの層と「医療機器」の表示（そもそも）](trivia/bandage-basics.md)
+- なにでできてる: [ばんそうこうは何でできているか、つるつると布っぽいのちがい、ねばねばの正体（原料は塩・石油・木・砂・ゴムの木）](trivia/bandage-materials.md)
+- つくりかた: [ばんそうこうはどうやって作るのか（1台の機械で、穴あけからつつむまで。滅菌がいちばん最後なわけ）](trivia/bandage-making.md)
+- しくみ: [ふつうの絆創膏とキズパワーパッドの違い、なぜ白くふくらむのか（白いのは膿ではない、使ってはいけない傷）](trivia/bandage-vs-hydrocolloid.md)
+- れきし: [ばんそうこうの歴史、台所でけがをする妻のために、会社の2つの品物を組み合わせた（その前はどうしていた？ 日本へはいつ？）](trivia/bandage-history.md)
+- ことば: [「絆創膏」は「口のあいた傷を、つなぎとめる、ねり薬」、英語のplasterはかべのしっくいと同じ言葉、地方で呼び名がちがうわけ](trivia/bandage-words.md)
+- かたち: [ばんそうこうの小さな穴・丸い角・パッドのあみ・はば19ミリ（かたちのなぞ）](trivia/bandage-holes.md)
 
 #### でんしレンジ {microwave}
 - きほん: [電子レンジとは何か、箱の中で何が起きているのか（そもそも）](trivia/microwave-basics.md)
