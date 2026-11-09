@@ -529,29 +529,6 @@
       }).join('')}`,
   };
 
-  F['cardboard-history'] = {
-    alt: 'なみのかみは、ぼうしのなかにはるかみから、つつむかみ、はこへとかわった',
-    svg: `
-      <g transform="translate(20 50)">
-        <rect x="16" y="0" width="44" height="60" rx="3" fill="#2b2b2b"/><rect x="0" y="56" width="76" height="8" rx="4" fill="#2b2b2b"/>
-        <path class="ln s-yellow" d="${wave(18, 58, 50, 6, 8)}"/>
-        ${T(38, 90, 'ぼうしの なか', 'tx-s')}${T(38, 106, '1856', 'tx-s')}
-      </g>
-      ${A('M104 90h16')}
-      <g transform="translate(126 44)">
-        <path class="glass" d="M22 0h12v14l8 10v46H14V24l8-10Z"/><path class="ln thin" d="M22 0h12v14l8 10v46H14V24l8-10Z"/>
-        <path class="ln s-yellow" d="${wave(6, 50, 46, 6, 8)}"/>
-        ${T(28, 96, 'つつむ かみ', 'tx-s')}${T(28, 112, '1871', 'tx-s')}
-      </g>
-      ${A('M190 90h16')}
-      <g transform="translate(214 44)">
-        <path class="brown" d="M0 20h80v50H0Z"/><path class="ln thin" d="M0 20h80v50H0ZM0 20l14-16h80l-14 16M80 70l14-16V4"/>
-        ${T(40, 96, 'はこ', 'tx-s')}${T(40, 112, '1903', 'tx-s')}
-      </g>
-      ${T(160, 30, 'なみの かみの うつりかわり', 'tx')}
-      ${T(160, 186, 'にほんでは 1909ねんから', 'tx-s')}`,
-  };
-
   // ---- とうふ ----
   F['tofu-basics'] = {
     alt: 'だいずをふやかしてすりつぶし、にて、しぼるととうにゅうとおからにわかれる。とうにゅうをかためるととうふ',

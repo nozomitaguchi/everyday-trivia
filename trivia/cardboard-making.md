@@ -56,7 +56,7 @@ tags: [おうちのなか, 素材, 作り方]
 
 - 段の高さ（A段・B段など）は、段ロールの歯の形で決まる。種類と高さは[ダンボールの切り口](cardboard-structure.md)のネタにある
 
-{{fig:cardboard-flutes}}
+{{fig:cb-mk-roll-shape}}
 
 ### 箱のはしの「のりしろ」
 

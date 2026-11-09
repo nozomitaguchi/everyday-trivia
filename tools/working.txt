@@ -7,4 +7,3 @@ crosswalk 2026-11-03T16:48Z
 pill-bug 2026-11-03T18:50Z
 tunnel 2026-11-03T20:50Z
 station 2026-11-03T23:48Z
-cardboard 2026-11-09T17:49Z
