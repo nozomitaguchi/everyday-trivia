@@ -88,7 +88,7 @@
     box: '0 0 320 190',
     svg: `${[['100キロ', 340, 'red'], ['60キロ', 220, 'blue'], ['40キロ', 130, 'green']].map(([n, l, c], i) => `
         ${car(10, 30 + i * 46, 0.7, c)}${T(70, 46 + i * 46, n, 'tx-s', 'start')}
-        <rect class="yellow" x="120" y="${34 + i * 46}" width="${l * 0.5}" height="16" rx="3"/>${T(124 + l * 0.5, 47 + i * 46, l + 'メートル', 'tx-s', 'start')}`).join('')}
+        <rect class="yellow" x="120" y="${34 + i * 46}" width="${l * 0.38}" height="16" rx="3"/>${T(124 + l * 0.38, 47 + i * 46, l + 'メートル', 'tx-s', 'start')}`).join('')}
       ${T(160, 180, 'はやい みちほど ながく あかるく', 'tx')}`,
   };
 
@@ -100,7 +100,7 @@
       ${eye(40, 110, 0.7)}<path class="ln thin" d="M40 120v20"/>
       <path class="ln s-yellow dash" style="stroke-width:2" d="M58 106L222 98M58 112L222 132"/>
       <path class="ln thin" d="M40 166h200M40 160v12M240 160v12"/>${T(140, 178, '150メートル', 'tx-s')}
-      ${T(40, 84, 'たかさ 1.5メートル', 'tx-s')}`,
+      ${T(14, 84, 'たかさ 1.5メートル', 'tx-s', 'start')}`,
   };
 
   F['tn-dimming'] = {

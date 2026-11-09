@@ -402,7 +402,7 @@
       <rect class="coal" x="130" y="80" width="60" height="70"/>
       ${[0, 1, 2, 3].map(i => { const t = i / 4; const y = 30 + t * 50, xL = 10 + t * 120, xR = 310 - t * 120; return `<path class="ln thin" d="M${xL} ${y}L${xR} ${y}"/>`; }).join('')}
       ${car(136, 130, 0.7, 'blue')}
-      <path class="ln s-red" d="M40 30v12.5" style="stroke-width:4"/>${T(52, 60, 'なんメートル？', 'tx', 'start')}${A('M50 52l-6 -8')}
+      <path class="ln s-red" d="M40 30v12.5" style="stroke-width:4"/>${T(60, 100, 'なんメートル？', 'tx', 'start')}${A('M56 88l-12 -40')}
       ${T(160, 196, 'ひょうじゅんは 10.5メートルごと', 'tx-s')}`,
   };
 
