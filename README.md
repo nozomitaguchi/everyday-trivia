@@ -109,9 +109,14 @@ tags: [ジャンル, ...]
 - なにでできてる: [本物のビニール（塩化ビニル）とは、なぜやわらかいのか](trivia/vinyl-pvc.md)
 
 #### ダンボール {cardboard}
-- かたち: [ダンボールは何でできているか](trivia/cardboard-structure.md)
-- つくりかた: [ダンボールはどうやって作るのか（100mの機械とトウモロコシののり）](trivia/cardboard-making.md)
-- れきし: [ダンボールは帽子の内側から始まった（名前の由来と歴史）](trivia/cardboard-history.md)
+- きほん: [ダンボールとは何か、紙なのになぜ強いのか（波の三角形と、段が縦向きのわけ）](trivia/cardboard-basics.md)
+- なにでできてる: [ダンボールは何からできているか、9割以上は古いダンボール（茶色いままのわけ、クラフトは「力」）](trivia/cardboard-materials.md)
+- つくりかた: [ダンボールはどうやって作るのか（100mの機械と、熱でかたまるトウモロコシののり、箱のはしの「のりしろ」）](trivia/cardboard-making.md)
+- れきし: [ダンボールの歴史、帽子の内側から、びんを包む紙、印刷機のまちがいで生まれた箱へ（木箱と「わら」の時代はどうしていた？ 日本へはいつ？）](trivia/cardboard-history.md)
+- ことば: [「段ボール」は「段のついたボール紙」、ボールは英語の board（板）、英語の corrugated はラテン語の「しわ」（ダンボールのことば）](trivia/cardboard-words.md)
+- かたち: [ダンボールの切り口でわかること、A・B・C・Eの段の高さ（なぜ厚さの順ではないのか、Aはわらのかわりだった）](trivia/cardboard-structure.md)
+- しるし: [ダンボール箱のしるしの読み方（「天地無用」を正しく知っている人は55.5％、かさ・グラス・矢印のマーク、三本の矢印のリサイクルマーク）](trivia/cardboard-marks.md)
+- ひみつ: [ダンボールは湿気に弱い？（湿度90％をこえると強さは半分以下、みかん箱の穴は冷やすための穴で、そのぶん箱は弱くなる）](trivia/cardboard-humidity.md)
 
 #### ゴム {rubber}
 - なにでできてる: [ゴムは何からできているか](trivia/rubber-natural-synthetic.md)
