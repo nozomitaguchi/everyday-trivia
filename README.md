@@ -98,12 +98,15 @@ tags: [ジャンル, ...]
 
 #### ビニールぶくろ（ポリぶくろ） {plastic-bag}
 - きほん: [ポリ袋とは何か（そもそも）](trivia/plastic-bag-basics.md)
-- なにでできてる: [シャカシャカの袋としっとりした袋の違い（高密度・低密度・直鎖状低密度）](trivia/polyethylene-hdpe-ldpe.md)
+- なにでできてる: [シャカシャカの袋としっとりした袋の違い（高密度・低密度・直鎖状低密度、しっとりした袋ほど口が開きにくいわけ）](trivia/polyethylene-hdpe-ldpe.md)
 - つくりかた: [ポリエチレンは石油からどう作られるか](trivia/polyethylene-how-made.md)
-- つくりかた: [ポリ袋はどうやって袋の形になるか（ふくらませて作る）](trivia/plastic-bag-inflation-molding.md)
+- つくりかた: [ポリ袋はどうやって袋の形になるか（ふくらませて作る、くもりの線、マチの折りこみ）](trivia/plastic-bag-inflation-molding.md)
 - れきし: [ポリエチレンは偶然から生まれ、触媒で作りやすくなった（だれが・どうやって）](trivia/polyethylene-history.md)
+- れきし: [レジ袋の歴史、布の買い物袋と紙袋の時代から、1枚の筒をくりぬくトゥーリンの袋へ（「木を守るため」の話は本当？ 日本へはいつ？）](trivia/plastic-bag-history.md)
 - ことば: [「ビニール袋」は実はビニールではない（名前のなぞ）](trivia/plastic-bag-polyethylene.md)
-- しるし: [レジ袋の有料化、タダのままでいい袋の条件](trivia/plastic-bag-fee-rules.md)
+- ひみつ: [レジ袋はなぜ縦にすっと裂けるのか（引っぱると強いのに、裂けやすい向きがある）](trivia/plastic-bag-tear.md)
+- しるし: [レジ袋の「号」は東と西で番号がちがう（東の番号は、昔の紙袋のなごり）](trivia/plastic-bag-size.md)
+- しるし: [レジ袋の有料化、タダのままでいい袋の条件（50μmのわけ、使わない人は3割から7割へ）](trivia/plastic-bag-fee-rules.md)
 
 #### ビニール（えんかビニル） {vinyl}
 - なにでできてる: [本物のビニール（塩化ビニル）とは、なぜやわらかいのか](trivia/vinyl-pvc.md)
