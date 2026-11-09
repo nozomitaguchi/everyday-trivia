@@ -8,3 +8,4 @@ pill-bug 2026-11-03T18:50Z
 tunnel 2026-11-03T20:50Z
 station 2026-11-03T23:48Z
 crosswalk 2026-11-09T18:50Z
+plastic-bag 2026-11-09T22:49Z
