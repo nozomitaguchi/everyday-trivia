@@ -287,16 +287,6 @@
       ${T(160, 30, 'つなぎめの だんさが うしろむき', 'tx-s')}`,
   };
 
-  F['road-tunnel-entrance-lighting'] = {
-    alt: 'トンネルのいりぐちはでんきがおおくてあかるく、おくへいくほどふつうのあかるさになる',
-    svg: `
-      <path class="ink" d="M20 180V90a70 70 0 0 1 140 0v90Z" opacity=".85"/>
-      <path class="ink" d="M160 180V90h150v90Z" opacity=".85"/>
-      ${Array.from({ length: 14 }, (_, i) => `<circle class="yellow" cx="${40 + i * 19}" cy="${100}" r="${i < 6 ? 6 : 3}"/>`).join('')}
-      ${T(90, 14, 'いりぐちは あかるい', 'tx-s')}
-      ${T(250, 70, 'おくは ふつう', 'tx-s')}
-      <circle class="yellow" cx="10" cy="20" r="0"/>`,
-  };
 
   // ---- のりもの ----
   F['train-basics'] = {
