@@ -296,7 +296,14 @@ tags: [ジャンル, ...]
 - かたち: [ガードレールの継ぎ目の重ね方](trivia/road-guardrail-overlap.md)
 
 #### トンネル {tunnel}
-- しくみ: [トンネルの入口だけ照明が多い理由](trivia/road-tunnel-entrance-lighting.md)
+- きほん: [トンネルとは何か、なぜ山に穴をあけても崩れないのか（丸い天井と、まわりの岩に支えさせる考え方）](trivia/tunnel-basics.md)
+- つくりかた: [トンネルはどうやって掘るのか（1mずつ掘って吹きつけて、天井の線は型わくのつなぎ目）](trivia/tunnel-making.md)
+- しくみ: [トンネルの入口だけ照明が多い理由（昼の入口は奥の約10倍明るい、夜は消す、オレンジの光が白くなったわけ）](trivia/road-tunnel-entrance-lighting.md)
+- れきし: [トンネルの歴史、水を引く手掘りの穴から、フナクイムシにならったシールドとダイナマイトへ](trivia/tunnel-history.md)
+- ことば: [tunnelはもともと「鳥をとる網」、昔の日本では「隧道」、入口の上の板は「扁額」（トンネルのことば）](trivia/tunnel-words.md)
+- ひみつ: [トンネルの天井の大きな筒は何？（ジェットファンで空気を押し出す、火事のときは止める）](trivia/tunnel-jet-fan.md)
+- かたち: [新幹線のトンネルの入口が、窓のあいた箱のように飛び出しているのはなぜか（出口の「ドン」を小さくするフード）](trivia/tunnel-shinkansen-hood.md)
+- しるし: [トンネルの壁の赤いランプと緑の箱は何？（非常用設備、50mおきの押しボタンと消火器、200mおきの非常電話）](trivia/tunnel-emergency.md)
 
 ### のりもの {vehicles}
 
