@@ -303,12 +303,12 @@
       ${bug(270, 70, 1.0, 0, '#5a4f45')}${T(270, 112, 'コシビロ', 'tx-s')}${T(270, 130, 'ややちいさい', 'tx-s')}${T(270, 148, 'ふしの ふちが まるい', 'tx-s')}`,
   };
   F['pb-vs-tail'] = {
-    alt: 'オカダンゴムシのおのあし（びし）は、からだのしたにかくれていて、うえからはみえない',
+    alt: 'オカダンゴムシのおのあし（びし）はみじかくてひらたく、からだのふちとそろっておわる。しっぽのようにつきでない',
     box: '0 0 320 150',
     svg: `
       ${bug(96, 64, 2.2)}
       <circle class="ln thin s-red" cx="154" cy="64" r="14" style="stroke-dasharray:4 3"/>
-      ${T(180, 60, 'おの あしは', 'tx', 'start')}${T(180, 82, 'したに かくれて', 'tx-s', 'start')}${T(180, 100, 'うえから みえない', 'tx-s', 'start')}`,
+      ${T(180, 60, 'おの あしは', 'tx', 'start')}${T(180, 82, 'みじかくて ふちと', 'tx-s', 'start')}${T(180, 100, 'そろう', 'tx-s', 'start')}`,
   };
   F['pb-vs-harmless'] = {
     alt: 'どれもひとにちょくせつのがいはない',
@@ -559,6 +559,429 @@
       <path d="M150 126h28v-26h28v-26h28v-26h28" style="fill:none;stroke:#e0563c;stroke-width:3"/>${wood(270, 46, 0.4, -45)}
       ${T(200, 150, 'こうごに まがるのが ふえた', 'tx-s')}${T(70, 24, '1992ねん', 'tx')}`,
   };
+
+  // ---------- 陸でくらすしかけ ----------
+  const drop = (x, y, s = 1) => `<path class="blue" transform="translate(${x} ${y}) scale(${s})" d="M0 -10c-4 6-6 10-6 13a6 6 0 0 0 12 0c0-3-2-7-6-13Z"/>`;
+  const sun = (x, y) => `<circle class="yellow" cx="${x}" cy="${y}" r="13"/>${[0, 45, 90, 135, 180, 225, 270, 315].map(a => `<path transform="rotate(${a} ${x} ${y})" d="M${x} ${y - 18}v-6" style="stroke:#d9a520;stroke-width:2;stroke-linecap:round"/>`).join('')}`;
+  const moon = (x, y) => `<path class="yellow" d="M${x + 6} ${y - 14}a14 14 0 1 0 8 24a11 11 0 1 1 -8 -24Z"/>`;
+  // pill bug seen from below (belly up), head to the left. lungs = white patches on the front pleopods
+  const belly = (x, y, s = 1, lungs = true) => `<g transform="translate(${x} ${y}) scale(${s})">
+    <path class="ln thin" d="M-26 -4c-6-4-10-8-12-14M-26 4c-6 4-10 8-12 14"/>
+    <ellipse cx="0" cy="0" rx="26" ry="14" style="fill:#8d8f93"/>
+    ${Array.from({ length: 7 }, (_, i) => `<path class="ln thin" d="M${-16 + i * 4} -3l-3 -9M${-16 + i * 4} 3l-3 9"/>`).join('')}
+    ${Array.from({ length: 5 }, (_, i) => `<rect x="${10 + i * 2.6}" y="-7" width="2.4" height="14" rx="1" style="fill:#b9b5ac;stroke:#00000044;stroke-width:.6"/>`).join('')}
+    ${lungs ? `<rect x="9.6" y="-6" width="5" height="4.4" rx="1" style="fill:#ffffff;stroke:#00000066;stroke-width:.6"/><rect x="9.6" y="1.6" width="5" height="4.4" rx="1" style="fill:#ffffff;stroke:#00000066;stroke-width:.6"/>` : ''}
+    <ellipse class="ln thin" cx="0" cy="0" rx="26" ry="14"/>
+  </g>`;
+  const ant = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})">
+    ${[-1, 1].map(k => [-5, 0, 5].map(dx => `<path class="ln thin" d="M${dx} 0l${dx * 0.6} ${k * 9}"/>`).join('')).join('')}
+    <circle class="coal" cx="-11" cy="0" r="4.5"/><ellipse class="coal" cx="0" cy="0" rx="5" ry="3.4"/><ellipse class="coal" cx="12" cy="0" rx="7" ry="5"/>
+    <path class="ln thin" d="M-14 -3l-6 -6M-14 3l-6 6"/></g>`;
+  const armadillo = (x, y, s = 1) => `<g transform="translate(${x} ${y}) scale(${s})">
+    <path class="ln thin" d="M-20 10v12M-6 12v10M10 12v10M22 10v12"/>
+    <path d="M-30 12c0-22 14-32 30-32s30 10 30 32Z" style="fill:#a58d6e"/>
+    ${[-16, -6, 4, 14].map(dx => `<path d="M${dx} -18v30" style="stroke:#00000055;stroke-width:1.4"/>`).join('')}
+    <path d="M-30 6l-14 4-2 6 16-2Z" style="fill:#a58d6e"/><path d="M30 8l12 8" style="stroke:#a58d6e;stroke-width:4;stroke-linecap:round"/>
+    <path class="ln thin" d="M-30 12c0-22 14-32 30-32s30 10 30 32Z"/></g>`;
+
+  F['pill-bug-land-life'] = {
+    alt: 'うみのなかまのダンゴムシが、りくでくらすしかけ。おなかのしろいはい、くちでのむみず、きたいでだすアンモニア',
+    box: '0 0 320 180',
+    svg: `
+      <path class="blue" d="M0 120h110v60H0Z" opacity=".55"/>${T(55, 170, 'うみ', 'tx-k')}
+      <path class="brown" d="M110 120h210v60H110Z" opacity=".55"/>${T(215, 170, 'りく', 'tx-k')}
+      ${A('M90 100c20-30 50-30 70-10')}
+      ${bug(210, 98, 1.2)}
+      ${T(66, 30, 'しろい はい', 'tx-s')}${T(160, 24, 'くちで のむ みず', 'tx-s')}${T(260, 30, 'ガスの おしっこ', 'tx-s')}
+      ${[66, 160, 260].map(x => `<circle class="yellow" cx="${x}" cy="50" r="7"/>`).join('')}`,
+  };
+  F['pb-land-origin'] = {
+    alt: 'りくのとうきゃくるいは、せかいに3710しゅ。うみにいたそせんから、たぶん1かいだけりくへあがった。はじまりはせきたんきごろ',
+    box: '0 0 320 170',
+    svg: `
+      <path class="blue" d="M0 110h130v60H0Z" opacity=".55"/><path class="green" d="M130 110h190v60H130Z" opacity=".55"/>
+      <path d="M8 96c10-10 20-10 30 0s20 10 30 0" style="fill:none;stroke:#4a90c8;stroke-width:2"/>
+      ${bug(70, 134, 0.8, 0, '#7b8a99', false, true)}${T(70, 162, 'うみの そせん', 'tx-k')}
+      ${A('M110 128c16-24 36-28 56-14')}${T(140, 98, '1かいだけ？', 'tx-s')}
+      ${bug(230, 134, 0.9)}${T(230, 162, 'りくの なかま', 'tx-k')}
+      ${T(160, 30, 'せきたんき（やく 3おくねん まえ）ごろ', 'tx-s')}
+      ${T(160, 56, 'いまは 3710しゅ', 'tx')}`,
+  };
+  F['pb-land-lung'] = {
+    alt: 'ダンゴムシをおなかがわからみたところ。まえのほうのふくしのそとがわに、しろいかたまり（ぎきかん）がある',
+    box: '0 0 320 170',
+    svg: `
+      ${belly(140, 80, 3.4)}
+      ${T(36, 20, 'あたま', 'tx-s')}
+      <path class="ln thin s-red" d="M188 34l-4 22"/>${T(240, 28, 'しろい かたまり', 'tx')}${T(240, 46, '（ぎきかん）', 'tx-s')}
+      ${T(160, 160, 'おなかがわから みた ところ', 'tx-s')}`,
+  };
+  F['pb-land-94'] = {
+    alt: 'ぎきかんのおかげで、からだがかわいていても、かわいたくうきからふだんつかうさんその94パーセントをとりこめる',
+    box: '0 0 320 150',
+    svg: `
+      <rect class="pale" x="40" y="60" width="240" height="30" rx="6"/>
+      <rect class="green" x="40" y="60" width="${240 * 0.94}" height="30" rx="6"/>
+      <rect class="ln thin" x="40" y="60" width="240" height="30" rx="6"/>
+      ${T(160, 80, 'さんそ 94％', 'tx-k')}
+      ${T(160, 40, 'かわいた くうきでも', 'tx')}
+      ${T(160, 120, 'ふだんの 100に たいして 94', 'tx-s')}`,
+  };
+  F['pb-land-drink'] = {
+    alt: 'しめったせっこうのめんから、くちでみずをすう。しつど85パーセントのくうきでも、しめっためんがあればいきのびた',
+    box: '0 0 320 170',
+    svg: `
+      <rect class="gray" x="20" y="110" width="280" height="30" rx="4"/><rect class="ln thin" x="20" y="110" width="280" height="30" rx="4"/>
+      ${[50, 90, 230, 270].map(x => drop(x, 126, 0.7)).join('')}
+      ${T(160, 160, 'しめった せっこうの めん', 'tx-s')}
+      ${bug(170, 96, 1.6)}
+      <circle class="ln thin s-red" cx="118" cy="104" r="12"/>${T(80, 70, 'くちで すう', 'tx')}
+      ${T(250, 40, 'くうき しつど 85％', 'tx-s')}`,
+  };
+  F['pb-land-ammonia'] = {
+    alt: 'からだのちっそのごみのやく95パーセントをアンモニアとしてだし、おもにきたいのままだす。おしっこでみずをながさずにすむ',
+    box: '0 0 320 170',
+    svg: `
+      ${bug(90, 110, 1.6)}
+      ${[0, 1, 2].map(i => `<path d="M${120 + i * 14} 84c-6-10 6-16 0-26s6-16 0-26" style="fill:none;stroke:#9a7fc0;stroke-width:2.4;stroke-dasharray:3 4"/>`).join('')}
+      ${T(140, 20, 'アンモニアの ガス', 'tx')}
+      ${drop(255, 96, 2.4)}<path class="ln thin s-red" d="M225 66l60 60M285 66l-60 60"/>${T(255, 150, 'みずで ながさない', 'tx-s')}`,
+  };
+  F['pb-land-shape'] = {
+    alt: '20ど、しつどやく45パーセントで1じかんに、オカダンゴムシはたいじゅうの3.2パーセント、ひらたいワラジムシのなかまは7.5パーセントのみずをうしなう',
+    box: '0 0 320 180',
+    svg: `
+      ${T(160, 20, '1じかんで にげた みず', 'tx')}
+      <rect class="blue" x="70" y="${140 - 3.2 * 12}" width="44" height="${3.2 * 12}"/><rect class="ln thin" x="70" y="${140 - 3.2 * 12}" width="44" height="${3.2 * 12}"/>
+      <rect class="blue" x="206" y="${140 - 7.5 * 12}" width="44" height="${7.5 * 12}"/><rect class="ln thin" x="206" y="${140 - 7.5 * 12}" width="44" height="${7.5 * 12}"/>
+      ${T(92, 94, '3.2％', 'tx')}${T(228, 42, '7.5％', 'tx')}
+      <path class="ln thin" d="M40 140h240"/>
+      <path d="M72 160c0-10 10-14 20-14s20 4 20 14Z" style="fill:${BUG}"/>${T(92, 176, 'まるっこい', 'tx-s')}
+      <path d="M204 158c0-5 12-7 24-7s24 2 24 7Z" style="fill:${WOOD}"/>${T(228, 176, 'ひらたい', 'tx-s')}`,
+  };
+  F['pb-land-roll-water'] = {
+    alt: 'かわいたくうきのなかで、まるまったときはみずのうしないかたが34.8パーセントへった',
+    box: '0 0 320 170',
+    svg: `
+      ${bug(80, 70, 1.3)}${ball(230, 70, 24)}
+      ${[0, 1, 2, 3, 4].map(i => drop(50 + i * 16, 118 - (i % 2) * 6, 0.6)).join('')}
+      ${[0, 1, 2].map(i => drop(214 + i * 16, 118 - (i % 2) * 6, 0.6)).join('')}
+      ${T(80, 150, 'のびて いると', 'tx-s')}${T(230, 150, 'まるまると 34.8％ へる', 'tx-s')}
+      ${A('M128 70h60')}${T(160, 22, 'かわいた くうき（18ど）', 'tx-s')}`,
+  };
+  F['pb-land-group'] = {
+    alt: 'ワラジムシのなかまは、あつまるほど1ぴきあたりのみずのうしないかたがへり、おおきなむれではんぶんいかになった',
+    box: '0 0 320 170',
+    svg: `
+      ${wood(70, 70, 0.9)}${[0, 1, 2].map(i => drop(48 + i * 20, 116, 0.6)).join('')}${T(70, 150, '1ぴき', 'tx-s')}
+      ${[[210, 54, 10], [252, 56, -10], [214, 82, -5], [256, 86, 8], [234, 70, 0]].map(([x, y, r]) => wood(x, y, 0.6, r)).join('')}
+      ${drop(234, 116, 0.6)}${T(234, 150, 'あつまると はんぶん いか', 'tx-s')}
+      ${T(160, 22, '1ぴき あたりの にげる みず', 'tx-s')}`,
+  };
+  F['pb-land-night'] = {
+    alt: 'ダンゴムシはおもによるか、きおんがさがってしつどがあがったときにでてくる。ひるはつちのなかやもののしたにいる',
+    box: '0 0 320 170',
+    svg: `
+      <rect class="pale" x="0" y="0" width="160" height="170"/><rect class="coal" x="160" y="0" width="160" height="170" opacity=".75"/>
+      ${sun(40, 34)}${moon(280, 34)}
+      ${ground(130)}
+      ${stone(80, 130, 100)}${bug(80, 122, 0.6)}
+      ${bug(230, 116, 0.9)}${bug(282, 120, 0.7, 20)}
+      ${T(80, 158, 'ひるは かくれる', 'tx-k')}${T(240, 158, 'よるに でる', 'tx-k')}`,
+  };
+  F['pb-look-rain'] = {
+    alt: 'はれたひのひると、あめあがりのあさやゆうがたで、うえきばちのまわりのダンゴムシのかずをくらべる',
+    box: '0 0 320 180',
+    svg: `
+      <path class="ln thin s-soft" d="M160 10v150"/>
+      ${sun(40, 30)}${T(80, 66, 'はれの ひる', 'tx')}
+      ${[0, 1, 2, 3].map(i => `<path class="ln thin s-blue" d="M${206 + i * 24} 20l-6 14"/>`).join('')}${T(240, 66, 'あめあがり', 'tx')}
+      <path class="orange" d="M56 108h48l-6 40h-36Z"/><path class="ln thin" d="M56 108h48l-6 40h-36Z"/>
+      <path class="orange" d="M216 108h48l-6 40h-36Z"/><path class="ln thin" d="M216 108h48l-6 40h-36Z"/>
+      ${T(80, 100, '？', 'tx')}${T(240, 100, '？', 'tx')}
+      ${bug(194, 134, 0.4)}${bug(290, 132, 0.4, 30)}
+      ${T(160, 176, 'どっちが おおいか よそう', 'tx-s')}`,
+  };
+  F['pb-look-group'] = {
+    alt: 'なんびきもかたまっているところをみつけたら、そこがひかげか、しめっているかをみる。みるだけ',
+    box: '0 0 320 160',
+    svg: `
+      <rect class="gray" x="40" y="30" width="110" height="80" rx="6" opacity=".6"/>${T(95, 24, 'ひかげ？', 'tx-s')}
+      ${[[78, 86, 10], [104, 84, -20], [90, 100, 0], [118, 100, 15]].map(([x, y, r]) => bug(x, y, 0.45, r)).join('')}
+      ${drop(60, 70, 0.6)}${drop(134, 64, 0.6)}${T(95, 130, 'しめって いる？', 'tx-s')}
+      ${bug(230, 60, 0.45)}${bug(270, 110, 0.45, 40)}${T(250, 140, 'ばらばら', 'tx-s')}`,
+  };
+
+  // ---------- ことば ----------
+  F['pill-bug-words'] = {
+    alt: 'まるまったダンゴムシは、だんご、てまり、くすりのつぶ、アルマジロにたとえられてきた',
+    box: '0 0 320 170',
+    svg: `
+      ${ball(160, 84, 28)}
+      ${T(60, 30, 'だんご', 'tx')}${T(260, 30, 'てまり', 'tx')}${T(60, 156, 'くすりの つぶ', 'tx')}${T(260, 156, 'アルマジロ', 'tx')}
+      ${A('M90 40l40 22')}${A('M230 40l-40 22')}${A('M90 140l40 -26')}${A('M230 140l-40 -26')}`,
+  };
+  F['pb-words-dango'] = {
+    alt: 'かんじでは「団子虫」。オカダンゴムシは〈陸団子虫〉とかかれる',
+    box: '0 0 320 160',
+    svg: `
+      <path class="ln" d="M60 30v100"/>${[54, 82, 110].map(y => `<circle class="pale" cx="60" cy="${y}" r="13"/><circle class="ln thin" cx="60" cy="${y}" r="13"/>`).join('')}
+      ${T(60, 150, 'だんご', 'tx-s')}
+      ${T(200, 60, '団子虫', 'tx')}${T(200, 80, 'だんご ＋ むし', 'tx-s')}
+      ${T(200, 120, '陸団子虫', 'tx')}${T(200, 140, 'オカダンゴムシ', 'tx-s')}`,
+  };
+  F['pb-words-temari'] = {
+    alt: 'べつめいはテマリムシ。てまりは、いとをまいてつくるまるいまり',
+    box: '0 0 320 160',
+    svg: `
+      <circle class="red" cx="90" cy="76" r="40"/>
+      <path d="M50 76h80M90 36v80M62 48l56 56M118 48l-56 56" style="stroke:#f4e6c8;stroke-width:3"/>
+      <circle class="ln thin" cx="90" cy="76" r="40"/>${T(90, 142, 'てまり', 'tx')}
+      ${ball(230, 76, 26)}${T(230, 142, 'テマリムシ', 'tx')}`,
+  };
+  F['pb-words-edo'] = {
+    alt: 'えどじだいのむしのほんの「鼠婦」はワラジムシのなかま。いとうけいすけのもくろくには、きょうでヲメムシ、えどでワラジムシとかいてある',
+    box: '0 0 320 170',
+    svg: `
+      <rect class="pale" x="30" y="20" width="110" height="130" rx="4"/><rect class="ln thin" x="30" y="20" width="110" height="130" rx="4"/>
+      <path class="ln thin" d="M85 20v130"/>${T(85, 166, 'いとう けいすけの ほん', 'tx-s')}
+      ${T(58, 60, '鼠婦', 'tx-k')}${wood(112, 90, 0.5, 90)}
+      ${T(230, 50, 'きょう', 'tx-s')}${T(230, 70, 'ヲメムシ', 'tx')}
+      ${T(230, 110, 'えど', 'tx-s')}${T(230, 130, 'ワラジムシ', 'tx')}`,
+  };
+  F['pb-words-mouse'] = {
+    alt: 'ちゅうごくのじしょ『じが』に「鼠負」。ネズミのあなにおおくいて、ネズミがせおっている、とかかれている',
+    box: '0 0 320 160',
+    svg: `
+      <path class="brown" d="M0 120h320v40H0Z" opacity=".55"/>
+      <ellipse class="gray" cx="140" cy="96" rx="44" ry="22"/><circle class="gray" cx="96" cy="86" r="16"/><circle class="gray" cx="92" cy="70" r="7"/>
+      <circle class="coal" cx="88" cy="84" r="2.4"/><path class="ln thin" d="M184 100c30 6 40-6 60 4"/>
+      <ellipse class="ln thin" cx="140" cy="96" rx="44" ry="22"/>
+      ${wood(140, 70, 0.5)}
+      ${T(160, 26, '「鼠負」＝ ネズミが せおう', 'tx')}`,
+  };
+  F['pb-words-armadillo'] = {
+    alt: 'ぞくめいArmadillidiumは、アルマジロに「ちいさい」をあらわすごびをつけたもの',
+    box: '0 0 320 160',
+    svg: `
+      ${armadillo(70, 80, 1.1)}${T(70, 128, 'アルマジロ', 'tx-s')}
+      ${T(160, 86, '＋', 'tx')}
+      ${T(160, 30, 'アルマジリディウム', 'tx')}
+      ${bug(246, 82, 1)}${T(246, 128, 'ちいさい', 'tx-s')}`,
+  };
+  F['pb-words-armor'] = {
+    alt: 'アルマジロはスペインごのarmado（よろいをきた）に「ちいさい」をつけたことば。かたいいたがかさなったからから',
+    box: '0 0 320 160',
+    svg: `
+      <path class="gray" d="M40 50h60l6 60h-72Z"/><path class="ln thin" d="M40 50h60l6 60h-72Z"/>${[64, 80, 96].map(y => `<path class="ln thin" d="M38 ${y}h66"/>`).join('')}
+      <circle class="gray" cx="70" cy="36" r="12"/><circle class="ln thin" cx="70" cy="36" r="12"/>
+      ${T(70, 134, 'よろいを きた', 'tx-s')}
+      ${A('M120 80h40')}
+      ${armadillo(236, 82, 1)}${T(236, 134, 'かたい いたが かさなる', 'tx-s')}`,
+  };
+  F['pb-words-vulgare'] = {
+    alt: 'しゅしょうめいvulgareはラテンごの「ふつうの、どこにでもいる」から',
+    box: '0 0 320 150',
+    svg: `
+      ${[[60, 60, 10], [120, 90, -20], [180, 56, 30], [240, 94, 0], [280, 50, -30], [90, 110, 50]].map(([x, y, r]) => bug(x, y, 0.5, r)).join('')}
+      ${T(160, 24, 'ウルガレ ＝ ふつうの', 'tx')}
+      ${T(160, 140, 'どこにでも いる', 'tx-s')}`,
+  };
+  F['pb-words-english'] = {
+    alt: 'えいごのなまえ。ピルバグはくすりのつぶ、ローリーポーリーはころころ、ウッドラウスはふるいきのなかでみつかる',
+    box: '0 0 320 170',
+    svg: `
+      ${[0, 1, 2].map(i => `<circle class="white" cx="${44 + i * 14}" cy="44" r="7"/><circle class="ln thin" cx="${44 + i * 14}" cy="44" r="7"/>`).join('')}${ball(110, 44, 10)}${T(230, 48, 'ピルバグ ＝ くすりの つぶ', 'tx-s')}
+      ${ball(60, 96, 10)}${A('M76 96h40')}${ball(132, 96, 10)}${T(230, 100, 'ローリーポーリー ＝ ころころ', 'tx-s')}
+      <rect class="brown" x="30" y="132" width="110" height="22" rx="10"/><rect class="ln thin" x="30" y="132" width="110" height="22" rx="10"/>${wood(84, 143, 0.35)}${T(230, 148, 'ウッドラウス ＝ きの シラミ', 'tx-s')}`,
+  };
+  F['pb-words-pharma'] = {
+    alt: '1791ねんのロンドンのくすりのいちらんに、ワラジムシのなかまがくすりのざいりょうとしてのっている',
+    box: '0 0 320 170',
+    svg: `
+      <rect class="pale" x="40" y="20" width="130" height="136" rx="4"/><rect class="ln thin" x="40" y="20" width="130" height="136" rx="4"/>
+      ${T(105, 44, '1791ねん', 'tx-k')}${[64, 80, 112, 128].map(y => `<path class="ln thin s-soft" d="M54 ${y}h102"/>`).join('')}
+      <rect x="52" y="88" width="106" height="16" rx="3" style="fill:#e8c35a"/>${T(105, 100, 'ワラジムシ', 'tx-k')}
+      <path class="brown" d="M220 90h60l-4 50h-52Z"/><path class="ln thin" d="M220 90h60l-4 50h-52Z"/>${wood(250, 112, 0.45)}
+      ${T(250, 160, 'くすりの ざいりょう', 'tx-s')}`,
+  };
+  F['pb-words-doubt'] = {
+    alt: '1797ねんのひゃっかじてんは、いろいろなびょうきにもてはやされたとかきながら、ほんとうにきくかはうたがわしいとかいた',
+    box: '0 0 320 160',
+    svg: `
+      <rect class="pale" x="30" y="30" width="110" height="100" rx="4"/><rect class="ln thin" x="30" y="30" width="110" height="100" rx="4"/>
+      ${T(85, 56, '1797ねん', 'tx-k')}${T(85, 82, 'ひゃっかじてん', 'tx-k')}
+      ${T(230, 60, 'もてはやされた', 'tx')}${T(230, 100, 'でも きくかは？', 'tx')}
+      <ellipse class="ln thin s-red" cx="230" cy="96" rx="66" ry="18" style="stroke-dasharray:4 3"/>`,
+  };
+  F['pb-look-names'] = {
+    alt: 'まるまったダンゴムシをみかけたら、だんご、てまり、くすりのつぶ、アルマジロのどれににているか、さきにきめてからみる',
+    box: '0 0 320 170',
+    svg: `
+      ${ball(160, 76, 30)}
+      ${['だんご', 'てまり', 'くすり', 'アルマジロ'].map((w, i) => `<rect class="bg" x="${12 + i * 76}" y="126" width="68" height="28" rx="14"/>${T(46 + i * 76, 145, w, 'tx-s')}`).join('')}
+      ${T(160, 24, 'どれに にてる？', 'tx')}`,
+  };
+  F['pb-look-book'] = {
+    alt: 'えほんやずかんで、ダンゴムシのえいごのなまえやがくめいをみつけたら、まるやよろいのいみがかくれていないかよむ',
+    box: '0 0 320 160',
+    svg: `
+      <path class="pale" d="M40 40h110v100H40Z"/><path class="pale" d="M150 40h110v100H150Z"/><path class="ln thin" d="M40 40h220v100H40ZM150 40v100"/>
+      ${bug(95, 80, 1)}${T(95, 124, 'ダンゴムシ', 'tx-k')}
+      ${T(205, 76, 'ピルバグ', 'tx-k')}${T(205, 100, 'アルマジリディウム', 'tx-k')}
+      <circle class="ln thin s-red" cx="205" cy="88" r="40" style="stroke-dasharray:4 3"/>`,
+  };
+
+  // ---------- 歴史 ----------
+  F['pb-hist-before'] = {
+    alt: 'がくめいがつくまえから、ちゅうごくやえどのほんでは「鼠婦」とよび、ヨーロッパではくすりにしていた。にほんのオカダンゴムシはめいじよりまえのきろくがない',
+    box: '0 0 320 170',
+    svg: `
+      <rect class="pale" x="20" y="24" width="80" height="100" rx="4"/><rect class="ln thin" x="20" y="24" width="80" height="100" rx="4"/>${T(60, 70, '鼠婦', 'tx-k')}${T(60, 144, 'ちゅうごく・えど', 'tx-s')}
+      <path class="brown" d="M136 54h50l-4 60h-42Z"/><path class="ln thin" d="M136 54h50l-4 60h-42Z"/>${T(160, 144, 'ヨーロッパの くすり', 'tx-s')}
+      ${bug(262, 70, 0.9)}<path class="ln thin s-red" d="M236 50l52 40"/>${T(262, 134, 'めいじより まえの', 'tx-s')}${T(262, 150, 'きろくは ない', 'tx-s')}`,
+  };
+  F['pb-hist-people'] = {
+    alt: 'すこしずつわかってきたひとたち。1804ねんラトレイユ、1831ねんブラント、1953ねん、1967ねんヒューズ、1992ねん、2005・2006ねんにほんのけんきゅう',
+    box: '0 0 320 200',
+    svg: `
+      <path class="ln thin s-soft" d="M40 30h250"/>
+      ${[['1804', 'なまえ'], ['1831', 'なかま'], ['1953', 'めいろ'], ['1967', 'ヒューズ'], ['1992', 'クモ'], ['2006', 'にほん']].map(([y, t], i) => `
+        <circle class="${i % 2 ? 'yellow' : 'orange'}" cx="${40 + i * 48}" cy="30" r="6"/>
+        <path class="ln thin s-soft" d="M${40 + i * 48} 36v${30 + (i % 2) * 50}"/>
+        ${T(40 + i * 48, 82 + (i % 2) * 50, y, 'tx-s')}${T(40 + i * 48, 98 + (i % 2) * 50, t, 'tx-s')}`).join('')}
+      ${T(160, 194, 'みんなで すこしずつ', 'tx')}`,
+  };
+  F['pb-look-city-forest'] = {
+    alt: 'まちのこうえんとしんりんのおちばのあたりのダンゴムシをくらべる。もりのコシビロダンゴムシのなかまは、ふしのふちがまるい',
+    box: '0 0 320 170',
+    svg: `
+      <path class="ln thin s-soft" d="M160 10v150"/>
+      <rect class="gray" x="40" y="30" width="22" height="50"/><rect class="gray" x="70" y="18" width="26" height="62"/><rect class="gray" x="104" y="40" width="20" height="40"/>
+      ${bug(80, 120, 1.1)}${T(80, 158, 'まち：オカダンゴムシ', 'tx-s')}
+      ${[200, 240, 280].map(x => `<path class="green" d="M${x} 20l-16 36h32Z"/><path class="brown" d="M${x - 3} 56h6v20h-6Z"/>`).join('')}
+      ${bug(240, 120, 0.9, 0, '#5d5a52')}
+      <circle class="ln thin s-red" cx="240" cy="120" r="30" style="stroke-dasharray:4 3"/>${T(240, 158, 'もり：ふちが まるい？', 'tx-s')}`,
+  };
+
+  // ---------- 丸くなる ----------
+  F['pb-roll-muscle'] = {
+    alt: 'まるまるのにだいじなのは、ゆみのようにまがったせなかのいた（はいばん）と、おなかがわのきんにく',
+    box: '0 0 320 170',
+    svg: `
+      <path d="M40 120c20-70 220-70 240 0" style="fill:${BUG}"/>
+      <path class="ln thin" d="M40 120c20-70 220-70 240 0"/>
+      <path class="red" d="M56 116c40-14 168-14 208 0v6c-40-12-168-12-208 0Z"/>
+      ${T(160, 24, 'ゆみの ように まがった せなかの いた', 'tx-s')}
+      ${T(160, 150, 'おなかがわの きんにく', 'tx-s')}<path class="ln thin s-soft" d="M160 138v-14"/>`,
+  };
+  F['pb-roll-antenna-fold'] = {
+    alt: 'しょっかくは、あたまのまえのひろいくぼみにたたまれる。だからきれめのないたまになる',
+    box: '0 0 320 170',
+    svg: `
+      <circle cx="90" cy="84" r="34" style="fill:${BUG}"/><circle class="ln thin" cx="90" cy="84" r="34"/>
+      <path class="ln thin" d="M62 70c-14-10-24-20-30-34M62 90c-16 6-26 14-32 26"/>
+      ${T(90, 140, 'しょっかくを のばす', 'tx-s')}
+      ${A('M140 84h30')}
+      ${ball(236, 84, 34)}
+      <path d="M210 72c6 6 6 18 0 24" style="fill:none;stroke:#e8c35a;stroke-width:2.4"/>
+      ${T(236, 140, 'くぼみに しまう', 'tx-s')}${T(236, 158, 'きれめの ない たま', 'tx-s')}`,
+  };
+  F['pb-roll-legs-tail'] = {
+    alt: 'あしはおなかがわのいたのみぞにおさまり、みじかいおのあし（びし）はたまのなかにはいる',
+    box: '0 0 320 170',
+    svg: `
+      <circle class="gray" cx="160" cy="84" r="60"/><circle class="ln" cx="160" cy="84" r="60"/>
+      ${Array.from({ length: 7 }, (_, i) => `<path class="ln thin" d="M${120 + i * 12} 70v28" style="stroke-dasharray:2 2"/><path class="ln thin" d="M${120 + i * 12} 98l6 -6"/>`).join('')}
+      <path class="blue" d="M196 110l14 -8 4 10Z"/><path class="ln thin" d="M196 110l14 -8 4 10Z"/>
+      ${T(60, 40, 'あしは みぞへ', 'tx-s')}${T(260, 150, 'おの あしも なかへ', 'tx-s')}`,
+  };
+  F['pb-roll-ant'] = {
+    alt: 'アリといっしょにすると、まるまれないワラジムシのなかまのほうがおおくこうげきされ、しんだわりあいもたかかった',
+    box: '0 0 320 170',
+    svg: `
+      <path class="ln thin s-soft" d="M160 10v140"/>
+      ${ball(80, 80, 22)}${ant(40, 120, 0.8)}${ant(120, 50, 0.8)}
+      ${T(80, 156, 'まるまれる', 'tx-s')}
+      ${wood(240, 84, 0.9)}${ant(200, 60, 0.8)}${ant(276, 60, 0.8)}${ant(250, 120, 0.8)}
+      ${T(240, 156, 'まるまれない：こうげき おおい', 'tx-s')}`,
+  };
+  F['pb-roll-mother'] = {
+    alt: 'おなかのふくろにこどもをかかえたメスは、ふくろがふくらんでいて、すきまなくまるまりきれなかった',
+    box: '0 0 320 160',
+    svg: `
+      <circle cx="160" cy="80" r="40" style="fill:${FEM}"/><circle class="ln thin" cx="160" cy="80" r="40"/>
+      <path d="M134 108c10 12 42 12 52 0" style="fill:#f1e7c9;stroke:#00000055;stroke-width:1"/>
+      ${[146, 160, 174].map(x => `<circle class="white" cx="${x}" cy="112" r="4"/>`).join('')}
+      <circle class="ln thin s-red" cx="160" cy="112" r="20" style="stroke-dasharray:4 3"/>
+      ${T(160, 24, 'ふくろが じゃまで すきまが できる', 'tx-s')}`,
+  };
+  F['pb-roll-smooth'] = {
+    alt: 'まるまったからだはひょうめんがなめらかなので、てきがかみつくばしょをみつけにくい',
+    box: '0 0 320 160',
+    svg: `
+      ${ball(150, 84, 36)}
+      ${ant(60, 84, 1.6)}${T(60, 124, 'てき', 'tx-s')}
+      ${T(255, 76, 'つるつる', 'tx')}${T(255, 98, 'かむ ところが ない', 'tx-s')}`,
+  };
+  F['pb-look-ball'] = {
+    alt: 'まるまったダンゴムシをみかけたら、しょっかくやあしがみえるか、すきまがあるかをみる。さわらずにみるだけ',
+    box: '0 0 320 170',
+    svg: `
+      ${ball(130, 90, 34)}
+      <circle class="ln thin s-red" cx="130" cy="90" r="46" style="stroke-dasharray:4 3"/>
+      ${T(250, 70, 'しょっかくは？', 'tx-s')}${T(250, 92, 'あしは みえる？', 'tx-s')}${T(250, 114, 'すきまは ある？', 'tx-s')}
+      ${T(130, 160, 'さわらずに みるだけ', 'tx-s')}`,
+  };
+
+  // ---------- そのほかの みてみよう ----------
+  F['pb-look-legs'] = {
+    alt: 'あるいているダンゴムシのあしをかぞえる。こんちゅうは6ほん、ダンゴムシは14ほん',
+    box: '0 0 320 170',
+    svg: `
+      ${bug(110, 84, 2.6)}
+      ${T(250, 60, 'こんちゅうは 6', 'tx')}${T(250, 90, 'ダンゴムシは？', 'tx')}
+      ${T(160, 160, 'よそうしてから かぞえる', 'tx-s')}`,
+  };
+  F['pb-look-color'] = {
+    alt: 'せなかにクリームいろのてんてんがあるもの（メスにおおい）と、もようのないくろっぽいもの（オスにおおい）をくらべる',
+    box: '0 0 320 160',
+    svg: `
+      ${bug(84, 70, 1.6, 0, FEM, true)}${T(90, 130, 'てんてん：メスに おおい', 'tx-s')}
+      ${bug(240, 70, 1.6, 0, '#4d5056')}${T(240, 130, 'くろっぽい：オスに おおい', 'tx-s')}`,
+  };
+  F['pb-look-turn'] = {
+    alt: 'ダンゴムシがブロックにぶつかって、みぎとひだりのどちらにまがったかをおぼえ、つぎのかべではんたいにまがるかよそうしてみる',
+    box: '0 0 320 180',
+    svg: `
+      <rect class="gray" x="120" y="20" width="80" height="22"/><rect class="ln thin" x="120" y="20" width="80" height="22"/>
+      <rect class="gray" x="230" y="20" width="22" height="80"/><rect class="ln thin" x="230" y="20" width="22" height="80"/>
+      <path d="M160 160V52H220" style="fill:none;stroke:#e0563c;stroke-width:3;stroke-dasharray:6 4"/>
+      ${bug(160, 150, 0.6, 90)}
+      ${T(206, 76, 'みぎ', 'tx-s')}${T(214, 130, 'つぎは ひだり？', 'tx')}
+      ${T(60, 100, 'よそう', 'tx')}`,
+  };
+  F['pb-look-tail'] = {
+    alt: 'おしりのさきをうえからみくらべる。しっぽのような2ほんのとがりがつきでていればワラジムシ、ふちがまるくそろっていればダンゴムシ',
+    box: '0 0 320 160',
+    svg: `
+      <g transform="translate(90 70) scale(2)"><path d="M-30 -12h30c16 0 24 6 24 12s-8 12-24 12h-30Z" style="fill:${BUG}"/><path class="ln thin" d="M-30 -12h30c16 0 24 6 24 12s-8 12-24 12h-30"/></g>
+      ${T(90, 124, 'ダンゴムシ', 'tx-s')}${T(90, 142, 'まるく そろう', 'tx-s')}
+      <g transform="translate(220 70) scale(2)"><path d="M-30 -11h30c14 0 20 5 20 11s-6 11-20 11h-30Z" style="fill:${WOOD}"/><path d="M16 -6l14 -4M16 6l14 4" style="stroke:${WOOD};stroke-width:3;stroke-linecap:round"/><path class="ln thin" d="M-30 -11h30c14 0 20 5 20 11s-6 11-20 11h-30"/></g>
+      <circle class="ln thin s-red" cx="270" cy="70" r="20" style="stroke-dasharray:4 3"/>
+      ${T(230, 124, 'ワラジムシ', 'tx-s')}${T(230, 142, 'しっぽが 2ほん', 'tx-s')}`,
+  };
+  F['pb-look-molt'] = {
+    alt: 'うしろはんぶんだけしろいか、まえはんぶんだけしろいかをみて、だっぴのどのだんかいかかんがえる',
+    box: '0 0 320 160',
+    svg: `
+      <g transform="translate(80 70) scale(1.5)"><ellipse cx="0" cy="0" rx="26" ry="14" style="fill:${BUG}"/><path d="M2 -14a26 14 0 0 1 0 28Z" style="fill:#ece8de"/><ellipse class="ln thin" cx="0" cy="0" rx="26" ry="14"/></g>
+      ${T(80, 124, 'うしろが しろい：はじめ', 'tx-s')}
+      <g transform="translate(240 70) scale(1.5)"><ellipse cx="0" cy="0" rx="26" ry="14" style="fill:${BUG}"/><path d="M-2 -14a26 14 0 0 0 0 28Z" style="fill:#ece8de"/><ellipse class="ln thin" cx="0" cy="0" rx="26" ry="14"/></g>
+      ${T(240, 124, 'まえが しろい：おわりごろ', 'tx-s')}
+      ${T(20, 24, '← あたま', 'tx-s', 'start')}${T(160, 152, 'やわらかいので みるだけ', 'tx-s')}`,
+  };
+
   F['pill-bug-history'] = (window.AHA_TIMELINE || (() => ({ svg: '' })))([
     { y: '1804', t: 'ラトレイユが がくめいを つける', c: 'orange' },
     { y: '1831', t: 'ブラントが ぞくの なまえ' },

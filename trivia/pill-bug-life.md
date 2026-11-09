@@ -26,7 +26,7 @@ tags: [いきもの, ダンゴムシ, 育ち方]
 
 ### 半分ずつ脱皮する
 
-- 脱皮のときは、まず体の後ろ半分が白くなってはずれ、数日後に前半分が白くなってはずれる
+- 脱皮のときは、まず体の後ろ半分が白くなってはずれ、数日後（約3日後）に前半分が白くなってはずれる
 
 {{fig:pb-life-molt}}
 
@@ -48,6 +48,12 @@ tags: [いきもの, ダンゴムシ, 育ち方]
 
 {{fig:pb-life-span}}
 
+### みてみよう
+
+- 体の後ろ半分だけ白っぽいダンゴムシや、前半分だけ白っぽいダンゴムシを見かけたら、脱皮のとちゅう。後ろと前のどちらが白いかを見て、脱皮のどの段階か考える。脱皮のあとは殻がやわらかいので、そっと見るだけにする
+
+{{fig:pb-look-molt}}
+
 ## 3〜5歳むけ
 
 ダンゴムシの おかあさんは、おなかに ふくろが あるよ。
@@ -65,6 +71,10 @@ tags: [いきもの, ダンゴムシ, 育ち方]
 うしろが さきで、まえは あとなんだ。
 
 {{fig:pb-life-molt}}
+
+うしろだけ しろい ダンゴムシを さがして みてね。
+
+{{fig:pb-look-molt}}
 
 ## 6〜9歳むけ
 
@@ -90,7 +100,12 @@ tags: [いきもの, ダンゴムシ, 育ち方]
 
 {{fig:pb-life-soft}}
 
+うしろが しろいか、まえが しろいか、くらべて みよう。
+
+{{fig:pb-look-molt}}
+
 ## 出典
 
 - [戸田市 ダンゴムシのひみつ（子育て、脱皮、寿命、冬眠）（PDF）](https://www.city.toda.saitama.jp/uploaded/attachment/23741.pdf)
+- [UF/IFAS EDIS IN1099 Pillbug, Roly-Poly, Woodlouse（後ろ半分の約3日後に前半分）（PDF）](https://ask.ifas.ufl.edu/publication/IN1099/pdf)
 - [Wikipedia: Armadillidium vulgare（育房の位置、子の数、脱皮の周期）](https://en.wikipedia.org/wiki/Armadillidium_vulgare)

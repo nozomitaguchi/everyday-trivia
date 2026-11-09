@@ -333,8 +333,10 @@ tags: [ジャンル, ...]
 
 #### ダンゴムシ {pill-bug}
 - きほん: [ダンゴムシとは何か、虫ではなくエビやカニの仲間](trivia/pill-bug-basics.md)
+- しくみ: [海の仲間のダンゴムシは、どうやって陸でくらしているのか（白い肺、口で飲む水、気体で出すおしっこ）](trivia/pill-bug-land-life.md)
 - しくみ: [ダンゴムシは右に曲がったら次は左、交替性転向反応](trivia/pill-bug-turn.md)
 - れきし: [ダンゴムシの歴史、地中海から世界へ、明治に日本へ、迷路の研究まで](trivia/pill-bug-history.md)
+- ことば: [ダンゴムシのことば、「団子」「手まり」「小さなアルマジロ」「丸薬」、昔は本当に薬だった](trivia/pill-bug-words.md)
 - かたち: [ダンゴムシが丸くなる理由](trivia/pill-bug-rolls-up.md)
 - かたち: [ダンゴムシとワラジムシの違い、日本には140種あまりの仲間](trivia/pill-bug-vs-woodlouse.md)
 - ひみつ: [ダンゴムシの一生、おなかのふくろで育ち、体を半分ずつ脱皮する](trivia/pill-bug-life.md)

@@ -41,13 +41,19 @@ tags: [いきもの, ダンゴムシ, 種類]
 
 {{fig:pb-vs-koshibiro}}
 
-- オカダンゴムシの尾の脚（尾肢）は、体の下にかくれていて上からは見えない
+- オカダンゴムシの尾の脚（尾肢）は短くて平たく、体のふちとそろって終わる。上から見えるのは外側の平たい部分だけ。ワラジムシの仲間の尾肢は、とがった刃のような形で、体の後ろへ長くつき出ている
 
 {{fig:pb-vs-tail}}
 
 - どれも人に直接の害はない
 
 {{fig:pb-vs-harmless}}
+
+### みてみよう
+
+- ダンゴムシとワラジムシを見つけたら、おしりの先を上から見くらべる。しっぽのような2本のとがりが後ろにつき出ていればワラジムシ、体のふちがまるくそろっていればダンゴムシ（見るだけ）
+
+{{fig:pb-look-tail}}
 
 ## 3〜5歳むけ
 
@@ -63,7 +69,9 @@ tags: [いきもの, ダンゴムシ, 種類]
 
 {{fig:pb-vs-speed}}
 
-どっちが いたか、みて みてね。
+おしりに、しっぽが あるかな。みて みてね。
+
+{{fig:pb-look-tail}}
 
 ## 6〜9歳むけ
 
@@ -83,9 +91,14 @@ tags: [いきもの, ダンゴムシ, 種類]
 
 {{fig:pb-vs-koshibiro}}
 
+おしりの さきに、しっぽみたいな とがりが あるか くらべて みよう。
+
+{{fig:pb-look-tail}}
+
 ## 出典
 
 - [名古屋市 ワラジムシ・ダンゴムシ類（日本で140種あまり、外来種、無害）](https://www.city.nagoya.jp/kenkofukushi/eisei/1015269/1034848/1015298/1034491/1015373.html)
 - [福岡県 生物多様性 オカダンゴムシ（ワラジムシとの見分け方、尾肢、コシビロダンゴムシ）](https://biodiversity.pref.fukuoka.lg.jp/futsushu/picturebook/okadangomushi.html)
 - [奈良教育大学 虫ガイド オカダンゴムシ（ワラジムシは丸くならない）](https://www.nara-edu.ac.jp/cnee/NUE-KINDER-INSECT-GUIDE/web-content/musipage/okadangomusi.html)
+- [Fox, R. Invertebrate Anatomy OnLine: Armadillidium vulgare（尾肢の形のちがい）](https://lanwebs.lander.edu/faculty/rsfox/invertebrates/armadillidium.html)
 - [東京都教育委員会 児童・生徒の研究 ダンゴムシとワラジムシのくらべっこ（PDF）](https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/03_22)
