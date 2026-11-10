@@ -297,8 +297,13 @@ tags: [ジャンル, ...]
 - れきし: [走る人の非常口マークは日本生まれ、世界の標準になった](trivia/emergency-exit-history.md)
 
 #### ビル {building}
-- ひみつ: [「定礎」の裏にあるタイムカプセル](trivia/building-cornerstone-box.md)
-- しるし: [高いビルの赤い点滅灯](trivia/building-aviation-obstruction-light.md)
+- きほん: [ビルとは何か、なぜ何十階も積み上げられるのか（壁で支える家と、骨組みで支えるビル）（そもそも）](trivia/building-basics.md)
+- なにでできてる: [ビルは何でできているか、鉄とコンクリートを組み合わせるわけ（原料の原料は国産の石灰石）](trivia/building-materials.md)
+- つくりかた: [ビルはどうやって建てるのか、屋上のクレーンは最後にどうやって降りてくるのか（親・子・孫のクレーン）](trivia/building-construction.md)
+- れきし: [ビルの歴史、れんがの壁から鉄の骨組みへ、31mの天井から超高層へ（霞が関ビルのヒントは五重塔？）](trivia/building-history.md)
+- ことば: [「ビル」は「ビルヂング」の短縮、skyscraperは「マストのてっぺんの帆」、「高層」と「超高層」のちがい（ビルのことば）](trivia/building-words.md)
+- しるし: [高いビルの上の赤いランプ（航空障害灯）、点滅するのとしないのがあるわけ、鉄塔だけ紅白にぬるわけ](trivia/building-aviation-obstruction-light.md)
+- ひみつ: [「定礎」の板の裏にあるタイムカプセル（何が入っていて、いつ開けるのか、開けた例）](trivia/building-cornerstone-box.md)
 
 #### でんちゅうと でんせん {power-lines}
 - きほん: [電柱の電線は上から電圧の高い順に並んでいる](trivia/utility-pole-wire-order.md)
