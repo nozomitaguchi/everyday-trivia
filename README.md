@@ -309,10 +309,13 @@ tags: [ジャンル, ...]
 - ひみつ: [横断歩道のまん中の「ぶつぶつの帯」エスコートゾーン、目の見えない人がまっすぐ渡るための道しるべ](trivia/crosswalk-escort-zone.md)
 
 #### どうろ {road}
-- しるし: [センターラインの黄色と白](trivia/road-center-line-colors.md)
-- しるし: [道路標識の形と色でわかること](trivia/road-route-number-signs.md)
-- しくみ: [路面の凸凹「ランブルストリップス」](trivia/road-rumble-strips.md)
-- かたち: [ガードレールの継ぎ目の重ね方](trivia/road-guardrail-overlap.md)
+- きほん: [道路とは何か、なぜまん中が少し高いのか（車の重さを土まで広げる何枚もの層と、雨を端へ流す1.5〜2％のかたむき）](trivia/road-basics.md)
+- なにでできてる: [黒い道は何でできているか（アスファルトは原油のいちばん重い残り、ほとんどは石、熱いうちに敷いて50℃に冷めたら通れる）](trivia/road-asphalt.md)
+- しくみ: [路面の凸凹「ランブルストリップス」（センターラインの上に削った深さ12mmの溝、北海道で正面衝突の事故が半分に）](trivia/road-rumble-strips.md)
+- れきし: [道路の歴史、雨がふると高下駄の泥道から、マカダムの砕石とアスファルトの黒い道へ（「日本の道路は信じがたいほど悪い」と言われた1956年まで）](trivia/road-history.md)
+- しるし: [センターラインの黄色と白（線の色と形で、何のためのはみ出しがだめかが違う、破線は5mごと）](trivia/road-center-line-colors.md)
+- しるし: [道路標識の形と色でわかること（国道は逆三角形、都道府県道は六角形、高速道路は緑で一般道は青）](trivia/road-route-number-signs.md)
+- かたち: [ガードレールの継ぎ目の重ね方（手前の板を車道側に重ね、切り口を車に向けない）](trivia/road-guardrail-overlap.md)
 
 #### トンネル {tunnel}
 - きほん: [トンネルとは何か、なぜ山に穴をあけても崩れないのか（丸い天井と、まわりの岩に支えさせる考え方）](trivia/tunnel-basics.md)

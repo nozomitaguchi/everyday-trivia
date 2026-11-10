@@ -201,9 +201,9 @@
     svg: `
       <rect class="gray" x="0" y="30" width="320" height="140" opacity=".5"/>
       <path class="ln" d="M0 100h320" style="stroke:#f2c230;stroke-width:6"/>
-      <rect class="blue" x="40" y="116" width="50" height="26" rx="6"/><rect class="red" x="120" y="116" width="50" height="26" rx="6"/>
-      <path class="arw" d="M180 128c30 0 40-40 70-40" style="stroke:#e0563c"/>
-      <path class="ln s-red" d="M214 82l20 20M234 82l-20 20" style="stroke-width:4"/>
+      <rect class="blue" x="40" y="58" width="50" height="26" rx="6"/><rect class="red" x="120" y="58" width="50" height="26" rx="6"/>
+      <path class="arw" d="M180 70c30 0 40 40 70 40" style="stroke:#e0563c"/>
+      <path class="ln s-red" d="M214 98l20 20M234 98l-20 20" style="stroke-width:4"/>
       ${T(160, 24, 'はみだして おいこさない', 'tx')}`,
   };
 
@@ -218,9 +218,9 @@
           : `<rect x="${x + 43}" y="36" width="6" height="132" style="fill:${i === 1 ? '#fff' : '#f2c230'}"/>`;
         return `<rect class="gray" x="${x}" y="30" width="92" height="144" rx="4"/>
           ${line}
-          <rect class="blue" x="${x + 58}" y="126" width="22" height="34" rx="5"/>
-          <rect class="red" x="${x + 58}" y="70" width="22" height="34" rx="5"/>
-          ${i === 0 ? `<path class="arw" d="M${x + 64} 124c-20-14-20-40 0-58"/>` : `<path class="ln s-red" d="M${x + 26} 92l16 16M${x + 42} 92l-16 16" style="stroke-width:4"/>`}`;
+          <rect class="blue" x="${x + 12}" y="126" width="22" height="34" rx="5"/>
+          <rect class="red" x="${x + 12}" y="70" width="22" height="34" rx="5"/>
+          ${i === 0 ? `<path class="arw" d="M${x + 28} 124c44-14 44-44 0-58"/>` : `<path class="ln s-red" d="M${x + 50} 92l16 16M${x + 66} 92l-16 16" style="stroke-width:4"/>`}`;
       }).join('')}
       ${T(54, 20, 'しろの てんせん', 'tx-s')}${T(158, 20, 'しろの じっせん', 'tx-s')}${T(262, 20, 'きいろの じっせん', 'tx-s')}
       ${T(54, 194, 'ひつようなら', 'tx-s')}${T(54, 212, 'はみだせる', 'tx-s')}
@@ -240,27 +240,7 @@
       ${T(270, 168, 'いくさきの かんばん', 'tx-s')}`,
   };
 
-  F['road-rumble-strips'] = {
-    alt: 'みちのはしのでこぼこにタイヤがのると、ゴゴゴとおととゆれがでる',
-    svg: `
-      <rect class="gray" x="0" y="40" width="320" height="120" opacity=".5"/>
-      ${Array.from({ length: 20 }, (_, i) => `<rect class="ink" x="${8 + i * 16}" y="140" width="8" height="14" rx="2" opacity=".6"/>`).join('')}
-      <circle class="ink" cx="170" cy="126" r="18"/><circle class="gray" cx="170" cy="126" r="8"/>
-      ${T(170, 80, 'ゴゴゴ', 'tx-b')}
-      <path class="ln s-red" d="M140 90l-8-8M200 90l8-8M150 82l-4-10M190 82l4-10" style="stroke-width:2.5"/>
-      ${T(160, 186, 'はしの でこぼこ', 'tx-s')}`,
-  };
 
-  F['road-guardrail-overlap'] = {
-    alt: 'ガードレールのいたは、くるまのすすむむきにあわせて、てまえからじゅんにかさねる',
-    svg: `
-      <path class="gray" d="M20 60h110l6 10v30l-6 10H20Z"/><path class="gray" d="M126 56h110l6 10v30l-6 10H126Z"/><path class="gray" d="M232 52h80v60h-80Z"/>
-      <path class="ln" d="M20 60h110l6 10v30l-6 10H20M126 56h110l6 10v30l-6 10H126M232 52h80v60h-80"/>
-      <rect class="blue" x="40" y="140" width="80" height="34" rx="8"/>
-      ${A('M130 157h80')}
-      ${T(170, 196, 'くるまの すすむ むき', 'tx-s')}
-      ${T(160, 30, 'つなぎめの だんさが うしろむき', 'tx-s')}`,
-  };
 
 
   // ---- のりもの ----
