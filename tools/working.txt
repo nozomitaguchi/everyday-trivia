@@ -9,4 +9,3 @@ tunnel 2026-11-03T20:50Z
 station 2026-11-03T23:48Z
 crosswalk 2026-11-09T18:50Z
 power-lines 2026-11-10T00:49Z
-vinyl 2026-11-10T02:48Z

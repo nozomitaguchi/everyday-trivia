@@ -364,7 +364,7 @@
       <rect class="white" x="20" y="50" width="160" height="44" rx="6"/>
       <rect class="coal" x="180" y="50" width="120" height="44" rx="6"/>
       <rect class="ln" x="20" y="50" width="280" height="44" rx="6"/>
-      ${T(100, 78, 'しお 57%', 'tx-k')}
+      ${T(100, 78, 'えんそ 57%', 'tx-k')}
       ${T(240, 78, 'せきゆ', 'tx-w')}
       <path class="white" d="M88 116h24v10l-4 40H92l-4-40Z"/><path class="ln thin" d="M88 116h24v10l-4 40H92l-4-40Z"/>
       <circle class="coal" cx="96" cy="122" r="1.5"/><circle class="coal" cx="104" cy="122" r="1.5"/>
