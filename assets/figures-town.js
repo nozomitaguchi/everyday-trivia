@@ -274,21 +274,21 @@
       <rect class="green" x="40" y="54" width="240" height="90" rx="14"/><rect class="ln" x="40" y="54" width="240" height="90" rx="14"/>
       ${[60, 120, 180, 230].map(x => `<rect class="glass" x="${x}" y="70" width="36" height="30" rx="4"/>`).join('')}
       <rect class="gray" x="130" y="146" width="40" height="16" rx="4"/>${T(150, 182, 'モーター', 'tx-s')}
-      <circle class="ink" cx="80" cy="156" r="12"/><circle class="ink" cx="240" cy="156" r="12"/>
+      <circle class="gray" cx="80" cy="156" r="12"/><circle class="ln thin" cx="80" cy="156" r="12"/><circle class="gray" cx="240" cy="156" r="12"/><circle class="ln thin" cx="240" cy="156" r="12"/>
       <path class="ln" d="M0 170h320" style="stroke-width:3"/>
       ${A('M120 36v20')}`,
   };
 
   F['deadman-and-eb-device'] = {
-    alt: 'ハンドルからてをはなすと、いちばんつよいブレーキがかかって、でんしゃがとまる',
+    alt: 'ハンドルからてをはなすと、ブレーキがかかって、でんしゃがとまる',
     svg: `
       <rect class="gray" x="40" y="110" width="110" height="30" rx="6"/>
-      <path class="ln" d="M95 110V70" style="stroke-width:6"/><rect class="ink" x="70" y="56" width="50" height="16" rx="8"/>
+      <path class="ln" d="M95 110V70" style="stroke-width:6"/><rect class="coal" x="70" y="56" width="50" height="16" rx="8"/>
       <path class="pink" d="M72 40c0-12 46-12 46 0v18H72Z"/>
       ${T(95, 166, 'おさえて いる あいだ', 'tx-s')}${T(95, 182, 'はしれる', 'tx-s')}
       ${A('M160 100h40')}
       <rect class="red" x="210" y="60" width="90" height="60" rx="10"/>${T(255, 96, 'とまる！', 'tx-w')}
-      ${T(255, 146, 'てを はなすと', 'tx-s')}${T(255, 162, 'つよい ブレーキ', 'tx-s')}`,
+      ${T(255, 146, 'てを はなすと', 'tx-s')}${T(255, 162, 'ブレーキ', 'tx-s')}`,
   };
 
   F['railway-car-type-symbols'] = {

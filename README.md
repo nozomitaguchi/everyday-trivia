@@ -327,12 +327,15 @@ tags: [ジャンル, ...]
 ### のりもの {vehicles}
 
 #### でんしゃ {train}
-- きほん: [電車はどうやって走るのか](trivia/train-basics.md)
-- かたち: [電車のつり革の高さと色](trivia/train-strap-height-color.md)
-- しるし: [電車の「クハ」「モハ」の意味](trivia/railway-car-type-symbols.md)
-- しるし: [線路脇の勾配標](trivia/railway-gradient-post.md)
-- ひみつ: [東海道新幹線で富士山が見えるのはE席](trivia/shinkansen-fuji-e-seat.md)
-- しくみ: [デッドマン装置とEB装置](trivia/deadman-and-eb-device.md)
+- きほん: [電車とは何か、どうやって走るのか（電気は「行き」と「帰り」の輪になっている）](trivia/train-basics.md)
+- しくみ: [電車の上の電線はなぜジグザグなのか（2段の電線、5mおきのつり金具、気温で伸びる線を引っぱるおもり）](trivia/train-overhead-wire.md)
+- しくみ: [電車の車輪はなぜカーブを曲がれるのか（左右がつながった車輪と、円すい形の「ふみづら」）](trivia/train-wheel-curve.md)
+- れきし: [電車の歴史、電池で走らなかった機関車から、外から電気を送る電車へ（馬と煙の時代に何が困っていたか）](trivia/train-history.md)
+- しるし: [電車の「クハ」「モハ」の意味（運転台・モーター・座席の3つを、カタカナ2〜3文字で）](trivia/railway-car-type-symbols.md)
+- しるし: [線路わきの勾配標（坂の向きと「1000mで何m」、鉄の車輪はなぜ坂が苦手か）](trivia/railway-gradient-post.md)
+- かたち: [電車のつり革の高さ・色・形（優先席は低く長く、ドアの近くは高く、三角と丸にもわけがある）](trivia/train-strap-height-color.md)
+- ひみつ: [東海道新幹線で富士山が見えるのはE席（上りでも下りでも同じ席なのはなぜか）](trivia/shinkansen-fuji-e-seat.md)
+- しくみ: [デッドマン装置とEB装置（運転士が急に倒れたら、電車はどうやって止まるのか）](trivia/deadman-and-eb-device.md)
 
 #### えき {station}
 - しるし: [ホームの点字ブロックの「内方線」](trivia/railway-tactile-block-inner-line.md)
