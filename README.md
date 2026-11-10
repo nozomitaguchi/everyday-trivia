@@ -345,6 +345,10 @@ tags: [ジャンル, ...]
 - しくみ: [デッドマン装置とEB装置（運転士が急に倒れたら、電車はどうやって止まるのか）](trivia/deadman-and-eb-device.md)
 
 #### えき {station}
+- きほん: [駅とは何か、ホームの形は3つ（島式・相対式・頭端式）と、幅・柱・すき間のきまり（そもそも）](trivia/station-basics.md)
+- しくみ: [自動改札機の扉はなぜ「ふだん開いている」のか、きっぷが人を追いこして運ばれるしくみ（はさみの改札からSuicaまで）](trivia/station-ticket-gate.md)
+- れきし: [駅の歴史、馬を乗りつぐ「駅」から、ステン所・停車場、はさみの改札、自動改札とSuicaへ](trivia/station-history.md)
+- ことば: [「駅」の字に「馬」が入っているわけ、「ステン所」「停車場」から「駅」へ、「駅伝」の名前も（駅のことば）](trivia/station-words.md)
 - しるし: [ホームの点字ブロックの「内方線」](trivia/railway-tactile-block-inner-line.md)
 
 #### くるま {car}
