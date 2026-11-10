@@ -196,31 +196,6 @@
       ${T(240, 192, 'すこしだけ', 'tx-s')}`,
   };
 
-  F['road-crosswalk-stripes'] = {
-    alt: 'むかしのはしごがたは、せんにかこまれたところにみずがたまった。いまはしましまだけ',
-    svg: `
-      <rect class="gray" x="10" y="30" width="140" height="130" opacity=".5"/>
-      <rect class="bg" x="20" y="40" width="120" height="10" style="stroke:none"/><rect class="bg" x="20" y="140" width="120" height="10" style="stroke:none"/>
-      ${[0, 1, 2, 3, 4].map(i => `<rect class="bg" x="${24 + i * 24}" y="50" width="12" height="90" style="stroke:none"/>`).join('')}
-      <ellipse class="blue" cx="66" cy="96" rx="9" ry="20" opacity=".7"/>
-      ${T(80, 184, 'むかし（みずが たまる）', 'tx-s')}
-      <rect class="gray" x="170" y="30" width="140" height="130" opacity=".5"/>
-      ${[0, 1, 2, 3, 4].map(i => `<rect class="bg" x="${184 + i * 24}" y="40" width="12" height="110" style="stroke:none"/>`).join('')}
-      ${T(240, 184, 'いま（しましまだけ）', 'tx-s')}`,
-  };
-
-  F['road-diamond-marking'] = {
-    alt: 'おうだんほどうのてまえ50メートルと30メートルに、ひしがたのしるしがある',
-    svg: `
-      <rect class="gray" x="110" y="0" width="100" height="200" opacity=".5"/>
-      ${[0, 1, 2, 3, 4, 5].map(i => `<rect class="bg" x="${116 + i * 15}" y="16" width="9" height="30" style="stroke:none"/>`).join('')}
-      <path class="ln" d="M160 84l14 18-14 18-14-18Z" style="stroke:#fff;stroke-width:3"/>
-      <path class="ln" d="M160 140l14 18-14 18-14-18Z" style="stroke:#fff;stroke-width:3"/>
-      ${T(232, 106, '30メートル', 'tx-s', 'start')}${T(232, 162, '50メートル', 'tx-s', 'start')}
-      ${T(232, 36, 'おうだんほどう', 'tx-s', 'start')}
-      <rect class="blue" x="146" y="180" width="28" height="16" rx="4"/>`,
-  };
-
   F['road-center-line-colors'] = {
     alt: 'きいろいせんは、おいこすためにはんたいがわへはみだしてはいけないしるし',
     svg: `

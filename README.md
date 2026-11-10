@@ -294,8 +294,13 @@ tags: [ジャンル, ...]
 - しるし: [信号の「ピヨピヨ」「カッコー」、なぜ2つの音が交互に鳴るのか](trivia/traffic-light-sound.md)
 
 #### おうだんほどう {crosswalk}
-- かたち: [横断歩道から横線が消えた理由](trivia/road-crosswalk-stripes.md)
-- しるし: [道路に描かれたひし形](trivia/road-diamond-marking.md)
+- きほん: [横断歩道とは何か、歩く人と車がそれぞれ何を守る場所なのか（そもそも）](trivia/crosswalk-basics.md)
+- なにでできてる: [横断歩道の白線は何でできていて、どうやって引くのか（200℃でとかして、ガラスの粒をまく）](trivia/crosswalk-paint.md)
+- れきし: [横断歩道の歴史、ポンペイの飛び石からロンドンの「ゼブラ」へ、日本は1920年の「電車路線横断線」から](trivia/crosswalk-history.md)
+- かたち: [横断歩道から横線が消えた理由（2本線 → はしご → しまだけ、そしてすきまは90cmまで）](trivia/road-crosswalk-stripes.md)
+- しるし: [道路に描かれたひし形（「この先に横断歩道」の予告、約30m手前から2〜3個）](trivia/road-diamond-marking.md)
+- しるし: [信号のない横断歩道で、車は止まらなければならない（止まる車は10年で7.6％から61.1％に）](trivia/crosswalk-stop-rule.md)
+- ひみつ: [横断歩道のまん中の「ぶつぶつの帯」エスコートゾーン、目の見えない人がまっすぐ渡るための道しるべ](trivia/crosswalk-escort-zone.md)
 
 #### どうろ {road}
 - しるし: [センターラインの黄色と白](trivia/road-center-line-colors.md)
