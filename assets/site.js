@@ -127,7 +127,6 @@
       const open = !root.classList.contains('search-open');
       root.classList.toggle('search-open', open);
       searchToggle.setAttribute('aria-expanded', String(open));
-      if (open) searchInput.focus();
     });
   }
 

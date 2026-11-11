@@ -311,13 +311,13 @@ ${head}</head>
 <header class="site">
   <div class="site-inner">
     <a class="logo" href="${U.home()}" aria-label="みのまわり図鑑"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-lens" cx="20" cy="20" r="14.5"/><path class="lm-key" d="M20 12.5a4.5 4.5 0 0 1 2.6 8.200L24 28h-8l1.400-7.300A4.500 4.500 0 0 1 20 12.500Z"/><path class="lm-handle" d="M31 31l11 11"/></svg><span class="logo-text">みのまわり<span class="logo-zukan">図鑑</span></span></a>
-    <nav class="site-nav" aria-label="メインメニュー">
+    <nav class="site-nav" id="site-menu" aria-label="メインメニュー">
       ${navLink('c', U.cats(), 'カテゴリ')}
       ${navLink('a', U.angles(), 'きりくち')}
       ${navLink('about', U.about(), 'このサイトについて').replace('<a ', '<a class="nav-about" ')}
     </nav>
-    <button type="button" class="search-toggle" aria-expanded="false" aria-controls="search" aria-label="さがす">
-      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M16.5 16.5 21 21"/></svg>
+    <button type="button" class="search-toggle" aria-expanded="false" aria-controls="site-menu search" aria-label="メニュー">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <form class="search" id="search" role="search" action="${U.search()}" method="get" autocomplete="off">
       <label class="search-field">
@@ -350,6 +350,8 @@ ${body}
       <p class="foot-note">説明はそれぞれの出典をもとに書いています。</p>
     </div>
     <ul class="foot-links">
+      <li><a href="${U.cats()}">カテゴリ</a></li>
+      <li><a href="${U.angles()}">きりくち</a></li>
       <li><a href="${U.about()}">このサイトについて</a></li>
       <li><a href="https://github.com/nozomitaguchi/everyday-trivia">まちがいを見つけたら GitHub で教えてください</a></li>
     </ul>
@@ -429,9 +431,8 @@ function buildHome() {
       <section class="hero">
         <div class="wrap hero-inner">
           <div class="hero-text">
-            <h1 class="hero-title"><span>見てるのに、</span><span>知らない。</span></h1>
+            <h1 class="hero-title"><span>そこにある、</span><span>知らない話。</span></h1>
           </div>
-          ${cabinet(picks)}
         </div>
       </section>
       <div class="wrap">
@@ -440,10 +441,6 @@ function buildHome() {
         <div class="shelves-grid">${filled.map(shelf).join('')}</div>
       </section>
 
-      <section class="section angles-box" aria-labelledby="h-angles">
-        <h2 class="section-title" id="h-angles">きりくちで さがす</h2>
-        ${angleChips()}
-      </section>
     </div></div>
     <div data-lv="small"><div class="wrap">
       <div class="small-top">

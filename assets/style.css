@@ -1006,3 +1006,25 @@ html[data-level="kid"] :is(h1, h2, h3, .page-title, .chapter-name, .shelf-name, 
 /* short pages (404, empty search) keep the footer at the bottom of the window */
 body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
 body > main { flex: 1 0 auto; }
+
+/* ---------- menu: nav + search sit behind the hamburger at every width ---------- */
+.site .search-toggle, html[data-level="kid"] .site .search-toggle { display: inline-grid; order: 1; margin-left: auto; }
+.site .search-toggle svg { stroke: var(--ink); }
+html[data-level="small"] .site .search-toggle { display: none; }
+.site .site-nav { display: none; order: 4; flex: 1 1 100%; flex-wrap: wrap; gap: var(--space-1); margin: 0; font-size: 1rem; }
+.site .site-nav a { padding: 0 var(--space-3); }
+.site .site-nav .nav-about { display: inline-flex; }
+.search-open .site .site-nav { display: flex; }
+.site .search { display: none; order: 5; flex: 1 1 100%; }
+.search-open .site .search { display: block; }
+html[data-level="kid"] .site .search, html[data-level="small"] .site .search, html[data-level="small"] .site .site-nav { display: none; }
+.site .about-mini { display: none; }
+.site .reader { order: 6; }
+@media (min-width: 1200px) {
+  .site .site-inner { flex-wrap: wrap; }
+  .site .reader { order: 1; flex: 0 0 auto; margin-left: auto; }
+  .site .search-toggle, html[data-level="kid"] .site .search-toggle { order: 2; margin-left: var(--space-2); }
+  .search-open .site .search { max-width: 32rem; }
+}
+/* home: the copy line stands alone above the categories */
+.hero .hero-inner { display: block; }
