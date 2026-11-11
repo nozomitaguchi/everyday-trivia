@@ -45,7 +45,7 @@ function shoot(chrome, html, png, profile) {
     fs.mkdirSync(path.dirname(png), { recursive: true });
     fs.rmSync(png, { force: true });
     const args = ['--headless=new', '--no-sandbox', '--disable-gpu', '--hide-scrollbars', '--mute-audio', '--no-first-run',
-      '--disable-extensions', '--force-device-scale-factor=1', '--force-color-profile=srgb', `--user-data-dir=${profile}`,
+      '--disable-extensions', '--disable-background-networking', '--disable-component-update', '--disable-sync', '--disable-default-apps', '--no-default-browser-check', '--metrics-recording-only', '--disable-features=Translate,OptimizationHints,MediaRouter,AutofillServerCommunication', '--force-device-scale-factor=1', '--force-color-profile=srgb', `--user-data-dir=${profile}`,
       `--window-size=${W},${H}`, '--virtual-time-budget=5000', '--run-all-compositor-stages-before-draw', `--screenshot=${png}`, pathToFileURL(html).href];
     const p = spawn(chrome, args, { stdio: ['ignore', 'ignore', 'pipe'] });
     let err = '';
