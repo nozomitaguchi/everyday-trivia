@@ -9,11 +9,31 @@
 - `index.html`, `assets/` … サイト本体。この README の「一覧」と `trivia/*.md` をそのまま読みこんで表示する
 - `WRITING.md` … 深掘りの基準（1つのものにそろえる問い、絵の入れ方）と、子ども向けの説明の書き方の基準
 - `items/` … 「もの」ごとのページの先頭に出す「ひとことで」（`items/<id>.md`）
+- `assets/core.js` … 一覧と Markdown の読みとり・HTML 化（ブラウザとビルドで共用）
+- `tools/build.mjs` … 静的サイトのビルド（Node 22 の標準機能だけ。`node tools/build.mjs` で `_site/` に出力。`_site/` はコミットしない）
 - `tools/check_kids.py` … 子ども向けの文が基準を満たすかの機械チェック
 - `tools/coverage.py` … ものごとの深さ（ネタの本数・絵の枚数・きほん・歴史の有無）を浅い順に並べる
 - `trivia/` … 1トリビア1ファイル。出典を確認できたもの
 - `inbox.md` … まだ出典を確認できていないネタの置き場
 - `images/` … 自分で撮った写真のみ（他サイトの画像は入れない）
+
+## ページのアドレス
+
+`tools/build.mjs` が、1ページ1アドレスの HTML を作る（GitHub Actions の `.github/workflows/pages.yml` が main への push ごとにビルドして公開）。アドレスは README の `{ }` の名前とファイル名からそのまま決まるので、名前を変えない限り変わらない。
+
+| ページ | アドレス |
+|---|---|
+| ホーム | `/everyday-trivia/` |
+| カテゴリ一覧 | `/everyday-trivia/c/` |
+| 大きな分類 | `/everyday-trivia/c/<分類の名前>/`（例 `c/home/`） |
+| 切り口一覧 | `/everyday-trivia/a/` |
+| 切り口 | `/everyday-trivia/a/<切り口の名前>/`：きほん=`basics` なにでできてる=`materials` つくりかた=`making` しくみ=`how` かたち=`shape` しるし=`marks` ひみつ=`secrets` れきし=`history` ことば=`words` |
+| もの | `/everyday-trivia/i/<ものの名前>/`（例 `i/pencil/`） |
+| 1つのトリビア | `/everyday-trivia/i/<ものの名前>/#t-<ファイル名>`。`/everyday-trivia/t/<ファイル名>/` はそこへ転送する（共有用のタイトルつき） |
+| さがす | `/everyday-trivia/s/?q=<ことば>` |
+
+- 前のアドレス（`#/i/pencil`、`#/t/…`、`#/<ファイル名>` など）は、開くと新しいアドレスへ移る
+- 別のドメインで公開するときは `SITE_URL=https://example.com/ node tools/build.mjs`（アドレスの先頭 `/everyday-trivia/` はここから決まる）
 
 ## 図鑑の組み立て
 

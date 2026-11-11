@@ -125,6 +125,11 @@ a { color: var(--accent-ink); text-decoration-thickness: 1.5px; text-underline-o
 img { max-width: 100%; height: auto; border-radius: var(--radius); }
 button, input { font: inherit; color: inherit; }
 h1, h2, h3 { font-weight: 400; letter-spacing: var(--tracking); }
+[hidden] { display: none !important; }
+/* pre-rendered pages (tools/build.mjs) carry the text for every reader level; show only the chosen one */
+html[data-level="small"] [data-lv]:not([data-lv~="small"]),
+html[data-level="kid"] [data-lv]:not([data-lv~="kid"]),
+html[data-level="adult"] [data-lv]:not([data-lv~="adult"]) { display: none !important; }
 .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
 .skip { position: absolute; left: -999px; top: var(--space-4); z-index: 20; }
@@ -333,6 +338,7 @@ main:focus, main:focus-visible { outline: none; }
 .label { border-radius: 6px; padding: 0 var(--space-2); background: var(--ink); color: var(--on-ink); }
 .label-cat { background: var(--cat); color: #fff; }
 .label-plain { color: var(--muted); }
+.today-body { display: flex; flex-direction: column; gap: var(--space-3); }
 .today-title { margin: 0; font-size: var(--fs-lg); line-height: 1.45; font-weight: 500; letter-spacing: 0.02em; text-wrap: pretty; }
 .today-pic { background: var(--cat-soft); border-radius: var(--radius-lg); overflow: hidden; }
 .today-pic .fig { margin: 0; background: transparent; box-shadow: none; padding: var(--space-4); }
@@ -434,9 +440,9 @@ main:focus, main:focus-visible { outline: none; }
 .look .fig { background: var(--paper); }
 
 /* kid text is written with spaces between phrases; break lines only there */
-.level-small .body, .level-kid .body { word-break: keep-all; overflow-wrap: anywhere; line-break: strict; }
-.level-kid .body { font-size: 1.1875rem; line-height: 2; }
-.level-small .body { font-size: 1.3rem; line-height: 2.1; letter-spacing: 0.02em; }
+.level-small .body, .level-kid .body, .body.level-small, .body.level-kid { word-break: keep-all; overflow-wrap: anywhere; line-break: strict; }
+.level-kid .body, .body.level-kid { font-size: 1.1875rem; line-height: 2; }
+.level-small .body, .body.level-small { font-size: 1.3rem; line-height: 2.1; letter-spacing: 0.02em; }
 html[data-level="kid"] .trivia-title { font-size: 1.75rem; }
 html[data-level="kid"] :is(.trivia-title, .card-title, .today-title, .toc-name), html[data-level="small"] :is(h1, h2, .trivia-title) { word-break: keep-all; overflow-wrap: anywhere; }
 html[data-level="kid"] .trivia .fig svg { max-width: 560px; }
@@ -637,3 +643,9 @@ html[data-level="small"] h1, html[data-level="small"] h2 { font-weight: 700; }
 .moon-orbit .sun-label { fill: var(--muted); font-size: 13px; font-weight: 700; font-family: inherit; }
 .moon-dark { fill: var(--plate); }
 .moon-lit { fill: #f6e7a8; }
+
+/* search page (static site) */
+.search-page-form { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-bottom: var(--space-4); }
+.search-page-form .search-field { flex: 1 1 16rem; background: var(--paper); }
+.search-page-form .btn { border: 0; cursor: pointer; font: inherit; }
+.today-set { min-width: 0; }
