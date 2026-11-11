@@ -2,12 +2,9 @@
   'use strict';
 
   // ---------- reader level ----------
-  const LEVELS = [
-    { id: 'small', short: 'ちいさい', heading: '3〜5歳むけ', sample: 4, max: 5 },
-    { id: 'kid', short: 'こども', heading: '6〜9歳むけ', sample: 7, max: 9 },
-    { id: 'adult', short: 'おとな', heading: null, sample: 15, max: Infinity },
-  ];
-  const KID_HEADINGS = LEVELS.filter(l => l.heading).map(l => l.heading);
+  // parsing and rendering live in assets/core.js (shared with the static build), diagrams in assets/widgets.js
+  const CORE = window.AHA_CORE;
+  const { LEVELS, KID_HEADINGS, ANGLES, parseEntry, esc, inline, firstParagraph } = CORE;
 
   const store = {
     get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
@@ -22,28 +19,6 @@
   function ageText(a) { return a <= AGE_MIN ? `${AGE_MIN}さい いか` : a >= AGE_MAX ? `${AGE_MAX}さい いじょう` : `${a}さい`; }
   function levelOf(a) { return LEVELS.find(l => a <= l.max); }
   function level() { return levelOf(age); }
-
-  // ---------- key switch drawing ----------
-  // ticksOnly: draw tick marks on the plate instead of text labels (header dial)
-  function keySwitchSvg({ size, labels, angle, litIndex, fontSize = 15, title, ticksOnly = false }) {
-    const labelSvg = ticksOnly ? '' : labels.map((l, i) => {
-      const rad = (l.angle - 90) * Math.PI / 180;
-      const r = 63;
-      return `<text class="label${i === litIndex ? ' on' : ''}" x="${(Math.cos(rad) * r).toFixed(1)}" y="${(Math.sin(rad) * r).toFixed(1)}" font-size="${fontSize}" text-anchor="middle" dominant-baseline="central">${l.text}</text>`;
-    }).join('');
-    const ticks = ticksOnly ? labels.map((l, i) => `<line class="tick${i === litIndex ? ' on' : ''}" x1="0" y1="-62" x2="0" y2="-80" style="transform: rotate(${l.angle}deg)"/>`).join('') : '';
-    return `<svg width="${size}" height="${size}" viewBox="-100 -100 200 200" role="img" aria-label="${title}">
-      <circle class="ring" r="92"/>
-      ${ticks}
-      ${labelSvg}
-      <circle class="cyl" r="44"/>
-      <circle class="cyl-hi" r="36"/>
-      <g class="rotor" style="transform: rotate(${angle}deg)">
-        <rect class="slot" x="-5" y="-30" width="10" height="38" rx="5"/>
-        <circle class="slot" cx="0" cy="12" r="10"/>
-      </g>
-    </svg>`;
-  }
 
   // ---------- header: the reader switch ----------
   // Content only changes between three levels, so the reader picks a level;
@@ -96,10 +71,7 @@
   const searchStatus = document.getElementById('search-status');
   const searchToggle = document.querySelector('.search-toggle');
 
-  // compare loosely: full/half width, case, katakana vs hiragana, spaces
-  const norm = s => s.normalize('NFKC').toLowerCase()
-    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
-    .replace(/[\s　]+/g, '');
+  const norm = CORE.norm;
 
   function searchIndex(idx, query) {
     const nq = norm(query);
@@ -175,397 +147,15 @@
     return cache.get(path);
   }
 
-  // README "## 一覧": ### category {id} / #### item {id} / - angle: [title](trivia/slug.md)
   let indexPromise = null;
   function loadIndex() {
-    if (!indexPromise) indexPromise = fetchText('README.md').then(md => {
-      const list = md.split(/^## 一覧\s*$/m)[1] || '';
-      const cats = [];
-      let cat = null;
-      let item = null;
-      for (const line of list.split('\n')) {
-        const c = line.match(/^###\s+(.+?)\s*\{([a-z0-9-]+)\}\s*$/);
-        if (c) { cat = { name: c[1], id: c[2], items: [] }; cats.push(cat); item = null; continue; }
-        const it = line.match(/^####\s+(.+?)\s*\{([a-z0-9-]+)\}\s*$/);
-        if (it && cat) { item = { name: it[1], id: it[2], cat, entries: [] }; cat.items.push(item); continue; }
-        const e = line.match(/^-\s+(\S+?):\s*\[(.+?)\]\(trivia\/([a-z0-9-]+)\.md\)/);
-        if (e && item) item.entries.push({ angle: e[1], title: e[2], slug: e[3], item });
-      }
-      const items = new Map();
-      const bySlug = new Map();
-      cats.forEach(c => c.items.forEach(i => { items.set(i.id, i); i.entries.forEach(e => bySlug.set(e.slug, e)); }));
-      return { cats, items, bySlug };
-    });
+    if (!indexPromise) indexPromise = fetchText('README.md').then(CORE.parseIndex);
     return indexPromise;
   }
 
-  // angle keys used in README, with how each reader level sees them
-  const ANGLES = {
-    'きほん': { small: 'これは なあに？', kid: 'どんな もの？', adult: 'そもそも' },
-    'なにでできてる': { small: 'なにで できてる？', kid: 'なにで できてる？', adult: '素材' },
-    'つくりかた': { small: 'どうやって つくる？', kid: 'どうやって つくる？', adult: '作り方' },
-    'しくみ': { small: 'どうなってるの？', kid: 'どんな しくみ？', adult: '仕組み' },
-    'かたち': { small: 'どうして この かたち？', kid: 'なぜ この かたち？', adult: '形のわけ' },
-    'しるし': { small: 'これは なんの しるし？', kid: 'この しるしは なに？', adult: '記号の意味' },
-    'ひみつ': { small: 'ひみつ', kid: 'ひみつ', adult: '小ネタ' },
-    'れきし': { small: 'むかしは どうだった？', kid: 'だれが かんがえたの？', adult: '歴史' },
-    'ことば': { small: 'なんで この なまえ？', kid: 'なまえの ひみつ', adult: '名前の由来' },
-  };
-  const angleLabel = a => (ANGLES[a] || { small: a, kid: a, adult: a })[level().id];
-
-  function parseEntry(md) {
-    let meta = {};
-    let body = md;
-    const fm = md.match(/^---\n([\s\S]*?)\n---\n/);
-    if (fm) {
-      body = md.slice(fm[0].length);
-      for (const line of fm[1].split('\n')) {
-        const m = line.match(/^(\w+):\s*(.*)$/);
-        if (!m) continue;
-        const v = m[2].trim();
-        meta[m[1]] = v.startsWith('[') ? v.slice(1, -1).split(',').map(s => s.trim()).filter(Boolean) : v;
-      }
-    }
-    const sections = [];
-    const parts = body.split(/^## (.+)$/m);
-    const intro = parts[0].trim();
-    for (let i = 1; i < parts.length; i += 2) sections.push({ heading: parts[i].trim(), text: parts[i + 1].trim() });
-    return { meta, intro, sections };
-  }
-
-  function fixPaths(md) {
-    return md
-      .replace(/\]\(\.\.\/images\//g, '](images/')
-      .replace(/\]\(([a-z0-9-]+)\.md\)/g, '](#/t/$1)');
-  }
-
-  // Minimal Markdown renderer for the subset used in trivia/*.md.
-  // Everything is HTML-escaped first; only safe URL schemes become links.
-  function esc(s) {
-    return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  }
-  function safeUrl(u) {
-    return /^(https?:\/\/|#\/|images\/)/.test(u) ? u : '#';
-  }
-  function inline(s) {
-    let out = esc(s);
-    out = out.replace(/!\[([^\]]*)\]\(([^)\s]+)\)/g, (_, alt, u) => `<img src="${safeUrl(u)}" alt="${alt}" loading="lazy">`);
-    out = out.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => {
-      const url = safeUrl(u);
-      const ext = url.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
-      return `<a href="${url}"${ext}>${t}</a>`;
-    });
-    out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-    out = out.replace(/`([^`]+)`/g, '<code>$1</code>');
-    return out;
-  }
-  function renderList(lines) {
-    // lines: [{indent, ordered, text}]
-    let html = '';
-    const stack = [];
-    for (const l of lines) {
-      while (stack.length && l.indent < stack[stack.length - 1].indent) html += `</li></${stack.pop().tag}>`;
-      const top = stack[stack.length - 1];
-      if (!top || l.indent > top.indent) {
-        const tag = l.ordered ? 'ol' : 'ul';
-        stack.push({ indent: l.indent, tag });
-        // an ordered list split by a picture keeps its numbering (6. 7. ... after a figure)
-        const start = l.ordered && l.start > 1 ? ` start="${l.start}"` : '';
-        html += `<${tag}${start}><li>${inline(l.text)}`;
-      } else {
-        html += `</li><li>${inline(l.text)}`;
-      }
-    }
-    while (stack.length) html += `</li></${stack.pop().tag}>`;
-    return html;
-  }
-  function renderTable(lines) {
-    const cells = l => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim());
-    const head = cells(lines[0]);
-    const rows = lines.slice(2).map(cells);
-    return `<table><thead><tr>${head.map(h => `<th>${inline(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-  }
-  function toHtml(md) {
-    const lines = fixPaths(md).split('\n');
-    let html = '';
-    let i = 0;
-    while (i < lines.length) {
-      const line = lines[i];
-      if (!line.trim()) { i++; continue; }
-      if (line.startsWith('```')) {
-        const buf = [];
-        i++;
-        while (i < lines.length && !lines[i].startsWith('```')) buf.push(lines[i++]);
-        i++;
-        html += `<pre><code>${esc(buf.join('\n'))}</code></pre>`;
-        continue;
-      }
-      // a line like {{fig:name}} places an extra illustration from AHA_FIGURES right there
-      const fg = line.match(/^\{\{fig:([a-z0-9-]+)\}\}$/);
-      if (fg) { html += figureHtml(fg[1]); i++; continue; }
-      const h = line.match(/^(#{2,4})\s+(.+)$/);
-      if (h) { const n = h[1].length; html += `<h${n}>${inline(h[2])}</h${n}>`; i++; continue; }
-      if (/^\s*\|/.test(line)) {
-        const buf = [];
-        while (i < lines.length && /^\s*\|/.test(lines[i])) buf.push(lines[i++]);
-        html += renderTable(buf);
-        continue;
-      }
-      if (/^\s*([-*]|\d+\.)\s+/.test(line)) {
-        const buf = [];
-        while (i < lines.length && /^\s*([-*]|\d+\.)\s+/.test(lines[i])) {
-          const m = lines[i].match(/^(\s*)([-*]|\d+\.)\s+(.*)$/);
-          buf.push({ indent: m[1].length, ordered: /\d/.test(m[2]), start: parseInt(m[2], 10), text: m[3] });
-          i++;
-        }
-        html += renderList(buf);
-        continue;
-      }
-      const buf = [];
-      while (i < lines.length && lines[i].trim() && !/^(#{2,4}\s|\s*\||\s*([-*]|\d+\.)\s|```|\{\{fig:)/.test(lines[i])) buf.push(lines[i++].trim());
-      html += `<p>${inline(buf.join(''))}</p>`;
-    }
-    return html;
-  }
-
-  // ---------- interactive diagrams ----------
-  const T = (o) => o[level().id];
-
-  const WIDGETS = {
-    'elevator-fire-service-keyswitch': {
-      title: { small: 'かぎを まわして みよう', kid: 'かぎを まわして みよう', adult: '鍵を回してみる' },
-      switches: [
-        {
-          name: { small: 'いちじしょうぼう', kid: 'いちじしょうぼう', adult: '一次消防' },
-          positions: [{ text: '切', angle: -45 }, { text: '入', angle: 45 }],
-          removable: [0, 1],
-          status: {
-            small: ['いつもの エレベーター', 'しょうぼうしさんの エレベーター'],
-            kid: ['ふだんの エレベーター', 'しょうぼうしさん せんよう。かごの なかでしか うごかせない'],
-            adult: ['通常運転', '一次消防運転。かご内の操作でだけ動く'],
-          },
-        },
-        {
-          name: { small: 'にじしょうぼう', kid: 'にじしょうぼう', adult: '二次消防' },
-          positions: [{ text: '切', angle: 0 }, { text: '入', angle: 60, spring: true }],
-          removable: [0],
-          status: {
-            small: ['いつもの ところ', 'ドアを あけた まま うごくよ！'],
-            kid: ['ふだんは ここ', 'おさえて いる あいだだけ、ドアを あけた まま うごく'],
-            adult: ['定位置', '二次消防運転。戸を開いたまま走行（保持している間だけ）'],
-          },
-        },
-      ],
-    },
-    'car-ignition-key': {
-      title: { small: 'かぎを まわして みよう', kid: 'かぎを まわして みよう', adult: '鍵を回してみる' },
-      switches: [
-        {
-          name: { small: 'くるまの かぎ', kid: 'くるまの かぎ', adult: 'イグニッションキー' },
-          positions: [
-            { text: 'LOCK', angle: -66 },
-            { text: 'ACC', angle: -22 },
-            { text: 'ON', angle: 22 },
-            { text: 'START', angle: 66, spring: true },
-          ],
-          fontSize: 14,
-          removable: [0],
-          status: {
-            small: ['かぎを ぬけるよ', 'すこし でんきが つくよ', 'でんきが つくよ', 'ブルルン！ エンジンが かかるよ'],
-            kid: ['ロック。かぎが ぬける', 'アクセサリー。でんきの いちぶが つかえる', 'オン。くるまの でんきが ぜんぶ つく', 'スタート。エンジンを かける。てを はなすと オンに もどる'],
-            adult: ['LOCK。キーを抜ける唯一の位置', 'ACC。エンジンを止めたまま一部の電装品が使える', 'ON。走行に必要な電装に通電', 'START。セルモーターを回す。離すと ON へ戻る'],
-          },
-        },
-      ],
-    },
-  };
-
-  // ---- moon phase widget ----
-  const MOON_STEPS = [
-    { day: 0, small: 'しんげつ。みえないよ', kid: 'しんげつ。おひさまと おなじ ほうこうで、みえない', adult: '新月（見えない）' },
-    { day: 3, small: 'みかづき', kid: 'みかづき', adult: '三日月（約3日）' },
-    { day: 7, small: 'はんぶんの つき', kid: 'はんげつ（じょうげんの つき）', adult: '上弦の月（約7日）' },
-    { day: 11, small: 'ふくらんだ つき', kid: 'まんまるに ちかい つき', adult: '十日余りの月（約11日）' },
-    { day: 15, small: 'まんまる！', kid: 'まんげつ。おひさまの はんたいがわ', adult: '満月（約15日）' },
-    { day: 18, small: 'すこし かけた つき', kid: 'かけはじめた つき', adult: '欠け始めの月（約18日）' },
-    { day: 22, small: 'はんぶんの つき', kid: 'はんげつ（かげんの つき）', adult: '下弦の月（約22日）' },
-    { day: 26, small: 'ほそい つき', kid: 'ほそい つき', adult: '細い月（約26日）' },
-  ];
-  const CYCLE = 29.53;
-
-  function moonDiskPath(p, r) {
-    // lit part of the moon as seen from Earth (northern hemisphere), p = 0..1 of the cycle
-    const k = Math.cos(2 * Math.PI * p);
-    const rx = Math.abs(k * r).toFixed(2);
-    if (p < 0.5) {
-      // waxing: right edge lit; terminator bulges right while crescent, left once gibbous
-      return `M0 ${-r} A${r} ${r} 0 0 1 0 ${r} A${rx} ${r} 0 0 ${k > 0 ? 0 : 1} 0 ${-r}Z`;
-    }
-    return `M0 ${-r} A${r} ${r} 0 0 0 0 ${r} A${rx} ${r} 0 0 ${k > 0 ? 1 : 0} 0 ${-r}Z`;
-  }
-
-  function renderMoon(mount) {
-    const lv = level().id;
-    const wrap = document.createElement('section');
-    wrap.className = 'diagram';
-    const title = { small: 'おつきさまを うごかして みよう', kid: 'おつきさまを うごかして みよう', adult: '月を動かしてみる' }[lv];
-    wrap.setAttribute('aria-label', title);
-    wrap.innerHTML = `<p class="diagram-title">${title}</p>
-      <div class="moon-row">
-        <figure class="moon-fig"><svg class="moon-orbit" viewBox="-100 -80 230 160" role="img"></svg>
-          <figcaption>${{ small: 'うえから みた ところ', kid: 'うえから みた ところ', adult: '北の上空から見た位置' }[lv]}</figcaption></figure>
-        <figure class="moon-fig"><svg class="moon-look" viewBox="-60 -60 120 120" role="img"></svg>
-          <figcaption>${{ small: 'ちきゅうから みた ところ', kid: 'ちきゅうから みた ところ', adult: '地球から見た形' }[lv]}</figcaption></figure>
-      </div>
-      <div class="turn">
-        <button type="button" data-d="-1">${{ small: 'もどる', kid: 'まえの ひ', adult: '前へ' }[lv]}</button>
-        <button type="button" data-d="1">${{ small: 'すすむ', kid: 'つぎの ひ', adult: '次へ' }[lv]}</button>
-      </div>
-      <p class="status" aria-live="polite"></p>`;
-    let i = 0;
-    const orbit = wrap.querySelector('.moon-orbit');
-    const look = wrap.querySelector('.moon-look');
-    const status = wrap.querySelector('.status');
-    function draw() {
-      const s = MOON_STEPS[i];
-      const p = s.day / CYCLE;
-      const th = 2 * Math.PI * p;
-      const R = 52;
-      const mx = (Math.cos(th) * R).toFixed(1);
-      const my = (-Math.sin(th) * R).toFixed(1);
-      const sunLabel = { small: 'おひさま', kid: 'おひさま', adult: '太陽の光' }[lv];
-      orbit.setAttribute('aria-label', `${s[lv]}`);
-      orbit.innerHTML = `
-        <g class="sunrays">${[-36, -12, 12, 36].map(y => `<line x1="128" y1="${y}" x2="84" y2="${y}"/>`).join('')}</g>
-        <text class="sun-label" x="106" y="-50" text-anchor="middle">${sunLabel}</text>
-        <circle class="orbit" r="${R}"/>
-        <circle class="earth" r="13"/>
-        <g transform="translate(${mx} ${my})">
-          <circle class="moon-dark" r="9"/>
-          <path class="moon-lit" d="M0 -9 A9 9 0 0 1 0 9Z"/>
-        </g>`;
-      look.setAttribute('aria-label', `${s[lv]}`);
-      look.innerHTML = `<circle class="moon-dark" r="48"/>${s.day === 0 ? '' : `<path class="moon-lit" d="${moonDiskPath(p, 48)}"/>`}`;
-      const dayLine = { small: '', kid: `しんげつから ${s.day}にちめ`, adult: `新月から${s.day}日目` }[lv];
-      status.innerHTML = `<strong>${s[lv]}</strong>${dayLine ? `<br>${dayLine}` : ''}`;
-    }
-    wrap.querySelectorAll('.turn button').forEach(b => b.addEventListener('click', () => {
-      i = (i + Number(b.dataset.d) + MOON_STEPS.length) % MOON_STEPS.length;
-      draw();
-    }));
-    draw();
-    mount.appendChild(wrap);
-  }
-
-  function renderWidget(slug, mount) {
-    if (slug === 'moon-phases') return renderMoon(mount);
-    const def = WIDGETS[slug];
-    if (!def) return;
-    const wrap = document.createElement('section');
-    wrap.className = 'diagram';
-    wrap.setAttribute('aria-label', T(def.title));
-    wrap.innerHTML = `<p class="diagram-title">${T(def.title)}</p><div class="switch-row"></div>`;
-    const row = wrap.querySelector('.switch-row');
-    def.switches.forEach(sw => row.appendChild(buildSwitch(sw)));
-    mount.appendChild(wrap);
-  }
-
-  function buildSwitch(sw) {
-    const lv = level().id;
-    const card = document.createElement('div');
-    card.className = 'switch-card';
-    let pos = 0;
-    let held = null; // position to return to while a spring position is held
-
-    const leftLabel = { small: 'ひだりへ', kid: 'ひだりへ', adult: '左へ' }[lv];
-    const rightLabel = { small: 'みぎへ', kid: 'みぎへ', adult: '右へ' }[lv];
-
-    card.innerHTML = `
-      <div class="switch-name">${T(sw.name)}</div>
-      <div class="ks"></div>
-      <div class="turn">
-        <button type="button" data-dir="-1">${leftLabel}</button>
-        <button type="button" data-dir="1">${rightLabel}</button>
-      </div>
-      <p class="status" aria-live="polite"></p>`;
-    const ks = card.querySelector('.ks');
-    const status = card.querySelector('.status');
-    const [btnL, btnR] = card.querySelectorAll('.turn button');
-
-    function draw() {
-      const p = sw.positions[pos];
-      ks.innerHTML = keySwitchSvg({
-        size: 168,
-        labels: sw.positions,
-        angle: p.angle,
-        litIndex: pos,
-        fontSize: sw.fontSize || 18,
-        title: `${T(sw.name)}：${p.text}`,
-      });
-      const removable = sw.removable.includes(held === null ? pos : -1);
-      const keyLine = {
-        small: removable ? 'かぎ：ぬける' : 'かぎ：ぬけない',
-        kid: removable ? 'かぎは ぬける' : 'かぎは ぬけない',
-        adult: removable ? '鍵：抜ける' : '鍵：抜けない',
-      }[lv];
-      status.classList.toggle('live', !!p.spring);
-      status.innerHTML = `<strong>${sw.status[lv][pos]}</strong><br>${keyLine}`;
-      btnL.disabled = pos === 0 || held !== null;
-      const next = sw.positions[pos + 1];
-      // While a spring position is held, the right button must stay enabled:
-      // disabling it would drop pointer capture and spring the key back at once.
-      btnR.disabled = held !== null ? false : !next;
-      btnR.classList.toggle('hold', !!(next && next.spring));
-      if (next && next.spring) {
-        btnR.textContent = { small: 'みぎへ（おさえる）', kid: 'みぎへ（おさえる）', adult: '右へ（押さえる）' }[lv];
-      } else {
-        btnR.textContent = rightLabel;
-      }
-    }
-
-    function press(dir) {
-      if (held !== null) return;
-      const target = pos + dir;
-      if (target < 0 || target >= sw.positions.length) return;
-      if (sw.positions[target].spring) {
-        held = pos;
-        pos = target;
-      } else {
-        pos = target;
-      }
-      draw();
-    }
-    function release() {
-      if (held === null) return;
-      pos = held;
-      held = null;
-      draw();
-    }
-
-    // pointer: press on down, spring back on up
-    [btnL, btnR].forEach(btn => {
-      const dir = Number(btn.dataset.dir);
-      btn.addEventListener('pointerdown', e => {
-        if (btn.disabled) return;
-        e.preventDefault();
-        btn.setPointerCapture?.(e.pointerId);
-        press(dir);
-      });
-      ['pointerup', 'pointercancel', 'lostpointercapture'].forEach(t => btn.addEventListener(t, release));
-      btn.addEventListener('keydown', e => {
-        if ((e.key === ' ' || e.key === 'Enter') && !e.repeat) { e.preventDefault(); press(dir); }
-      });
-      btn.addEventListener('keyup', e => {
-        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); release(); }
-      });
-      btn.addEventListener('click', e => e.preventDefault());
-      btn.addEventListener('contextmenu', e => e.preventDefault());
-    });
-    window.addEventListener('blur', release);
-
-    draw();
-    return card;
-  }
+  const angleLabel = a => CORE.angleLabel(a, level().id);
+  const fixPaths = md => CORE.fixPaths(md);
+  const toHtml = md => CORE.toHtml(md, { figure: figureHtml });
 
   // ---------- views ----------
   const main = document.getElementById('main');
@@ -593,11 +183,7 @@
   }
 
   // a decorative picture for a card: the item's own figure (きほん first), else the category icon
-  function itemFigName(it) {
-    const F = FIGS();
-    const e = it.entries.find(x => x.angle === 'きほん' && F[x.slug]) || it.entries.find(x => F[x.slug]);
-    return e ? e.slug : null;
-  }
+  const itemFigName = it => CORE.itemFigName(it, n => !!FIGS()[n]);
   function thumbHtml(name, catId) {
     const f = name && FIGS()[name];
     if (!f) return `<span class="no-pic">${picto(catId)}</span>`;
@@ -654,18 +240,6 @@
     return `<ul class="chips">${keys.map(a => `<li><a class="chip" href="#/a/${encodeURIComponent(a)}"${a === current ? ' aria-current="page"' : ''}>${angleLabel(a)}<span class="chip-n">${counts.get(a)}</span></a></li>`).join('')}</ul>`;
   }
 
-  // the trivia text a reader of this level sees first (for the featured card)
-  function firstParagraph(md) {
-    const out = [];
-    for (const line of md.split('\n')) {
-      const t = line.trim();
-      if (!t) { if (out.length) break; continue; }
-      if (/^(#|\{\{fig:|\||[-*]\s|\d+\.\s|```)/.test(t)) { if (out.length) break; continue; }
-      out.push(t);
-    }
-    return out.join('');
-  }
-
   // "recently deepened" = items the scheduled growing job worked on (tools/working.txt: "<id> <UTC time>")
   async function loadRecent(idx) {
     const txt = await fetchText('tools/working.txt').catch(() => '');
@@ -682,14 +256,7 @@
   }
 
   // same pick for everyone on the same (local) day
-  function todaysEntry(idx) {
-    const all = allEntries(idx);
-    const d = new Date();
-    const key = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
-    let h = 2166136261;
-    for (const ch of key) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619) >>> 0; }
-    return all[h % all.length];
-  }
+  const todaysEntry = idx => CORE.dayPick(allEntries(idx), CORE.dayKey(new Date()));
 
   async function renderHome() {
     document.title = 'みのまわり図鑑';
@@ -889,22 +456,6 @@
       </article>`;
   }
 
-  // wrap each "### みてみよう" and what follows it (up to the next heading) in a panel
-  function markLook(scope) {
-    scope.querySelectorAll('.body h3').forEach(h => {
-      if (h.textContent.trim() !== 'みてみよう') return;
-      const box = document.createElement('div');
-      box.className = 'look';
-      h.before(box);
-      let n = h;
-      while (n && !(n !== h && /^H[234]$/.test(n.tagName))) {
-        const next = n.nextElementSibling;
-        box.appendChild(n);
-        n = next;
-      }
-    });
-  }
-
   function leadFor(overviewMd) {
     if (!overviewMd) return '';
     const lv = level();
@@ -997,8 +548,7 @@
         </div>
       </div>
     </div>`;
-    markLook(main);
-    main.querySelectorAll('.widget-mount').forEach(m => renderWidget(m.dataset.slug, m));
+    main.querySelectorAll('.widget-mount').forEach(m => AHA_WIDGETS.render(m.dataset.slug, m, level().id));
     watchToc();
     if (focusSlug) {
       const el = document.getElementById(`t-${focusSlug}`);
@@ -1006,61 +556,8 @@
     }
   }
 
-  // ---------- ちいさい子: picture book ----------
-  // One short sentence and one picture per screen, built from each trivia's "3〜5歳むけ" text and its figures.
-  // A figure goes with the paragraph just before it (or the next one if that already has a picture);
-  // long paragraphs are split at sentence ends and keep the same picture.
-  function bookPages(it, mds, overviewMd) {
-    const F = FIGS();
-    const pages = [];
-    const tokens = text => {
-      const out = [];
-      let buf = [];
-      const flush = () => { if (buf.length) { out.push({ p: buf.join('') }); buf = []; } };
-      for (const line of text.split('\n')) {
-        const t = line.trim();
-        const fg = t.match(/^\{\{fig:([a-z0-9-]+)\}\}$/);
-        if (fg) { flush(); out.push({ fig: fg[1] }); continue; }
-        if (!t || /^(#|\||```)/.test(t)) { flush(); continue; }
-        buf.push(t.replace(/^([-*]|\d+\.)\s+/, ''));
-      }
-      flush();
-      return out;
-    };
-    const toBlocks = (toks) => {
-      const blocks = [];
-      let pending = null;
-      for (const t of toks) {
-        if (t.p) { blocks.push({ text: t.p, fig: pending && F[pending] ? pending : null }); pending = null; continue; }
-        const last = blocks[blocks.length - 1];
-        if (last && !last.fig && F[t.fig]) last.fig = t.fig; else pending = t.fig;
-      }
-      return blocks;
-    };
-    const push = (chapter, angle, blocks) => {
-      blocks.forEach(b => {
-        const parts = b.text.length > 34 ? b.text.split(/(?<=[。！？])\s*/).filter(Boolean) : [b.text];
-        parts.forEach(text => pages.push({ chapter, angle, text, fig: b.fig }));
-      });
-    };
-    if (overviewMd) {
-      const sec = parseEntry(overviewMd).sections.find(s => s.heading === '3〜5歳むけ');
-      const firstP = sec && tokens(sec.text).find(t => t.p);
-      if (firstP) push(-1, null, [{ text: firstP.p, fig: itemFigName(it) }]);
-    }
-    const used = new Set(pages.map(p => p.fig).filter(Boolean));
-    it.entries.forEach((e, ci) => {
-      const sec = parseEntry(mds[ci]).sections.find(s => s.heading === '3〜5歳むけ');
-      if (!sec) return;
-      const blocks = toBlocks(tokens(sec.text));
-      if (!blocks.length) return;
-      // a chapter that starts without a picture may use the trivia's own figure once
-      if (!blocks[0].fig && F[e.slug] && !used.has(e.slug)) blocks[0].fig = e.slug;
-      blocks.forEach(b => b.fig && used.add(b.fig));
-      push(ci, e.angle, blocks);
-    });
-    return pages;
-  }
+  // ---------- ちいさい子: picture book (pages are built in assets/core.js) ----------
+  const bookPages = (it, mds, overviewMd) => CORE.bookPages(it, mds, overviewMd, n => !!FIGS()[n], itemFigName(it));
 
   let book = null;
   function renderBook(idx, it, pages, focusSlug) {
