@@ -95,6 +95,11 @@ function recentItems() {
 const ASSETS = ['assets/style.css', 'assets/core.js', 'assets/widgets.js', 'assets/site.js'];
 const ver = {};
 for (const a of ASSETS) ver[a] = crypto.createHash('sha1').update(read(a)).digest('hex').slice(0, 8);
+// One id for the whole build. A page whose HTML is older than the CSS/JS it loads (browser cache right
+// after a deploy) reloads itself once, so old markup is never shown with new styles.
+const BUILD = crypto.createHash('sha1').update(ASSETS.map(a => ver[a]).join('')).digest('hex').slice(0, 8);
+ver['assets/site.js'] = BUILD;
+const BUILD_GUARD = `(function(){var b='${BUILD}',d=document.documentElement;if(d.getAttribute('data-build')!==b){try{if(sessionStorage.getItem('aha-build')!==b){sessionStorage.setItem('aha-build',b);location.reload();}}catch(e){}}})();\n`;
 const asset = a => `${B}${a}?v=${ver[a]}`;
 
 // ---------- small HTML helpers ----------
@@ -258,7 +263,7 @@ function page({ file, title, description, view, body, nav = '', noindex = false,
   const url = canonical || abs(file.replace(/index\.html$/, ''));
   const navLink = (k, href, text) => `<a href="${href}"${nav === k ? ' aria-current="page"' : ''}>${text}</a>`;
   const out = `<!doctype html>
-<html lang="ja" data-level="adult" data-view="${view}">
+<html lang="ja" data-level="adult" data-view="${view}" data-build="${BUILD}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -860,7 +865,7 @@ html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; backgrou
 // ---------- run ----------
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
-for (const a of ASSETS) write(a, read(a));
+for (const a of ASSETS) write(a, a === 'assets/site.js' ? BUILD_GUARD + read(a) : read(a));
 if (fs.existsSync(path.join(ROOT, 'images'))) fs.cpSync(path.join(ROOT, 'images'), path.join(OUT, 'images'), { recursive: true });
 write('.nojekyll', '');
 buildHome();
