@@ -669,3 +669,9 @@ html[data-level="small"] h1, html[data-level="small"] h2 { font-weight: 700; }
   .logo { font-size: 0.9375rem; }
   .site-nav { font-size: 0.8125rem; }
 }
+/* footer is always dark: logo uses fixed light colours there */
+.site-foot .logo { color: #fff; }
+.site-foot .logo-mark .lm-lens { fill: #1e1d19; stroke: #fff; }
+.site-foot .logo-mark .lm-handle { stroke: #fff; }
+.site-foot .logo-mark .lm-key { fill: #9dbba9; }
+.site-foot .logo-zukan { background: #fff; color: #1e1d19; }
