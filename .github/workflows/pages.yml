@@ -33,6 +33,12 @@ jobs:
         run: node tools/build.mjs
         env:
           SITE_URL: ${{ steps.pages.outputs.base_url }}/
+      # share images (og:image) with the Chrome that ubuntu runners already have; adds the image tags only for
+      # images that were made, so if this step fails the site deploys as before, just without share images
+      - name: Share images
+        continue-on-error: true
+        timeout-minutes: 10
+        run: node tools/og.mjs
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

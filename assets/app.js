@@ -179,7 +179,7 @@
   function figureHtml(slug) {
     const f = FIGS()[slug];
     if (!f) return '';
-    return `<figure class="fig"><svg viewBox="${f.box || '0 0 320 200'}" role="img" aria-label="${f.alt}">${f.svg}</svg></figure>`;
+    return `<figure class="fig"><svg viewBox="${f.box || '0 0 320 200'}" role="img" aria-label="${f.alt}">${CORE.figSvg(f.svg)}</svg></figure>`;
   }
 
   // a decorative picture for a card: the item's own figure (きほん first), else the category icon
@@ -187,7 +187,7 @@
   function thumbHtml(name, catId) {
     const f = name && FIGS()[name];
     if (!f) return `<span class="no-pic">${picto(catId)}</span>`;
-    return `<span class="fig thumb" aria-hidden="true"><svg viewBox="${f.box || '0 0 320 200'}" preserveAspectRatio="xMidYMid meet" focusable="false">${f.svg}</svg></span>`;
+    return `<span class="fig thumb" aria-hidden="true"><svg viewBox="${f.box || '0 0 320 200'}" preserveAspectRatio="xMidYMid meet" focusable="false">${CORE.figSvg(f.svg)}</svg></span>`;
   }
 
   const allEntries = idx => idx.cats.flatMap(c => c.items.flatMap(i => i.entries));
@@ -447,7 +447,7 @@
     return `
       <article class="trivia level-${kidSection ? lv.id : 'adult'}" id="t-${e.slug}" aria-label="${esc(heading || angleLabel(e.angle))}">
         <div class="trivia-meta">${total > 1 ? `<span class="trivia-n">${n + 1}<span>／${total}</span></span>` : ''}<p class="angle${e.angle === 'きほん' ? ' basic' : ''}">${angleLabel(e.angle)}</p></div>
-        ${heading ? `<h2 class="trivia-title">${esc(heading)}</h2>` : ''}
+        ${heading ? `<h2 class="trivia-title">${esc(CORE.displayTitle(heading, e.angle))}</h2>` : ''}
         ${note ? `<p class="level-note">${note}</p>` : ''}
         ${skipFig ? '' : figureHtml(e.slug)}
         <div class="body">${toHtml(bodyMd)}</div>
