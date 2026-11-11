@@ -29,6 +29,7 @@
     // sources are open for adults and folded for children
     document.querySelectorAll('details.sources').forEach(d => { d.open = lv.id === 'adult'; });
     renderWidgets();
+    fitSoon();
   }
 
   function setLevel(i, { instant = false } = {}) {
@@ -197,6 +198,7 @@
       const ci = Number(pages[i].dataset.chapter);
       dots.forEach((d, k) => d.classList.toggle('on', k === ci));
       el('.book-progress span').style.width = `${((i + 1) / pages.length) * 100}%`;
+      fitSoon();
       el('.book-count').textContent = `${pages.length}ページの うち ${i + 1}ページめ。${pages[i].querySelector('.book-text').textContent}`;
     }
     function go(d) {
@@ -205,8 +207,12 @@
       i = n;
       draw();
       if (pages[i].animate) {
-        const frames = reduceMotion.matches ? [{ opacity: 0.4 }, { opacity: 1 }] : [{ opacity: 0, transform: `translateX(${d * 16}px)` }, { opacity: 1, transform: 'none' }];
-        pages[i].animate(frames, { duration: 220, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' });
+        // a page turn: the new page swings in from the side it comes from, hinged at the spine
+        const frames = reduceMotion.matches ? [{ opacity: 0.4 }, { opacity: 1 }] : [
+          { opacity: 0, transform: `perspective(1200px) translateX(${d * 28}px) rotateY(${d * -16}deg)`, transformOrigin: d > 0 ? 'left center' : 'right center' },
+          { opacity: 1, transform: 'perspective(1200px) translateX(0) rotateY(0)', transformOrigin: d > 0 ? 'left center' : 'right center' },
+        ];
+        pages[i].animate(frames, { duration: reduceMotion.matches ? 160 : 300, easing: 'cubic-bezier(0.23, 1, 0.32, 1)' });
       }
     }
     el('.prev').addEventListener('click', () => go(-1));
@@ -235,8 +241,57 @@
     if (mine) cards.forEach(c => { c.hidden = c !== mine; });
   }
 
+  // ---------- pictures: labels that run past the picture's edge (their width depends on the font) ----------
+  // After the fonts are in, a picture whose drawing or words reach outside its viewBox gets a viewBox that
+  // holds them, so nothing is drawn outside the picture panel. Only visible pictures; each one once.
+  function fitFigures() {
+    document.querySelectorAll('figure.fig > svg[viewBox]').forEach(s => {
+      if (s.dataset.fit || !s.getClientRects().length) return;
+      let b;
+      try { b = s.getBBox(); } catch (e) { return; }
+      const v = s.viewBox.baseVal;
+      if (!b.width || !v || !v.width) return;
+      const x0 = Math.min(v.x, b.x - 3), y0 = Math.min(v.y, b.y - 3);
+      const x1 = Math.max(v.x + v.width, b.x + b.width + 3), y1 = Math.max(v.y + v.height, b.y + b.height + 3);
+      s.dataset.fit = '1';
+      if ((x0 < v.x - 0.5 || y0 < v.y - 0.5 || x1 > v.x + v.width + 0.5 || y1 > v.y + v.height + 0.5) && x1 - x0 < v.width * 1.35 && y1 - y0 < v.height * 1.35) {
+        s.setAttribute('viewBox', `${x0.toFixed(1)} ${y0.toFixed(1)} ${(x1 - x0).toFixed(1)} ${(y1 - y0).toFixed(1)}`);
+      }
+    });
+  }
+  function fitSoon() { requestAnimationFrame(fitFigures); }
+
+  // ---------- shelves: buttons for pointer users (the rows also scroll by touch, trackpad and keyboard) ----------
+  function initShelves() {
+    document.querySelectorAll('.shelf-wrap').forEach(w => {
+      const row = w.querySelector('.shelf');
+      const prev = w.querySelector('.shelf-btn.prev');
+      const next = w.querySelector('.shelf-btn.next');
+      if (!row || !prev || !next) return;
+      const update = () => {
+        const max = row.scrollWidth - row.clientWidth - 2;
+        prev.setAttribute('aria-disabled', String(row.scrollLeft <= 2));
+        next.setAttribute('aria-disabled', String(row.scrollLeft >= max));
+        prev.tabIndex = row.scrollLeft <= 2 ? -1 : 0;
+        next.tabIndex = row.scrollLeft >= max ? -1 : 0;
+        w.classList.toggle('at-end', row.scrollLeft >= max);
+      };
+      const step = d => row.scrollBy({ left: d * Math.max(160, row.clientWidth * 0.8), behavior: reduceMotion.matches ? 'auto' : 'smooth' });
+      prev.addEventListener('click', () => step(-1));
+      next.addEventListener('click', () => step(1));
+      row.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      prev.hidden = false;
+      next.hidden = false;
+      update();
+    });
+  }
+
   pickToday();
   applyLevel();
+  initShelves();
+  fitSoon();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { document.querySelectorAll('svg[data-fit]').forEach(s => { delete s.dataset.fit; }); fitSoon(); });
   requestAnimationFrame(() => seg && seg.classList.remove('instant'));
   initBook();
   watchToc();

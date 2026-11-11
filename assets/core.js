@@ -126,7 +126,7 @@
     const rows = lines.slice(2).map(cells);
     return `<table><thead><tr>${head.map(h => `<th>${inline(h)}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map(c => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
   }
-  // opts.figure(name) -> HTML for {{fig:name}}; opts.link / opts.images as in fixPaths.
+  // opts.figure(name) -> HTML for {{fig:name}}; opts.link / opts.images as in fixPaths; opts.shift moves headings down (1: ## -> h3).
   // "### みてみよう" and what follows it (up to the next heading) is wrapped in <div class="look">.
   function toHtml(md, opts = {}) {
     const figure = opts.figure || (() => '');
@@ -153,7 +153,8 @@
         closeLook();
         const n = h[1].length;
         if (n === 3 && h[2].trim() === 'みてみよう') { html += '<div class="look">'; look = true; }
-        html += `<h${n}>${inline(h[2])}</h${n}>`;
+        const hn = Math.min(6, n + (opts.shift || 0));
+        html += `<h${hn}>${inline(h[2])}</h${hn}>`;
         i++;
         continue;
       }
@@ -209,7 +210,8 @@
     if (kidSection) {
       bodyMd = kidSection.text;
     } else {
-      bodyMd = adultSections.map(s => `### ${s.heading}\n\n${s.text}`).join('\n\n');
+      // each adult section becomes a heading one level above the section's own ### subheadings
+      bodyMd = adultSections.map(s => `## ${s.heading}\n\n${s.text}`).join('\n\n');
       if (L.heading) note = lv === 'small'
         ? 'この おはなしは まだ おとな むけしか ないよ。おとなの ひとが かみくだいて よんで あげてね。'
         : 'この おはなしは まだ おとな むけしか ないよ。';
