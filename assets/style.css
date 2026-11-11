@@ -273,7 +273,7 @@ main:focus, main:focus-visible { outline: none; }
 /* ---------- picto and thumbnails ---------- */
 .picto { fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .fig.thumb { display: block; width: 100%; height: 100%; margin: 0; padding: var(--space-3); background: transparent; border: 0; }
-.thumb svg { display: block; width: 100%; height: 100%; max-width: none; margin: 0; }
+.fig.thumb svg { display: block; width: 100%; height: 100%; max-width: none; margin: 0; overflow: hidden; }
 .no-pic { display: grid; place-items: center; width: 100%; height: 100%; }
 .no-pic .picto { width: 44px; height: 44px; stroke: var(--cat-ink); }
 
@@ -288,7 +288,7 @@ main:focus, main:focus-visible { outline: none; }
   background: var(--paper); border-radius: var(--radius); box-shadow: var(--shadow);
   overflow: hidden; color: var(--ink); text-decoration: none;
 }
-.card-pic { display: block; height: 150px; background: var(--cat-soft); }
+.card-pic { display: block; height: 150px; background: var(--cat-soft); overflow: hidden; }
 .card-body { display: flex; flex-direction: column; gap: var(--space-1); padding: var(--space-4); }
 .card-cat { font-size: var(--fs-xs); font-weight: 700; color: var(--cat-ink); }
 .card-title { font-size: var(--fs-md); font-weight: 500; line-height: 1.45; text-wrap: pretty; }
@@ -493,7 +493,7 @@ html[data-level="small"] h1, html[data-level="small"] h2 { font-weight: 700; }
   background: var(--cat-soft); border-radius: 20px; color: var(--ink); text-decoration: none;
   box-shadow: var(--shadow-sm);
 }
-.tile-pic { display: block; width: 100%; aspect-ratio: 4 / 3; }
+.tile-pic { display: block; width: 100%; aspect-ratio: 4 / 3; overflow: hidden; }
 .tile-pic .thumb { padding: var(--space-1); }
 .tile-name { word-break: keep-all; overflow-wrap: anywhere; font-size: 1.375rem; font-weight: 700; line-height: 1.4; text-align: center; letter-spacing: 0.02em; }
 
