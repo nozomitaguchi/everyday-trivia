@@ -248,8 +248,8 @@ function shelf(c) {
             <span class="shelf-pic">${coverHtml(itemCover(it), c.id)}</span>
             <span class="shelf-name">${it.name}</span>
             <span class="shelf-sub">${countSay(it)}</span></a></li>`).join('')}</ul>
-          <button type="button" class="shelf-btn prev" aria-controls="${id}" aria-label="${c.name}の たなを まえへ" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5 7 12l7 7"/></svg></button>
-          <button type="button" class="shelf-btn next" aria-controls="${id}" aria-label="${c.name}の たなを つぎへ" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5l7 7-7 7"/></svg></button>
+          <button type="button" class="shelf-btn prev" aria-controls="${id}" aria-label="${c.name}を まえへ" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5 7 12l7 7"/></svg></button>
+          <button type="button" class="shelf-btn next" aria-controls="${id}" aria-label="${c.name}を つぎへ" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5l7 7-7 7"/></svg></button>
         </div>
       </section>`;
 }
@@ -429,41 +429,19 @@ function buildHome() {
       <section class="hero">
         <div class="wrap hero-inner">
           <div class="hero-text">
-            <p class="hero-kicker">${say('', 'みのまわりの ずかん', '身の回りの図鑑')}<span class="hero-kicker-n">${allItems.length}${say('', 'こ の もの', '種')}・${allEntries.length}${say('', 'この おはなし', '話')}</span></p>
-            <h1 class="hero-title"><span>見てるけど、</span><span>知らない。</span><br><span>さわってるけど、</span><span>知らない。</span></h1>
-            ${lvx({ small: '', kid: 'まいにち 見る ものの「なにで できてる？」「どうやって つくる？」「どんな しくみ？」「なぜ この かたち？」を あつめた ずかんです。読む人に あわせて、せつめいが かわります。', adult: '身の回りのものの「なにでできてる？」「どうやってつくる？」「どんなしくみ？」「なぜこのかたち？」を集めた図鑑。読む人の年齢に合わせて、説明が切り替わります。' }, 'p', 'hero-lead')}
-            <div class="btns">
-              <a class="btn btn-primary" href="${U.cats()}">カテゴリから さがす</a>
-              <a class="btn" href="${U.angles()}">きりくちから さがす</a>
-            </div>
+            <h1 class="hero-title"><span>見てるのに、</span><span>知らない。</span></h1>
           </div>
           ${cabinet(picks)}
         </div>
       </section>
       <div class="wrap">
-      <section class="section today-sec" aria-label="きょうの ひとつ">
-        <div class="today-set">${keys.map(k => todayCard(CORE.dayPick(allEntries, k), k, k === todayKey)).join('')}</div>
-      </section>
-
-      <section class="section" aria-labelledby="h-cats">
-        <div class="section-head"><h2 class="section-title" id="h-cats">カテゴリ</h2><a class="more" href="${U.cats()}">${say('ぜんぶ みる', 'ぜんぶ 見る', 'カテゴリ一覧')} →</a></div>
-        <ul class="chapter-grid reveal">${idx.cats.map(catCard).join('')}</ul>
-      </section>
-
-      ${recent.length ? `<section class="section" aria-labelledby="h-recent">
-        <div class="section-head"><h2 class="section-title" id="h-recent">さいきん くわしく なった もの</h2></div>
-        <ul class="grid grid-4 reveal">${recent.map(it => itemCard(it, { tags: false })).join('')}</ul>
-      </section>` : ''}
-
       <section class="section shelves" aria-labelledby="h-shelves">
-        <div class="section-head"><h2 class="section-title" id="h-shelves">${say('たなから えらぶ', 'たなから えらぶ', 'たなから選ぶ')}</h2>
-          ${lvx({ small: '', kid: 'よこに すすむと、もっと あるよ。', adult: 'カテゴリごとの棚。横にスクロールすると続きがあります。' }, 'p', 'section-note')}</div>
+        <div class="section-head"><h2 class="section-title" id="h-shelves">カテゴリ</h2></div>
         <div class="shelves-grid">${filled.map(shelf).join('')}</div>
       </section>
 
       <section class="section angles-box" aria-labelledby="h-angles">
         <h2 class="section-title" id="h-angles">きりくちで さがす</h2>
-        ${lvx({ small: '', kid: 'おなじ きりくちで、いろいろな ものを くらべて 読めます。', adult: '同じ切り口（素材・歴史・しるし…）で、いろいろなものを横にくらべて読めます。' }, 'p', 'section-lead')}
         ${angleChips()}
       </section>
     </div></div>
