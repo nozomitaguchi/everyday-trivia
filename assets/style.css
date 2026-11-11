@@ -95,7 +95,8 @@
 .cat-living-things { --cat: #5d6e45; --cat-soft: #e3e9d6; }
 .cat-sky           { --cat: #5a5a8c; --cat-soft: #e2e1ee; }
 .cat-body          { --cat: #9c5068; --cat-soft: #f1dde4; }
-.cat-home, .cat-food, .cat-town, .cat-vehicles, .cat-living-things, .cat-sky, .cat-body { --cat-ink: var(--cat); }
+/* text in the category colour sits on paper and on the page ground: a touch darker than --cat for 4.5:1 on both */
+.cat-home, .cat-food, .cat-town, .cat-vehicles, .cat-living-things, .cat-sky, .cat-body { --cat-ink: color-mix(in srgb, var(--cat) 86%, #000); }
 /* --pic: the ground under a picture or cover. Pictures are drawn for light paper, so in dark mode they sit
    on a dimmed light "plate" instead of being turned dark (--pic-l is the light tone of each category) */
 :root { --pic-l: #e6ece0; }
@@ -420,6 +421,7 @@ main:focus, main:focus-visible { outline: none; }
 .look > h3, .look > h4 { margin-top: 0; border-left-color: var(--accent); }
 .look > h4::before { background: var(--accent); }
 .look .fig { background: var(--fig-paper); }
+.look a { color: color-mix(in srgb, var(--accent-ink) 82%, var(--ink)); }
 @media (prefers-color-scheme: dark) { .look .fig { background: color-mix(in srgb, #fffaf0 80%, #1b1a17); } }
 
 /* kid text is written with spaces between phrases; break lines only there */
@@ -780,7 +782,7 @@ html[data-level="small"] h1, html[data-level="small"] h2 { font-weight: 700; }
 .cat-head-count { margin: var(--space-3) 0 0; color: var(--muted); padding-top: var(--space-3); border-top: 3px solid var(--cat); display: inline-block; min-width: 8em; }
 .cat-head-pics { border-radius: var(--radius); box-shadow: var(--shadow); }
 @media (max-width: 767px) { .cat-head-pics { aspect-ratio: 2 / 1; } }
-.cat-index-no { font-variant-numeric: tabular-nums; opacity: 0.85; margin-right: var(--space-2); }
+.cat-index-no { font-variant-numeric: tabular-nums; margin-right: var(--space-2); }
 
 /* ---------- shelves: one row of covers per category ---------- */
 .section-note { margin: 0; flex-basis: 100%; color: var(--muted); font-size: var(--fs-sm); }
@@ -999,3 +1001,8 @@ html[data-level="small"] .about-mini { display: none !important; }
   .card-title { font-size: 1.0625rem; }
   .card-tags { display: none; }
 }
+/* kid text breaks only at its spaces, headings too */
+html[data-level="kid"] :is(h1, h2, h3, .page-title, .chapter-name, .shelf-name, .cab-name, .learn-name), html[data-level="small"] :is(h1, h2, h3, .page-title) { word-break: keep-all; overflow-wrap: anywhere; }
+/* short pages (404, empty search) keep the footer at the bottom of the window */
+body { min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+body > main { flex: 1 0 auto; }

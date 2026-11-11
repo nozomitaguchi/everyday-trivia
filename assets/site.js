@@ -81,7 +81,7 @@
     return { items, entries };
   }
   const itemName = (d, id) => (d.items.find(i => i.id === id) || { name: id }).name;
-  const entryTitle = e => (level().id === 'adult' ? e.title : e.kid);
+  const entryTitle = e => CORE.displayTitle(level().id === 'adult' ? e.title : e.kid, e.angle);
   const itemUrl = id => `${B}i/${id}/`;
   const entryUrl = e => `${B}i/${e.item}/#t-${e.slug}`;
 
