@@ -276,6 +276,62 @@
     return pages;
   }
 
+  // ---------- figures: one palette and one typeface for every picture ----------
+  // Figures in assets/figures-*.js may hard-code colours and fonts in their SVG strings. Before a figure
+  // is drawn (static build and the old in-browser version alike) those are moved onto the site palette:
+  // the well-known saturated colours get fixed muted partners, any other strong colour is toned down
+  // the same way, and labels use the site typeface. Hues stay where they were, so colours that mean
+  // something (signal red / yellow / green, exit-sign green, skin, food) remain recognisable.
+  const FIG_COLORS = {
+    '#e0563c': '#c9634e', '#f2c230': '#e5b844', '#5b9bd5': '#6a98bd', '#1f9d6b': '#2e8a63',
+    '#bfe3f2': '#cde2e8', '#f0a35a': '#e09d62', '#f2a7b5': '#e3aab2', '#9b7be0': '#8f83bf',
+    '#b9814a': '#b0835a', '#f6e7a8': '#f0e2b0', '#3b6fd6': '#4b72b0', '#a8323a': '#a2464a',
+    '#c8321f': '#b5503f', '#e2283a': '#c8484c', '#d8402a': '#c45a46', '#e0a800': '#d0a233',
+    '#2b6cc4': '#3f6fa8', '#9fd3ea': '#a9d0e0', '#1f7a3a': '#2f7046', '#c47a2c': '#b7803f',
+    '#e8c640': '#dcbf52', '#c8323c': '#b84c50', '#c4434b': '#b84c50',
+  };
+  function toneHex(hex) {
+    let h = hex.toLowerCase();
+    if (h.length === 4) h = '#' + h[1] + h[1] + h[2] + h[2] + h[3] + h[3];
+    if (FIG_COLORS[h]) return FIG_COLORS[h];
+    const n = parseInt(h.slice(1), 16);
+    const r = (n >> 16) / 255, g = ((n >> 8) & 255) / 255, b = (n & 255) / 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b), l = (max + min) / 2, d = max - min;
+    if (!d) return hex;
+    const s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    if (s < 0.6 || l < 0.2 || l > 0.9) return hex; // greys, darks, pastels already sit well
+    const hue = max === r ? ((g - b) / d + (g < b ? 6 : 0)) : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    const s2 = s * 0.74, l2 = l + (0.56 - l) * 0.15;
+    const q = l2 < 0.5 ? l2 * (1 + s2) : l2 + s2 - l2 * s2, p = 2 * l2 - q;
+    const ch = t => { t = (t + 1) % 1; const v = t < 1 / 6 ? p + (q - p) * 6 * t : t < 0.5 ? q : t < 2 / 3 ? p + (q - p) * (2 / 3 - t) * 6 : p; return Math.round(v * 255).toString(16).padStart(2, '0'); };
+    return '#' + ch(hue / 6 + 1 / 3) + ch(hue / 6) + ch(hue / 6 - 1 / 3);
+  }
+  const figCache = new Map();
+  function figSvg(svg) {
+    if (!svg) return '';
+    let out = figCache.get(svg);
+    if (out !== undefined) return out;
+    out = String(svg)
+      .replace(/#[0-9a-fA-F]{6}\b|#[0-9a-fA-F]{3}\b(?![0-9a-fA-F])/g, toneHex)
+      .replace(/'Zen Maru Gothic'/g, "Quicksand,'Zen Kaku Gothic New'")
+      .replace(/(font:\s*)(?:800|900)\b/g, '$1700')
+      .replace(/(font-weight:\s*)(?:800|900)\b/g, '$1700');
+    figCache.set(svg, out);
+    return out;
+  }
+
+  // a trivia title as shown next to its angle chip: a trailing "（そもそも）" that only repeats the chip goes
+  // (display only; page titles, slugs and files keep the full title)
+  function displayTitle(title, angle) {
+    const t = String(title || '');
+    const m = t.match(/^(.*\S)\s*[（(]([^（）()]+)[）)]\s*$/);
+    if (!m) return t;
+    const L = angleLabels(angle);
+    const names = [angle, L.small, L.kid, L.adult].filter(Boolean);
+    const x = m[2].trim();
+    return names.some(n => x === n || x.endsWith(`の${n}`)) ? m[1] : t;
+  }
+
   // ---------- small helpers ----------
   // the item's own picture: the きほん trivia's figure first, else the first trivia with one
   function itemFigName(it, hasFig) {
@@ -297,7 +353,7 @@
   const api = {
     LEVELS, KID_HEADINGS, levelOfAge, ANGLES, angleLabels, angleLabel, angleId, angleFromId,
     parseIndex, parseEntry, esc, safeUrl, fixPaths, inline, toHtml, firstParagraph, plain,
-    entryView, bookPages, itemFigName, dayPick, dayKey, norm,
+    entryView, bookPages, itemFigName, dayPick, dayKey, norm, figSvg, toneHex, displayTitle,
   };
   root.AHA_CORE = api;
   if (typeof module === 'object' && module.exports) module.exports = api;
