@@ -431,13 +431,13 @@ function buildHome() {
       <section class="hero">
         <div class="wrap hero-inner">
           <div class="hero-text">
-            <h1 class="hero-title"><span>そこにある、</span><span>知らない話。</span></h1>
+            <h1 class="hero-title hero-one">そこにある、知らない話。</h1>
           </div>
         </div>
       </section>
       <div class="wrap">
       <section class="section shelves" aria-labelledby="h-shelves">
-        <div class="section-head"><h2 class="section-title" id="h-shelves">カテゴリ</h2></div>
+        <h2 class="vh" id="h-shelves">カテゴリ</h2>
         <div class="shelves-grid">${filled.map(shelf).join('')}</div>
       </section>
 

@@ -1028,3 +1028,4 @@ html[data-level="kid"] .site .search, html[data-level="small"] .site .search, ht
 }
 /* home: the copy line stands alone above the categories */
 .hero .hero-inner { display: block; }
+.hero-title.hero-one { white-space: nowrap; font-size: clamp(1.375rem, 6.4vw, 3.5rem); }
