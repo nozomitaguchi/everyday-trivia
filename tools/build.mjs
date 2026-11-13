@@ -124,7 +124,7 @@ const PICTO = {
   sky: '<path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/>',
   body: '<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10Z"/>',
 };
-const LOGO_MARK = (cls = '') => `<svg class="logo-mark ${cls}" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-lens" cx="20" cy="20" r="14.5"/><path class="lm-key" d="M20 12.5a4.5 4.5 0 0 1 2.6 8.200L24 28h-8l1.400-7.300A4.500 4.500 0 0 1 20 12.500Z"/><path class="lm-handle" d="M31 31l11 11"/></svg>`;
+const LOGO_MARK = (cls = '') => `<svg class="logo-mark ${cls}" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-ring" cx="24" cy="24" r="21.5"/><path class="lm-key" d="M24 12a7 7 0 0 1 3.6 13L30 35a1.5 1.5 0 0 1-1.5 1.800h-9a1.500 1.500 0 0 1-1.500-1.800L20.400 25A7 7 0 0 1 24 12Z"/></svg>`;
 const picto = id => `<svg class="picto" viewBox="0 0 24 24" aria-hidden="true">${PICTO[id] || '<circle cx="12" cy="12" r="8"/>'}</svg>`;
 
 // a drawing that reaches past its viewBox (a tree poking over the top, ...) gets a viewBox that holds it,
@@ -282,7 +282,7 @@ ${noindex ? '<meta name="robots" content="noindex, follow">\n' : ''}<link rel="c
 <meta name="twitter:title" content="${esc(fullTitle)}">
 <meta name="twitter:description" content="${esc(desc)}">
 <!--og-image:${og}-->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f6f5f'/%3E%3Cg transform='translate(7 7) scale(1.08)'%3E%3Cpath d='M31 31l11 11' stroke='%23fffaf0' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='20' cy='20' r='16' fill='%23fffaf0'/%3E%3Cpath d='M20 11.500a5 5 0 0 1 3 9L24.500 29h-9l1.500-8.500a5 5 0 0 1 3-9Z' fill='%231e1d19'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='12' fill='%234f6f5f'/%3E%3Cpath d='M24 12a7 7 0 0 1 3.6 13L30 35a1.5 1.5 0 0 1-1.5 1.800h-9a1.500 1.500 0 0 1-1.500-1.800L20.400 25A7 7 0 0 1 24 12Z' fill='%23fffaf0'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -310,7 +310,7 @@ ${head}</head>
 <a class="skip" href="#main">本文へ</a>
 <header class="site">
   <div class="site-inner">
-    <a class="logo" href="${U.home()}" aria-label="みのまわり図鑑"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-lens" cx="20" cy="20" r="14.5"/><path class="lm-key" d="M20 12.5a4.5 4.5 0 0 1 2.6 8.200L24 28h-8l1.400-7.300A4.500 4.500 0 0 1 20 12.500Z"/><path class="lm-handle" d="M31 31l11 11"/></svg><span class="logo-text">みのまわり<span class="logo-zukan">図鑑</span></span></a>
+    <a class="logo" href="${U.home()}" aria-label="みのまわり図鑑"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-ring" cx="24" cy="24" r="21.5"/><path class="lm-key" d="M24 12a7 7 0 0 1 3.6 13L30 35a1.5 1.5 0 0 1-1.5 1.800h-9a1.500 1.500 0 0 1-1.500-1.800L20.400 25A7 7 0 0 1 24 12Z"/></svg><span class="logo-text">みのまわり図鑑</span></a>
     <nav class="site-nav" id="site-menu" aria-label="メインメニュー">
       ${navLink('c', U.cats(), 'カテゴリ')}
       ${navLink('a', U.angles(), 'きりくち')}
@@ -346,7 +346,7 @@ ${body}
 <footer class="site-foot">
   <div class="foot-inner">
     <div>
-      <p class="foot-name logo"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-lens" cx="20" cy="20" r="14.5"/><path class="lm-key" d="M20 12.5a4.5 4.5 0 0 1 2.6 8.200L24 28h-8l1.400-7.300A4.500 4.500 0 0 1 20 12.500Z"/><path class="lm-handle" d="M31 31l11 11"/></svg><span class="logo-text">みのまわり<span class="logo-zukan">図鑑</span></span></p>
+      <p class="foot-name logo"><svg class="logo-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle class="lm-ring" cx="24" cy="24" r="21.5"/><path class="lm-key" d="M24 12a7 7 0 0 1 3.6 13L30 35a1.5 1.5 0 0 1-1.5 1.800h-9a1.500 1.500 0 0 1-1.500-1.800L20.400 25A7 7 0 0 1 24 12Z"/></svg><span class="logo-text">みのまわり図鑑</span></p>
       <p class="foot-note">説明はそれぞれの出典をもとに書いています。</p>
     </div>
     <ul class="foot-links">
@@ -801,7 +801,7 @@ html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; backgrou
 .og-grid > span { aspect-ratio: 1; border-radius: 10px; background: var(--pic); overflow: hidden; box-shadow: 0 6px 20px rgba(61,49,31,.08); }
 .og-grid .og-mark { display: grid; place-items: center; background: #4f6f5f; }
 .og-grid .og-mark .logo-mark { width: 70%; height: auto; }
-.og-mark .lm-lens { fill: #fffaf0; stroke: #fffaf0; } .og-mark .lm-key { fill: #1e1d19; } .og-mark .lm-handle { stroke: #fffaf0; }
+.og-mark .logo-mark { color: #fffaf0; }
 .og-cat { display: inline-block; padding: 4px 16px; border-radius: 8px; background: var(--cat); color: #fff; font-size: 24px; font-weight: 700; letter-spacing: 0.08em; }
 .og-name { margin: 26px 0 0; font-size: 92px; line-height: 1.2; font-weight: 500; letter-spacing: 0.04em; word-break: keep-all; overflow-wrap: anywhere; }
 .og-name.long { font-size: 68px; }
@@ -812,7 +812,7 @@ html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; backgrou
 .og-cover .cover { padding: 9%; }
 </style></head><body><div class="og ${cls}">${inner}</div>
 <svg width="0" height="0" style="position:absolute"><defs><marker id="ah" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 9 5 1 9Z" class="ah-head"/></marker></defs></svg></body></html>`;
-  const brand = `<p class="og-brand logo">${LOGO_MARK()}<span class="logo-text">みのまわり<span class="logo-zukan">図鑑</span></span></p>`;
+  const brand = `<p class="og-brand logo">${LOGO_MARK()}<span class="logo-text">みのまわり図鑑</span></p>`;
   const manifest = { site: SITE, base: B, images: [] };
   const picks = heroPicks(8);
   const cells = picks.map(it => `<span class="cat-${it.cat.id}">${coverHtml(itemCover(it), it.cat.id)}</span>`);

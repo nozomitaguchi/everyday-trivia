@@ -1031,3 +1031,17 @@ html[data-level="kid"] .site .search, html[data-level="small"] .site .search, ht
 /* home: the copy line stands alone above the categories */
 .hero .hero-inner { display: block; }
 .hero-title.hero-one { white-space: nowrap; font-size: clamp(1.375rem, 6.4vw, 3.5rem); }
+
+/* ---------- logo v2: keyhole in a thin ring + light, widely spaced wordmark ---------- */
+.logo { gap: 0.55em; }
+.logo-mark { width: 1.75em; height: 1.75em; flex: none; }
+.logo-mark .lm-ring { fill: none; stroke: currentColor; stroke-width: 2; }
+.logo-mark .lm-key, .site-foot .logo-mark .lm-key { fill: currentColor; }
+.logo-text { display: inline; font-weight: 400; letter-spacing: 0.2em; white-space: nowrap; }
+.cab-mark .logo-mark { color: #fffaf0; }
+@media (max-width: 479px) { .logo-text { letter-spacing: 0.16em; } }
+.logo-mark.small-mark { width: 64px; height: 64px; color: var(--accent-ink); }
+.logo-mark.small-mark .lm-ring { stroke-width: 2.5; }
+.logo-mark.about-mark { width: 72px; height: 72px; }
+.logo-mark.hero-mark { width: 74%; height: auto; }
+@media (max-width: 479px) { .logo-mark.about-mark { width: 52px; height: 52px; } }
