@@ -326,9 +326,12 @@ tags: [ジャンル, ...]
 - ひみつ: [「定礎」の板の裏にあるタイムカプセル（何が入っていて、いつ開けるのか、開けた例）](trivia/building-cornerstone-box.md)
 
 #### でんちゅうと でんせん {power-lines}
-- きほん: [電柱の電線は上から電圧の高い順に並んでいる](trivia/utility-pole-wire-order.md)
-- しるし: [電柱の番号札は通報のときの住所代わり](trivia/utility-pole-number.md)
-- しるし: [送電線にぶら下がる玉](trivia/powerline-marker-balls.md)
+- きほん: [電柱とは何か、電線はなぜ上から電圧の高い順に並んでいるのか（そもそも）](trivia/utility-pole-wire-order.md)
+- しくみ: [電柱の灰色のバケツ（柱上変圧器）の中身と、白い「がいし」にひだがあるわけ、鳥が感電しないわけ](trivia/utility-pole-transformer.md)
+- つくりかた: [コンクリートの電柱はどうやって作るのか（型ごと回して中を空にする、鋼の線を引っぱったまま固める、6分の1は土の中）](trivia/utility-pole-concrete.md)
+- れきし: [電柱の歴史、最初の電信線は地面にうめるはずだった（うめるのに失敗して柱に、木の柱からコンクリートの柱へ）](trivia/utility-pole-history.md)
+- しるし: [電柱の番号札の読み方、札が2枚あるのはなぜか（持ち主は上の札？下の札？地域で逆になる）](trivia/utility-pole-number.md)
+- しるし: [送電線にぶら下がる玉は何のためか（直径50cm以上、赤と白を45mおきに、川や大きな道をまたぐ高い線だけ）](trivia/powerline-marker-balls.md)
 
 #### しんごう {traffic-light}
 - きほん: [信号機はだれが切り替えているのか（時間・感知器・押ボタン、点・線・面）](trivia/traffic-light-basics.md)
