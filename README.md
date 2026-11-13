@@ -322,8 +322,12 @@ tags: [ジャンル, ...]
 - しるし: [階段の手すり、なぜ高さのちがう2本？ 端が60cmまっすぐ延びるわけと、そこにある点字](trivia/handrail-braille.md)
 
 #### ひじょうぐち {emergency-exit}
-- しるし: [非常口マークの緑地と白地](trivia/building-exit-sign-colors.md)
-- れきし: [走る人の非常口マークは日本生まれ、世界の標準になった](trivia/emergency-exit-history.md)
+- きほん: [非常口の緑の箱は何？ 光る「誘導灯」と光らない「誘導標識」、一日中ついているわけ（そもそも）](trivia/emergency-exit-basics.md)
+- しくみ: [停電しても非常口のマークが消えないわけ 箱の中の電池と、横の点検スイッチ](trivia/emergency-exit-battery.md)
+- れきし: [走る人の非常口マークは日本生まれ 煙で消える文字から、ソ連案との競争をへて世界の標準へ](trivia/emergency-exit-history.md)
+- かたち: [同じ非常口マークなのに大きさがちがうのはなぜ？ A級・B級・C級と「受け持つ距離」](trivia/emergency-exit-sizes.md)
+- しるし: [非常口マークの緑地と白地 「ここが出口」と「出口はこっち」、緑は安全の色](trivia/building-exit-sign-colors.md)
+- ひみつ: [電気がないのに光る、床の近くの非常口マーク 光をためる「蓄光」のひみつ](trivia/emergency-exit-glow.md)
 
 #### ビル {building}
 - きほん: [ビルとは何か、なぜ何十階も積み上げられるのか（壁で支える家と、骨組みで支えるビル）（そもそも）](trivia/building-basics.md)
