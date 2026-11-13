@@ -891,8 +891,9 @@ html[data-level="kid"] .trivia-title { font-size: clamp(1.625rem, 1.3rem + 1vw, 
 .body p { margin: 0 0 1.1em; }
 /* headings inside a story: section (h3, or h2 in the old version) > subsection (h4) > small (h5) */
 .body h2, .body h3 { font-size: 1.3125rem; font-weight: 700; letter-spacing: 0.03em; line-height: 1.5; margin: 2.6em 0 0.8em; padding-left: 0.7em; border-left: 4px solid var(--cat); }
-.body h4 { font-size: 1.125rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.55; margin: 2em 0 0.5em; display: flex; gap: 0.5em; align-items: baseline; }
-.body h4::before { content: ""; flex: none; width: 0.55em; height: 0.55em; border-radius: 2px; background: var(--cat); transform: translateY(-0.08em); }
+.body h4 { font-size: 1.125rem; font-weight: 700; letter-spacing: 0.02em; line-height: 1.55; margin: 2em 0 0.5em; }
+/* inline marker, not flex: a heading with a link or bold part must stay one line of text */
+.body h4::before { content: ""; display: inline-block; width: 0.55em; height: 0.55em; margin-right: 0.5em; border-radius: 2px; background: var(--cat); vertical-align: 0.06em; }
 .body h5 { font-size: 1.0625rem; font-weight: 700; color: var(--cat-ink); margin: 1.6em 0 0.4em; }
 .body > h3:first-child, .body > h2:first-child { margin-top: 0; }
 .body ul, .body ol { padding-left: 1.4em; margin: 0 0 1.1em; }
@@ -906,8 +907,9 @@ html[data-level="kid"] .trivia-title { font-size: clamp(1.625rem, 1.3rem + 1vw, 
 @media (min-width: 640px) { .look { padding: var(--space-5) var(--space-5) var(--space-3); } }
 details.sources { margin-top: var(--space-6); padding-top: var(--space-4); border-top: 1px solid var(--line); }
 details.sources ul, details.sources ol { list-style: none; padding: 0; margin: var(--space-3) 0 0; display: grid; gap: var(--space-2); counter-reset: src; }
-details.sources li { counter-increment: src; display: grid; grid-template-columns: 1.8em minmax(0, 1fr); margin: 0; overflow-wrap: anywhere; }
-details.sources li::before { content: counter(src); font-variant-numeric: tabular-nums; font-weight: 700; color: var(--muted); }
+/* not a grid: a source line is mixed text and links, and each piece would become its own grid cell */
+details.sources li { counter-increment: src; display: block; position: relative; padding-left: 1.8em; margin: 0; overflow-wrap: anywhere; }
+details.sources li::before { content: counter(src); position: absolute; left: 0; top: 0; font-variant-numeric: tabular-nums; font-weight: 700; color: var(--muted); }
 details.sources p { margin: var(--space-2) 0 0; overflow-wrap: anywhere; }
 
 /* ---------- about ---------- */
