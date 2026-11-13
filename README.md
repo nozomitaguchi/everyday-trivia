@@ -398,8 +398,11 @@ tags: [ジャンル, ...]
 #### くるま {car}
 - きほん: [車のエンジンはどうやって動くのか](trivia/car-engine-basics.md)
 - しくみ: [うるさい車やバイクは何がうるさいのか](trivia/loud-cars-and-motorcycles.md)
-- しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
 - しくみ: [車のキーのSTART位置と抜ける位置](trivia/car-ignition-key.md)
+- れきし: [車は「大砲を引く蒸気の荷車」から始まった（馬の時代、1886年の特許、ベルタの100キロ、手回しハンドルの危なさ、日本の1898年）](trivia/car-history.md)
+- かたち: [タイヤはなぜ黒くて、みぞがあるのか（炭の粒、水をかき出すみぞ、1.6ミリのスリップサインと横の△）](trivia/car-tire.md)
+- しるし: [車のうしろのランプはなぜ赤・白・オレンジに分かれているのか](trivia/car-lamps.md)
+- しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
 
 ### いきもの {living-things}
 

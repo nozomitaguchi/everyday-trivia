@@ -25,6 +25,20 @@ tags: [自動車, UI設計]
 
 {{fig:spring-vs-stay}}
 
+- STARTでモーターを回すのは、1912年にキャデラックがつけたケタリングの電気のスターターから。その前は、車の前でハンドルを人が回していた（→[車の歴史](car-history.md)）
+
+{{fig:kettering-starter}}
+
+### みてみよう
+
+- 家の車がキーかボタンか、大人に見せてもらう（さわらない）。キーなら LOCK・ACC・ON・START の字をさがし、どこで手をはなすと戻るか予想する
+
+{{fig:key-look-letters}}
+
+- ボタンの車なら、ボタンに書いてある字を読んで、キーの車の字とくらべる
+
+{{fig:key-look-button}}
+
 
 ## 3〜5歳むけ
 
@@ -52,9 +66,14 @@ tags: [自動車, UI設計]
 
 {{fig:car-key-lock-only}}
 
+おうちの くるまの かぎの まわりの もじを、おとなに みせて もらおう。どこで もどるか、よそうして みよう。
+
+{{fig:key-look-letters}}
+
 
 ## 出典
 
 - [トヨタ ヤリス 取扱書「エンジン（イグニッション）スイッチ」](https://manual.toyota.jp/toyota/yaris/yaris/1912/vhcv/ja/html/vhch04se020401.html)：LOCK でステアリングロック、シフトが P のときにキーを抜き差しできる、一度に30秒以上スターターを回さない
 - [2006 Toyota RAV4 Owner's Manual p.153](https://www.manualowl.com/am/Toyota/2006-RAV4/Manual/5534?page=153)："START—Starter motor on. The key will return to the ON position when released." / "The key can be removed only at this position (LOCK)." 
+- [フランクリン研究所 Case Files: Charles F. Kettering](https://fi.edu/en/news/case-files-charles-f-kettering)：1912年のキャデラックに電気スターター
 - 車種によって違うので、くわしくはその車の取扱説明書を見る
