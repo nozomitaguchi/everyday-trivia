@@ -1,8 +1,0 @@
-<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="assets/style.css">
-<style>body{margin:0;padding:8px}#g{display:grid;grid-template-columns:repeat(3,374px);gap:8px}.c{border:1px solid #888;padding:2px}.c .fig{margin:0}.n{font:11px monospace}</style></head><body><div id="g"></div>
-<script src="assets/core.js"></script><script src="assets/figures-history.js"></script><script src="assets/figures-town.js"></script><script src="assets/figures-powerlines.js"></script><script src="assets/figures-powerlines2.js"></script><script src="assets/figures-powerlines3.js"></script>
-<script>
-const q=new URLSearchParams(location.search);const files=q.get('names').split(',');
-const F=window.AHA_FIGURES;const CORE=window.AHA_CORE;
-document.getElementById('g').innerHTML=files.map(n=>`<div class="c"><div class="n">${n}</div><figure class="fig"><svg viewBox="${F[n].box||'0 0 320 200'}">${CORE.figSvg(F[n].svg)}</svg></figure></div>`).join('');
-</script></body></html>
