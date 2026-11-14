@@ -80,7 +80,7 @@
       <rect class="gray" x="120" y="54" width="44" height="54" rx="10"/><rect class="ln thin" x="120" y="54" width="44" height="54" rx="10"/>
       <path class="ln s-red" d="M30 34h110v20" style="stroke-width:2.5"/>
       <path class="ln" d="M164 90Q230 96 290 140" style="stroke-width:2"/>
-      ${T(60, 26, '6600ボルト', 'tx-s')}
+      ${T(70, 52, '6600ボルト', 'tx-s')}
       ${T(230, 66, 'はこで さげる', 'tx')}
       ${T(250, 170, '100ボルト・200ボルト', 'tx-s')}
       ${house(250, 120, .45)}`,
@@ -94,7 +94,7 @@
       <path class="ln" d="M20 50Q100 50 170 96" style="stroke-width:2"/>
       <rect class="white" x="168" y="96" width="30" height="40" rx="4"/><rect class="ln thin" x="168" y="96" width="30" height="40" rx="4"/>
       <rect class="glass" x="173" y="102" width="20" height="12"/><path class="ln thin" d="M176 124h14"/>
-      ${A('M240 116h-36')}${T(268, 100, 'メーター', 'tx', 'middle')}${T(268, 118, 'ここで はかる', 'tx-s')}
+      ${A('M240 116h-36')}${T(246, 104, 'メーター', 'tx', 'start')}${T(246, 136, 'ここで はかる', 'tx-s', 'start')}
       ${T(70, 40, 'ひきこみせん', 'tx-s')}`,
   };
   F['ol-path-panel'] = {
@@ -116,10 +116,10 @@
     svg: `
       <rect class="white" x="20" y="20" width="280" height="130" rx="8"/><rect class="ln thin" x="20" y="20" width="280" height="130" rx="8"/>
       <rect class="blue" x="36" y="44" width="56" height="70" rx="4"/>${T(64, 84, 'しゅかん', 'tx-k')}
-      <rect class="yellow" x="104" y="44" width="56" height="70" rx="4"/>${T(132, 84, 'ろうでん', 'tx-k')}
-      ${[0, 1, 2, 3, 4].map(i => `<rect class="gray" x="${176 + i * 24}" y="54" width="16" height="50" rx="3"/>`).join('')}
-      ${T(232, 126, 'ぶんき（へやごと）', 'tx-s')}
-      ${T(64, 172, 'いえぜんたい', 'tx-s')}${T(132, 172, 'もれると きる', 'tx-s')}${T(232, 172, '20アンペアずつ', 'tx-s')}
+      <rect class="yellow" x="118" y="44" width="56" height="70" rx="4"/>${T(146, 84, 'ろうでん', 'tx-k')}
+      ${[0, 1, 2, 3].map(i => `<rect class="gray" x="${196 + i * 24}" y="54" width="16" height="50" rx="3"/>`).join('')}
+      ${T(240, 126, 'ぶんき（へやごと）', 'tx-s')}
+      ${T(64, 172, 'いえぜんたい', 'tx-s')}${T(146, 172, 'もれると きる', 'tx-s')}${T(240, 172, '20アンペアずつ', 'tx-s')}
       ${T(160, 194, 'ながれすぎ・もれを とめる スイッチ', 'tx-s')}`,
   };
   F['ol-blade-receiver'] = {
@@ -130,8 +130,8 @@
       <path class="ln thin s-soft" d="M40 64h120M40 116h120" style="stroke-dasharray:4 4"/>
       <path class="orange" d="M80 70h8v40h-8Z M100 70h8v40h-8Z"/>
       <path class="ln thin" d="M80 70h8v40h-8Z M100 70h8v40h-8Z"/>
-      ${A('M200 90h-88')}
-      ${T(250, 80, 'はうけ', 'tx')}${T(250, 100, 'どう・どうの まざった', 'tx-s')}${T(250, 116, 'きんぞく', 'tx-s')}
+      ${A('M196 90h-84')}
+      ${T(204, 86, 'はうけ', 'tx', 'start')}${T(204, 106, 'どう・どうの', 'tx-s', 'start')}${T(204, 122, 'まざった きんぞく', 'tx-s', 'start')}
       ${T(100, 160, 'あなの おくを きって みた ところ', 'tx-s')}`,
   };
   F['ol-recess-5mm'] = {
@@ -213,9 +213,9 @@
       <rect class="white" x="90" y="110" width="80" height="22" rx="5"/><rect class="ln thin" x="90" y="110" width="80" height="22" rx="5"/>
       <path class="ln thin" d="M50 100q0 20 40 20"/>
       <rect class="white" x="160" y="70" width="60" height="18" rx="4"/><rect class="ln thin" x="160" y="70" width="60" height="18" rx="4"/>
-      <path class="ln thin" d="M150 110q10-20 20-22M110 132q0 20 20 30M130 132q10 20 40 24M190 88q10 30 40 40M210 88q20 10 50 0"/>
+      <path class="ln thin" d="M150 110q10-20 20-22M110 132q0 20 20 30M130 132q10 20 40 24M190 88q10 30 40 40M210 88q10 10 24 14"/>
       ${ng(270, 50, 16)}
-      ${T(270, 90, 'たこあし', 'tx')}${T(270, 106, 'はいせん', 'tx')}
+      ${T(286, 84, 'たこあし', 'tx')}${T(286, 100, 'はいせん', 'tx')}
       ${T(160, 174, 'きめられた ようりょうの なかで', 'tx-s')}`,
   };
   F['ol-shutter'] = {
@@ -249,8 +249,8 @@
     box: '0 0 320 190',
     svg: `
       <rect class="white" x="30" y="30" width="260" height="110" rx="8"/><rect class="ln thin" x="30" y="30" width="260" height="110" rx="8"/>
-      ${['いま', 'しんしつ', 'だいどころ', 'エアコン', 'せんめん'].map((n, i) => `<rect class="gray" x="${60 + i * 46}" y="56" width="22" height="44" rx="3"/>
-      <rect class="pale" x="${48 + i * 46}" y="108" width="46" height="18" rx="2"/>${T(71 + i * 46, 121, n, 'tx-k')}`).join('')}
+      ${['いま', 'しんしつ', 'エアコン', 'ふろ'].map((n, i) => `<rect class="gray" x="${68 + i * 60}" y="56" width="22" height="44" rx="3"/>
+      <rect class="pale" x="${51 + i * 60}" y="108" width="56" height="18" rx="2"/>${T(79 + i * 60, 121, n, 'tx-k')}`).join('')}
       ${eye(160, 162)}
       ${T(160, 186, 'みる だけ。さわらない', 'tx')}`,
   };
@@ -279,7 +279,7 @@
       <rect class="brown" x="0" y="172" width="320" height="4" opacity=".5"/>
       ${T(226, 46, 'ひせっちがわ（でんあつがわ）', 'tx-s')}
       ${T(226, 92, 'せっちがわ', 'tx-s')}
-      ${T(190, 150, 'ここで じめんに つなぐ', 'tx')}${A('M150 146h-40')}`,
+      ${T(156, 150, 'ここで じめんに つなぐ', 'tx', 'start')}${A('M150 146h-40')}`,
   };
   F['ol-from-america'] = {
     alt: 'にほんのコンセントのあなのかたちは、もとはアメリカのきかくがもと。ながさをかえたのは、どちらがせっちがわかのくべつ（きょくせい）をつけるため',
@@ -315,7 +315,7 @@
       ${A('M110 70h40')}
       <rect class="white" x="170" y="20" width="80" height="110" rx="10"/><rect class="ln thin" x="170" y="20" width="80" height="110" rx="10"/>
       <rect class="coal" x="190" y="46" width="12" height="40" rx="2"/><rect class="coal" x="222" y="52" width="8" height="28" rx="2"/>
-      ${T(196, 104, 'ながい', 'tx-s')}${T(226, 104, 'みじかい', 'tx-s')}
+      ${T(186, 112, 'ながい', 'tx-s', 'end')}${T(236, 112, 'みじかい', 'tx-s', 'start')}
       ${T(160, 168, 'ひろい いたは ながい あなに だけ はいる', 'tx-s')}`,
   };
   F['ol-neutral-vs-earth'] = {
@@ -425,7 +425,7 @@
       ${num(180, 30, '2')}
       <circle class="white" cx="240" cy="90" r="46"/><circle class="ln thin" cx="240" cy="90" r="46"/>
       <path class="arw" d="M212 60a40 40 0 0 1 56 0"/>
-      <rect class="gray" x="224" y="80" width="32" height="20" rx="4"/>
+      <g transform="rotate(35 240 90)"><path class="coal" d="M220 70a28 28 0 0 1 14-8v10a18 18 0 0 0-8 6Z"/><path class="coal" d="M260 110a28 28 0 0 1-14 8v-10a18 18 0 0 0 8-6Z"/></g>
       ${T(240, 160, 'まわすと ぬけない', 'tx')}`,
   };
   F['ol-twist-where'] = {
