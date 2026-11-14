@@ -48,6 +48,22 @@ tags: [からだ, うんち]
 
 {{fig:pp-step-out}}
 
+### ごはんを食べると、うんちがしたくなるわけ
+
+- 食べものが胃に入ると、その知らせが腸に伝わって、うんちを出す方へ腸を動かす。これを「**胃・結腸反射**（いけっちょうはんしゃ）」という。反射は、考えなくても体がかってにする動き（熱いものにさわると手を引っこめるのと同じなかま）
+
+{{fig:pp-reflex}}
+
+- この反射がいちばん起こりやすいのは**朝ごはんのあと**。だから病院の便秘の説明では、朝ごはんのあとにトイレに行く習慣が勧められている。大腸の動きは、朝起きたあとと、食事のあとがいちばん活発
+
+{{fig:pp-reflex-morning}}
+
+### みてみよう
+
+あしたの朝、朝ごはんを食べ終わった時刻を覚えておこう。「何分くらいで、トイレに行きたくなるかな？」と予想してから、時計を見てたしかめる。毎朝くりかえすと、自分の体の「いつものリズム」が見えてくる。
+
+{{fig:pp-look-reflex}}
+
 ## 3〜5歳むけ
 
 ごはんを たべると、おくちで もぐもぐ こまかく するよ。
@@ -63,6 +79,10 @@ tags: [からだ, うんち]
 のこった ものが、うんちに なって でて くるんだ。
 
 {{fig:pp-step-out}}
+
+あさごはんの あと、トイレに いきたく なるかな。みて みてね。
+
+{{fig:pp-look-reflex}}
 
 ## 6〜9歳むけ
 
@@ -86,9 +106,15 @@ tags: [からだ, うんち]
 
 {{fig:pp-step-brain}}
 
+あさごはんを たべて から、なんぷんで トイレに いきたく なるかな。とけいを みて、まいあさ くらべて みよう。
+
+{{fig:pp-look-reflex}}
+
 ## 出典
 
 - [HugKum 食べ物が消化されるまで](https://hugkum.sho.jp/544027)
+- [岡山大学病院 薬剤部 くすりの窓口 No.236（朝食後は胃・結腸反射＝食べ物が胃に入ると腸に排便を促す指令が、もっとも出やすいタイミング、朝食後にトイレへ）（PDF）](https://www.pharm.hospital.okayama-u.ac.jp/kanja/pdf/mado236.pdf)
+- [The Conversation: Why do I poo in the morning? A gut expert explains（2024年、ウエスタンシドニー大学のヴィンセント・ホー。胃がふくらむと胃結腸反射、大腸の収縮は朝起きたあとと食事のあとがいちばん活発）](https://theconversation.com/why-do-i-poo-in-the-morning-a-gut-expert-explains-229624)
 - [HugKum 長さ6mにもなる「小腸」の不思議（6〜7m）](https://hugkum.sho.jp/539938)
 - [ScienceDaily: Surface area of the digestive tract much smaller than previously thought (2014)](https://www.sciencedaily.com/releases/2014/04/140423111505.htm)：Helander & Fändriks, Scand J Gastroenterol 2014。大人の消化管の内側の表面は30〜40㎡（バドミントンコートの半分ほど）、大腸は約2㎡。以前は180〜300㎡（テニスコート並み）とされていた
 - [労働者健康安全機構 せき損センター 排便のしくみ（水分の多い状態で大腸へ、直腸にためる、直腸壁の刺激が大脳へ、括約筋、いきむと腹圧）（PDF）](https://sekisonh.johas.go.jp/file/nursing/nursing_pamphlet_06.pdf)

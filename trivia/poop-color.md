@@ -38,6 +38,16 @@ tags: [からだ, うんち]
 
 {{fig:pp-color-card}}
 
+- 生まれて最初のうんち（**胎便**、たいべん）は、茶色ではなく**濃い緑色**。生まれてからふつう12〜24時間のうちに出る
+
+{{fig:pp-color-meconium}}
+
+### みてみよう
+
+家にある母子健康手帳を開いて、便色カードのページを見てみよう。1番から7番まで、色がどう変わっていくかをくらべる。ふだんの茶色いうんちは何番に近いか、予想してから見ると面白い。
+
+{{fig:pp-look-card}}
+
 ## 3〜5歳むけ
 
 うんちは、だいたい ちゃいろだね。
@@ -51,6 +61,10 @@ tags: [からだ, うんち]
 おなかの ちいさな ちいさな いきものが、ちゃいろに するよ。
 
 {{fig:pp-color-3-bacteria}}
+
+おうちの てちょうの、うんちの いろの カードを みて みてね。
+
+{{fig:pp-look-card}}
 
 ## 6〜9歳むけ
 
@@ -70,8 +84,13 @@ tags: [からだ, うんち]
 
 {{fig:pp-color-card}}
 
+おうちの ぼしてちょうに、いろの カードが あるよ。いつもの うんちは なんばんに ちかいか、くらべて みよう。
+
+{{fig:pp-look-card}}
+
 ## 出典
 
 - [The Naked Scientists: Why is food multicoloured, but poo brown?（胆汁、赤血球のヘモグロビンからビリルビン、細菌がウロビリノーゲンに、一部はおしっこの黄色、ステルコビリンで茶色、胆汁が届かないと白っぽい）](https://www.thenakedscientists.com/node/179316)
 - [国立成育医療研究センター（2012年から母子健康手帳に便色カード、胆道閉鎖症など胆汁うっ滞の早期発見）（PDF）](https://www.ncchd.go.jp/center/information/kaihatsu/pdf/2019/2019E-3.pdf)
+- [MSDマニュアル家庭版 胎便栓症候群（胎便は新生児で最初にみられる便で濃い緑色、通常12〜24時間以内に排泄）](https://www.msdmanuals.com/ja-jp/home/23-小児の健康上の問題/新生児における消化管および肝臓の異常/胎便栓症候群)
 - [堺市 便色カード（1〜7番の色見本、1〜3番に近いときはすぐに専門医を受診、胆道閉鎖症）](https://www.city.sakai.lg.jp/kosodate/hughug/ninshin_shusan/nyuyoji/benshoku.html)
