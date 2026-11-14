@@ -17,9 +17,11 @@ tags: [そらとけしき, 光, 歴史]
 | 1506〜1510年ごろ | レオナルド・ダ・ヴィンチ（イタリア） | 青は空気そのものの色ではない、とノートに書く |
 | 1666年 | アイザック・ニュートン（イギリス） | 白い光は色のまざったものだと、プリズムで示す |
 | 1790年 | オラス＝ベネディクト・ド・ソシュール（スイス） | 空の青さをはかる「青さ計」を発表 |
+| 1809年 | フランソワ・アラゴ（フランス） | 空の光の「ゆれる向き」がそろっている（偏光）ことに気づく |
 | 1869年 | ジョン・ティンダル（イギリス） | ガラス管の中に小さな青空を作る |
 | 1871年 | レイリー卿（イギリス） | 小さなつぶほど青を強く散らすことを計算 |
 | 1908〜1910年 | ミー、スモルコフスキー、アインシュタイン | 大きなつぶ（雲）の散乱と、空気の分子だけで青くなるわけを計算 |
+| 1953年 | エドワード・ハルバート（アメリカ） | 日の入りのころの真上の青は、3分の2がオゾンのせいだと計算 |
 
 {{fig:sky-history-people}}
 
@@ -36,6 +38,9 @@ tags: [そらとけしき, 光, 歴史]
 {{fig:newton-two-prisms}}
 
 - 言い伝え：ニュートンは、ペストの流行でケンブリッジ大学から故郷ウールスソープの家に帰っていたときに、この実験をした
+
+{{fig:newton-plague-home}}
+
 - 史実：実験は1666年。ただ、ニュートンはケンブリッジにいたころから実験を計画していたので、ペストがきっかけではなかったと考える研究者もいる
 
 {{fig:newton-legend}}
@@ -74,6 +79,16 @@ tags: [そらとけしき, 光, 歴史]
 
 {{fig:mie-big-drop}}
 
+### それでも話は終わらなかった：夕暮れの青とオゾン
+
+- 1953年、アメリカの物理学者エドワード・ハルバートは、日の入りのころの真上の空の青のうち、空気の分子の散乱によるのは3分の1だけで、3分の2は空の高いところのオゾンが橙や赤の光を吸うためだと計算した。2023年にドイツの研究者たちが計算しなおして、この見積もりとよく合うことをたしかめた（→[日がしずんだあとの空](sky-after-sunset.md)）
+
+{{fig:sky-hulburt-share}}
+
+- 空の光の「ゆれる向き」（偏光）も、1809年のアラゴの発見から、1871年のレイリーの説明、1949年のミツバチの研究へとつながった（→[同じ青空でも場所で色がちがう](sky-direction.md)）
+
+{{fig:sky-dir-polar-history}}
+
 ### 日本では
 
 | 年 | できごと |
@@ -87,6 +102,12 @@ tags: [そらとけしき, 光, 歴史]
 観測には、ソシュールの青さ計と同じように、青さを段階の番号で読む「オストワルト・リンケの目盛り」が使われた。
 
 {{fig:sky-color-history}}
+
+### みてみよう
+
+- ソシュールの青さ計のように、自分で「うすい・ふつう・こい」の3段階を決めて、毎日だいたい同じ時刻に、同じ方向の空がどれに近いかを見る。季節や天気で変わるか、くらべる
+
+{{fig:sky-look-history}}
 
 ## 3〜5歳むけ
 
@@ -108,6 +129,10 @@ tags: [そらとけしき, 光, 歴史]
 
 {{fig:tyndall-tube}}
 
+きょうの そらは、うすい あおかな、こい あおかな。みて みてね。
+
+{{fig:sky-look-history}}
+
 ## 6〜9歳むけ
 
 500ねんくらい まえの えかきが、ダ・ヴィンチさんだよ。「そらの あおは、くうきの いろじゃ ない」と ノートに かいたんだ。
@@ -128,6 +153,12 @@ tags: [そらとけしき, 光, 歴史]
 
 さいごに アインシュタインさんたちが けいさんしたよ。ちりが なくても、くうきの つぶだけで そらは あおく なるんだ。なぜかと いうと、くうきの つぶ そのものが あおい ひかりを ちらすからなんだ。
 
+{{fig:einstein-fluctuation}}
+
+ソシュールさんの まねを して、そらの あおさを「うすい・ふつう・こい」で きめて みよう。きのうと きょうの そらを くらべて みよう。
+
+{{fig:sky-look-history}}
+
 ## 出典
 
 - [Discovering da Vinci: Astronomy（レスター手稿）](https://discoveringdavinci.com/notebooks/subjects/astronomy.html)
@@ -138,5 +169,7 @@ tags: [そらとけしき, 光, 歴史]
 - [M. Potenza ほか: The daylight blue sky and the Avogadro number（European Journal of Physics 2015、PDF）](https://air.unimi.it/retrieve/handle/2434/339120/563213/MPotenza_EuropeJournPhysics_DaylightSkyAvogadro_2015.pdf)
 - [Physics FAQ: Why is the sky blue?](https://math.ucr.edu/home/baez/physics/General/BlueSky/blue_sky.html)
 - [Wikipedia Mie scattering](https://en.wikipedia.org/wiki/Mie_scattering)
+- [Lange, Rozanov, von Savigny: Revisiting the question "Why is the sky blue?"（Atmospheric Chemistry and Physics 23, 2023）](https://acp.copernicus.org/articles/23/14829/2023/acp-23-14829-2023.html)
+- [A. T. Young: Rayleigh scattering（Physics Today 1982年1月、PDF。1809年アラゴ）](https://aip.brightspotcdn.com/PTO.v35.i1.42_1.online.pdf)
 - [Optics & Photonics News: A Blue Sky History（2004）](https://www.optica-opn.org/home/articles/volume_15/issue_6/features/a_blue_sky_history/)
 - [神田清・山本正己「東京に於ける天空の色の觀測報告」気象集誌 1932年（J-STAGE）](https://www.jstage.jst.go.jp/article/jmsj1923/10/11/10_11_620/_article/-char/ja)
