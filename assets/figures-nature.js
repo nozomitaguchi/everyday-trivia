@@ -121,18 +121,6 @@
     box: '0 0 320 214',
   };
 
-  F['common-cold'] = {
-    alt: 'ウイルスがはなやのどにはいり、はっけっきゅうがたたかう。のうがたいおんをあげてウイルスがふえにくくなる',
-    svg: `
-      ${[[40, 50], [70, 34], [56, 80]].map(([x, y]) => `<g transform="translate(${x} ${y})"><circle class="purple" r="9"/>${[0, 60, 120, 180, 240, 300].map(r => `<path class="ln thin s-purple" d="M0-9v-5" transform="rotate(${r})"/>`).join('')}</g>`).join('')}
-      ${T(56, 116, 'ウイルス', 'tx-s')}
-      ${A('M90 60h40')}
-      <circle class="pink" cx="170" cy="60" r="34"/>${T(170, 64, 'はな・のど', 'tx-s')}
-      <circle class="bg" cx="250" cy="70" r="22"/><circle class="ln thin" cx="250" cy="70" r="10"/>
-      ${T(250, 112, 'はっけっきゅうが', 'tx-s')}${T(250, 128, 'たたかう', 'tx-s')}
-      <rect class="bg" x="140" y="140" width="14" height="50" rx="7"/><circle class="red" cx="147" cy="186" r="10"/><rect class="red" x="143" y="156" width="8" height="30"/>
-      ${T(166, 160, 'ねつで ウイルスが', 'tx-s', 'start')}${T(166, 176, 'ふえにくく なる', 'tx-s', 'start')}`,
-  };
   // ---- おつきさま ----
   F['moon-basics'] = {
     alt: 'つきのおおきさはちきゅうのやく4ぶんの1。ちきゅうから38まんキロはなれている',
