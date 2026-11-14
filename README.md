@@ -256,8 +256,13 @@ tags: [ジャンル, ...]
 - しるし: [三角のPETマークと「1」、キャップが水にうくわけ（リサイクルのしるし）](trivia/pet-bottle-mark.md)
 
 #### リモコンと Wi-Fi {remote-and-wifi}
+- きほん: [リモコンは何をしている？ ボタン1つが、目に見えない光の合図になってテレビに届くまで](trivia/remote-basics.md)
 - しくみ: [Wi-Fi、Bluetooth、赤外線の仕組み](trivia/wifi-bluetooth-infrared.md)
-- れきし: [リモコンは「ひも」から始まった、Bluetooth はバイキングの王さまの名前、電波を乗りかえる早い特許は女優と作曲家](trivia/remote-bluetooth-history.md)
+- しくみ: [リモコンの光は何を言っている？ 1回押すと約0.07秒の「光のモールス信号」、ほかのメーカーのテレビが動かないわけ](trivia/remote-signal-code.md)
+- なにでできてる: [リモコンのボタンの下はどうなっている？ 炭を混ぜた黒いゴムと、くしの形の模様、電源スイッチがいらないわけ](trivia/remote-buttons.md)
+- れきし: [リモコンは「ひも」から始まった：テスラの船、懐中電灯、カチッと鳴る超音波、赤外線へ。Bluetooth はバイキングの王さまの名前、電波を乗りかえる早い特許は女優と作曲家](trivia/remote-bluetooth-history.md)
+- れきし: [Wi-Fi は何の略でもない：1985年の電波の開放、レジの会社のオランダの研究所、ブラックホールさがしから生まれた工夫](trivia/wifi-history.md)
+- ひみつ: [目に見えないリモコンの光が、スマホのカメラだと見えるのはなぜ？ 光る部品は、レーダーの研究中に見つかった](trivia/remote-camera-ir.md)
 
 ### たべもの {food}
 
