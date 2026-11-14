@@ -60,6 +60,12 @@ tags: [おうちのなか, はみがきこ, 素材]
 
 {{fig:tp-src-fluoride}}
 
+### みてみよう
+
+- 箱やチューブの成分表示は、「清掃剤：」「湿潤剤：」「発泡剤：」のように、役割の名前のあとに材料がならぶ。どの役割の材料がいちばん多くならんでいるか予想してから、読んでたしかめる（例：花王の薬用ハミガキの表示）
+
+{{fig:tp-look-ingredients}}
+
 ## 3〜5歳むけ
 
 はみがきこには、いろんな ものが まざって いるよ。
@@ -82,6 +88,10 @@ tags: [おうちのなか, はみがきこ, 素材]
 
 {{fig:tp-menthol-cold}}
 
+はこの うらの じを、おうちの ひとに よんで もらってね。
+
+{{fig:tp-look-ingredients}}
+
 ## 6〜9歳むけ
 
 はみがきこは、やくめの ちがう ものを まぜて つくって いるよ。
@@ -103,6 +113,10 @@ tags: [おうちのなか, はみがきこ, 素材]
 
 {{fig:tp-menthol-cold}}
 
+はこの うらの「〜ざい」の なまえを さがして、いくつ あるか かぞえて みよう。
+
+{{fig:tp-look-ingredients}}
+
 ## 出典
 
 - [サンスター 歯みがき剤の基本成分（PDF）](https://www.club-sunstar-pro.jp/_var/files/sp-catalog/toothpaste/related_catalog_3596193.pdf)
@@ -116,3 +130,4 @@ tags: [おうちのなか, はみがきこ, 素材]
 - [ChemicalBook カルボキシメチルセルロースナトリウム](https://www.chemicalbook.com/ChemicalProductProperty_JP_CB5209844.htm)
 - [国立健康・栄養研究所 カラギーナン（PDF）](https://www.nibiohn.go.jp/eiken/info/pdf/k250.pdf)
 - [生理学研究所 温度生物学ハンドブック TRPM8（PDF）](https://www.nips.ac.jp/thermalbio/handbook/1-9v2.pdf)
+- [花王 薬用ピュオーラ 美白ケア ハミガキ（成分表示の例）](https://www.kao-kirei.com/ja/item/khg/pyuora/4901301439536/)

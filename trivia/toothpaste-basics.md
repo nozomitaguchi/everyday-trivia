@@ -50,6 +50,26 @@ tags: [おうちのなか, はみがきこ, 生活]
 
 {{fig:tp-name-dentifrice}}
 
+### よくある誤解：研磨剤で歯がけずれる？
+
+- 歯みがき粉の「みがく力」は、RDA（相対象牙質摩耗値）という数で表す。歯の中にある、エナメル質よりずっとやわらかい象牙質（ぞうげしつ）を、決まった力・時間・温度でみがき、けずれる量を、ものさしにする粉（100とする）とくらべた数。アメリカ歯科医師会（ADA）が1976年にこのはかり方を発表し、1995年までに国際規格になった
+
+{{fig:tp-rda-scale}}
+
+- 国際規格（ISO 11609）とADAは、RDAは250まで（ものさしの粉の2.5倍まで）と決めている。ADAのマークがついた歯みがき粉は、すべて250以下
+
+{{fig:tp-rda-limit}}
+
+- ADAは、250以下の歯みがき粉を一生ただしく使っても、象牙質のけずれはわずかで、体でいちばんかたいエナメル質はほとんどけずれない、としている。歯がすりへる原因には、強くゴシゴシみがきすぎることもある。象牙質が出るのは、エナメル質がすりへったり、歯ぐきが下がったりしたところ
+
+{{fig:tp-enamel-dentin}}
+
+### みてみよう
+
+- 家にある歯みがき粉の箱で、「医薬部外品」「薬用」の文字と、「液体歯磨」「洗口液」の文字をさがし、それぞれが「みがくもの」か「ゆすぐだけのもの」かを、大人といっしょに読みくらべる
+
+{{fig:tp-look-label}}
+
 ## 3〜5歳むけ
 
 はみがきこは、はぶらしに つける ねりねりした もの。
@@ -68,6 +88,10 @@ tags: [おうちのなか, はみがきこ, 生活]
 
 {{fig:tp-name-powder}}
 
+おうちの はみがきこの はこを、おうちの ひとと みて みてね。
+
+{{fig:tp-look-label}}
+
 ## 6〜9歳むけ
 
 はの よごれを おとすのは、はぶらしで こする うごきだよ。はみがきこは、それを てつだって いるんだ。
@@ -84,6 +108,10 @@ tags: [おうちのなか, はみがきこ, 生活]
 
 {{fig:tp-name-powder}}
 
+はこの じを よんで、「みがく もの」か「ゆすぐ だけの もの」か、くらべて みよう。
+
+{{fig:tp-look-label}}
+
 ## 出典
 
 - [サンスター 歯みがき剤の基本成分（PDF）](https://www.club-sunstar-pro.jp/_var/files/sp-catalog/toothpaste/related_catalog_3596193.pdf)
@@ -91,3 +119,5 @@ tags: [おうちのなか, はみがきこ, 生活]
 - [沖縄県 フッ化物洗口 Q&A（PDF）](https://www.pref.okinawa.jp/_res/projects/default_project/_page_/001/006/310/fukkabutusenkouqa.pdf)
 - [Weblio 歯磨き粉](https://www.weblio.jp/content/%E6%AD%AF%E7%A3%A8%E3%81%8D%E7%B2%89)
 - [Online Etymology Dictionary: dentifrice](https://www.etymonline.com/word/dentifrice)
+- [ADA Toothpastes（RDA と 250 の上限）](https://www.ada.org/resources/research/science-and-research-institute/oral-health-topics/toothpastes)
+- [RDH Magazine: Protected by a safe RDA（RDAのはかり方、1976年とISO）](https://www.rdhmag.com/patient-care/article/16409242/protected-by-a-safe-rda-setting-the-record-straight-about-toothpaste-abrasivity)

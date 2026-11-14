@@ -46,6 +46,12 @@ tags: [おうちのなか, はみがきこ, 仕組み, からだ]
 
 {{fig:tp-fluoride-share}}
 
+### みてみよう
+
+- 箱の成分表示の「薬用成分」のところで、フッ素がどんな名前で入っているかをさがす。「フッ化ナトリウム」のほか、「モノフルオロリン酸ナトリウム（フッ素）」と書いてあるものもある。家族の歯みがき粉どうしで、名前がちがうかくらべる
+
+{{fig:tp-look-fluoride-name}}
+
 ## 3〜5歳むけ
 
 むしばの ばいきんは、すっぱい ものを だすよ。
@@ -64,6 +70,10 @@ tags: [おうちのなか, はみがきこ, 仕組み, からだ]
 
 {{fig:tp-rinse-once}}
 
+はこに「フッそ」と かいて あるか、おうちの ひとと みて みてね。
+
+{{fig:tp-look-fluoride-name}}
+
 ## 6〜9歳むけ
 
 むしばの ばいきんは、「さん」と いう すっぱい ものを だすよ。さんに ふれると、はの いちばん そとがわが すこし とけるんだ。
@@ -80,9 +90,14 @@ tags: [おうちのなか, はみがきこ, 仕組み, からだ]
 
 {{fig:tp-rinse-once}}
 
+かぞくの はみがきこの はこで、「フッそ」の なまえが おなじか、くらべて みよう。
+
+{{fig:tp-look-fluoride-name}}
+
 ## 出典
 
 - [沖縄県 フッ化物洗口 Q&A（PDF）](https://www.pref.okinawa.jp/_res/projects/default_project/_page_/001/006/310/fukkabutusenkouqa.pdf)
 - [神奈川県歯科医師会 高濃度フッ化物配合歯磨剤についての見解（PDF）](https://www.dent-kng.or.jp/fswp/wp-content/uploads/2022/09/statement_20180301.pdf)
 - [厚生労働省 フッ化物応用の資料（PDF）](https://www.mhlw.go.jp/content/10801000/000460049.pdf)
 - [東京都保健医療局 4学会合同のフッ化物配合歯磨剤の推奨される利用方法](https://www.hokeniryo.metro.tokyo.lg.jp/documents/d/hokeniryo/news_230106)
+- [花王 薬用ピュオーラ 美白ケア ハミガキ（薬用成分の表示の例）](https://www.kao-kirei.com/ja/item/khg/pyuora/4901301439536/)
