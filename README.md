@@ -373,9 +373,12 @@ tags: [ジャンル, ...]
 - しくみ: [黄色のあと、なぜすぐ反対側が青にならないのか（全部が赤の数秒と、歩行者の青の点滅）](trivia/traffic-light-clearance.md)
 - しくみ: [信号の光るところ、電球からLEDへ（西日で全部ついて見えた「疑似点灯」）](trivia/traffic-light-led.md)
 - れきし: [信号機の歴史、最初の信号はガスで爆発した、緑なのに「青信号」のわけ](trivia/traffic-light-history.md)
+- ひみつ: [信号はなぜ赤・黄・緑なのか（鉄道のランプでは、はじめ「白」が進めだった）](trivia/traffic-light-colors.md)
 - かたち: [信号機の赤がいちばん右にある理由](trivia/road-red-light-on-right.md)
 - かたち: [雪国の信号機が縦向きな理由](trivia/road-vertical-traffic-light.md)
+- かたち: [歩行者信号の「止まる人」と「歩く人」、いつからあの形？（ドイツの帽子の人、アメリカの手のひら）](trivia/traffic-light-pedestrian.md)
 - しるし: [信号の「ピヨピヨ」「カッコー」、なぜ2つの音が交互に鳴るのか](trivia/traffic-light-sound.md)
+- しるし: [赤なのに出る「青い矢印」は何を言っているのか（右折の矢印と「時差式」の板）](trivia/traffic-light-arrow.md)
 
 #### おうだんほどう {crosswalk}
 - きほん: [横断歩道とは何か、歩く人と車がそれぞれ何を守る場所なのか（そもそも）](trivia/crosswalk-basics.md)
