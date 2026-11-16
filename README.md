@@ -311,8 +311,12 @@ tags: [ジャンル, ...]
 
 #### エレベーター {elevator}
 - きほん: [エレベーターはどうやって動くのか](trivia/elevator-basics.md)
+- しくみ: [エレベーターのドアは、なぜ人をはさまないのか（さわる前に気づく光のカーテン）](trivia/elevator-door-safety.md)
 - れきし: [エレベーターを「乗れるもの」にしたのは、ロープが切れても落ちないしかけ](trivia/elevator-history.md)
 - かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
+- かたち: [エレベーターのボタンのなぞ（「開」はなぜ左？ 低いボタン、点字、2度押しで取り消し）](trivia/elevator-buttons.md)
+- しるし: [かごの中の「定期検査報告済証」は何のしるし？（毎年の検査と、ふだんの保守のちがい）](trivia/elevator-inspection-sticker.md)
+- ひみつ: [いちばん速いエレベーターは分速1260m、耳がツーンとするのはなぜ？](trivia/elevator-speed.md)
 - しくみ: [火事のとき消防隊が使う特別な運転と、2つの鍵穴（一次消防・二次消防）](trivia/elevator-fire-service-keyswitch.md)
 
 #### エスカレーター {escalator}

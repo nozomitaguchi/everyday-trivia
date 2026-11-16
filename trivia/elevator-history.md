@@ -33,7 +33,7 @@ tags: [まち, 建物, 歴史]
 | 1880年 | ヴェルナー・フォン・ジーメンス（ドイツ） | 世界初の**電気**のエレベーター |
 | 1887年 | アレクサンダー・マイルズ | 昇降路のドアを**自動で閉める**しくみの特許。手で閉め忘れて人が落ちる事故を防ぐ（→[ドアが閉まらないと動かない](elevator-basics.md)） |
 | 1924年 | オーチス社 | 速さを自動で調節する制御 |
-| 1944年 | ジョセフ・ジョバンニ | ドアが人をはさまないようにする安全バンパーの特許 |
+| 1944年出願（1947年特許） | ジョセフ・ディ・ジョバンニ | ドアが人やものに当たって止められると、モーターを逆に回してドアを開け直すしくみ（→[ドアはなぜ人をはさまない？](elevator-door-safety.md)） |
 | 1979年 | オーチス社 | マイクロプロセッサー（小さなコンピューター）で、すべて自動に |
 
 {{fig:elevator-inventors}}
@@ -200,4 +200,5 @@ tags: [まち, 建物, 歴史]
 - [Wikipedia Elisha Otis](https://en.wikipedia.org/wiki/Elisha_Otis)
 - [雑学ネタ帳 エレベーターの日](https://zatsuneta.com/archives/111102.html)
 - [日本エレベーター協会 エレベータージャーナル](https://www.n-elekyo.or.jp/about/elevatorjournal/pdf/Journal6-15.pdf)
+- [Google Patents US2432293A Elevator car door control mechanism](https://patents.google.com/patent/US2432293)：Joseph Di Giovanni、1944年8月19日出願、1947年12月9日特許。ドアが障害物で止められるとスイッチが開いてドアのモーターを逆転
 - [日本エレベーター協会 Elevator Journal No.3（2014）技術講座「エレベーターの超高速・超高揚程化対応技術」（三菱電機、PDF）](https://www.n-elekyo.or.jp/about/elevatorjournal/pdf/Journal3_09.pdf)：調速機は遠心力を利用して過速を検出し、巻上機のブレーキも使って停止。非常止め装置は巻上ロープが切断してもかごを落下させず停止させ、調速機と連携。制動片にファインセラミック
