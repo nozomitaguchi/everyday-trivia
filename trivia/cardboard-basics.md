@@ -36,6 +36,10 @@ tags: [おうちのなか, 素材]
 
 {{fig:cb-basic-vertical}}
 
+- 段の向きは、紙の「目」（繊維がならぶ向き、→[紙の目](paper-grain.md)）とも決まった関係にある。ジョージア工科大学（IPST）のポピルは、段ボールの端を押す試験の力は「段と平行、つまり段ボールの横（CD）の向き」にかかる、と書いている。CDは、紙を作る機械とコルゲーターの流れに直角の向き。だから箱の上から重さがかかるとき、表と裏のライナーは、紙の「横」の向きに押されている
+
+{{fig:cb-basic-cd}}
+
 - ニュージーランドの研究（2023年）が紹介した先行研究では、段がたて向きの箱は、横向きの箱より圧縮強さが約20％高かった。ただし同じ研究の実験では、段を45°までかたむけても強さははっきりとは落ちず、60°で落ちた
 
 {{fig:cb-basic-angle}}
@@ -112,6 +116,7 @@ tags: [おうちのなか, 素材]
 
 ## 出典
 
+- [R. E. Popil, Overview of recent studies at IPST on corrugated board edge compression strength（BioResources 7(2), 2012、PDF）](https://bioresources.cnr.ncsu.edu/BioRes_07/BioRes_07_2_2553_Popil_Overview_Edge_Compression_Buckling_1006.pdf)："The load direction is parallel to the flutes or the cross direction (CD) of the board"
 - [全国段ボール工業組合連合会 段ボールのしくみ](https://zendanren.or.jp/pages/45/)：段ボールは「波形に成形した中しんの片面又は両面にライナを貼ったもの」
 - [全国段ボール工業組合連合会 段ボールの構造（トラス構造）](https://zendanren.or.jp/pages/46/)：三角形を単位とするトラス構造、鉄橋や東京タワーと同じ
 - [レンゴー あゆみ](https://www.rengo.co.jp/company/history/timeline.html)：「片面段ボール」

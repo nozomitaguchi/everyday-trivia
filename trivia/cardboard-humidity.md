@@ -28,6 +28,10 @@ tags: [おうちのなか, 素材, ひみつ]
 
 {{fig:cb-hu-cold}}
 
+- なぜ水分で弱くなるのかをさかのぼると、紙のでき方に行きつく。紙の強さのほとんどは、繊維と繊維をつなぐ「水素結合」によるもので、水素結合は水にふれるとほどけてしまう（富士フイルムビジネスイノベーション）。のりを使わずにくっついている紙が、ぬれるとすぐ破れるのも同じわけ（→[紙とは何か](paper-basics.md)）
+
+{{fig:cb-hu-hbond}}
+
 ### みかん箱の穴は何のため？
 
 - 全農の報告（2017年）によると、青果物（野菜・くだもの）の段ボール箱は、中身を効率よく冷やすため、胴に通気の穴をあけたものが多い。手を入れて持つための手穴もある
@@ -90,6 +94,7 @@ tags: [おうちのなか, 素材, ひみつ]
 
 ## 出典
 
+- [富士フイルムビジネスイノベーション かみの基礎講座「紙に文字が書けたり、印刷できるのはなぜ？」](https://www.fujifilm.com/fb/ja/support/colorprint/howto/basic/paper-09)：「紙の強度のほとんどは「水素結合」によるもの」「水素結合は、水に触れると解消してしまいます」
 - [岐阜県産業技術センター研究報告 No.12（2018）紙の保管環境とその物性変化に基づくリスクマネジメント（第1報）（PDF）](https://www.gitec.rd.pref.gifu.lg.jp/files/reports/2017/paper_2017_14.pdf)：相対湿度80%r.h.を超えると強度が急激に低下し始め、90%r.h.を超えるとさらに急激に低下し標準状態の半分以下
 - [R. E. Popil, Effects of Moisture content on Box Compression Strength: FBA BCT Loss Factors（Georgia Tech、PDF）](https://research.gatech.edu/sites/default/files/2021-06/effects-of-moisture-content-on-box-compression-strength.pdf)：80％RHでBCTが32％低下、10ポイントのRH変化でSCTが10％変化、冷蔵食品倉庫は箱を弱くする、50％RHと23℃が基準
 - [Billerud, How does relative humidity affect packaging](https://info.billerud.com/how-does-relative-humidity-affect-packaging)：Paper for boxes is usually tested at 50% RH. But corrugated solutions often have to handle up to 90% RH

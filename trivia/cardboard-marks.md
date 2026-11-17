@@ -48,9 +48,24 @@ tags: [おうちのなか, 素材, しるし]
 
 {{fig:cb-sg-kami}}
 
+ほかの容器とくらべると、マークを法律で決められているものと、業界が自分でつけているものに分かれる（経済産業省）。ペットボトルの三角のマークは法律で決められたほう（→[三角のPETマークと「1」](pet-bottle-mark.md)）。表の「お金」は、作った会社や使った会社がリサイクルのお金を出す義務（再商品化義務）があるかどうか。ペットボトルは飲みもの・酒・特定の調味料のもの、缶は飲みもの・酒のスチール缶とアルミ缶、紙パックはアルミを使わないもの。
+
+| 容器 | マーク | お金 |
+|---|---|---|
+| ペットボトル、紙の容器 | 義務 | あり |
+| 飲みものの缶 | 義務 | なし |
+| ガラスびん | 自主 | あり |
+| 段ボール、紙パック | 自主 | なし |
+
+{{fig:cb-sg-law-table}}
+
+- 段ボールに紙を貼り合わせた箱は、重さの大きいほうで決める。紙のほうが重ければ「紙製容器包装」として紙マークの表示が必要になり、段ボールのほうが重ければ段ボールとして扱う（経済産業省）
+
+{{fig:cb-sg-weight}}
+
 ### みてみよう
 
-- 宅配で届いた箱の横を見て、矢印・グラス・かさのしるしを探してみよう。「天地無用」の文字があれば、矢印の向きと合っているか確かめる
+- 宅配で届いた箱の横を見て、矢印・グラス・かさのしるしを探してみよう。「天地無用」の文字があれば、矢印の向きと合っているか確かめる。ペットボトルのラベルの三角のマークとならべて、「法律で決められたしるし」と「業界がつけるしるし」の形のちがいもくらべてみよう
 
 {{fig:cb-sg-look}}
 
@@ -100,6 +115,8 @@ tags: [おうちのなか, 素材, しるし]
 
 ## 出典
 
+- [経済産業省「識別表示 Q&A（容器包装の識別表示）」](https://www.meti.go.jp/policy/recycle/main/admin_info/law/02/faq/faq1.html)：識別表示の義務はプラスチック製・紙製容器包装、PETボトル、スチール缶、アルミ缶。ガラス製容器・紙パック・段ボールは自主表示。段ボールと紙を貼り合わせたものは重量の大きいほうで判断
+- [環境省 環境ラベル等データベース「リサイクル・識別表示」](https://www.env.go.jp/policy/hozen/green/ecolabel/c01_03.html)：段ボールのリサイクル推進シンボルは段ボールリサイクル協議会、国際段ボール協会のシンボルに「ダンボールはリサイクル」などを併記、義務化されていない
 - [日用品物流標準化ワーキンググループ 日用品における物流標準化ガイドライン（2022年1月）（PDF）](https://www.planet-van.co.jp/pdf/research/guideline202201.pdf)：JIS Z 0150-2018 の「上」「壊れ物」「水ぬれ防止」「上積み段数制限」「上積み禁止」の意味
 - [ISO 780:2015 Packaging — Distribution packaging — Graphical symbols for handling and storage of packages](https://committee.iso.org/standard/59933.html)：graphical symbols ... to convey handling instructions、should be used only when necessary、does not include instructions specific to handling of dangerous goods
 - [文化庁 ぶんかる 言葉のQ&A「天地無用」の荷物は，どう扱うか](https://www.bunka.go.jp/prmagazine/rensai/kotoba/kotoba_008.html)：「上下を逆にしてはいけない」という意味。平成25年度 国語に関する世論調査で55.5％、「上下を気にしないでよい」29.2％
