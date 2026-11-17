@@ -30,7 +30,7 @@ Wi-Fi（ワイファイ）は、1985年にアメリカが「免許なしで使�
 
 {{fig:wf-wavelan}}
 
-- 作業部会は1990年9月に初めて集まった。NCRのビック・ヘイズが最初の議長をつとめ、「Wi-Fiの父」と呼ばれる。研究所は1991年にAT&T、のちにルーセント、アギアと持ち主が変わった
+- 作業部会は1990年9月に初めて集まり、WaveLANのチームの人が議長をつとめた（IEEEの記念碑）。その人、NCRのビック・ヘイズは、作業部会をつくるのを助け、2000年3月まで議長をつづけた。「Wi-Fiの父」と呼ばれている（IEEEコンピューター・ソサエティの紹介）。研究所は、NCRが1991年にAT&Tに買われ、1996年にルーセント、2001年にアギアと持ち主が変わった（IEEEの記念碑）
 
 {{fig:wf-hayes}}
 
@@ -170,7 +170,8 @@ Wi-Fi（ワイファイ）は、1985年にアメリカが「免許なしで使�
 - [Michael Marcus: Spread Spectrum History（ドケット81-413）](https://www.marcus-spectrum.com/page4/SSHist.html)
 - [ETHW: Milestones: WaveLAN, Precursor of Wi-Fi, 1987](https://ethw.org/Milestones:WaveLAN,_Precursor_of_Wi-Fi,_1987)
 - [Marcus Spectrum: Vic Hayes](https://marcus-spectrum.com/Blog/files/Hayes1115.html)
-- [Wikipedia: Vic Hayes](https://en.wikipedia.org/wiki/Vic_Hayes)
+- [IEEE Computer Society: Victor Hayes](https://www.computer.org/profiles/victor-hayes)
+- [Network World: Wireless living legend Vic Hayes](https://www.networkworld.com/article/723559/wireless-living-legend-vic-hayes.html)
 - [IEEE SA: The Evolution of Wi-Fi Technology and Standards](https://standards.ieee.org/uncategorized/the-evolution-of-wi-fi-technology-and-standards)
 - [CSIRO: Story of WiFi（動画の書き起こし）](https://www.csiro.au/Youtube/story-of-wifi/video-transcript)
 - [CSIROpedia: Wireless LANs](https://csiropedia.csiro.au/Wireless-LANs)

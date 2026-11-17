@@ -66,6 +66,16 @@ tags: [おうちのなか, 家電, しくみ]
 
 {{fig:rc-aeha-1987}}
 
+### 本物のモールス信号とくらべる
+
+- 電信のモールス信号も、「長い・短い」で字を表す。国際電気通信連合（ITU）の決まりでは、長い線（ツー）は短い点（トン）の3倍、同じ字の中の点と線のすき間は点1つぶん、字と字のすき間は点3つぶん、言葉と言葉のすき間は点7つぶん。モールスは1844年、柱に張った電線で最初の電文を送った（→[電柱の歴史](utility-pole-history.md)）
+
+{{fig:rc-morse-itu}}
+
+- モールス信号とソニー方式は、**光っている（音が鳴っている）長さ**で意味を分ける。NEC方式は反対に、光の長さはいつも同じで、**休みの長さ**で0と1を分ける。同じ「点滅の合図」でも、どこの長さを読むかがちがう
+
+{{fig:rc-morse-vs-nec}}
+
 ### ほかのメーカーのテレビが動かないわけ
 
 - 合図の頭にメーカーの番号があるので、ちがう番号の合図は「自分あてではない」ことになる。方式そのものがちがえば、そもそも読みとれない
@@ -141,5 +151,6 @@ tags: [おうちのなか, 家電, しくみ]
 - [Sharp GP1U28R データシート（家電製品協会 1987年7月の誤動作防止対策）](https://zh.datasheetq.com/pdf-html/62789/Sharp/5page/GP1U28R.html)
 - [赤外線リモコン送信（家製協・ソニーなどの方式）](https://www.asahi-net.or.jp/~gt3n-tnk/IR_TX1.html)
 - [Vishay: Data Formats for IR Remote Control / Disturbance Signals](https://www.vishay.com/docs/80072/disturb.pdf)
+- [ITU-R M.1677（2004年）International Morse code](https://www.itu.int/dms_pubrec/itu-r/rec/m/R-REC-M.1677-0-200405-S!!PDF-E.pdf)
 - [オーム電機 マルチリモコン 取扱説明書](https://www.ohm-electric.co.jp/pdf/manual/078072Manual.pdf)
 - [シャープ よくあるご質問：レコーダーのリモコンでテレビを操作](https://jp.sharp/support/bd/doc/f_remote.html)

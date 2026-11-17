@@ -58,7 +58,7 @@ tags: [おうちのなか, 家電, ひみつ]
 
 {{fig:rc-led-discovery}}
 
-- 1962年10月、TIは最初の発光ダイオード（LED）の製品 SNX-100 を発表した。光は890nmの近赤外線で、1個130ドルだった。2人の特許（アメリカ特許3,293,513「半導体放射ダイオード」）は1962年8月に出され、1966年12月に認められた
+- 1962年10月、TIは最初の発光ダイオード（LED）の製品 SNX-100 を発表した。光は890nmの近赤外線で、1個130ドルだった。2人の特許（アメリカ特許3,293,513「半導体放射ダイオード」）は1962年8月8日に出され、1966年12月20日に認められた。ほかの研究所の特許とぶつかり、認められるまで約4年かかった（エジソン・テック・センター）
 
 {{fig:rc-snx100}}
 
@@ -129,6 +129,6 @@ tags: [おうちのなか, 家電, ひみつ]
 - [岩崎電気 技術資料「光と色」](https://www.iwasaki.co.jp/lighting/support/tech-data/pdf/1_01.pdf)
 - [NASA Science: Infrared Waves](https://science.nasa.gov/ems/07_infraredwaves)
 - [Edison Tech Center: The First Practical LED](https://edisontechcenter.org/lighting/LED/TheFirstPracticalLED.pdf)
-- [Wikipedia: James R. Biard（特許の日付）](https://en.wikipedia.org/wiki/James_R._Biard)
+- [Google Patents: US3293513 Semiconductor radiant diode](https://patents.google.com/patent/US3293513)
 - [Vishay: TSAL6200](https://www.vishay.com/en/product/81010)
 - [USGS Mineral Commodity Summaries 2025: Gallium](https://pubs.usgs.gov/periodicals/mcs2025/mcs2025-gallium.pdf)

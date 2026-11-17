@@ -16,9 +16,13 @@ tags: [おうちのなか, 家電, なにでできてる]
 
 {{fig:rc-rubber-sheet}}
 
-- ボタンの裏のまん中には、ゴムに炭を混ぜた「カーボンピル」（ピルは「つぶ」の意味）や、金のつぶがつけてある。炭の粉が混ざると、ゴムでも電気が通る
+- ボタンの裏のまん中には、電気を通すつぶ（ピル）がついている。つぶは炭か金でできている（キーパッドメーカーのネルソン・ミラー）。炭のつぶ「カーボンピル」は、炭の粒とシリコーンゴムを混ぜて先に小さな形にしておき、最後にボタンを型でつくるときに裏へ一体にくっつける。炭は電気が通るだけの量を入れ、ゴムは粒をつなぎとめる役（回路基板メーカーのエペック）
 
 {{fig:rc-carbon-pill}}
+
+- ゴムに炭の粉を混ぜるのは、タイヤも同じ。ただしタイヤのすすの粉（カーボンブラック）は電気のためではなく、すりへりにくくするため（→[タイヤはなぜ黒いのか](rubber-tire-black.md)）。同じ「ゴム＋炭」でも、ねらいがちがう
+
+{{fig:rc-carbon-tire}}
 
 - 基板には、くしの歯を2つかみ合わせたような2本の線が印刷してある。ドイツのゴムボタンメーカーN&Hテクノロジーの設計資料では、線の太さ0.3mm・すき間0.3mmの「くし形」で試験している。カーボンピルが下りると、2本の線が橋わたしされて電気が流れる
 
@@ -34,9 +38,13 @@ tags: [おうちのなか, 家電, なにでできてる]
 
 {{fig:rc-dome-snap}}
 
-- この手ごたえの強さを「スナップ率」という。押すのに一番力がいる所（F1）と、つぶれた直後（F2）の差の割合で、40〜60%がすすめられている。40%より小さいと手ごたえはなくなるが長もちし、大きすぎるともどる力が弱くなってボタンが引っかかりやすい
+- この手ごたえの強さを「スナップ率」という。押すのに一番力がいる所の力（F1）から、つぶれて接点がふれる所の力（F2）を引き、F1で割った割合。イギリスのダイヤモンドHMIの設計資料は40〜60%くらいを目安にし、N&Hテクノロジーの資料は50±10%をふつうとしている
 
 {{fig:rc-snap-graph}}
+
+- 目安より小さくすると、手ごたえを少しあきらめるかわりに長もちする（ダイヤモンドHMI）。大きいほど手ごたえは強いが、指をはなしたあとにもどる力（F3）が弱くなり、ボタンが引っかかることがある（N&Hテクノロジー）
+
+{{fig:rc-snap-tradeoff}}
 
 | 数字で見るゴムのボタン（N&Hテクノロジーの資料） | 数字 |
 |---|---|
@@ -126,7 +134,9 @@ tags: [おうちのなか, 家電, なにでできてる]
 
 - [サンアロー化成 導電性シリコーンスイッチ（イプロス）](https://mono.ipros.com/product/detail/2000156505)
 - [N&H Technology: Design Guide Silicone Rubber Keypad](https://www.nh-technology.de/download/Design-Guide-Silicone-Rubber-Keypad.pdf)
-- [Wikipedia: Silicone rubber keypad（カーボンピル・スナップ率）](https://en.wikipedia.org/wiki/Silicone_rubber_keypad)
+- [Diamond HMI: Rubber Keypad Design Guide 2025（スナップ率の目安）](https://www.diamondhmi.co.uk/wp-content/uploads/2025/10/Rubber-keypad-design-guide-2025.pdf)
+- [Epec: Conductive & Non-Conductive Rubber Keypad Comparison（カーボンピルの作り方）](https://www.epectec.com/articles/conductive-and-non-conductive-rubber-keypad-comparison.html)
+- [Nelson-Miller: Exploring the Components of a Silicone Rubber Keypad（炭か金のつぶ）](https://nelson-miller.com/exploring-the-components-of-a-silicone-rubber-keypad)
 - [NEC µPD6121/6122 データシート（写し）](https://datasheets.ibselectronics.com/UPD6121G-001-NEC-datasheet-105117.pdf)
 - [Philips SAA3004 データシート（写し）](https://www.eit.lth.se/fileadmin/eit/courses/datablad/Periphery/Other/saa3004.pdf)
 - [ソニー 電池のQ&A](https://www.sony.jp/battery/qanda/index.html)
