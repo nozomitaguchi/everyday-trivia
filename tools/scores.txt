@@ -1,5 +1,5 @@
 # 仕上げの自己採点の記録（WRITING.md「仕上げの自己採点」）。1行に「<id> D<1〜4> O<1〜4> <日付> [noword]」。
 # noword は、名前の由来を確かめられる資料がなく「ことば」のネタを立てないと決めたもの。
-traffic-light D4 O3 2026-11-16
+traffic-light D4 O4 2026-11-17
 melamine-cup D4 O4 2026-11-17
 digestion D4 O4 2026-11-17

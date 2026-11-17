@@ -18,7 +18,7 @@ tags: [まちのなか, 道路, 歴史]
 
 ### 鉄道の信号を道路に（1868年 ロンドン）
 
-- 当時のロンドンの通りは馬車でいっぱいで、道を渡るのは危なかった。議事堂前のにぎやかな通りを渡る危なさは、国会の委員会でも取り上げられていた。そこで1868年12月、鉄道の仕事をしていたジョン・ピーク・ナイトの考えた信号が、ウェストミンスター橋の近く、国会議事堂の前の交差点に立った
+- 当時のロンドンの通りは馬車でいっぱいで、道を渡るのは危なかった。議事堂前のにぎやかな通りを渡る危なさは、国会の委員会でも取り上げられていた。そこで1868年12月、鉄道の信号のしくみを道路に持ちこんだノッティンガムの技術者ジョン・ピーク・ナイトの信号が、国会議事堂の前、グレート・ジョージ通りとブリッジ通りの交差点に立った。12月9日の新聞タイムズが「議事堂の前の交差点に新しくついた」と伝えている
 
 {{fig:knight-westminster}}
 
@@ -26,7 +26,7 @@ tags: [まちのなか, 道路, 歴史]
 
 {{fig:knight-arm-night}}
 
-- 1か月もたたない1869年1月、ガスがもれて明かりが爆発し、動かしていた警察官が大やけどをした。信号は取りやめになり、また警察官が手で馬車と歩行者を通す方法に戻った。イギリスで信号が再び使われたのは1929年
+- 1か月もたたない1869年1月、ガスがもれて明かりが爆発し、動かしていた警察官が大やけどをした。信号は取りやめになり、また警察官が手で馬車と歩行者を通す方法に戻った。イギリスで信号が広まるのは、アメリカで生まれた電気の信号が入ってきた1920年代になってから
 
 {{fig:knight-gas-signal}}
 
@@ -132,7 +132,8 @@ tags: [まちのなか, 道路, 歴史]
 ## 出典
 
 - [Smithsonian Magazine: Chaotic Traffic From Horse-Drawn Carriages Inspired the World's First Traffic Lights](https://www.smithsonianmag.com/smart-news/chaotic-traffic-from-horse-drawn-carriages-inspired-the-worlds-first-traffic-lights-180985558)
-- [Wikipedia: J. P. Knight（1868年12月の設置場所、1929年の再導入）](https://en.wikipedia.org/wiki/J._P._Knight)
+- [ITV News: 150 years since the world's first traffic light in London（1868年12月9日、グレート・ジョージ通りとブリッジ通りの交差点、ノッティンガムの技術者ナイト）](https://itv.com/news/london/2018-12-10/150-years-since-the-worlds-first-traffic-light-in-london)
+- [Engelsberg Ideas: How the traffic light changed the world（設置から3週間で爆発）](https://engelsbergideas.com/essays/how-the-traffic-light-changed-the-world/)
 - [ianVisits: 150th anniversary of the first traffic lights（議会の委員会、爆発の日付）](https://www.ianvisits.co.uk/blog/2018/12/09/150th-anniversary-of-the-first-traffic-lights/)
 - [KSL: Utah inventions, the world's 1st electric traffic light（レスター・ワイヤー）](https://www.ksl.com/article/35930882/utah-inventions-the-worlds-1st-electric-traffic-light)
 - [Cleveland Police Museum: Early Electric Traffic Signals（1914年8月5日、ジェームズ・ホッジ）](https://www.clevelandpolicemuseum.org/historical/early-electric-traffic-signals/)
