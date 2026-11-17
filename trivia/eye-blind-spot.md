@@ -1,26 +1,26 @@
 ---
-title: だれの目にも見えない場所「盲点」がある、なぜ気づかないのか（1660年のマリオットの紙2まいの実験、タコの目には盲点がない）
+title: だれの目にも見えない場所「盲点」がある、なぜ気づかないのか（1668年のマリオットの紙2まいの実験、タコの目には盲点がない）
 kidtitle: めには みえない ところが あるって ほんとう？
 tags: [からだ, 目, 光]
 ---
 
 ## 見るとわかること
 
-目の奥の網膜には、光を感じる細胞（視細胞）が1つもない場所がある。神経と血管がたばになって目玉から出ていく「視神経乳頭（ししんけいにゅうとう）」で、ここに映ったものは見えない。これが「盲点（もうてん）」。だれの目にもあり、見ている点から耳がわに約15度ずれたところにある。ふだん気づかないのは、もう片方の目がおぎない、脳がまわりの色で穴をうめているから。1660年、フランスの学者エドム・マリオットが見つけた。
+目の奥の網膜には、光を感じる細胞（視細胞）が1つもない場所がある。神経と血管がたばになって目玉から出ていく「視神経乳頭（ししんけいにゅうとう）」で、ここに映ったものは見えない。これが「盲点（もうてん）」。だれの目にもあり、見ている点から耳がわに15〜20度ほどずれたところにある。ふだん気づかないのは、もう片方の目がおぎない、脳がまわりの色で穴をうめているから。1668年、フランスの学者エドム・マリオットが発表した。
 
 ## なぜそうなっているか
 
 ### 盲点ができるわけ
 
-- 視細胞につながった神経の線維は、網膜の表がわ（光が来るがわ）を通って1か所に集まり、たばになって目玉の後ろへぬけていく。そのぬけ口が視神経乳頭。ここには視細胞（桿体も錐体も）がないので、光が当たっても感じない
+- 視細胞につながった神経の線維は、網膜の表がわ（光が来るがわ）を通って1か所に集まり、たばになって目玉の後ろへぬけていく。そのぬけ口が視神経乳頭。ここには視細胞（桿体も錐体も。→[目のしくみ](eye-basics.md)）がないので、光が当たっても感じない
 
 {{fig:bs-disc}}
 
-- 視神経乳頭は直径約1.5mmの楕円。見えない範囲を空で言うと、満月がおよそ9個並ぶくらいの広さになる
+- 視神経乳頭は直径約1.5mmの楕円。網膜に栄養を運ぶ血管も、ここから目玉に出入りしている（網膜に血管が多いことは、写真の[赤目](photo-red-eye.md)にも出てくる）。見えない範囲を空で言うと、満月がおよそ9個並ぶくらいの広さになる
 
 {{fig:bs-size}}
 
-- 盲点は、見ている点から耳がわへ約12〜15度、少し下のところにある。右目の盲点は右がわ、左目の盲点は左がわ
+- 盲点は、見ている点から耳がわへ約15〜20度のところにある。右目の盲点は右がわ、左目の盲点は左がわ。広さは横に約5〜7度、縦に約7.5〜10度で、少し縦長。2023年にドイツなどの研究チームが盲点のふちを細かく測ると、高さの位置は人によってずれていて、水平の線よりずっと下まで広がっている人もいた
 
 {{fig:bs-where}}
 
@@ -34,15 +34,15 @@ tags: [からだ, 目, 光]
 
 {{fig:bs-fill}}
 
-### 1660年、マリオットの紙2まいの実験
+### 1668年、マリオットの紙2まいの実験
 
-- フランスの学者エドム・マリオットは1660年に盲点を見つけ、1668年に「視覚についての新しい発見」として発表した。イギリスの王立協会の雑誌にのった報告では、暗いかべの目の高さに小さな丸い紙をはり、その右へ約2フィート（約60cm）、少し低いところに2まい目の紙をはった。左目を閉じ、右目で1まい目を見つめたまま少しずつ後ろへ下がると、約10フィート（約3m）で「2まい目の紙が完全に消えた」。マリオットは、この実験を王の図書館で学者たちに見せた。結果は、パリとロンドンの学者たちがたしかめた
+- フランスの学者エドム・マリオットは、1668年に「視覚についての新しい発見」として盲点を発表した。これがマリオットの最初の本になった。イギリスの王立協会の雑誌にのった報告では、暗いかべの目の高さに小さな丸い紙をはり、その右へ約2フィート（約60cm）、少し低いところに2まい目の紙をはった。左目を閉じ、右目で1まい目を見つめたまま少しずつ後ろへ下がると、約10フィート（約3m）で「2まい目の紙が完全に消えた」。マリオットは、この実験を王の図書館で学者たちに見せた。結果は、パリとロンドンの学者たちがたしかめた
 
 {{fig:bs-mariotte}}
 
-- フランス王ルイ14世の宮廷で、この実験を見せた、とも伝えられる。ただし、当時の報告には「王の図書館」とあるだけで、王が見ていたとは書かれていない
+- ところが、マリオットはこの発見におどろいて、まちがった結論も出してしまった。網膜で像を見るという、それまでの正しい考えのほうをすてて、ものを見ているのは網膜の後ろにある「脈絡膜（みゃくらくまく）」だ、と考えるようになったのだ。フランスの解剖学者ジャン・ペケがこれに反論し、言い合いはマリオットが死ぬまで続いた。正しい実験から、まちがった説明が生まれることもある
 
-{{fig:bs-court}}
+{{fig:bs-choroid}}
 
 ### タコの目には盲点がない
 
@@ -108,10 +108,11 @@ tags: [からだ, 目, 光]
 
 - [Britannica「blind spot」](https://www.britannica.com/science/blind-spot)：「There are no photoreceptors (i.e., rods or cones) in the optic disk」、直径約1.5mm、両目の見える範囲が重なる、片目でも脳が「fill in」する
 - [東京大学「見えないものを見る」（UTokyo FOCUS）](https://www.u-tokyo.ac.jp/focus/ja/articles/a_00394.html)：盲点は血管と視神経の通り道で、視細胞が存在しない
-- [Wikipedia「Blind spot (vision)」](https://en.wikipedia.org/wiki/Blind_spot_(vision))：耳がわへ約12〜15度・1.5度下、高さ約7.5度・幅約5.5度、ルイ14世の宮廷の話、頭足類は視神経が後ろから視細胞に近づくので網膜に切れ目がない
+- [Meermeier ほか「Fine-scale measurement of the blind spot borders」Vision Research 211, 108208（2023）](https://www.uni-muenster.de/imperia/md/content/psyifp/ae_lappe/meermeier_2023.pdf)：「Located approximately 15 to 20 degrees in the temporal periphery」、横5〜7度・縦7.5〜10度、高さの位置は人によって水平線の1.53度上から9.64度下まで
 - [Scientific American「Mind the Gap」](https://www.scientificamerican.com/article/mind-the-gap/)：満月およそ9個分、背景の色で「filled in」
-- [Encyclopedia.com「Mariotte, Edme」](https://www.encyclopedia.com/people/science-and-technology/physics-biographies/edme-mariotte)：「Nouvelle découverte touchant la veüe」1668年、パリとロンドンの同僚がたしかめた
-- [Wikipedia「Edme Mariotte」](https://en.wikipedia.org/wiki/Edme_Mariotte)：1660年に盲点を発見
+- [Encyclopedia.com「Mariotte, Edme」](https://www.encyclopedia.com/people/science-and-technology/physics-biographies/edme-mariotte)：「Nouvelle découverte touchant la veüe」1668年が最初の著作、パリとロンドンの同僚がたしかめた、発見で網膜という正しい考えをすてて脈絡膜を見る場所とし、ペケと死ぬまで論争
+- [historyofmedicine.com「Edme Mariotte」（Garrison-Morton 1481.1）](https://historyofmedicine.com/author/d/edme-mariotte)：1668年『Nouvelle découverte touchant la veüe』で網膜の盲点を発見
+- [Linda Hall Library「Scientist of the Day: Edme Mariotte」](https://www.lindahall.org/about/news/scientist-of-the-day/edme-mariotte)：かべに紙の丸を2つ、1つめの右へ約2フィート・少し下、左目をかくして下がると右の丸が消える
 - [Philosophical Transactions 1668「A New Discovery Touching Vision」（OCR テキスト）](https://jimclifford.ca/philosophical-transactions-ocr-1665-1869/articles/jstor-101271/)：紙2まい、右目で見つめ、約2フィート横・少し下の紙、約10フィートで「the second paper totally disappear'd」、「his Majesties Library」で見せた
 - [PBS Evolution「Grand Design」](https://www.pbs.org/wgbh/evolution/change/grand/page05.html)：タコ・イカの目は「wired right-side out」で盲点がない
 - [Monash University「Blind spot」](https://ilearn.med.monash.edu/physiology/vision/blind-spot)：片目をかくして十字を見つめ、印が消える位置をさがす方法

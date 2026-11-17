@@ -71,7 +71,7 @@ tags: [からだ, 目, 光]
 
 {{fig:ey-b-rods-cones}}
 
-- 暗くなると、色を感じる錐体がはたらきにくくなり、色を感じない桿体が主役になる。だから夕方や暗い部屋では色がわかりにくい。1819年にチェコの生理学者プルキニェが、暗くなると赤いものが青いものより先に暗く見えることに気づいた（プルキニェ現象）
+- 暗くなると、色を感じる錐体がはたらきにくくなり、色を感じない桿体が主役になる。だから夕方や暗い部屋では色がわかりにくい。チェコの生理学者ヤン・プルキニェは、1825年に出した本に「夕方、昼間にいちばん明るく見えていた赤い花が、黒っぽく見えることに気づいた」と書いた。暗くなると、赤いものが青いものより先に暗く見える（プルキニェ現象）。暗い所で働く桿体が、赤い光をあまり感じないため
 
 {{fig:ey-b-purkinje}}
 
@@ -152,5 +152,6 @@ tags: [からだ, 目, 光]
 - [Spector「The Pupils」Clinical Methods 3rd ed.（NCBI Bookshelf）](https://www.ncbi.nlm.nih.gov/books/NBK381/)：大人のひとみは明るい所で2〜4mm、暗い所で4〜8mm、反対の目への光でもちぢむ（consensual response）
 - [The Irish Times「Why are the pupils in your eyes so dark?」](https://www.irishtimes.com/news/health/why-are-the-pupils-in-your-eyes-so-dark-1.507827)：入った光の大部分が目の中で吸収され、もどる光がわずか
 - [Lancaster University「Cones and rods」](https://www.lancaster.ac.uk/fas/psych/glossary/visual_acuity/cones_and_rods)：桿体約1億2000万、錐体約600万〜700万、3種類の錐体
-- [Britannica「Purkinje effect」](https://www.britannica.com/topic/Purkinje-effect)：暗くなると赤いものが同じ明るさの青いものより早く暗く見える／[Wikipedia「Purkinje effect」](https://en.wikipedia.org/wiki/Purkinje_effect)：1819年プルキニェ、暗くなると桿体が主役に
+- [Britannica「Purkinje effect」](https://www.britannica.com/topic/Purkinje-effect)：暗くなると赤いものが同じ明るさの青いものより早く暗く見える
+- [LITFL「Jan Evangelista Purkinje」](https://litfl.com/jan-evangelista-purkinje/)：1825年の『Beobachtungen und Versuche zur Physiologie der Sinne』（Neue Beiträge zur Kenntniss des Sehens in subjectiver Hinsicht）の110ページ「Abends bemerkte ich, daß die rothen Blumen, die ich bei Tage am hellsten gesehen hatte, nun schwärzer erschienen」、明るい所では錐体、暗い所では桿体が主役になり、感じやすい色が青緑のほうへずれる
 - [American Academy of Ophthalmology「Is it true that we are born with our eyeballs already full grown?」](https://aao.org/eye-health/ask-ophthalmologist-q/are-eyes-fully-grown-at-birth)：新生児約16.5mm、大人約24mm、生後2年と思春期にのびる
