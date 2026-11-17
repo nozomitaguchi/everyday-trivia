@@ -12,7 +12,7 @@ tags: [いきもの, むし, アリ, そもそも]
 
 ### ハチの仲間
 
-- アリはハチ目アリ科の昆虫。恐竜がいた白亜紀に、針をもつハチの祖先から生まれたと考えられている。親戚の中では、スズメバチよりミツバチに近いとされる（→[アリの歴史](ant-history.md)）
+- アリはハチ目アリ科の昆虫。恐竜がいた白亜紀に、針をもつハチの祖先から生まれたと考えられている。親戚の中では、スズメバチやアシナガバチよりミツバチに近い。2013年、カリフォルニア大学デービス校のフィル・ウォードさんたちが、たくさんの遺伝子をくらべて、アリはミツバチとアナバチの仲間（ミツバチ上科）にいちばん近い「姉妹のグループ」だと発表した（→[アリの歴史](ant-history.md)）
 
 {{fig:ant-wasp-kin}}
 
@@ -127,4 +127,6 @@ tags: [いきもの, むし, アリ, そもそも]
 ## 出典
 
 - [ナゾロジー いきもの図鑑 アリ（ハチ目アリ科、白亜紀にハチの祖先から、体のつくり、腹柄節、触角、目、針、かぎ爪、大きさ、種数、分布、2京匹、働きアリはメス、オスの寿命）](https://nazology.kusuguru.co.jp/zukan/ikimono/ari)
+- [カリフォルニア大学デービス校（2013年10月、Current Biology、アリとミツバチは社会性のスズメバチ類より遺伝的に近い、アリはミツバチ上科の姉妹群）](https://www.ucdavis.edu/news/evolutionary-question-answered-ants-more-closely-related-bees-most-wasps)
+- [ヴュルツブルク大学（2022年9月、PNAS、アリは2京匹、炭素1200万トン、野生の鳥とけものを合わせたより多い）](https://www.uni-wuerzburg.de/en/news-and-events/news/detail/news/wie-viele-ameisen-gibt-es-eigentlich/)
 - [phys.org How many ants are on Earth? 20 quadrillion, study says（2022年、PNAS、炭素約1200万トン、野生の鳥とけものより多い）](https://phys.org/news/2022-09-ants-earth-quadrillion.html)
