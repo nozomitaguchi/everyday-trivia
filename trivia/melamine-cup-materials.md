@@ -12,7 +12,7 @@ tags: [おうちのなか, 食器, 素材]
 
 ### 3つの材料
 
-- **メラミン**：白い粉の結晶。重さの約66％が窒素という、窒素だらけの分子。6つの角がある輪（炭素と窒素が交互にならぶ）に、3本の「手」（アミノ基）がついている（Wikipedia「Melamine」）
+- **メラミン**：白い粉の結晶。分子は炭素3つ・水素6つ・窒素6つ（C₃H₆N₆）で、重さの約3分の2（66.6％）が窒素という、窒素だらけの分子（国際がん研究機関）。6つの角がある輪（炭素と窒素が交互にならぶ）に、3本の「手」（アミノ基）がついている
 
 {{fig:mc-melamine-molecule}}
 
@@ -30,7 +30,7 @@ tags: [おうちのなか, 食器, 素材]
 
 {{fig:mc-step-ammonia}}
 
-2. **アンモニア＋二酸化炭素 → 尿素**：工業用の尿素は、アンモニアと二酸化炭素から作る。世界で作る尿素の9割以上は肥料になる（Wikipedia「Urea」）
+2. **アンモニア＋二酸化炭素 → 尿素**：工業用の尿素は、アンモニアと二酸化炭素を、約177℃（450K）・200気圧で反応させて作る。まずカルバミン酸アンモニウムができ、それがすぐ分かれて尿素になる。作られる尿素の9割以上は肥料になる（ヨーク大学『Essential Chemical Industry』）
 
 {{fig:mc-step-urea}}
 
@@ -53,13 +53,17 @@ tags: [おうちのなか, 食器, 素材]
 
 {{fig:mc-nissan}}
 
+- 世界のメラミンの生産は、1970年に生産能力が約20万トン、1994年に61万トン、2007年に約120万トン、2013年に160万トンをこえた。2017年には、中国が世界の生産と輸出の約半分かそれ以上をしめていた（国際がん研究機関）
+
+{{fig:mc-world}}
+
 ### ホルムアルデヒドの、原料の原料
 
-- 天然ガス → メタノール。メタノールは、主に天然ガスから作る。そしてメタノールのいちばん大きな使い道が、ホルムアルデヒド（メタネックス社）
+- 天然ガス → メタノール。メタノールは、主に天然ガスから作る。そしてメタノールのいちばん大きな使い道が、ホルムアルデヒド（メタネックス社）。ポリ袋のポリエチレンが原油からとる「ナフサ」から始まるのとくらべると（→[ポリエチレンは石油からどう作られるか](polyethylene-how-made.md)）、メラミンの食器は、2つの材料のどちらも天然ガスがもとになっている
 
 {{fig:mc-methanol}}
 
-- メタノール → ホルムアルデヒド。メタノールの蒸気を空気中の酸素と反応させる。触媒は、銀（約650℃）か、酸化鉄とモリブデンなどをまぜたもの（300〜400℃）（Wikipedia「Formox process」）
+- メタノール → ホルムアルデヒド。メタノールの蒸気を空気中の酸素と反応させる。触媒は、銀（600〜720℃）か、鉄とモリブデンの酸化物（モリブデン酸鉄、250〜400℃、「フォルモックス法」）。いまは世界のホルムアルデヒドの約3分の2がフォルモックス法で作られ、生産量は年に5000万トン（ホルマリンとして）をこえる。いちばんの使い道は樹脂（Thrane ほかの総説、2021年）
 
 {{fig:mc-oxidize}}
 
@@ -121,15 +125,14 @@ tags: [おうちのなか, 食器, 素材]
 
 ## 出典
 
-- [Wikipedia「Melamine」](https://en.wikipedia.org/wiki/Melamine)：重さの約66％が窒素、尿素からの反応式
 - [ブリタニカ「melamine-formaldehyde resin」](https://britannica.com/technology/melamine-formaldehyde-resin)：メラミンは尿素から、ホルムアルデヒドはメタノールの気相酸化、ホルマリン
 - [Ebner ほか「Release of Melamine and Formaldehyde from Melamine-Formaldehyde Plastic Kitchenware」Molecules 25(16), 2020](https://www.mdpi.com/1420-3049/25/16/3629/htm)：充填材のセルロース、メチロール化と2種類の橋、立体の網の目
 - [米国特許 US2310004（Widmer・Fisch、チバ社、スイス優先日1935年9月28日）](https://patents.google.com/patent/US2310004)：メラミン樹脂とセルロース充填材の成形材料
 - [国連気候技術センター（CTCN）「Ammonia」](https://www.ctc-n.org/technologies/ammonia)：窒素は空気から、水素は天然ガスの水蒸気改質、77％
-- [Wikipedia「Urea」](https://en.wikipedia.org/wiki/Urea)：工業用の尿素はアンモニアと二酸化炭素から、9割以上が肥料
+- [ヨーク大学 Centre for Industry Education Collaboration『The Essential Chemical Industry』「Urea」](https://essentialchemicalindustry.org/chemicals/urea.html)：アンモニアと二酸化炭素を450K・200atmで、カルバミン酸アンモニウムを経る、9割以上が肥料、メラミンの原料
 - [米国特許 US5731437「Process for the preparation of melamine」](https://patents.google.com/patent/US5731437)：390〜410℃、強い吸熱反応、高圧法と低圧法の圧力
-- [IARC Monographs 119「Melamine」](https://publications.iarc.who.int/_publications/media/download/5718/bfa29f9c5a92256f219cda293fc20e3c5dd4d3cd.pdf)：1960年ごろまではジシアンジアミドからだけ、いまはほぼ尿素から
+- [IARC Monographs 119「Melamine」](https://publications.iarc.who.int/_publications/media/download/5718/bfa29f9c5a92256f219cda293fc20e3c5dd4d3cd.pdf)：分子式 C3H6N6、分子量126.12、窒素が重さの約66.6％、1960年ごろまではジシアンジアミドからだけ、いまはほぼ尿素から、生産量の移りかわりと中国の割合
 - [日産化学「メラミン生産停止による化学品事業の構造改善について」（2021年8月10日）](https://www2.jpx.co.jp/disc/40210/140120210810482680.pdf)：富山工場で1964年から、2022年6月に停止、理由
 - [Methanex「Methanol FAQ」（2017年）](https://www.methanex.com/sites/default/files/news/media-resources/MX_Methanol_FAQ_2017.pdf)：メタノールは主に天然ガスから、最大の用途はホルムアルデヒド
-- [Wikipedia「Formox process」](https://en.wikipedia.org/wiki/Formox_process)：銀触媒（約650℃）と酸化鉄・モリブデン触媒（300〜400℃）
+- [Thrane ほか「A Review and Experimental Revisit of Alternative Catalysts for Selective Oxidation of Methanol to Formaldehyde」Catalysts 11(11), 1329, 2021](https://www.mdpi.com/2073-4344/11/11/1329)：銀触媒法600〜720℃、フォルモックス法250〜400℃・モリブデン酸鉄、フォルモックス法が約3分の2、年5000万トン以上、おもな用途は樹脂
 - [関西合成樹脂工業「よくあるご質問」](https://www.e-mannen.co.jp/faq/index.html)：三次成形で透明のメラミン樹脂（グレーズ）
