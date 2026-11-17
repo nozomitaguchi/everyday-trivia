@@ -1,8 +1,5 @@
 # 作業中の「もの」（自動の育てる作業が、ぶつからないように使う）
 # 1行に「<id> <開始したUTC時刻>」。3時間以上前の行は無視してよい。
-cardboard 2026-11-03T05:48Z
-cardboard 2026-11-03T10:48Z
-cardboard 2026-11-03T15:49Z
 crosswalk 2026-11-03T16:48Z
 pill-bug 2026-11-03T18:50Z
 tunnel 2026-11-03T20:50Z
@@ -22,3 +19,4 @@ cold 2026-11-14T06:49Z
 photo 2026-11-14T11:49Z
 elevator 2026-11-14T14:49Z
 emergency-exit 2026-11-16T19:49Z
+cardboard 2026-11-17T15:49Z
