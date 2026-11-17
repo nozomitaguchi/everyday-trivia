@@ -70,7 +70,7 @@ tags: [からだ, うんち, 歴史]
 
 ### うんちを見る道具
 
-- 1997年、イギリスのルイスとヒートンが、うんちのかたちを7つに分けた「ブリストル便形状スケール」を発表した（→[うんちのかたちでわかること](poop-shapes.md)）
+- 1992年、イギリスのブリストルでヒートンたちが、約1900人にうんちの時刻とかたちを記録してもらった。1997年にはルイスとヒートンが、うんちのかたちを7つに分けた「ブリストル便形状スケール」で、かたちが「おなかを通る時間」をいちばんよく映すことを、目じるしのつぶを使って確かめた（→[うんちのかたちでわかること](poop-shapes.md)）
 
 {{fig:pp-hist-bristol}}
 
@@ -98,7 +98,7 @@ tags: [からだ, うんち, 歴史]
 | 1885 | エシェリヒ | 赤ちゃんのうんちから大腸菌を報告した |
 | 1930・1935 | 代田稔 | 乳酸菌を強くする培養、ヤクルト |
 | 1969 | ヒントンたち | 目じるしのつぶで、おなかを通る時間をはかった |
-| 1997 | ルイスとヒートン | うんちのかたちの7タイプ |
+| 1992・1997 | ヒートンたち | うんちのかたちの7タイプが、通る時間を映すと確かめた |
 | 2021 | アスニカールたち | 青いマフィンで、通る時間と細菌の関係を調べた |
 
 {{fig:pp-hist-people}}
@@ -153,7 +153,8 @@ tags: [からだ, うんち, 歴史]
 - [Linda Hall Library: Scientist of the Day - William Beaumont（1822年6月6日マキノー砦、散弾銃、ろう孔、ひもにつけた牛肉、塩酸ににた酸、食べた量に合わせて出る、お酒と怒り、1833年の本、62の実験と51の結論）](https://lindahall.org/about/news/scientist-of-the-day/william-beaumont)
 - [Nature Reviews Microbiology（2007年、1885年エシェリヒが赤ちゃんのうんちから bacterium coli commune、赤ちゃんの死亡を減らす）](https://www.nature.com/nrmicro/journal/v5/n12/full/nrmicro1810.html)
 - [日本栄養士会 EXPO2025 ヤクルト（1930年に強化培養に成功、1935年発売、予防医学、乳酸菌 シロタ株）](https://dietitian.or.jp/expo2025/japan_nutrition_yakults/)
-- [Wikipedia: Bristol stool scale（1997年、ルイスとヒートン）](https://en.wikipedia.org/wiki/Bristol_stool_scale)
+- [Lewis SJ, Heaton KW. Scand J Gastroenterol 1997;32(9):920-4（7段階の表、66人、目じるしのつぶ、通過時間ともっとも強く結びつくのはかたち）](https://scilit.com/publications/c4d8df8578a62bd8d59484b2646e9489)
+- [Heaton KW ほか. Gut 1992;33:818-24（東ブリストルの男性838人・女性1059人の排便の記録）](https://data.zhenzhi.com/details/1/1002606833)
 - [国立成育医療研究センター（2012年から母子健康手帳に便色カード）（PDF）](https://www.ncchd.go.jp/center/information/kaihatsu/pdf/2019/2019E-3.pdf)
 - [ScienceDaily（2016年、センダーさんたち、細菌40兆個弱）](https://www.sciencedaily.com/releases/2016/01/160128132026.htm)
 - [コトバンク 山脇東洋（日本大百科全書：五臓六腑説に疑い、カワウソを自ら解剖、1754年京都で官許を得て解剖、1759年『蔵志』は日本で公刊された最初の人体解剖記録）](https://kotobank.jp/word/%E5%B1%B1%E8%84%87%E6%9D%B1%E6%B4%8B)

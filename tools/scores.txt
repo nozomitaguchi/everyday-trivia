@@ -2,3 +2,4 @@
 # noword は、名前の由来を確かめられる資料がなく「ことば」のネタを立てないと決めたもの。
 traffic-light D4 O3 2026-11-16
 melamine-cup D4 O4 2026-11-17
+digestion D4 O4 2026-11-17
