@@ -226,6 +226,7 @@ tags: [ジャンル, ...]
 - しくみ: [冬のエアコンはなぜ温かいのか、暖房が急に止まるのは「霜取り」（室外機から湯気が出るわけ）](trivia/air-conditioner-heating-defrost.md)
 - なにでできてる: [エアコンは何でできているか、銅の管とアルミのうすい板、そして冷媒の移り変わり（毒のガス→フロン→オゾン層→R32）](trivia/air-conditioner-refrigerant.md)
 - れきし: [エアコンは「印刷所の紙のしわ」を直すために生まれた、室外機を分けたのは日本（氷で冷やした時代、霧のホームの話、映画館の夏）](trivia/air-conditioner-history.md)
+- ことば: [「エアコン」は「空気を整えるもの」、名づけたのは糸の湿り気を整えていた繊維工場の人、日本では「クーラー」から「エアコン」へ](trivia/air-conditioner-words.md)
 - ひみつ: [エアコンのホースから水が出るのはなぜ（結露・除湿の2つのやり方・「ポコポコ」という音）](trivia/air-conditioner-drain-water.md)
 - しるし: [エアコンの「6〜9畳」は何の数字か（小さい方は木造・大きい方は鉄筋、もとは1965年ごろの断熱のない家）](trivia/air-conditioner-tatami-size.md)
 
