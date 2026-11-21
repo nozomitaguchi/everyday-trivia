@@ -220,6 +220,9 @@ tags: [ジャンル, ...]
 - ひみつ: [鏡は何色？ 合わせ鏡のトンネルの奥はなぜ暗く緑になるのか（犯人はガラスの鉄分）](trivia/mirror-green.md)
 - かたち: [道のカーブミラーはなぜふくらんでいて、なぜオレンジなのか](trivia/mirror-curve.md)
 
+#### トイレ {toilet}
+- しくみ: [トイレは、流したあともどうして少し水が残るのか（便器の奥の曲がった道「トラップ」、においを止める水、流したあと1〜2分の補給）](trivia/toilet-water.md)
+
 #### エアコン {air-conditioner}
 - きほん: [エアコンとは何か、室内機・室外機・2本の管とホース、冷房も暖房も「熱を運ぶ」機械（そもそも）](trivia/air-conditioner-basics.md)
 - しくみ: [エアコンはなぜ冷えるのか、室外機はなぜ必要なのか（外のほうが暑くても熱を捨てられるわけ）](trivia/air-conditioner-and-outdoor-unit.md)
