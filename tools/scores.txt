@@ -14,3 +14,4 @@ voice D3 O3 2026-11-21
 ice D3 O3 2026-11-21
 cicada D3 O3 2026-11-22
 tree D3 O3 2026-11-22
+goosebumps D3 O3 2026-11-22
