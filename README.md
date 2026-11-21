@@ -437,6 +437,7 @@ tags: [ジャンル, ...]
 
 #### くるま {car}
 - きほん: [車のエンジンはどうやって動くのか](trivia/car-engine-basics.md)
+- しくみ: [アクセルを踏むと、どうやってタイヤまで力が届くのか（ペダル → エンジン → 変速機 → デフ → タイヤ → 道路のリレー）](trivia/car-drivetrain.md)
 - しくみ: [うるさい車やバイクは何がうるさいのか](trivia/loud-cars-and-motorcycles.md)
 - しくみ: [車のキーのSTART位置と抜ける位置](trivia/car-ignition-key.md)
 - れきし: [車は「大砲を引く蒸気の荷車」から始まった（馬の時代、1886年の特許、ベルタの100キロ、手回しハンドルの危なさ、日本の1898年）](trivia/car-history.md)
