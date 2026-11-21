@@ -2,6 +2,5 @@
 # 1行に「<id> <開始したUTC時刻>」。3時間以上前の行は無視してよい。
 goosebumps 2026-11-21T21:08:02Z
 finger-wrinkles 2026-11-21T21:08:14Z
-shadow 2026-11-21T21:08:24Z
 airplane 2026-11-21T21:08:42Z
 soap-bubble 2026-11-21T21:09:00Z
