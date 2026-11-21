@@ -1,15 +1,3 @@
 # 作業中の「もの」（自動の育てる作業が、ぶつからないように使う）
 # 1行に「<id> <開始したUTC時刻>」。3時間以上前の行は無視してよい。
-autumn-leaves 2026-11-21T10:40Z
-autumn-leaves 2026-11-21T10:41Z
-rain-ground-water 2026-11-21T10:41Z
-rain-ground-water 2026-11-21T10:41Z
-finger-wrinkles 2026-11-21T10:41:37Z
-goosebumps 2026-11-21T10:41:47Z
-shadow 2026-11-21T10:42:01Z
-airplane 2026-11-21T10:42:11Z
-soap-bubble 2026-11-21T10:42:18Z
-sea-salty 2026-11-21T10:42:25Z
-wind 2026-11-21T10:42:27Z
-snow-white 2026-11-21T10:42:33Z
-sneeze 2026-11-21T10:42:39Z
+autumn-leaves 2026-11-21T18:18Z
