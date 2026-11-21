@@ -1,23 +1,4 @@
 # 作業中の「もの」（自動の育てる作業が、ぶつからないように使う）
 # 1行に「<id> <開始したUTC時刻>」。3時間以上前の行は無視してよい。
-crosswalk 2026-11-03T16:48Z
-pill-bug 2026-11-03T18:50Z
-tunnel 2026-11-03T20:50Z
-station 2026-11-03T23:48Z
-crosswalk 2026-11-09T18:50Z
-power-lines 2026-11-10T00:49Z
-power-lines 2026-11-10T04:51Z
-power-lines 2026-11-10T09:48Z
-outlet 2026-11-10T20:49Z
-emergency-exit 2026-11-10T23:51Z
-emergency-exit 2026-11-11T07:00Z
-outlet 2026-11-13T16:17Z
-outlet 2026-11-13T20:49Z
-photo 2026-11-14T02:49Z
-cold 2026-11-14T06:49Z
-photo 2026-11-14T11:49Z
-elevator 2026-11-14T14:49Z
-emergency-exit 2026-11-16T19:49Z
 key 2026-11-21T09:14Z
-winter-trees 2026-11-21T09:21Z
 winter-trees 2026-11-21T09:21Z
