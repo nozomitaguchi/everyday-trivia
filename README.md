@@ -461,6 +461,9 @@ tags: [ジャンル, ...]
 - しるし: [車のうしろのランプはなぜ赤・白・オレンジに分かれているのか](trivia/car-lamps.md)
 - しるし: [ナンバープレートの色とひらがな](trivia/car-number-plate-colors.md)
 
+#### ひこうき {airplane}
+- しくみ: [飛行機は、あんなに重いのに、どうして空を飛べるのか（つばさが空気を下へ曲げ、上は圧力が低く下は高くなる。「上と下の空気が同時に後ろに着く」はまちがい）](trivia/airplane-lift.md)
+
 ### いきもの {living-things}
 
 #### ダンゴムシ {pill-bug}
