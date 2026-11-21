@@ -11,3 +11,4 @@ futon D4 O4 2026-11-18
 air-conditioner D4 O4 2026-11-18
 yawn D3 O3 2026-11-21
 voice D3 O3 2026-11-21
+ice D3 O3 2026-11-21
