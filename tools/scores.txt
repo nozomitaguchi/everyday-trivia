@@ -24,3 +24,4 @@ mikan D3 O3 2026-11-23
 static-electricity D3 O3 2026-11-23
 washing-machine D3 O3 2026-11-23
 egg D3 O3 2026-11-23
+fish D3 O3 2026-11-24
