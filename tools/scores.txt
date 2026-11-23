@@ -23,3 +23,4 @@ fridge D3 O3 2026-11-22
 mikan D3 O3 2026-11-23
 static-electricity D3 O3 2026-11-23
 washing-machine D3 O3 2026-11-23
+egg D3 O3 2026-11-23
