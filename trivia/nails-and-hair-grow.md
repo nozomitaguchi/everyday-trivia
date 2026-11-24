@@ -26,7 +26,7 @@ tags: [からだ, つめ, かみ]
 
 ### 35年間、自分のつめをはかったお医者さん
 
-- アメリカの医師ウィリアム・ビーンは、32歳のころから35年間、自分の左手の親指のつめに、根元の皮ふのすぐ近くで印をつけ、その印が爪床のはし（白い先との境）まで進むのに何日かかるかを数え続けた
+- アメリカの医師ウィリアム・ビーンは、32歳のころから35年間、自分の左手の親指のつめに、根元の皮ふのすぐ近くで印をつけ、その印が爪床（→[つめのつくり](nails-hair-basics.md)）のはし（白い先との境）まで進むのに何日かかるかを数え続けた
 
 {{fig:nh-bean-mark}}
 
@@ -58,7 +58,7 @@ tags: [からだ, つめ, かみ]
 
 {{fig:nh-hair-cycle}}
 
-- 1日に50〜100本くらいの髪がぬけるのは、休止期が終わった髪。ぬけたあとの毛根から、また新しい髪が生えてくる
+- 1日に50〜100本くらいの髪がぬけるのは、休止期が終わった髪。ぬけたあとの毛根から、また新しい髪が生えてくる。休んでいる毛根を目ざめさせる合図の1つは、鳥肌を立てる小さな筋肉とつながった神経から来ることが、2020年にマウスで見つかった。寒さが長く続くと、神経が毛のもとになる細胞（幹細胞）を目ざめさせ、新しい毛が生えはじめた（→[寒いと、どうして鳥肌が立つのか](goosebumps-cold.md)）。人でも同じかは、まだわかっていない
 
 {{fig:nh-hair-shed}}
 
@@ -136,5 +136,6 @@ tags: [からだ, つめ, かみ]
 - [MSDマニュアル家庭版 脱毛症（成長期2〜6年、休止期2〜3か月、1日50〜100本）](https://www.msdmanuals.com/ja-jp/home/17-%E7%9A%AE%E8%86%9A%E3%81%AE%E7%97%85%E6%B0%97/%E6%AF%9B%E3%81%AE%E7%97%85%E6%B0%97/%E8%84%B1%E6%AF%9B%E7%97%87-%E8%84%B1%E6%AF%9B)
 - [北海道大学皮膚科 教科書PDF（頭髪約10万本、成長期約85％）](https://www.derm-hokudai.jp/wp/wp-content/uploads/2021/12/1-08.pdf)
 - [資生堂 抜け毛の話（平均約10万本）](https://www.shiseido.co.jp/sw/beautyinfo/DB009122/)
+- [Harvard Stem Cell Institute "The real reason behind goosebumps" 2020年7月20日（マウスで、交感神経が立毛筋を橋にして毛包幹細胞とつながる、長い寒さで新しい毛。論文は Shwartz Y. ほか Cell 2020）](https://www.hsci.harvard.edu/goosebumps-hair-follicle-stem-cells)
 - [Sharp RF. 1967 J Soc Cosmet Chem（気候の小さな変化では速さはほぼ変わらない）](https://library.scconline.org/v018n08/109)
 - [StatPearls: Histology, Nail（低い温度は成長をおそくする要因）](https://www.statpearls.com/ArticleLibrary/viewarticle/32684)
