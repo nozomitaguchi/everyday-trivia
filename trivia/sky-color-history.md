@@ -53,7 +53,7 @@ tags: [そらとけしき, 光, 歴史]
 
 {{fig:sky-history-card16}}
 
-- 1788年、モンブランの近くの峠（コル・デュ・ジェアン）で、白から黒まで青の濃さを細かく分けた輪の形の青さ計を使った。ジュネーブ科学史博物館は52段、ジュネーブ大学の資料は「白から濃い群青まで44段」としていて、段の数は資料で食いちがう。空とくらべて、いちばん近い番号を読む。トリノの科学アカデミーの紀要（1788〜1789年）に、しくみを発表した
+- 1788年、モンブランの近くの峠（コル・デュ・ジェアン）で、白から黒まで青の濃さを細かく分けた輪の形の青さ計を使った。ジュネーブ科学史博物館は52段、ジュネーブ大学の資料は「白から濃い群青まで44段」としていて、段の数は資料で食いちがう。空とくらべて、いちばん近い番号を読む。トリノの科学アカデミーの紀要（1788〜1789年の巻、1790年刊）に、1790年5月9日づけの報告「青さ計、つまり空の青の強さをはかる道具の説明」として、しくみを発表した
 
 {{fig:cyanometer}}
 
@@ -81,7 +81,7 @@ tags: [そらとけしき, 光, 歴史]
 
 {{fig:rayleigh-count}}
 
-- 1908年に物理学者マリアン・スモルコフスキーが、1910年にアインシュタインが（1911年とする資料もある）、気体の中で分子が「こんだり、すいたり」するゆらぎが光を散らすことを計算した。ちりや水のつぶがなくても、空気の分子だけで空は青くなるとわかった
+- 1908年に物理学者マリアン・スモルコフスキーが、1910年にアインシュタインが、気体や液体の中で分子が「こんだり、すいたり」するゆらぎが光を散らすことを計算した。分子を1つずつのつぶとしてではなく、こみぐあいのむらとして考える別の見方で、スモルコフスキーは論文の注に「これで空の青い色が説明できる」と書いた。ちりや水のつぶがなくても、空気の分子だけで空は青くなることが、別の道からもたしかめられた
 
 {{fig:einstein-fluctuation}}
 
@@ -177,6 +177,10 @@ tags: [そらとけしき, 光, 歴史]
 - [A. Giordan ほか「Le cyanomètre d'Horace-Benedict de Saussure, la mesure du bleu du ciel」（ジュネーブ大学、PDF。1787年の16段、1788年の44段とその値）](https://www.unige.ch/fapse/SSE/teachers/giordan/LDES/publi/livres/saussurehisto.pdf)
 - [Joyce Chaplin: Blues of Many Skies（London Review of Books 41巻4号、2019。フンボルトのチンボラソで46）](https://www.lrb.co.uk/the-paper/v41/n04/joyce-chaplin/blues-of-many-skies)
 - [A. v. Humboldt「Ueber zwei Versuche den Chimborazo zu besteigen」1837年（英訳、ベルン大学 デジタル版。1802年6月23日）](https://humboldt.unibe.ch/text/1837-Ueber_zwei_Versuche-07-neu/text)
+- [Accademia delle Scienze di Torino: Memorie 第1集の索引（Saussure, Description d'un cyanomètre, 9 mai 1790）](https://www.accademiadellescienze.it/media/18bdb166-4a81-4622-a43f-3b7891451e12)
+- [Newton: New Theory about Light and Colours（Philosophical Transactions 80, 1672。The Newton Project）](https://newtonproject.ox.ac.uk/view/texts/normalized/NATP00006)
+- [Smoluchowski, M.: Molekular-kinetische Theorie der Opaleszenz von Gasen im kritischen Zustande（Annalen der Physik 25, 1908、PDF）](https://www.physik.uni-augsburg.de/theo1/hanggi/Smoluchowski_1908.pdf)
+- [Einstein, A.: Theorie der Opaleszenz von homogenen Flüssigkeiten und Flüssigkeitsgemischen in der Nähe des kritischen Zustandes（Annalen der Physik 33, 1910）](https://doi.org/10.1002/andp.19103381612)
 - [Royal Institution: John Tyndall's blue sky apparatus](https://www.rigb.org/node/3139)
 - [M. Potenza ほか: The daylight blue sky and the Avogadro number（European Journal of Physics 2015、PDF）](https://air.unimi.it/retrieve/handle/2434/339120/563213/MPotenza_EuropeJournPhysics_DaylightSkyAvogadro_2015.pdf)
 - [Physics FAQ: Why is the sky blue?](https://math.ucr.edu/home/baez/physics/General/BlueSky/blue_sky.html)

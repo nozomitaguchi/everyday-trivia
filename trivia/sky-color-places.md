@@ -33,6 +33,14 @@ tags: [そらとけしき, 光, 宇宙]
 
 {{fig:places-humboldt}}
 
+- フンボルト自身の旅行記と本には、ほかの場所の値も残っている。1799年7月4日、大西洋をわたる船の上で23.5、テイデ山（大西洋のカナリア諸島の山）の頂上で41。1807年の本『植物地理学論考』では、アンデスの標高5900メートルで46だったと書いている。海の上、高い山、もっと高い山、の順に濃くなっていく
+
+{{fig:places-humboldt-three}}
+
+- 同じフンボルトの旅行記には、ソシュールの値として「シャモニーの修道院で20、モンブランの頂上で40」とも書かれていて、博物館の資料（27と39）とは数字が少しちがう。どの資料でも「高いところほど濃い青」という向きは同じ
+
+{{fig:places-numbers-differ}}
+
 - 日本でも1930年代に東京と宇都宮で空の色がはかられ、秋と冬のほうが空が青く、宇都宮の空は東京より青かった（くわしくは[空の色の歴史](sky-color-history.md)）
 
 {{fig:japan-sky-observation}}
@@ -109,6 +117,8 @@ tags: [そらとけしき, 光, 宇宙]
 - [infoclio.ch: Project #02 Cyanometer（2024。海に近い晴れた昼の空は約23）](https://www.infoclio.ch/en/project-02-cyanometer)
 - [Gizmodo: The Slightly-Less-Than-Epic Quest To Measure the Blueness Of The Sky（2015。ふつうの昼の空は約23）](https://gizmodo.com/the-slightly-less-than-epic-quest-to-measure-the-bluene-1686611005)
 - [Atlas Obscura: A Scientist Invented the Cyanometer Just to Measure the Blueness of the Sky](https://www.atlasobscura.com/articles/a-scientist-invented-the-cyanometer-just-to-measure-the-blueness-of-the-sky)
+- [Humboldt: Personal Narrative of Travels to the Equinoctial Regions（英訳1822年、Darwin Online。1799年7月4日の船の上で23.5°、テイデ山頂で41°、ソシュールのシャモニー20°・モンブラン40°）](https://darwin-online.org.uk/converted/Ancillary/BeagleLibrary/1819-29_Humboldt_A597.1.html)
+- [Humboldt & Bonpland: Essay on the Geography of Plants（1807年の英訳、シカゴ大学出版 2009、PDF。アンデス5900mで46°）](https://gsp.humboldt.edu/olm/Courses/GSP_510/Articles/Alexander_von_Humboldt,_Aime_Bonpland-Essay_on_the_Geography_of_Plants-University_Of_Chicago_Press(2009).pdf)
 - [A. v. Humboldt「Ueber zwei Versuche den Chimborazo zu besteigen」1837年（英訳、ベルン大学 デジタル版。1802年6月23日）](https://humboldt.unibe.ch/text/1837-Ueber_zwei_Versuche-07-neu/text)
 - [WebExhibits: Causes of Color（火星の空の色）](https://www.webexhibits.org/causesofcolor/14C.html)
 - [Phys.org: What makes Mars sunsets different from Earth's?（2015年5月）](https://phys.org/news/2015-05-mars-sunsets-earth.html)

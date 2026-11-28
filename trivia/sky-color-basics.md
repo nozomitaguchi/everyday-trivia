@@ -42,7 +42,7 @@ tags: [そらとけしき, 光]
 
 ### よくある誤解
 
-- 「空は海の色を映して青い」は誤り。空と海は、それぞれ別の理由で青い。空の青は、空気が光を散乱するから
+- 「空は海の色を映して青い」は誤り。空と海は、それぞれ別の理由で青い。空の青は、空気が光を散乱するから。海の青は、水が赤い光を吸いこむから
 
 {{fig:sky-not-sea}}
 
@@ -110,6 +110,7 @@ tags: [そらとけしき, 光]
 
 ## 出典
 
+- [NOAA Ocean Service: Why is the ocean blue?（海が青いのは水が赤い光を吸うから）](https://oceanservice.noaa.gov/facts/oceanblue.html)
 - [Met Office: Why are clouds white?（光の波長 青400nm・赤700nm）](https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/why-are-clouds-white)
 - [A. T. Young: Rayleigh scattering（Physics Today 1982年1月、PDF。1871年のレイリーの論文、波長の4乗に反比例）](https://aip.brightspotcdn.com/PTO.v35.i1.42_1.online.pdf)
 - [Lange, Rozanov, von Savigny: Revisiting the question "Why is the sky blue?"（Atmospheric Chemistry and Physics 23, 2023）](https://acp.copernicus.org/articles/23/14829/2023/acp-23-14829-2023.html)
