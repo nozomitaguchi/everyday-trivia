@@ -2,3 +2,4 @@
 # 1行に「<id> <開始したUTC時刻>」。3時間以上前の行は無視してよい。
 siren-doppler 2026-11-28T17:44Z
 contrail 2026-11-28T17:44Z
+summer-winter 2026-11-28T17:45Z
