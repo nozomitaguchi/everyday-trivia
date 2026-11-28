@@ -22,9 +22,13 @@ tags: [おうちのなか, 素材, 歴史]
 
 ### PETが生まれる：1941年、イギリス
 
-- 1930年代の終わり、アメリカのカロザース（デュポン）が作ったナイロンに負けない合成繊維さがしが続いていた。カロザースのチームはポリエステルでは強い繊維を作れず、ポリアミド（ナイロン）へ移っていた
+- PETより先に、アメリカのデュポンで、カロザースのチームがポリエステルの糸を作っていた。1930年4月にジュリアン・ヒルが作った最初のポリエステルは、とける温度が低く、弱かった。服の糸にはならないとされ、チームは1934年からポリアミド（のちのナイロン）に切りかえた。ポリエステルは「棚に上げられた」
 
 {{fig:pb-nylon-race}}
+
+- イギリスのウィンフィールドとディクソンは、このデュポンのポリエステルの研究を読み直し、原料の酸を、輪の形（ベンゼンの輪）をもつテレフタル酸にかえた（くさりの形は[原料の原料](pet-bottle-materials.md)）
+
+{{fig:pb-ring-acid}}
 
 - 1941年、イギリス・ランカシャー州アクリントンの研究室（キャリコ・プリンターズ協会、布に柄を印刷する会社の団体）で、レックス・ウィンフィールドと助手のジェームズ・ディクソンが、テレフタル酸とエチレングリコールから繊維になる樹脂を作った。これがPET
 
@@ -64,7 +68,7 @@ tags: [おうちのなか, 素材, 歴史]
 
 | 年 | 人・会社 | したこと |
 |---|---|---|
-| 1846年 | カイヨ（フランス） | テレビン油から酸を取り出し「テレフタル酸」と名づける |
+| 1846〜1847年 | カイヨ（フランス） | テレビン油に硝酸をはたらかせて酸を取り出し「テレフタル酸」と名づける |
 | 1941年 | ウィンフィールドとディクソン（イギリス） | テレフタル酸とエチレングリコールでPETを作る |
 | 1967〜1973年 | ワイエス（アメリカ、デュポン） | 2方向にのばしてふくらませるボトル。特許 |
 | 1977年 | キッコーマン | 日本で初めて食品（しょうゆ500ml）に使う |
@@ -154,7 +158,8 @@ tags: [おうちのなか, 素材, 歴史]
 - [環境イノベーション情報機構（EIC）「リターナブルびん」](https://www.eic.or.jp/library/gomi/shiryo/re_bottle/)：酒屋さんや集団回収で回収し「びん商」が洗って分類。ビールびんの回収は99%。一升びんは日本酒にもしょうゆにも使われる
 - [サントリー お客様センター「ビールびんは何年くらい使われていますか？」](https://www.suntory.co.jp/customer/faq/001707.html)：8年〜10年くらい
 - [伊藤園 お茶百科「緑茶飲料の歴史」](https://www.ocha.tv/history/japanese_tea_history/drink/)：1985年に10年の研究開発を経て「缶入り煎茶」。温かい缶は熱くなりすぎて飲みづらいという声
-- [John Rex Whinfield（Wikipedia 英語版）](https://en.wikipedia.org/wiki/John_Rex_Whinfield)：1930年代後半、カロザースのナイロンに対抗する合成繊維さがし
+- [Science History Institute「Nylon: A Revolution in Textiles」（A. J. Wolfe、2008）](https://www.sciencehistory.org/stories/magazine/nylon-a-revolution-in-textiles/)：1930年4月にヒルが最初のポリエステル、とける温度が低く商品にならない、1934年にポリアミドへ
+- [Plastics Technology「Tracing the History of Polymeric Materials: How Nylons & Polyesters Connected」（M. Sepe）](https://www.ptonline.com/articles/tracing-the-history-of-polymeric-materials-part-13)：ポリエステルはとける温度も強さも低く「棚に上げられた」。ウィンフィールドとディクソンはデュポンのポリエステルの研究を見直し、芳香族のテレフタル酸を使った
 - [Madehow「John Rex Whinfield」](https://www.madehow.com/inventorbios/71/John-Rex-Whinfield.html)：カロザースのチームはポリエステルを強い繊維にできず、ポリアミド研究へ移った
 - [Lancashire County Council「50 objects: Terylene」](https://old.lancashire.gov.uk/leisure-and-culture/museums/50-objects/item-details/?irn=1062)：1941年、アクリントンの研究室・ブロード・オーク捺染工場。戦争のため発表されず特許のみ。1946年ICIがフリートウッドに工場、デュポンが米国の権利を取得
 - [Science Museum Group「Prototype Terylene nightdress」](https://collection.sciencemuseumgroup.org.uk/objects/co8413759/prototype-terylene-nightdress)：1941年にウィンフィールドとディクソンがPETを発見、ICIが開発・商業化
@@ -169,4 +174,4 @@ tags: [おうちのなか, 素材, 歴史]
 - [キッコーマン広報の回答（J-CAST ニュース、2022年6月）](https://www.j-cast.com/2022/06/06438820.html?p=2)：1977年にしょうゆの容器としてペットボトルを採用、食品では日本初。『ちむどんどん』の場面への指摘とNHKの回答
 - [全国清涼飲料連合会 資料（PDF）](https://www.j-sda.or.jp/kenkyu/31taikai/pdf/sy02.pdf)：1980年代初頭のPETボトル飲料登場以来、主に散乱防止の観点から小型（1リットル未満）の販売を自主規制。1997年の容リ法施行に先立ち1996年に解除
 - [nippon.com「ペットボトルのリサイクル率は世界最高水準」](https://www.nippon.com/ja/japan-data/h00401/)：96年の自主規制撤廃で500ミリリットル飲料に広まった
-- [Terephthalic acid（Wikipedia 英語版）](https://en.wikipedia.org/wiki/Terephthalic_acid)：1846年にカイヨがテレビン油から初めて取り出した
+- [J. Wisniak「Louis Armand Victor Amedée Cailliot」（Educación Química 31(2), 2020、PDF）](https://www.scielo.org.mx/pdf/eq/v31n2/0187-893X-eq-31-02-102.pdf)：Comptes Rendus 23（1846）と Annales de Chimie et Physique 21（1847）。テレビン油に硝酸をはたらかせて得た酸を「acide téréphtalique」と名づけた

@@ -32,17 +32,25 @@ kidtitle: ペットボトルの そこの かたち
 
 {{fig:pet-bottom-thick-legs}}
 
-### 花びら型の前は「丸い底＋はかま」だった
+### 花びら型の前は「べつの台」だった
 
 - 日本で清涼飲料にペットボトルを使えるようになったのは1982年（食品衛生法の改正）。日本のペットボトルは1977年のしょうゆが最初で、飲みものに使えるようになったのはその5年後（[ペットボトルの歴史](pet-bottle-history.md)）
 
 {{fig:pb-soy-to-drink}}
 
-- 初期の2リットルの炭酸ボトルは、底が半球のように丸く、そのままでは立たなかった。そこに、色のついた別の部品（ベース、ベースカップ）を接着して立たせていた。1977年のペプシの最初のPETボトルにも、別の部品のベースカップがついていた
+- 1977年に出た最初のPETの飲みものボトル（64オンス、約1.9リットルのペプシ）は、別に作ったポリエチレンの「ベースカップ」をはめて立たせていた
 
 {{fig:pb-base-cup}}
 
-- 1981年には、アメリカのコンチネンタル・グループが「半球に近い底から、中が空の足が出ている容器」を特許にしている。花びら型は、**内圧に強い丸い底に、立つための足を生やした形**と見ることができる
+- のちに、ボトルそのものに足をつけて、ベースカップをなくした。ベースカップはそのぶんお金がかかり、リサイクルのときに外して分けなければならなかったから（Plastics Technology）
+
+{{fig:pb-base-cup-why}}
+
+- 足の生えた丸い底の考えは、じつはそれより前からあった。1969年にアメリカのコンチネンタル・カン社が出願し、1971年8月10日に登録された特許（US3598270）は、半球に近い底から中が空の足が何本も出て、足の先の平らな面で立つボトル
+
+{{fig:pb-1971-legs}}
+
+- 1981年のコンチネンタル・グループの特許（US4249667）は、この形を「炭酸飲料の高い内圧にたえる底」として受けつぎ、足と足のあいだの底が、圧力で少しずつのびる（クリープ）のをおさえるくふうを足している。花びら型は、**内圧に強い丸い底に、立つための足を生やした形**と見ることができる
 
 {{fig:pet-bottom-history}}
 
@@ -102,7 +110,7 @@ kidtitle: ペットボトルの そこの かたち
 
 {{fig:pet-bottom-thick-legs}}
 
-むかしの ボトルは、そこが ボールの ように まるかったよ。たてないので、べつの だいを くっつけて いたんだ。まるい そこに あしを はやしたのが、いまの はなびらの かたちだよ。
+さいしょの ころの ボトルは、べつの だいを はめて たたせて いたよ。でも だいは よけいに おかねが かかるし、すてる ときに はずさないと いけない。だから ボトルに あしを はやしたんだ。それが いまの はなびらの かたちだよ。
 
 {{fig:pet-bottom-history}}
 
@@ -121,10 +129,10 @@ kidtitle: ペットボトルの そこの かたち
 - [山本明利「ペットボトルロケット」YPCニュース No.134（1999）](https://www2.hamajima.co.jp/~tenjin/labo/pet.htm)：炭酸飲料の製造直後の理論圧力は20℃で約4kgf/cm²、30℃で約5、50℃で約8。店頭では2〜3割減圧
 - [Google Patents US3733309A](https://patents.google.com/patent/US3733309)：約50℃で約100psigまで大きく変形しない
 - [圧力技術「耐圧ペットボトルの構造挙動と耐圧強度に関する一検討」（J-STAGE）](https://www.jstage.jst.go.jp/article/hpi/49/3/49_3_118/_article/-char/ja)：21本の破裂試験で破裂圧力は1.9〜2.3MPa
-- [Plastics Technology「No. 9 — Stretch Blow Molding」](https://www.ptonline.com/articles/no-9---stretch-blow-molding)：1977年のペプシの最初のPET飲料ボトル、別部品のベースカップ
+- [Plastics Technology「No. 9 — Stretch Blow Molding」](https://www.ptonline.com/articles/no-9---stretch-blow-molding)：1977年の最初のPET飲料ボトルは64オンスのペプシで、別に射出成形したPEのベースカップつき。のちに足を一体にしてベースカップをなくした（お金がかかり、リサイクルで分ける必要があった）
 - [現代ビジネス ペットボトルの底がへこんでいる理由](https://gendai.media/articles/-/118467)：底が平らだと内圧でふくらみ、倒れやすくなる
 - [nippon.com ペットボトルのリサイクル率は世界最高水準](https://www.nippon.com/ja/japan-data/h00401/)：1977年しょうゆ、1982年に食品衛生法の改正で清涼飲料に使用が認められた
-- [Two-liter bottle（Wikipedia の写し）](https://cavac.at/cavacopedia/Two-liter%20bottle)："Most early two-liters had a separate opaque base glued to the hemispherical bottom of the clear PET flask."
+- [Google Patents US4249667A（Continental Group、1979年出願・1981年2月10日登録）](https://patents.google.com/patent/US4249667)：炭酸飲料の高い内圧にたえる底。先行の US3598270（Continental Can、1969年出願・1971年8月10日登録）は、半球形の底から中が空の足が出て、足の先で立つ。課題は足のあいだの底のクリープ
 - [Google Patents JPH0257545A 炭酸飲料容器の底部構造（引用文献 US4249667A, The Continental Group, 1981年公開）](https://patents.google.com/patent/JPH0257545A/cg-RX-API-DMAC10.html)：US4249667A "Plastic container with a generally hemispherical bottom wall having hollow legs projecting therefrom"
 - [Plastics Technology: Ultra-Light PET Bottle Expands Range for Hot-Fill](https://www.ptonline.com/articles/ultra-light-pet-bottle-expands-range-for-hot-fill)：高温充填では、冷えたあとにできる内部の減圧に耐えるため重い容器が必要だった。減圧を吸収する底（vacuum-absorbing base）
 - [三菱重工技報 Vol.46 No.3（2009）コスト低減に貢献する三菱の無菌充填システム](https://www.mhi.com/jp/technology/review/abstract-46-3-52)：耐熱性容器を必要としない常温で充填する無菌充填技術。1995年に初号機納入

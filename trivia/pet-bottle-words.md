@@ -26,7 +26,7 @@ tags: [おうちのなか, 素材, ことば]
 
 ### 「テレ」は木、「フタル」はナフタレン
 
-- 「テレフタル酸」という名前は、1846年（論文は1847年）にフランスの化学者アメデ・カイヨが、テレビン油（テレピン油）から取り出した酸につけた。テレビン油の「テレビン」は、地中海の木テレビンノキ（Pistacia terebinthus）から。この木からとれる樹脂が、もとの「テレビン油」だった
+- 「テレフタル酸」という名前は、フランス・ストラスブール大学の医学部で化学を教えていたアメデ・カイヨがつけた。1846年（くわしい論文は1847年）、テレビン油（テレピン油）に硝酸をはたらかせて取り出した酸に「テレフタル酸と名づけたい」と書いた。テレビン油の「テレビン」は、地中海の木テレビンノキ（Pistacia terebinthus）から。この木からとれる樹脂が、もとの「テレビン油」だった
 
 {{fig:pb-word-tere}}
 
@@ -44,7 +44,7 @@ tags: [おうちのなか, 素材, ことば]
 
 {{fig:pb-word-law}}
 
-- 英語では、材料で細かく分けずに「プラスチックボトル（plastic bottle）」と呼ぶのがふつう。「ペットボトル」は日本での呼び名
+- 英語でいちばんよく使われるのは「プラスチックボトル（plastic bottle）」。国際的な場面などでは「PET bottle（ペット・ボトル）」とも言う
 
 {{fig:pb-word-english}}
 
@@ -96,11 +96,11 @@ tags: [おうちのなか, 素材, ことば]
 
 ## 出典
 
-- [Terephthalic acid（Wikipedia 英語版）](https://en.wikipedia.org/wiki/Terephthalic_acid)：名前はテレビン油をとる木 Pistacia terebinthus とフタル酸から。1846年にアメデ・カイヨがテレビン油から初めて取り出した（論文は1847年）
+- [J. Wisniak「Louis Armand Victor Amedée Cailliot」（Educación Química 31(2), 2020、PDF）](https://www.scielo.org.mx/pdf/eq/v31n2/0187-893X-eq-31-02-102.pdf)：ストラスブールの医学部の化学の教授。Comptes Rendus 23（1846）と Annales de Chimie et Physique 21（1847）で、テレビン油に硝酸をはたらかせて得た酸を「acide téréphtalique」と名づけた
 - [Merriam-Webster「terephthalic acids」](https://www.merriam-webster.com/dictionary/terephthalic%20acids)：terebene（テレビン油を蒸留したテルペンの混合物）+ phthalic acid。初出1857年
 - [Etymonline「terebinth」](https://www.etymonline.com/word/terebinth)：ギリシャ語 terebinthos。キオス島のテレビン油（Chian turpentine）のもとになる木
 - [Société Chimique de France, L'Actualité Chimique n°492「À propos de xylènes」](https://new.societechimiquedefrance.fr/492-etymo-2/?lang=en)：カイヨはテレビン油の蒸留で得たパラ体をテレフタル酸と名づけた。ローランははじめナフタル酸、1842年にフタル酸と呼んだ
 - [Wiktionary「phthalic」](https://www.wiktionary.com/wiki/phthalic)：naphthalic を縮めた形
 - [環境省 容器包装リサイクル法 省令](https://www.env.go.jp/recycle/yoki/data/law_3-2.html)：「ポリエチレンテレフタレート製の容器」
 - [経済産業省 PETボトルの概要（PDF）](https://www.meti.go.jp/policy/recycle/main/admin_info/law/02/pdf/pet_gaiyo.pdf)：「いわゆるペットボトル」
-- [ペットボトル（Wikipedia 日本語版）](https://ja.wikipedia.org/wiki/%E3%83%9A%E3%83%83%E3%83%88%E3%83%9C%E3%83%88%E3%83%AB)：英語圏では普通、素材の違いを細分せずにプラスチックボトルと呼ぶ
+- [Weblio英会話コラム「『ペットボトル』は英語で何という？」（2024年6月）](https://eikaiwa.weblio.jp/column/phrases/how-to-say-in-english/pettobotoru-english)：plastic bottle がいちばんよく使われる。PET bottle は国際的な場面で使われることが多い

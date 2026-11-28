@@ -26,13 +26,13 @@ tags: [おうちのなか, 素材, なにでできてる]
 
 {{fig:pb-px-route}}
 
-- パラキシレンは、ベンゼンの輪に小さな枝（メチル基）が向かい合わせに2本ついた分子。酢酸を溶かす液にして、コバルト・マンガン・臭素の触媒（反応を助けるが自分は変わらない物質）と空気で酸化すると、2本の枝が「酸」の手に変わってテレフタル酸になる。不純物は水素で取りのぞき、純度は99.98%
+- パラキシレンは、ベンゼンの輪に小さな枝（メチル基）が向かい合わせに2本ついた分子。酢酸を溶かす液にして、コバルト・マンガン・臭素の触媒（反応を助けるが自分は変わらない物質）と空気で酸化すると（ある特許の例では180〜230℃）、2本の枝が「酸」の手に変わってテレフタル酸になる。不純物は水素で取りのぞき、純度は99.98%
 
 {{fig:pb-oxidation}}
 
 ### エチレングリコールの原料の原料
 
-- ナフサを熱で分解してエチレンを作り、エチレンを酸化してエチレンオキシド、それに水を反応させてエチレングリコール（MEG）にする。MEGの多くは、ポリエステル繊維とPET樹脂に使われる
+- ナフサを熱で分解してエチレンを作り（ポリぶくろの材料ポリエチレンと同じ出発点。→[ポリエチレンは石油からどう作られるか](polyethylene-how-made.md)）、エチレンを酸化してエチレンオキシド、それに水を反応させてエチレングリコール（MEG）にする。MEGの多くは、ポリエステル繊維とPET樹脂に使われる
 
 {{fig:pb-eg-route}}
 
@@ -124,6 +124,7 @@ tags: [おうちのなか, 素材, なにでできてる]
 - [PETボトルリサイクル推進協議会 ガイドブック 第1章（PDF）](https://www.petbottle-rec.gr.jp/guidebook/pdf/chapter1.pdf)：1941年に製法が見出され、1948年にポリエステルとして市場に登場
 - [経済産業省 石油産業に関する資料（PDF）](https://www.meti.go.jp/shingikai/energy_environment/sekiyu_sangyo/pdf/001_08_00.pdf)：原油→ナフサ→接触改質→リフォーメート→PX→PTA→重合、ナフサクラッカー→エチレン→MEG。原単位（PTA 0.87、MEG 0.35、PX 0.58）
 - [Lotte Chemical Pakistan「Process」](https://www.lottechem.pk/process/)：PTAはパラキシレンを酢酸を溶媒として酸化して作る。不純物は水素化で除き、純度99.98%
-- [Terephthalic acid（Wikipedia 英語版）](https://en.wikipedia.org/wiki/Terephthalic_acid)：アモコ法はコバルト・マンガン・臭化物の触媒、酢酸の溶媒、空気で p-キシレンを酸化
+- [米国特許 US4593122（PDF）](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/4593122)：p-キシレンを、コバルト・マンガン・臭素をふくむ触媒のもと、水をふくむ酢酸の溶媒の中で、空気で180〜230℃で酸化してテレフタル酸にする
+- [H. M. Lapa, L. M. D. R. S. Martins「p-Xylene Oxidation to Terephthalic Acid: New Trends」（Molecules 28, 1922, 2023）](https://www.mdpi.com/1420-3049/28/4/1922)：粗テレフタル酸を水素で精製する工場（hydropurification）の流れ
 - [Chemical Engineering「Ethylene Glycol Production」](https://chemengonline.com/ethylene-glycol-production)：MEGはエチレンオキシドの加水分解で作られ、EOはエチレンの酸化で得る。おもにポリエステル繊維とPET樹脂に使われる
 - [米国特許 US7608652（PDF）](https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/7608652)：エステル化 約230〜260℃、重縮合 約270〜290℃（例：278℃、約1mbar）、固相重合 210℃で6時間、ボトル用は固有粘度0.75〜0.85dL/gでアセトアルデヒドの少ないもの
