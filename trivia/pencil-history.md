@@ -62,7 +62,7 @@ tags: [おうちのなか, 文房具, 歴史]
 
 ### 戦争が生んだ「粘土を混ぜる芯」
 
-- フランス革命のあと、イギリスと戦争していたフランスは、イギリスの船に港を封鎖され、ボローデールの黒鉛を輸入できなくなった。鉛筆が手に入らなくなり、政府の要人カルノーにたのまれたのが、ナポレオンの軍に仕えていた科学者ニコラ・ジャック・コンテ
+- フランス革命のあと、イギリスと戦争していたフランスは、イギリスの船に港を封鎖され、ボローデールの黒鉛を輸入できなくなった。鉛筆が手に入らなくなった。1794年3月、公安委員会（革命政府の中心）のカルノーに「フランスの土から取れる材料で鉛筆の芯を作れ」と命じられたのが、技術者ニコラ・ジャック・コンテ（invention-europe に再録された歴史誌の記事）。コンテはのちにナポレオンのエジプト遠征で気球部隊の隊長もつとめた（ブリタニカ）
 
 {{fig:france-blockade}}
 
@@ -70,7 +70,7 @@ tags: [おうちのなか, 文房具, 歴史]
 
 {{fig:conte-clay-mix}}
 
-- しかも、粘土と黒鉛の割合や焼き方を変えるだけで、芯のかたさを変えられる。今のHやBの段階（→[鉛筆の芯は何でできているか](pencil-lead.md)）は、この発明の上にある。コンテ自身は数字で硬さを表し、数が大きいほどやわらかかった
+- しかも、粘土と黒鉛の割合や焼き方を変えるだけで、芯のかたさを変えられる。今のHやBの段階（→[鉛筆の芯は何でできているか](pencil-lead.md)）は、この発明の上にある。コンテは、はじめ芯の硬さを1〜4の数字で分けた（ケープアン美術館 フィッツ・ヘンリー・レーン・オンライン）。ただし、1がいちばんかたいのか、やわらかいのかは、資料によって食いちがう
 
 {{fig:conte-numbers}}
 
@@ -187,8 +187,9 @@ tags: [おうちのなか, 文房具, 歴史]
 - [STAEDTLER Nuremberg pioneers: How Friedrich and Johann Sebastian Staedtler wrote stationery history](https://www.staedtler.com/intl/en/discover/nuremberg-pioneers-how-friedrich-and-johann-sebastian-staedtler-wrote-stationery-history/)
 - [Faber-Castell Castle・Museum・Production（見学案内・PDF）](https://www.faber-castell.com/-/media/Faber-Castell-new/Corporate/f-c-experience/besucherzentrum/FC_Flyer_Besucherweg_Broschuere_EN.ashx?la=en-Glob)
 - [INPI L'heure de la rentrée : découvrez l'histoire du crayon Conté](https://www.inpi.fr/l-heure-de-la-rentree-decouvrez-l-histoire-du-crayon-conte)
-- [Wikipedia Pencil（コンテの数字の記号）](https://en.wikipedia.org/wiki/Pencil)
-- [Wikipedia Nicolas-Jacques Conté](https://en.wikipedia.org/wiki/Nicolas-Jacques_Cont%C3%A9)
+- [Cape Ann Museum, Fitz Henry Lane Online: The Modern Graphite Pencil（コンテの1〜4の段階）](https://www.fitzhenrylaneonline.org/historical_material/?section=Modern+Graphite+Pencil)
+- [Britannica Nicolas-Jacques Conté](https://www.britannica.com/biography/Nicolas-Jacques-Conte)
+- [invention-europe Un trait de génie（Jean Watin-Augouard、カルノーの命令）](https://invention-europe.com/2005/08/30/un-trait-de-genie/)
 - [日本筆記具工業会 鉛筆 よくある質問](https://www.jwima.org/knowledge/types/pencil/faq/)
 - [Dixon Ticonderoga Our Story](https://weareticonderoga.com/our-story)
 - [Reckendorfer v. Faber, 92 U.S. 347 (1875)](https://chanrobles.com/usa/us_supremecourt/92/347/case.php)

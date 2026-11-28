@@ -42,11 +42,11 @@ tags: [おうちのなか, 文房具, しくみ]
 
 ### 消しゴムがなかったころは「パン」
 
-- ゴムの消しゴムが広まる前は、パンで鉛筆の線を消していた。明治の東京の学校でも、ゴムのかわりにパンを使ったという思い出が残っている
+- ゴムの消しゴムが広まる前は、パンのかけらやパンくずで鉛筆の線を消すのがふつうだった。ただしパンは、くずが散らかって手間だった（IEEE Spectrum）
 
 {{fig:eraser-bread}}
 
-- 1770年、イギリスの化学者ジョゼフ・プリーストリーは、遠近法の本の脚注に「鉛筆の跡を紙からぬぐい取るのにすばらしく向いた物質を見た」と書いた。その物質は天然ゴムで、ロンドンの器具職人エドワード・ネアンが、1辺半インチ（約1.3cm）の角切りを3シリングで売っていた
+- 1770年、イギリスの化学者ジョゼフ・プリーストリーは、遠近法の本『透視図法の理論と実際への手びき』の序文の最後に、刷り上がったあとで足した一節として「鉛筆の跡を紙からぬぐい取るのにすばらしく向いた物質を見た」と書いた。売っていたのは、ロンドンの王立取引所の向かいの器具職人エドワード・ネアンで、1辺約半インチ（約1.3cm）の立方体を3シリング。「何年ももつ」とも書いている。本の中に物質の名前は出てこないが、これが天然ゴム（カウチューク）だったとされる（本の1770年版、IEEE Spectrum、アメリカ歴史学会の記事。ゴムがヨーロッパでどう使われはじめたかは→[ゴムの歴史](rubber-history.md)）
 
 {{fig:eraser-1770}}
 
@@ -121,4 +121,6 @@ tags: [おうちのなか, 文房具, しくみ]
 - [夢ナビ スマホの電池は鉛筆の芯から？ 黒鉛層間化合物のすごさとは](https://telemail.jp/shingaku/academics-research/lecture/g016590)
 - [トンボ鉛筆 鉛筆の筆記距離はどのくらい？](https://www.tombow.com/mamechishiki/p25/)
 - [日本筆記具工業会 鉛筆 よくある質問](https://www.jwima.org/knowledge/types/pencil/faq/)
-- [Wikipedia Eraser（プリーストリーの脚注、パンの消しゴム、ネアン）](https://en.wikipedia.org/wiki/Eraser)
+- [Joseph Priestley, A Familiar Introduction to the Theory and Practice of Perspective（1770年、序文 p.xv、Internet Archive）](https://archive.org/details/afamiliarintrod00conggoog)
+- [Laurel Thatcher Ulrich, Erasing History（Perspectives on History, 2009）](https://www.historians.org/perspectives-article/erasing-history-may-2009/)
+- [IEEE Spectrum Before the Undo Command, There Was the Electric Eraser（2025）](https://spectrum.ieee.org/electric-eraser)

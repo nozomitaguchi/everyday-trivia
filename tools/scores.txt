@@ -26,3 +26,4 @@ washing-machine D3 O3 2026-11-23
 egg D3 O3 2026-11-23
 fish D3 O3 2026-11-24
 nails-and-hair D4 O4 2026-11-24
+pencil D4 O4 2026-11-28
