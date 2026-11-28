@@ -111,7 +111,8 @@ tags: [そらとけしき, 光]
 ## 出典
 
 - [Met Office: Why are clouds white?（光の波長 青400nm・赤700nm）](https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/why-are-clouds-white)
-- [Wikipedia Rayleigh scattering](https://en.wikipedia.org/wiki/Rayleigh_scattering)
+- [A. T. Young: Rayleigh scattering（Physics Today 1982年1月、PDF。1871年のレイリーの論文、波長の4乗に反比例）](https://aip.brightspotcdn.com/PTO.v35.i1.42_1.online.pdf)
+- [Lange, Rozanov, von Savigny: Revisiting the question "Why is the sky blue?"（Atmospheric Chemistry and Physics 23, 2023）](https://acp.copernicus.org/articles/23/14829/2023/acp-23-14829-2023.html)
 - [Live Science: How Isaac Newton's experiments revealed the mystery of light](https://www.livescience.com/physics-mathematics/refraction-is-then-all-there-is-to-it-how-isaac-newtons-experiments-revealed-the-mystery-of-light)
 - [プレジデントオンライン 空は青い。それは何故か（武田紘樹）](https://president.jp/articles/-/92312)
 - [Ethan Siegel: This Is Why Earth's Oceans And Skies Are Blue](https://medium.com/starts-with-a-bang/this-is-why-earths-oceans-and-skies-are-blue-c408ce7d0d45)

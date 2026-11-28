@@ -108,5 +108,6 @@ tags: [そらとけしき, 光, 天気]
 - [Met Office: Why are clouds white?](https://weather.metoffice.gov.uk/learn-about/weather/types-of-weather/clouds/why-are-clouds-white)
 - [気象庁 福岡管区気象台 はれるんマガジン（雲が白く見えたり黒く見えたりするわけ、PDF）](https://www.data.jma.go.jp/fukuoka/chosa/files/harerun0071.pdf)
 - [ダイワ 雲のでき方（雲のつぶの大きさ）](https://www.daiwa.com/dyfc/manabu/weather/weather01/)
-- [Wikipedia Mie scattering](https://en.wikipedia.org/wiki/Mie_scattering)
+- [フライブルク大学友の会: Gustav Mie（1908年 Annalen der Physik の論文、波長と同じくらいか大きい球のつぶ、PDF）](https://www.freunde.uni-freiburg.de/pdfs/mie)
+- [ScattPort: Gustav Mie（1868〜1957、論文 Beiträge zur Optik trüber Medien, Annalen der Physik 25, 1908）](https://scattport.org/index.php/gustav-mie)
 - [Physics FAQ: Why is the sky blue?](https://math.ucr.edu/home/baez/physics/General/BlueSky/blue_sky.html)

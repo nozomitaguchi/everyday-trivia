@@ -12,19 +12,20 @@ tags: [そらとけしき, 光, 宇宙]
 
 ### 山の上の空は濃い青
 
-- 18世紀、スイスのソシュールは「青さ計」（白0〜黒52の53段階。数字が大きいほど濃い）で、場所ごとに真上の空の青さをはかった（→[空の色の歴史](sky-color-history.md)）。正午の値は次のとおり
+- 1788年、ジュネーブのソシュールは、白から黒まで青の濃さを細かく分けた輪の「青さ計」（数字が大きいほど濃い）で、場所ごとに空の青さをはかった（→[空の色の歴史](sky-color-history.md)）。ジュネーブ科学史博物館の資料にある値は次のとおり
 
 {{fig:places-saussure-noon}}
 
-| 場所 | 正午の真上の青さ |
+| 場所 | 青さ |
 |---|---|
-| シャモニー（モンブランのふもとの町） | 18.9 |
-| ジュネーブ（湖のほとりの町） | 22.5 |
-| コル・デュ・ジェアン（モンブランの近くの高い峠） | 31.0 |
+| ジュネーブ（湖のほとりの町） | 26.5 |
+| シャモニー（モンブランのふもとの町） | 27 |
+| コル・デュ・ジェアン（モンブランの近くの高い峠） | 37 |
+| モンブランの頂上（前の年の1787年） | 39 |
 
 {{fig:places-mountain-blue}}
 
-- 探検家フンボルトも、同じ道具で記録した。大西洋の上で23.5、テイデ山（大西洋のカナリア諸島の山）の頂上で41、1802年6月23日にチンボラソ山（南アメリカ）を登りながら46。高い山ほど、濃い青をはかった
+- 探検家フンボルトも、青さ計を持って大西洋をわたり、南アメリカへ行った。1802年6月23日にチンボラソ山（南アメリカ、当時は世界でいちばん高い山と考えられていた）を登りながら46を記録した。青さ計ではかったなかで、いちばん濃い青だった
 
 {{fig:places-humboldt}}
 
@@ -80,7 +81,7 @@ tags: [そらとけしき, 光, 宇宙]
 
 ## 6〜9歳むけ
 
-むかしの ひとは、そらの あおさを はかったよ。あおの こさを 53だんかいに ぬりわけた わを つかったんだ。たかい やまの うえほど、こい あおに なったんだ。
+むかしの ひとは、そらの あおさを はかったよ。あおの こさを たくさんの だんかいに ぬりわけた わを つかったんだ。たかい やまの うえほど、こい あおに なったんだ。
 
 {{fig:places-mountain-blue}}
 
@@ -98,7 +99,11 @@ tags: [そらとけしき, 光, 宇宙]
 
 ## 出典
 
-- [Wikipedia Cyanometer](https://en.wikipedia.org/wiki/Cyanometer)
+- [ジュネーブ科学史博物館 Booklets n° 1: Horace-Bénédict de Saussure（2024、PDF。1788年の輪の青さ計、52段、各地の値）](https://institutions.ville-geneve.ch/fileadmin/user_upload/mhn/images/votre_visite/site_mhs/1_Saussure_2024.pdf)
+- [A. Giordan ほか「Le cyanomètre d'Horace-Benedict de Saussure, la mesure du bleu du ciel」（ジュネーブ大学、PDF。1787年の16段、1788年の44段とその値）](https://www.unige.ch/fapse/SSE/teachers/giordan/LDES/publi/livres/saussurehisto.pdf)
+- [Joyce Chaplin: Blues of Many Skies（London Review of Books 41巻4号、2019。フンボルトのチンボラソで46）](https://www.lrb.co.uk/the-paper/v41/n04/joyce-chaplin/blues-of-many-skies)
+- [Atlas Obscura: A Scientist Invented the Cyanometer Just to Measure the Blueness of the Sky](https://www.atlasobscura.com/articles/a-scientist-invented-the-cyanometer-just-to-measure-the-blueness-of-the-sky)
+- [A. v. Humboldt「Ueber zwei Versuche den Chimborazo zu besteigen」1837年（英訳、ベルン大学 デジタル版。1802年6月23日）](https://humboldt.unibe.ch/text/1837-Ueber_zwei_Versuche-07-neu/text)
 - [WebExhibits: Causes of Color（火星の空の色）](https://www.webexhibits.org/causesofcolor/14C.html)
 - [Phys.org: What makes Mars sunsets different from Earth's?（2015年5月）](https://phys.org/news/2015-05-mars-sunsets-earth.html)
 - [神田清・山本正己「東京に於ける天空の色の觀測報告」気象集誌 1932年（J-STAGE）](https://www.jstage.jst.go.jp/article/jmsj1923/10/11/10_11_620/_article/-char/ja)

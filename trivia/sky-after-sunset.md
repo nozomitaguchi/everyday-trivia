@@ -52,7 +52,7 @@ tags: [そらとけしき, 光, 天気]
 
 [夕焼けが赤いわけ](sky-blue-sunset-red.md)は、光が空気の中を長く通るうちに、青い光が散らばってなくなるからだった。それなら、日がしずんだあとの空は、真上も赤や灰色になりそうなもの。ところが実際は、真上の空は昼より深い青になる。
 
-- 答えの多くは**オゾン**。オゾンは酸素の原子が3つつながった分子で、大気中のオゾンのおよそ9割は、地上から約10〜50キロの高いところ（成層圏）にある。オゾンは、黄・橙・赤の光（600ナノメートルのあたり）を吸いこむ。この吸いこみを**シャピュイ帯**という
+- 答えの多くは**オゾン**。オゾンは酸素の原子が3つつながった分子で、大気中のオゾンのおよそ9割は、地上から約10〜50キロの高いところ（成層圏）にある。オゾンは、600ナノメートルのあたりを中心に、黄や橙の光を吸いこむ。この吸いこみを**シャピュイ帯**という
 
 {{fig:sky-ozone-absorb}}
 
@@ -64,13 +64,13 @@ tags: [そらとけしき, 光, 天気]
 
 {{fig:sky-hulburt-share}}
 
-- 2023年、ドイツの研究者たちが、今のコンピューターの計算でたしかめなおした。太陽が地平線にあるとき、真上の空の青のうちオゾンの分は、オゾンの量によって60〜66％。ハルバートの見積もりとよく合った。太陽が高い昼は、オゾンの分はわずかだった
+- 2023年、ドイツの研究者たちが、今のコンピューターの計算でたしかめなおした。太陽が地平線にあるとき、真上の空の青のうちオゾンの分は、オゾンの量によって60〜66％。ハルバートの見積もりとよく合った。太陽が真上に近い昼（天頂から10度）は、オゾンの分は3％ほどしかなかった
 
 {{fig:sky-ozone-noon-dusk}}
 
 ### オゾンの色を見つけた人
 
-- 1880年、フランスの化学者ジェームズ・シャピュイが、オゾンの光の吸いこみ方を調べて、「オゾンは、じゅうぶんな厚さで見ると、とても目立つ空色をしている」と報告した。黄・橙・赤の光を吸うので、残った光が青く見える
+- 1880年、フランスのジェームズ・シャピュイが、パリの科学アカデミーの報告集に「オゾンの吸収スペクトルについて」を出した。1882年のくわしい論文では、長さ1〜2メートルの管に入れたオゾンの色は「空の青を思わせる」と書き、「青い色は、においと同じくらい確かにオゾンのしるしだ」とまで言っている。見える光の中に11本の暗い帯を見つけ、いちばん目立つ2本は、ナトリウムの黄色い光（D線）をはさむ黄〜橙のあたりにあった。黄や橙の光を吸うので、残った光が青く見える
 
 {{fig:sky-chappuis-1880}}
 
@@ -148,7 +148,7 @@ tags: [そらとけしき, 光, 天気]
 
 {{fig:sky-venus-belt}}
 
-ゆうがたなのに、まうえの そらは こい あおに なるよ。なぜかな？ そらの たかい ところに「オゾン」と いう ガスが あるよ。オゾンが、だいだいいろや あかい ひかりを すいこむからなんだ。
+ゆうがたなのに、まうえの そらは こい あおに なるよ。なぜかな？ そらの たかい ところに「オゾン」と いう ガスが あるよ。オゾンが、きいろや だいだいいろの ひかりを すいこむからなんだ。
 
 {{fig:sky-ozone-path}}
 
@@ -166,7 +166,8 @@ tags: [そらとけしき, 光, 天気]
 - [Atmospheric Optics: Earth's Shadow（地球の影とビーナスベルト）](https://atoptics.co.uk/blog/earths-shadow)
 - [Sky & Telescope: The Belt of Venus（日の入り6分後・15分後）](https://skyandtelescope.com/astronomy-blogs/the-belt-of-venus)
 - [Lange, Rozanov, von Savigny: Revisiting the question "Why is the sky blue?"（Atmospheric Chemistry and Physics 23, 2023）](https://acp.copernicus.org/articles/23/14829/2023/acp-23-14829-2023.html)
-- [Wikipedia James Chappuis（Comptes rendus 91, 1880 の引用）](https://en.wikipedia.org/wiki/James_Chappuis)
+- [J. Chappuis: Étude spectroscopique sur l'ozone（Annales scientifiques de l'É.N.S. 1882、PDF。オゾンの青い色、11本の吸収帯）](https://www.numdam.org/article/ASENS_1882_2_11__137_0.pdf)
+- [American Meteorological Society 気象用語集: Chappuis bands（600ナノメートルあたり、Chappuis 1880 C. R. Acad. Sci. 91）](https://glossary.ametsoc.org/wiki/chappuis-bands/)
 - [森安・植田・佐藤（埼玉県立浦和高校地学部）「ブルーモーメント」日本気象学会ジュニアセッション（PDF）](https://www.metsoc.jp/default/wp-content/uploads/2021/05/JS1-13.pdf)
 - [秋田地方気象台 天気のことわざ（夕焼けは晴れ）](https://www.data.jma.go.jp/akita/knowledge/kotowaza/kotowaza.html)
 - [気象庁 オゾン層とは（成層圏に約90％）](https://www.jma.go.jp/jma/kishou/know/env/ozonehp/3-10ozone.html)

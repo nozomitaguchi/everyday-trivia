@@ -20,7 +20,7 @@ tags: [そらとけしき, 光]
 
 {{fig:sky-fourth-power}}
 
-- 赤い光（約700ナノメートル）と青紫の光（約400ナノメートル）でくらべると、青紫は赤のおよそ10倍散らばる
+- 赤い光（約700ナノメートル）と青紫の光（約400ナノメートル）でくらべると、700÷400＝1.75を4回かけて約9.4。青紫は赤のおよそ9倍散らばる。アメリカの物理学の雑誌『フィジックス・トゥデイ』の解説（1982年）では、青（450ナノメートル）と赤（670ナノメートル）で約5倍。くらべる色えらびで倍率は変わるが、波が短いほどよく散らばることは同じ
 
 {{fig:sky-ten-times}}
 
@@ -94,7 +94,7 @@ tags: [そらとけしき, 光]
 
 {{fig:sky-prism}}
 
-あおい ひかりは、くうきの とても ちいさな つぶに ぶつかるよ。そして、あちこちに ちらばりやすいんだ。あかい ひかりより 10ばいも ちらばるよ。
+あおい ひかりは、くうきの とても ちいさな つぶに ぶつかるよ。そして、あちこちに ちらばりやすいんだ。あかい ひかりより 9ばいくらい ちらばるよ。
 
 {{fig:sky-ten-times}}
 
@@ -118,5 +118,6 @@ tags: [そらとけしき, 光]
 
 - [HugKum 空が青い理由とは?](https://hugkum.sho.jp/186715)
 - [Physics FAQ: Why is the sky blue?（カリフォルニア大学リバーサイド校）](https://math.ucr.edu/home/baez/physics/General/BlueSky/blue_sky.html)
-- [Wikipedia Rayleigh scattering](https://en.wikipedia.org/wiki/Rayleigh_scattering)
+- [A. T. Young: Rayleigh scattering（Physics Today 1982年1月、PDF。1871年のレイリーの論文、波長の4乗に反比例）](https://aip.brightspotcdn.com/PTO.v35.i1.42_1.online.pdf)
+- [Lange, Rozanov, von Savigny: Revisiting the question "Why is the sky blue?"（Atmospheric Chemistry and Physics 23, 2023）](https://acp.copernicus.org/articles/23/14829/2023/acp-23-14829-2023.html)
 - [ナゾロジー 空が青い理由（散乱は波長の4乗に反比例）](https://nazology.kusuguru.co.jp/archives/74402/2)
