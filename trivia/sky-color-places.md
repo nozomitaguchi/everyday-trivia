@@ -25,6 +25,10 @@ tags: [そらとけしき, 光, 宇宙]
 
 {{fig:places-mountain-blue}}
 
+- くらべるための目安：海に近い場所で、よく晴れた日の昼の空は、青さ計で23くらいになる。ソシュールがモンブランの頂上ではかった39は、それよりずっと濃い
+
+{{fig:places-sea-level-23}}
+
 - 探検家フンボルトも、青さ計を持って大西洋をわたり、南アメリカへ行った。1802年6月23日にチンボラソ山（南アメリカ、当時は世界でいちばん高い山と考えられていた）を登りながら46を記録した。青さ計ではかったなかで、いちばん濃い青だった
 
 {{fig:places-humboldt}}
@@ -102,6 +106,8 @@ tags: [そらとけしき, 光, 宇宙]
 - [ジュネーブ科学史博物館 Booklets n° 1: Horace-Bénédict de Saussure（2024、PDF。1788年の輪の青さ計、52段、各地の値）](https://institutions.ville-geneve.ch/fileadmin/user_upload/mhn/images/votre_visite/site_mhs/1_Saussure_2024.pdf)
 - [A. Giordan ほか「Le cyanomètre d'Horace-Benedict de Saussure, la mesure du bleu du ciel」（ジュネーブ大学、PDF。1787年の16段、1788年の44段とその値）](https://www.unige.ch/fapse/SSE/teachers/giordan/LDES/publi/livres/saussurehisto.pdf)
 - [Joyce Chaplin: Blues of Many Skies（London Review of Books 41巻4号、2019。フンボルトのチンボラソで46）](https://www.lrb.co.uk/the-paper/v41/n04/joyce-chaplin/blues-of-many-skies)
+- [infoclio.ch: Project #02 Cyanometer（2024。海に近い晴れた昼の空は約23）](https://www.infoclio.ch/en/project-02-cyanometer)
+- [Gizmodo: The Slightly-Less-Than-Epic Quest To Measure the Blueness Of The Sky（2015。ふつうの昼の空は約23）](https://gizmodo.com/the-slightly-less-than-epic-quest-to-measure-the-bluene-1686611005)
 - [Atlas Obscura: A Scientist Invented the Cyanometer Just to Measure the Blueness of the Sky](https://www.atlasobscura.com/articles/a-scientist-invented-the-cyanometer-just-to-measure-the-blueness-of-the-sky)
 - [A. v. Humboldt「Ueber zwei Versuche den Chimborazo zu besteigen」1837年（英訳、ベルン大学 デジタル版。1802年6月23日）](https://humboldt.unibe.ch/text/1837-Ueber_zwei_Versuche-07-neu/text)
 - [WebExhibits: Causes of Color（火星の空の色）](https://www.webexhibits.org/causesofcolor/14C.html)
