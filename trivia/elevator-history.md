@@ -40,15 +40,15 @@ tags: [まち, 建物, 歴史]
 
 ### 映画『ニューヨークの恋人』は史実どおり？
 
-- 2001年の映画『ニューヨークの恋人』（原題 Kate & Leopold）で、ヒュー・ジャックマンが演じるレオポルドは、1876年のニューヨークに住む第3代オールバニ公爵。芸術と科学を学んでいて、**エレベーターの試作品を設計して模型を作っている**人物として出てくる
+- 2001年の映画『ニューヨークの恋人』（原題 Kate & Leopold、ジェームズ・マンゴールド監督）で、ヒュー・ジャックマンが演じるレオポルドは、1876年のニューヨークにいるイギリスの公爵（オールバニ公）。新しいものを考えるのが好きで、**エレベーターの最初の設計を考えている**人物として出てくる。映画評論家ロジャー・イーバートは「レオポルドはブルックリン橋を設計し、エレベーターを発明した人だとわかる」と書いている
 
 {{fig:kl-leopold-1876}}
 
-- レオポルドが2001年にタイムスリップすると、街じゅうのエレベーターが止まる。彼が1876年に帰ると、また動き出す。「彼がいないとエレベーターが生まれない」という設定
+- レオポルドは、子孫のスチュアートといっしょに2001年へタイムスリップしてくる。イーバートの評では、レオポルドが1876年に帰って家族をつくらないと、スチュアートは生まれないことになる。時間旅行の矛盾は、映画の中では深く考えないことになっている
 
 {{fig:kl-timeslip}}
 
-- 映画では、レオポルドの執事の名前が「オーチス（Otis）」になっている
+- 映画では、レオポルドの執事の名前が「オーチス（Otis）」になっている（フィリップ・ボスコが演じる）。映画評論家デニス・シュワルツは、オーチスのエレベーターの名前はこの執事からとった、という設定だと書いている
 
 {{fig:kl-butler-otis}}
 
@@ -76,7 +76,7 @@ tags: [まち, 建物, 歴史]
 
 ### オーチスが考えたこと
 
-- オーチスはベッドの工場で働く機械工だった。ニューヨーク州ヨンカーズのベッド工場に機械を取りつけに行ったとき、重い機械を上の階へ上げる昇降機が必要になったのがきっかけ
+- オーチスは、ニュージャージー州のベッド工場で働く機械工だった。1852年、会社からニューヨーク州ヨンカーズへ送られ、使われなくなった製材所をベッド工場に作りかえて機械を取りつけることになった。重い機械や材料を上の階へ上げる昇降機が必要になったのがきっかけ
 
 {{fig:otis-bed-factory}}
 
@@ -94,15 +94,15 @@ tags: [まち, 建物, 歴史]
 
 ### ロープを切ってみせた
 
-- 1854年、ニューヨークで開かれたアメリカ初の万国博覧会（クリスタル・パレス）で、オーチスは台に乗って高く上がり、ロープを切らせた。台は止まり、見物人は歓声をあげた
+- 1854年5月、ニューヨークのクリスタル・パレス（アメリカ初の万国博覧会の会場）で、オーチスは台に乗って9メートル（30フィート）ほどの高さまで上がり、助手にロープを切らせた。台は止まり、オーチスはシルクハットをとっておじぎをして「みなさん、だいじょうぶ、だいじょうぶ（All safe, gentlemen, all safe!）」と言った（1853年とする資料もある）
 
 {{fig:otis-demo}}
 
-- このあと注文が増え、1857年3月23日、ニューヨークの百貨店E・V・ホーワウト社に、人を乗せるための安全エレベーターの第1号がついた
+- このあと注文が増え、1857年3月23日、ニューヨークのガラス器や銀器の店E・V・ホーワウト社に、人を乗せるための安全エレベーターの第1号がついた。蒸気機関で動いた。ニューヨーク市の歴史的建造物の報告書は「客のためだけの乗用エレベーターをそなえたニューヨークで最初の店」と書いている
 
 {{fig:otis-first-store}}
 
-- 特許がおりたのは1861年1月15日。オーチスはその約3か月後の4月8日に亡くなった
+- 特許（アメリカ特許31128号「巻き上げ装置の改良」）がおりたのは1861年1月15日。特許の説明には「ロープが切れると、つめがばねで押し出されて、両側のギザギザの棒にかみこむ」と書いてある。オーチスはその約3か月後の4月8日、49歳で亡くなった
 
 {{fig:otis-patent-1861}}
 
@@ -195,9 +195,17 @@ tags: [まち, 建物, 歴史]
 ## 出典
 
 - [Live Science: Ups & Downs: The Evolution of Elevators](https://livescience.com/57282-elevator-history.html)
-- [Wikipedia Kate & Leopold](https://en.wikipedia.org/wiki/Kate_%26_Leopold)
+- [Roger Ebert: Kate & Leopold（2001年の映画評。第3代オールバニ公、1876年、エレベーターを発明）](https://www.rogerebert.com/reviews/kate-and-leopold-2001)
+- [Dennis Schwartz: Kate & Leopold（執事 Otis はフィリップ・ボスコ、エレベーターの名は執事から）](https://dennisschwartzreviews.com/kateleopold/)
+- [Austin Chronicle: Kate & Leopold（1876年ごろ、試作のエレベーター）](https://austinchronicle.com/events/film/2001-12-28/142038)
 - [TIME: The Elevator Safety Brake Patent](https://time.com/4700084/elevator-patent-history-otis-safety)
-- [Wikipedia Elisha Otis](https://en.wikipedia.org/wiki/Elisha_Otis)
+- [Britannica: Elisha Otis（1811年8月3日〜1861年4月8日、1852年ヨンカーズ、1854年5月クリスタル・パレス、1857年3月23日ホーワウト社）](https://www.britannica.com/topic/Elisha-Otis)
+- [ASME: Elisha Graves Otis（製材所をベッド工場に、馬車のばね、のこぎり歯のラチェット）](https://www.asme.org/topics-resources/content/elisha-graves-otis)
+- [Google Patents US31128A Improvement in hoisting apparatus（E. G. Otis、1861年1月15日）](https://patents.google.com/patent/US31128)
+- [Guinness World Records: First building to have a safety elevator（1857年3月23日、蒸気機関）](https://www.guinnessworldrecords.com/world-records/first-building-to-have-a-safety-elevator-(lift))
+- [American Heritage: "All Safe, Gentlemen, All Safe!"（Spencer Klaw、1978年）](https://www.americanheritage.com/all-safe-gentlemen-all-safe)
+- [PBS They Made America: Elisha Otis（クリスタル・パレスの展示を1853年とする）](https://www.pbs.org/wgbh/theymadeamerica/whomade/otis_hi.html)
+- [ニューヨーク市歴史的建造物保存委員会 E. V. Haughwout Building 指定報告書（1965年、PDF）](https://s-media.nyc.gov/agencies/lpc/lp/0017.pdf)
 - [雑学ネタ帳 エレベーターの日](https://zatsuneta.com/archives/111102.html)
 - [日本エレベーター協会 エレベータージャーナル](https://www.n-elekyo.or.jp/about/elevatorjournal/pdf/Journal6-15.pdf)
 - [Google Patents US2432293A Elevator car door control mechanism](https://patents.google.com/patent/US2432293)：Joseph Di Giovanni、1944年8月19日出願、1947年12月9日特許。ドアが障害物で止められるとスイッチが開いてドアのモーターを逆転

@@ -387,6 +387,7 @@ tags: [ジャンル, ...]
 - きほん: [エレベーターはどうやって動くのか](trivia/elevator-basics.md)
 - しくみ: [エレベーターのドアは、なぜ人をはさまないのか（さわる前に気づく光のカーテン）](trivia/elevator-door-safety.md)
 - れきし: [エレベーターを「乗れるもの」にしたのは、ロープが切れても落ちないしかけ](trivia/elevator-history.md)
+- ことば: [「エレベーター」はラテン語の「持ち上げるもの」、イギリスでは lift、法律では「昇降機」、「エレベータ」と「エレベーター」はどちらが正しい？（エレベーターのことば）](trivia/elevator-words.md)
 - かたち: [エレベーターの奥にある鏡](trivia/elevator-mirror.md)
 - かたち: [エレベーターのボタンのなぞ（「開」はなぜ左？ 低いボタン、点字、2度押しで取り消し）](trivia/elevator-buttons.md)
 - しるし: [かごの中の「定期検査報告済証」は何のしるし？（毎年の検査と、ふだんの保守のちがい）](trivia/elevator-inspection-sticker.md)
