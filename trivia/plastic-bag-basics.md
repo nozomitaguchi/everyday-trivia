@@ -14,7 +14,7 @@ tags: [おうちのなか, 素材, きほん]
 
 {{fig:pbag-poly-many}}
 
-- くさりはとても長い。特に長いもの（超高分子量ポリエチレン）は分子量350万〜750万で、エチレン約12万〜27万個分にあたる
+- くさりはとても長い。特に長いもの（超高分子量ポリエチレン）は、三井化学の製品で平均分子量50万〜600万。エチレン1個の分子量は28なので、エチレン約1万8000〜21万個分がつながっている
 
 {{fig:pbag-chain-length}}
 
@@ -22,7 +22,7 @@ tags: [おうちのなか, 素材, きほん]
 
 {{fig:pbag-oil-to-bag}}
 
-- 密度は 0.91〜0.97 g/cm³ で、水（1.0）より軽い。だからポリ袋は水に浮く。浮くので、捨てられた袋は川や海を流れていってしまう
+- 密度（1cm³あたりの重さ）は、しっとりした低密度ポリエチレンで約0.91〜0.93 g/cm³、シャカシャカの高密度ポリエチレンで約0.94〜0.97 g/cm³。どちらも水（1.0）より軽い。だからポリ袋は水に浮く。浮くので、捨てられた袋は川や海を流れていってしまう
 
 {{fig:pe-float}}
 
@@ -101,6 +101,8 @@ tags: [おうちのなか, 素材, きほん]
 
 - [化学工学会 ポリエチレン](https://www.scej.org/education/polyethy.html)
 - [ヤマゲン ポリ袋の素材](https://www.yamagen-net.com/poly_bag/material/)
-- [Wikipedia Polyethylene](https://en.wikipedia.org/wiki/Polyethylene)
+- [三井化学 ハイゼックスミリオン（超高分子量ポリエチレン）](https://jp.mitsuichemicals.com/en/service/mobility/polymers/hi-zex-million/index.htm)：平均分子量は50万〜600万
+- [プラスチック循環利用協会 パンフレット（主なプラスチックの特性と用途）](https://pwmi.or.jp/pdf/panf1.pdf)：低密度ポリエチレンは水より軽い（比重<0.94）、高密度ポリエチレンは低密度よりやや重い（比重>0.94）が水より軽い
+- [SpecialChem Omnexus「Polyethylene (PE)」](https://omnexus.specialchem.com/selection-guide/polyethylene-plastic)：LDPE 0.910〜0.925、HDPE 0.941〜0.965 g/cm³（本文では HDPE 0.93〜0.97 とも書く）
 - [サニパック インフレーション成形](https://www.sanipak.jp/faq/words/inflation.html)
 - [Rebecca Altman「From War Machine to Supermarket Staple: A History of the Plastic Bag」Orion Magazine](https://orionmagazine.org/article/plastic-bag-history/)：1950年代のクリーニング袋は肌にはりつきやすく、子どもの窒息死が多く起きた

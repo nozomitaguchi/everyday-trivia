@@ -52,7 +52,7 @@ tags: [おうちのなか, 素材, 歴史]
 
 ### 世界に広がる
 
-- アメリカでは、石油会社モービルの法律部門が、セロプラスト社のアメリカの特許を1976年に取り消させた（1977年とする資料もある）。同じ1976年、モービルは自分の袋をアメリカのスーパーでためしに使い始めた
+- アメリカでは、石油会社モービルの法律部門が、セロプラスト社のアメリカの特許を1976年に取り消させた。同じ1976年、モービルは自分の袋をアメリカのスーパーでためしに使い始めた
 
 {{fig:pbag-hi-mobil}}
 
@@ -191,7 +191,6 @@ tags: [おうちのなか, 素材, 歴史]
 - [Rebecca Altman「From War Machine to Supermarket Staple: A History of the Plastic Bag」Orion Magazine](https://orionmagazine.org/article/plastic-bag-history/)：セロプラスト社は1950年代の終わりに袋を開発。モービルの法務部門が1976年にアメリカの特許を取り消させ、同年スーパーでためしに使った。1988年のアメリカでプラスチックは約40％、2003年には80％近く。トゥーリンはたたんだ袋をポケットに入れていた（息子の話）
 - [Christian Science Monitor「Push for paper bags with sacks appeal」(1988)](https://www.csmonitor.com/1988/1101/dpape.html)：アメリカ製紙協会によると、食料品の袋のうちプラスチックは1982年5％、1986年38％
 - [The Week「Why plastic bags may be better for the environment than paper or cotton」(2019)](https://theweek.com/climate-change/103845/why-plastic-bags-may-be-better-for-the-environment-than-paper-or-cotton)：ラウル・トゥーリンがBBCに "To my dad, the idea that people would simply throw these away would be bizarre." と話した。紙袋は森林伐採につながり環境に悪いと考えられていた（記事の説明）
-- [Wikipedia Plastic shopping bag](https://en.wikipedia.org/wiki/Plastic_shopping_bag)：モービルの特許取り消しを1977年とする
 - [高島屋 紀ノ国屋](https://www.takashimaya.co.jp/shopping/interior/kinokuniya/)：1953年、日本初の「セルフサービス方式」のスーパーマーケットを東京・青山に開業
 - [日本ポリオレフィンフィルム工業組合「レジ袋有料化義務化についての意見」（環境省 資料）](https://www.env.go.jp/content/900537303.pdf)：レジ袋となる原型が日本で発明されたのが1962年。紙からポリへの切り替えの中で、日本の紙袋メーカーは淘汰された
 - [Business Insider Japan「マイバッグのほうが地球に優しい」は本当なのか](https://www.businessinsider.jp/article/215722/)：それまでの買い物袋は紙袋で、雨にぬれると破けやすく、取っ手がないものも多かった。1970年代から普及
