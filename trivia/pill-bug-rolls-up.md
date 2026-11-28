@@ -22,7 +22,7 @@ tags: [いきもの, むし]
 
 ### 何をきっかけに丸くなる？
 
-- さわられたときや、ゆれ（振動）を感じたときに丸くなることが多い
+- 体を強くおされたときや、強いゆれ（振動）を感じたときに丸くなることが多い。研究では、木の棒でそっとつついて丸まらせ、のびるまでの時間をはかる
 
 {{fig:pb-roll-trigger}}
 
@@ -34,9 +34,13 @@ tags: [いきもの, むし]
 
 {{fig:pb-roll-sound}}
 
-- とても強いストレスを受けると、じっと動かない「死んだふり」をすることもある
+- 丸まってじっと動かない姿は、研究者によって「強直性不動（きょうちょくせいふどう：体をかためて動かなくなる反応）」とも、「死んだふり」とも考えられてきた。まわりからは、食べものではなく小石のように見える
 
 {{fig:pb-roll-still}}
+
+- 2023年に研究者サモラ＝カマチョが、43匹で丸まってからのびるまでの時間をはかった。敵のヒキガエルのふんのにおいがすると、オスは長く丸まったままだったが、メスは変わらなかった。動きまわってメスをさがすオスの方が、敵に出会いやすいからかもしれない、と書いている（本人も「推測」と書いている）
+
+{{fig:pb-roll-toad}}
 
 ### どうやってすき間なく丸まる？
 
@@ -65,6 +69,10 @@ tags: [いきもの, むし]
 - 丸まった体は表面がなめらかなので、敵がかみつく場所を見つけにくい
 
 {{fig:pb-roll-smooth}}
+
+- それでも、いつも守れるわけではない。ムクドリのような鳥など大きな敵には、丸まっても足りない。レプトゲニスという仲間のアリは、丸まった球をこじあけて食べることが知られている
+
+{{fig:pb-roll-pry}}
 
 - 丸まると、体から逃げる水も約3分の1へる（→[ダンゴムシはどうやって陸でくらしているのか](pill-bug-land-life.md)）
 
@@ -118,6 +126,10 @@ tags: [いきもの, むし]
 
 {{fig:pb-roll-antenna-fold}}
 
+でも、いつも まもれる わけでは ないよ。おおきな とりや、ボールを こじあける アリも いるんだ。
+
+{{fig:pb-roll-pry}}
+
 まるく なった ダンゴムシに、すきまが あるか みて みよう。
 
 {{fig:pb-look-ball}}
@@ -125,7 +137,8 @@ tags: [いきもの, むし]
 ## 出典
 
 - [埼玉県 身近な生きもの ダンゴムシ（PDF）](https://www.pref.saitama.lg.jp/documents/49600/20-21.pdf)
-- [Wikipedia: Armadillidium vulgare（丸くなるきっかけ、死んだふり）](https://en.wikipedia.org/wiki/Armadillidium_vulgare)
+- [Animal Diversity Web（ミシガン大学） Armadillidium vulgare（強くおされたり強くゆれたりすると丸まる、鳥には足りない、レプトゲニス属のアリがこじあける）](https://animaldiversity.org/accounts/Armadillidium_vulgare)
+- [Zamora-Camacho (2023) Keep the ball rolling: sexual differences in conglobation behavior of a terrestrial isopod under different degrees of perceived predation pressure. PeerJ 11:e16696（強直性不動や死んだふりとしての解釈、棒でつつく、ヒキガエルのにおいでオスだけ長く丸まる）](https://peerj.com/articles/16696)
 - [東京都教育委員会 児童・生徒の研究 ダンゴムシとワラジムシのくらべっこ（PDF）](https://www.kyoiku.metro.tokyo.lg.jp/documents/d/kyoiku/03_22)
 - [福岡県 生物多様性 オカダンゴムシ](https://biodiversity.pref.fukuoka.lg.jp/futsushu/picturebook/okadangomushi.html)
 - [Tuf & Ďurajková (2022) Antipredatory strategies of terrestrial isopods. ZooKeys 1101（背板の曲がりと腹側の筋肉、なめらかな表面）](https://zookeys.pensoft.net/article_preview.php?id=76266)

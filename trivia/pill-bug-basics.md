@@ -28,15 +28,23 @@ tags: [いきもの, ダンゴムシ, そもそも]
 
 {{fig:pb-antenna}}
 
-- オカダンゴムシの大人は体長10〜14mmくらい。大きいものでは18mmほどになる
+- オカダンゴムシの大人は体長10mmほど（名古屋市の資料では約14mm）。大きいものでは18mmほどになる
 
 {{fig:pb-size}}
 
 ### かたい殻としめった場所
 
-- 殻は炭酸カルシウムと、キチンという物質と、タンパク質でできている。殻は4つの層が重なっている
+- 殻（クチクラ）は、外から**上クチクラ・外クチクラ・内クチクラ・膜の層**の4つの層が重なっている。いちばん外の上クチクラは、タンパク質とろうの薄い膜
 
 {{fig:pb-shell}}
+
+- 外クチクラと内クチクラは、キチン（エビやカニの殻にもある、糖がつながった細い糸）をタンパク質が包んだ繊維でできていて、そのすき間に炭酸カルシウムがしみこんで、かたくなっている
+
+{{fig:pb-shell-fiber}}
+
+- しみこむ炭酸カルシウムの形が層でちがう。外クチクラには、つぶがきちんと並んだ結晶（方解石）が、内クチクラには、形の決まっていない炭酸カルシウム（非晶質）が入っている。いちばん内側の膜の層には、ほとんど入っていない
+
+{{fig:pb-shell-calcite}}
 
 - カルシウムをおぎなうため、コンクリートの表面をかじることもある
 
@@ -52,7 +60,7 @@ tags: [いきもの, ダンゴムシ, そもそも]
 
 {{fig:pb-food}}
 
-- オスは黒っぽい灰色で、点の模様がないものが多い。メスは茶色っぽく、クリーム色〜黄色の点々の模様があるものが多い
+- オスは黒っぽい灰色で、点の模様がないものが多い。メスは少し色がうすく茶色っぽく、クリーム色〜黄色の点々の模様があるものが多い（名古屋市の資料では「雄は黒灰色、雌はいくぶん淡く、黄褐色のものもある」）
 
 {{fig:pb-male-female}}
 
@@ -125,5 +133,6 @@ tags: [いきもの, ダンゴムシ, そもそも]
 - [奈良教育大学 自然環境教育センター 虫ガイド オカダンゴムシ](https://www.nara-edu.ac.jp/cnee/NUE-KINDER-INSECT-GUIDE/web-content/musipage/okadangomusi.html)
 - [名古屋市 ワラジムシ・ダンゴムシ類](https://www.city.nagoya.jp/kenkofukushi/eisei/1015269/1034848/1015298/1034491/1015373.html)
 - [福岡県 生物多様性 オカダンゴムシ](https://biodiversity.pref.fukuoka.lg.jp/futsushu/picturebook/okadangomushi.html)
-- [Wikipedia: Armadillidium vulgare](https://en.wikipedia.org/wiki/Armadillidium_vulgare)
+- [Animal Diversity Web（ミシガン大学） Armadillidium vulgare（体長、外クチクラの方解石と内クチクラの非晶質炭酸カルシウム）](https://animaldiversity.org/accounts/Armadillidium_vulgare)
+- [Seidl & Ziegler (2012) Electron microscopic and preparative methods for the analysis of isopod cuticle. ZooKeys 176（等脚類のクチクラの4つの層、キチンとタンパク質の繊維、層ごとの炭酸カルシウム）](https://pmc.ncbi.nlm.nih.gov/articles/PMC3335406)
 - [戸田市 ダンゴムシのひみつ（PDF）](https://www.city.toda.saitama.jp/uploaded/attachment/23741.pdf)
