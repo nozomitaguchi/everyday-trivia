@@ -773,3 +773,5 @@
   - 2026-11-28：1770年の本の序文には物質の名前も rubber の語もない（Ulrich, Perspectives on History 2009）。rubber の意味の初出は1788年（Etymonline）。ゴムの記事（rubber-history）の書き方も見直したい
 - コンテに芯づくりを命じた時期：1794年3月（invention-europe）と1793年（Fitz Henry Lane Online）
   - 2026-11-28：鉛筆の歴史の記事は1794年3月を採用
+- いちごのそう果の中の種のつくり（熟したときの果皮・種皮・胚・胚乳の大きさの割合、子葉の形）と、栽培いちごの花1つあたりのめしべの数
+  - 2026-11-28：Kang ほか 2013（The Plant Cell）の本文と Hollender 2012 の博士論文が読めず保留。記事では「胚珠1つ→種1つ」（Nitsch 1951）と「野生種で数百のめしべ」（Hollender ほか 2014）まで
