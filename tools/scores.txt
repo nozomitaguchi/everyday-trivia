@@ -16,7 +16,7 @@ cicada D3 O3 2026-11-22
 tree D3 O3 2026-11-22
 goosebumps D3 O3 2026-11-22
 fingers D3 O3 2026-11-22
-airplane D3 O3 2026-11-22
+airplane D4 O3 2026-11-29
 bird D3 O3 2026-11-24
 dog D3 O3 2026-11-22
 fridge D3 O3 2026-11-22
