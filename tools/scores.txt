@@ -34,3 +34,4 @@ coin D4 O3 2026-11-28
 ambulance D3 O3 2026-11-29
 seasons D3 O3 2026-11-29
 spider D3 O3 2026-11-29
+water-strider D3 O3 2026-11-29
